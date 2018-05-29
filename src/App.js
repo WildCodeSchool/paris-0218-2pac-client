@@ -9,8 +9,8 @@ class App extends Component {
         <AsideLeft />
         <AsideRight />
       </div>
-      )
-    }
+    )
   }
+}
 
-export default App;
+export default App
