@@ -10,7 +10,7 @@ class AsideLeft extends Component {
         <p>blablabla</p>
         <a href="#lien vers la page de l'article">>>> Lire la suite</a>
       </div>
-      )
+    )
   }
 }
 
