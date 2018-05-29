@@ -16,6 +16,7 @@ class AsideRight extends Component {
         </div>
       </div>
     )
- }
+  }
 }
-  export default AsideRight
+
+export default AsideRight
