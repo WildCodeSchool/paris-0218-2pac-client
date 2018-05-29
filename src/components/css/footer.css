@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+
+footer {
+
+  position: absolute;
+  bottom : 0;
+  width: 100%;
+
+}
+
+.footer-desc {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #226462;
+  padding: 1.5%;
+
+}
+
+.logo {
+
+  display: inline-block;
+  width: 220px;
+  align-self: flex-start;
+
+}
+
+.desc {
+
+  display: inline-block;
+  white-space: pre;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  margin-left: 55px;
+  letter-spacing: 1px;
+  align-self: flex-end;
+
+}
+
+.desc span {
+
+  font-weight: 600;
+  font-size : 22px;
+  word-spacing: 1px;
+
+}
+
+.icon {
+
+  font-size : 17px;
+
+}
+
+@media screen and (max-width: 45em) { /*portable classique*/
+
+  .footer-desc {
+    display: block;
+  }
+
+  .logo {
+
+    display: block;
+    width: 180px;
+    margin : 10px auto;
+
+  }
+
+  .desc {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    font-size: 14px;
+
+  }
+
+}
+
+@media screen and (max-width: 65em) { /*tablette classique*/
+
+
+
+}
