@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
+import Login from './components/Login'
+import Search from './components/Search'
+import NavBar from './components/NavBar'
 
 class App extends Component {
   render () {
     return (
-      <div> futur componenent</div>
+      <div>
+        < Login />
+        < Search />
+        < NavBar />
+      </div>
     )
   }
 }
