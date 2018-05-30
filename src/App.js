@@ -3,13 +3,19 @@ import Login from './components/Login'
 import Search from './components/Search'
 import NavBar from './components/NavBar'
 
+import './css/header.css'
+
 class App extends Component {
   render () {
     return (
       <div>
-        < Login />
-        < Search />
-        < NavBar />
+        <div className="mainHeader">
+          < Login />
+          < Search />
+        </div>
+        <div>
+          < NavBar />
+        </div>
       </div>
     )
   }

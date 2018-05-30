@@ -1,0 +1,26 @@
+.search{
+  border-radius: 10px;
+  border: solid black 1px;
+  width: 200px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.mainHeader{
+  background-color: red;
+  height: 200px;
+  background-image: url('../img/photo_couverture_web.jpg');
+  background-size: cover;
+}

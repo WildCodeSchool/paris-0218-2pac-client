@@ -1,11 +1,13 @@
 import React from 'react'
-
+import '../css/header.css'
 
 class Search extends React.Component {
 
   render() {
     return(
-      <div>Search</div>
+      <div>
+        <input className="search" type="text" placeholder="Search" />
+      </div>
     );
   }
 }
