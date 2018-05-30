@@ -44,6 +44,104 @@ class Calendar extends Component {
     	let firstDay = moment(dateContext).startOf('month').format('d')//day of week
     	return firstDay
     }
+//popup month 
+	setMonth = (month) => {
+		let monthNo = this.months.indexOf(month)
+		let dateContext = Object.assign({},this.state.dateContext)
+		dateContext = moment(dateContext).set("month", monthNo)
+		this.setState({
+			dateContext: dateContext
+		})
+	}
+
+	onSelectChange = (event, data) => {
+		this.setMonth(data)
+		this.props.onMonthChange && this.props.onMonthChange
+	}
+
+    SelectList = (props) => {
+    	let popup = props.data.map((data) => {
+    		return (
+    			<div key={data}>
+    				<a href="#" onClick={(event)=>{this.onSelectChange(event, data)}}>
+    					{data}
+    				</a>
+    			</div>
+    		)
+    	})
+
+    	return(
+    		<div className="month-popup">
+    			{popup}
+    		</div>
+    	)
+  	}
+ 
+  	onChangeMonth = (event, month) => {
+  		this.setState({
+  			showMonthPopup: !this.state.showMonthPopup
+  		})
+
+  	}
+
+    MonthNav = () => {
+    	return(
+    		<span className="label-month"
+    			onClick={(event) => {this.onChangeMonth(event, this.month())}}>
+	    		{this.month()}
+	    		{this.state.showMonthPopup && 
+	    			<this.SelectList data={this.months} />
+	    		}
+    		</span>
+    	)
+    }
+
+    showYearEditor = () => {
+        this.setState({
+            showYearNav: true
+        });
+    }
+
+    setYear = (year) => {
+        let dateContext = Object.assign({}, this.state.dateContext);
+        dateContext = moment(dateContext).set("year", year);
+        this.setState({
+            dateContext: dateContext
+        })
+    }
+
+    onYearChange = (event) => {
+        this.setYear(event.target.value);
+        this.props.onYearChange && this.props.onYearChange(event, event.target.value);
+    }
+
+    onKeyUpYear = (event) => {
+        if (event.which === 13 || event.which === 27) {
+            this.setYear(event.target.value);
+            this.setState({
+                showYearNav: false
+            })
+        }
+    }
+
+    YearNav = () => {
+        return (
+            this.state.showYearNav ?
+            <input
+                defaultValue = {this.year()}
+                className="editor-year"
+                ref={(yearInput) => { this.yearInput = yearInput}}
+                onKeyUp= {(event) => this.onKeyUpYear(event)}
+                onChange = {(event) => this.onYearChange(event)}
+                type="number"
+                placeholder="year"/> :
+            <span
+                className="label-year"
+                onDoubleClick={(event)=> { this.showYearEditor()}}>
+                {this.year()}
+            </span>
+        );
+    }
 
 	render(){
 		// Map the weekdays i.e Sun, Mon, Tue etc as <td>
@@ -112,6 +210,12 @@ class Calendar extends Component {
 			   <table className="calendar">
 			   		<thead>
 			   			<tr className="calendar-header">
+			   				<td colSpan="5">
+			   					<this.MonthNav />
+			   					{" "}
+			   					<this.YearNav />
+
+			   				</td>
 			   			</tr>
 			   		</thead>
 			   		<tbody>
