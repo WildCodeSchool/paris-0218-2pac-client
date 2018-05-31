@@ -195,7 +195,7 @@ class Calendar extends Component {
             let selectedClass = (d == this.state.selectedDay ? " selected-day " : "")
             daysInMonth.push(
                 <td key={d} className={className + selectedClass} >
-                    <span onClick={(e)=>{this.onDayClick(e, d)}}>{d}</span>
+                    <span onClick={(event)=>{this.onDayClick(event, d)}}>{d}</span>
                 </td>
             );
         }
