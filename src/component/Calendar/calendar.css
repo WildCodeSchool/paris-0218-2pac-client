@@ -79,6 +79,7 @@ tr {
 }
 
 .nav-month {
+    color: black;
     position: absolute;
     top: 0.6em;
     font-size: 0.6em;
