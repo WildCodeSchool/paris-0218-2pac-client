@@ -1,0 +1,16 @@
+.Button{
+  /* background-color: #226462; */
+  color : #707070;
+  padding: .30rem .3rem;
+  font-size: 1rem;
+  border-top:  none;
+  border-bottom:  none;
+  border-left:  none;
+  height: 30px;
+  border-right: 1px solid #707070;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* margin: auto; */
+}
+
+
