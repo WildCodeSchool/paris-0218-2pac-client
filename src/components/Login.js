@@ -1,13 +1,10 @@
 import React from 'react'
+import './Login.css'
 
+const Login = () => (
+  <div className="Login">
+    Se connecter
+  </div>
+)
 
-class Login extends React.Component {
-
-  render() {
-    return(
-      <div>Se connecter</div>
-    );
-  }
-}
-
-export default Login;
+export default Login

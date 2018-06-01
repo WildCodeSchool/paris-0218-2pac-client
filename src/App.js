@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
 import Login from './components/Login'
 import Search from './components/Search'
-import NavBar from './components/NavBar'
+import Nav from './components/Nav'
 
 import './css/header.css'
 
 class App extends Component {
   render () {
     return (
-      <div>
+      <div className="headerBlock">
         <div className="mainHeader">
-          < Login />
-          < Search />
+          <img className="logo" src={ require('./img/logo_PAC_horizon_CMJN_CT_transp.png') } alt="logo" />
+          <div className="blockSearchLogin">
+            <Login />
+            <Search />
+          </div>
         </div>
         <div>
-          < NavBar />
+          <Nav onClick={() => console.log('yes')}/>
         </div>
       </div>
     )
