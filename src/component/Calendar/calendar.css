@@ -41,9 +41,6 @@ tr {
 
 .day {
     font-size: 0.8em;
-}
-
-.day {
     cursor: pointer;
     width: 24px;
     height: 24px;
@@ -84,12 +81,6 @@ tr {
     top: 0.6em;
     font-size: 0.6em;
     right:3px;
-}
-
-.prev {
-}
-
-.next {
 }
 
 .editor-year {
