@@ -1,0 +1,7 @@
+.mainHeader{
+  height: 200px;
+  background-image: url('../img/photo_couverture_web.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+}
