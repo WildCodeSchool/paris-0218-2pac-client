@@ -3,11 +3,6 @@ import Button from './Button'
 import './Nav.css'
 
 class Nav extends React.Component {
-  // state= {
-  //   item: ['Qui sommes nous ?', 'Comprendre la PAC', 'Notre vision', 'Agir', 'Presse'],
-  //   menuHowWeAre: false,
-  //   menuUnderstandPac: false
-  // }
 
   state = {
     navItems:
