@@ -13,4 +13,11 @@
   /* margin: auto; */
 }
 
+a {
+  text-decoration: none;
+}
 
+li {
+  cursor: pointer;
+  list-style: none;
+}

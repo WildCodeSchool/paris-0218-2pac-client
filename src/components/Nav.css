@@ -1,3 +1,18 @@
+.mainHeader{
+  height: 200px;
+  background-image: url('../img/photo_couverture_web.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo{
+  width: 200px;
+  background-color:  white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .Nav{
   display: flex;
   justify-content: center;
