@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './footer.css'
+import './Footer.css'
 import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry'
 import actionAid from './img/members_logo/action_aid.png'
 import agter from './img/members_logo/agter.jpg'
