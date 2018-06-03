@@ -1,0 +1,18 @@
+.blockSearchLogin{
+  width: 200px;
+  height: 100px;
+  text-align: right;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.search{
+  border-radius: 10px;
+  border: white solid 2px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.searchBar{
+  padding-top: 60px;
+}
