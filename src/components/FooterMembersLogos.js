@@ -70,13 +70,12 @@ const logos = [
 export default class FooterMembersLogos extends Component {
   render () {
     return (
+      
       <div id="logo-container" className="logo-container">
-
         <ResponsiveMasonry
           columnsCountBreakPoints={{350: 3, 750: 7, 900: 10}}
         >
           <Masonry>
-
             {logos.map((item, i) =>
               <div className='member-logo' key={i}>
                 <img
@@ -85,10 +84,8 @@ export default class FooterMembersLogos extends Component {
                 />
               </div>
             )}
-
           </Masonry>
         </ResponsiveMasonry>
-
       </div>
 
     )

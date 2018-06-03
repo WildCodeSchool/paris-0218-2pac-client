@@ -9,7 +9,6 @@ export default class Footer extends Component {
   render () {
     return (
       <footer>
-
         <div className='footer-desc'>
           <div className='logo'><img alt='logo' src={logo} /> </div>
           <div className='desc'>
@@ -26,7 +25,6 @@ export default class Footer extends Component {
         </div>
 
         <div className='mentions'> <a href='/'> <FaCircle /> Mentions légales <FaCircle /> </a> </div>
-
       </footer>
     )
   }
