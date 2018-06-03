@@ -1,7 +1,21 @@
 .mainHeader{
-  height: 200px;
   background-image: url('../img/photo_couverture_web.jpg');
   background-size: cover;
   display: flex;
   justify-content: space-around;
+}
+
+.logo{
+  width: 250px;
+  background-color:  white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.blockSearchLogin{
+  width: 200px;
+  height: 100px;
+  text-align: right;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

@@ -1,18 +1,20 @@
-.blockSearchLogin{
-  width: 200px;
-  height: 100px;
-  text-align: right;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
 .search{
-  border-radius: 10px;
+  border-radius: 50px;
   border: white solid 2px;
   width: 200px;
+  padding: 10px;
   background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  transition: .5s;
+
+}
+
+.search:focus {
+
+  background-color: white;
+
 }
 
 .searchBar{
-  padding-top: 60px;
+  padding-top: 40px;
 }
