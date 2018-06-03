@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from './img/logo_horizon.svg'
+import logo from './../img/logo_horizon.svg'
 import './Footer.css'
 import FaChevronRight from 'react-icons/lib/fa/chevron-right'
 import FaCircle from 'react-icons/lib/fa/circle'
