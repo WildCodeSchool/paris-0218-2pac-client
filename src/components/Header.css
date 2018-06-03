@@ -1,13 +1,23 @@
+a{
+  text-decoration: none;
+}
+
+li {
+  cursor: pointer;
+  list-style: none;
+}
+
 .mainHeader{
   background-image: url('../img/photo_couverture_web.jpg');
   background-size: cover;
   display: flex;
   justify-content: space-around;
+  height: 200px;
 }
 
-.logo{
+.logo {
   width: 250px;
-  background-color:  white;
+  background-color: white;
   margin-top: 50px;
   margin-bottom: 50px;
 }
