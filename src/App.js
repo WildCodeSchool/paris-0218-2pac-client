@@ -3,8 +3,6 @@ import Login from './components/Login'
 import Search from './components/Search'
 import Nav from './components/Nav'
 
-import './css/header.css'
-
 class App extends Component {
   render () {
     return (
