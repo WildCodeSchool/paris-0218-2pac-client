@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Footer.css'
 import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry'
 import actionAid from './../img/members_logo/action_aid.png'
@@ -67,27 +67,27 @@ const logos = [
   {src: terreEtHumanisme, alt: 'member logo'}
 ]
 
-export default class FooterMembersLogos extends Component {
-  render () {
-    return (
+const FooterMembersLogos = () => {
+  return (
 
-      <div id="logo-container" className="logo-container">
-        <ResponsiveMasonry
-          columnsCountBreakPoints={{350: 3, 750: 7, 900: 10}}
-        >
-          <Masonry>
-            {logos.map((item, i) =>
-              <div className='member-logo' key={i}>
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                />
-              </div>
-            )}
-          </Masonry>
-        </ResponsiveMasonry>
-      </div>
+    <div id="logo-container" className="logo-container">
+      <ResponsiveMasonry
+        columnsCountBreakPoints={{350: 3, 750: 7, 900: 10}}
+      >
+        <Masonry>
+          {logos.map((item, i) =>
+            <div className='member-logo' key={i}>
+              <img
+                src={item.src}
+                alt={item.alt}
+              />
+            </div>
+          )}
+        </Masonry>
+      </ResponsiveMasonry>
+    </div>
 
-    )
-  }
+  )
 }
+
+export default FooterMembersLogos
