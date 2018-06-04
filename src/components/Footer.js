@@ -12,10 +12,10 @@ export default class Footer extends Component {
         <div className='footer-desc'>
           <div className='logo'><img alt='logo' src={logo} /> </div>
           <div className='desc'>
-            <span> <FaChevronRight className='icon' /> POUR UNE AUTRE PAC </span> {'\n'}
-              est une plateforme française inter-organisations{'\n'}
-              constituant un espace commun de réflexion et d'action,{'\n'}
-              en vue de la refonte de la politique agricole commune.
+            <span> <FaChevronRight className='icon' /> POUR UNE AUTRE PAC </span>
+            <span> est une plateforme française inter-organisations </span>
+            <span>constituant un espace commun de réflexion et d'action,</span>
+            <span>en vue de la refonte de la politique agricole commune.</span>
           </div>
         </div>
 
