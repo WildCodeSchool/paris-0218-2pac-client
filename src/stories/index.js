@@ -2,9 +2,20 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+/*
+import { linkTo } from '@storybook/addon-links'
+*/
 
 import Login from '../components/Login'
 import Button from '../components/Button'
+import Footer from '../components/Footer'
+import FooterMembersLogos from '../components/FooterMembersLogos'
+
+storiesOf('Footer', module)
+  .add('Complete footer', () => <Footer />)
+
+storiesOf('FooterMembersLogos', module)
+  .add('Footer members logo section', () => <FooterMembersLogos />)
 
 storiesOf('Login', module)
   .add('login text', () =>
