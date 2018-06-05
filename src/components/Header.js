@@ -5,7 +5,7 @@ import Nav from './Nav'
 import './Header.css'
 import logo from './../img/logo_horizon.png'
 
-const Header = () => {
+const Header = ({ menu }) => {
   return (
     <div className="headerBlock">
       <div className="mainHeader">
@@ -15,7 +15,7 @@ const Header = () => {
           <Search />
         </div>
       </div>
-      <Nav />
+      <Nav menu={menu} />
     </div>
   )
 }
