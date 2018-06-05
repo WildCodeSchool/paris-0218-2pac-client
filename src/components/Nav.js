@@ -1,6 +1,5 @@
 import React from 'react'
 import Button from './Button'
-// import DropDownMenu from './DropDownMenu'
 import './Nav.css'
 
 const navItems = [
@@ -12,63 +11,34 @@ const navItems = [
 ]
 
 class Nav extends React.Component {
-  constructor() {
-    super()
-    this.showSubMenu = this.showSubMenu.bind(this)
-  }
-
-  state= {
-    showSubMenu: false,
+  state = {
     index: undefined
   }
 
-
-  // change le state
-  showSubMenu(i) {
-    console.log('test')
-    this.setState({
-      // showSubMenu: !this.state.showSubMenu,
-      index: i
-    })
+  componentDidMount(i) {
+    this.setState({index: i})
   }
 
-  // hideMenu(i) {
-  //   console.log('test')
-  //   this.setState({
-  //     // showSubMenu: !this.state.showSubMenu,
-  //     index: undefined
-  //   })
-  // }
-
-  componentDidMount() {
-    document.removeEventListener('click', this.showSubMenu(undefined))
+  componentWillUnmount() {
+    this.setState({index: undefined})
   }
 
-// affiche le contenu
   toggleList = (event, i) => {
     if (navItems[i].children) {
-
       const sub = navItems[i].children.map(e =>
           <li key={e.toString()}>{e}</li>)
-
-      return(
-        <ul>{sub}</ul>)
+      return(<ul>{sub}</ul>)
     }
   }
 
   render () {
     const items = navItems.map((item, i) =>
       <Button
-        onClick={(event) => this.showSubMenu(i)}
-        // onMouseOut={(event) => this.hideMenu(i)}
+        onClick={(event) => this.componentDidMount(i)}
         key={i}
         className="Button Item">
         {item.title}
       </Button>)
-
-    // const subMenu = this.state.showSubMenu ? (
-    //     <div>{this.toggleList({children: navItems.children}, this.state.index)}</div>
-    //   ) : ''
 
     const subMenu = this.state.index === undefined ? '' :
     <div>{this.toggleList({children: navItems.children}, this.state.index)}</div>
