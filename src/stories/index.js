@@ -10,6 +10,8 @@ import Login from '../components/Login'
 import Button from '../components/Button'
 import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
+import Article from '../components/Article'
+
 
 storiesOf('Footer', module)
   .add('Complete footer', () => <Footer />)
@@ -45,3 +47,6 @@ storiesOf('Button', module)
     <Button onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
     Qui sommes nous?
     </Button>)
+
+storiesOf('Article', module)
+  .add('Article template', () => <Article /> )
