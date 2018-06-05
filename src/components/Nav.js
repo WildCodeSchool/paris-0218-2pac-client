@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import './Nav.css'
+import { action } from '../store'
 
 const navItems = [
   {title: 'Qui sommes nous ?', children: ['Présentation', 'Historique', 'Nos actions', 'Nos membres']},
@@ -10,50 +11,43 @@ const navItems = [
   {title: 'Presse', children: ['On parle de nous (articles ‘presse’)', 'Communiqués de presse (articles ‘communiqués de presse’)', 'Kit presse']}
 ]
 
-class Nav extends React.Component {
-  state = {
-    index: undefined
-  }
+const showMenuList = menuIndex => {
+  const selectedMenu = navItems[menuIndex]
+  if (!selectedMenu || !selectedMenu.children) return
+  const menuList = navItems[menuIndex].children
+    .map(e => <li key={e}>{e}</li>)
 
-  componentDidMount(i) {
-    this.setState({index: i})
-  }
+  return <ul>{menuList}</ul>
+}
 
-  componentWillUnmount() {
-    this.setState({index: undefined})
-  }
+const NavItem = ({ menuIndex, title }) =>
+  <Button
+    key={String(menuIndex)}
+    onClick={() => action.showOrHideMenu(menuIndex)}
+    onBlur={action.hideMenu}
+    className="Button Item">
+    {title}
+  </Button>
 
-  toggleList = (event, i) => {
-    if (navItems[i].children) {
-      const sub = navItems[i].children.map(e =>
-          <li key={e.toString()}>{e}</li>)
-      return(<ul>{sub}</ul>)
-    }
-  }
 
-  render () {
-    const items = navItems.map((item, i) =>
-      <Button
-        onClick={(event) => this.componentDidMount(i)}
-        key={i}
-        className="Button Item">
-        {item.title}
-      </Button>)
+const Nav = ({ menu }) => {
+  const items = navItems.map((item, i) => NavItem({
+    menuIndex: i,
+    title: item.title
+  }))
 
-    const subMenu = this.state.index === undefined ? '' :
-    <div>{this.toggleList({children: navItems.children}, this.state.index)}</div>
+  const subMenu = showMenuList(menu)
 
-    return (
-      <div>
-        <div className="Nav">
-          {items}
-        </div>
-        <div>
-          {subMenu}
-        </div>
+  return (
+    <div>
+      <div className="Nav">
+        {items}
       </div>
-    )
-  }
+      <div>
+        {subMenu}
+      </div>
+    </div>
+  )
 }
 
 export default Nav
