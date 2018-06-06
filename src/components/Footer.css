@@ -12,10 +12,11 @@ footer {
   padding: 1.5%;
 }
 
-.logo {
+.footer-desc > .logo {
   display: inline-block;
   width: 220px;
   align-self: flex-start;
+  background-color: transparent;
 }
 
 .desc {
