@@ -10,9 +10,8 @@ import Login from '../components/Login'
 import Button from '../components/Button'
 import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
-import Formular from '../components/Formular'
+import Formular from '../containers/Formular'
 import Submit from '../components/Submit'
-import Input from '../components/Input'
 
 storiesOf('Footer', module)
   .add('Complete footer', () => <Footer />)
@@ -54,6 +53,3 @@ storiesOf('Formular', module)
 
 storiesOf('Submit', module)
   .add('Submit', () => <Submit/>)
-
-storiesOf('Input', module)
-  .add('Input', () => <Input />)

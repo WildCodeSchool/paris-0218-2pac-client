@@ -5,7 +5,7 @@ class Submit extends Component {
   render () {
     return (
       <label>
-        <input type='submit' value="➔ S'inscrire" />
+        <input onClick={this.handleSubmit} type='submit' value="➔ S'inscrire" />
       </label>
     )
   }

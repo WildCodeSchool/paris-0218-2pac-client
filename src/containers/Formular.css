@@ -25,22 +25,22 @@ p {
 }*/
 
 
-input[placeholder='Nom'] {
+input[name='lastName'] {
 	width: 280px;
 	margin-right: 20px;
 	margin-bottom: 10px;
 }
 
-input[placeholder='Prénom'] {
+input[name='firstName'] {
 	width: 320px;
 	margin-bottom: 10px;
 }
 
-input[placeholder='Adresse mail'] {
+input[name='mail'] {
 	width: 626px;
 	margin-bottom: 10px;
 }
 
-input[placeholder='Numéro de téléphone'] {
+input[name='number'] {
 	width: 626px;
 }
