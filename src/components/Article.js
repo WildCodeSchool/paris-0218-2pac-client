@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import Container from './Container'
 import IntroArticle from './IntroArticle'
 import BodyArticle from './BodyArticle'
-import './Article.css'
 
 const Article = () => {
 
     return (
-      <div className="article">
+
+      <Container>
 
         <div className="intro-article">
           <IntroArticle />
@@ -16,7 +17,8 @@ const Article = () => {
           <BodyArticle />
         </div>
 
-      </div>
+      </Container>
+
     )
 
 }
