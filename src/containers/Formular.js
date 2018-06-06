@@ -33,10 +33,10 @@ render () {
         <label>
           <input type='checkbox' name='checkbox'/>
           <p>J'accepte que ces données soient utilisées par <span>Pour une autre PAC.</span></p>
-          <input type='text' name='lastName' placeholder='Nom' onChange={this.updateField(this)}/>
-          <input type='text' name='firstName' placeholder='Prénom' onChange={this.updateField(this)}/>
-          <input type='mail' name='mail' placeholder='Adresse mail' onChange={this.updateField(this)}/>
-          <input type='number' name='number' placeholder='Numéro de téléphone' onChange={this.updateField(this)}/>
+          <input type='text' name='lastName' placeholder='Nom' />
+          <input type='text' name='firstName' placeholder='Prénom' />
+          <input type='mail' name='mail' placeholder='Adresse mail' />
+          <input type='number' name='number' placeholder='Numéro de téléphone' />
         </label>
         <Submit />
       </form>
