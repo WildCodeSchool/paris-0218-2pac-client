@@ -72,7 +72,7 @@ const FooterMembersLogos = () => {
 
     <div id="logo-container" className="logo-container">
       <ResponsiveMasonry
-        columnsCountBreakPoints={{350: 3, 750: 7, 900: 10}}
+        columnsCountBreakPoints={{100: 3, 350: 5, 750: 7, 900: 10}}
       >
         <Masonry>
           {logos.map((item, i) =>
