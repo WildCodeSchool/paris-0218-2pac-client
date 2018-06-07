@@ -99,7 +99,7 @@ footer {
   .footer-desc {
     display: block;
   }
-  .logo {
+  .footer-desc > .logo {
     display: block;
     width: 180px;
     margin: 10px auto;
