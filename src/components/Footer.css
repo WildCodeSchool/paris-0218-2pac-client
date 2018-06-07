@@ -69,11 +69,12 @@ footer {
 }
 
 .member-logo {
-  margin: 5px;
+  margin: 7px;
 }
 
 .member-logo img {
-  max-width: 80px;
+  max-width: 90px;
+  max-height: 100px;
 }
 
 .mentions {
