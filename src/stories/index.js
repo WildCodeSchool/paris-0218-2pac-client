@@ -12,9 +12,11 @@ import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
 import Container from '../components/Container'
 import Tag from '../components/Tag'
+import Title from '../components/Title'
 import BodyArticle from '../components/BodyArticle'
 import IntroArticle from '../components/IntroArticle'
 import Article from '../components/Article'
+import Contact from '../components/Contact'
 
 
 storiesOf('Footer', module)
@@ -52,6 +54,9 @@ storiesOf('Button', module)
     Qui sommes nous?
     </Button>)
 
+storiesOf('Title', module)
+  .add('Title', () => <Title title="Exemple de titre"> </Title> )
+
 storiesOf('IntroArticle', module)
   .add('Intro article', () => <IntroArticle /> )
 
@@ -66,3 +71,6 @@ storiesOf('Container', module)
 
 storiesOf('Article', module)
   .add('Article template', () => <Article /> )
+
+storiesOf('Contact', module)
+  .add('Contact template', () => <Contact /> )
