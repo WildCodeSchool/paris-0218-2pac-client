@@ -12,7 +12,7 @@ const reducer = (state, action) => {
   }
   if (action.type === 'SET_OR_UNSET_MENU') {
     if (state.menu === action.menu) {
-      return  {
+      return {
         menu: undefined
       }
     }
@@ -36,7 +36,6 @@ const action = {
     menu: menuIndex
   })
 }
-
 
 export {
   store,

@@ -3,7 +3,7 @@ import Header from './components/Header'
 import { store } from './store'
 
 class App extends Component {
-  constructor() {
+  constructor () {
     super()
     this.state = store.getState()
     store.subscribe(() => {
