@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import FaChevronRight from 'react-icons/lib/fa/chevron-right'
 import './IntroArticle.css'
 import Title from './Title'
 import Tag from './Tag'
