@@ -93,7 +93,7 @@ footer {
 }
 
 @media screen and (max-width: 45em) {
-  /*portable classique*/
+
   .footer-desc {
     display: block;
   }
@@ -109,8 +109,4 @@ footer {
     letter-spacing: 0px;
     font-size: 14px;
   }
-}
-
-@media screen and (max-width: 65em) {
-  /*tablette classique*/
 }
