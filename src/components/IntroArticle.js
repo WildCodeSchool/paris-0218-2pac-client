@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import FaChevronRight from 'react-icons/lib/fa/chevron-right'
 import './IntroArticle.css'
+import Title from './Title'
 import Tag from './Tag'
 import introImg from '../img/photo_couverture_web.jpg'
 
@@ -9,7 +10,7 @@ const IntroArticle  = () => {
     return (
       <div>
 
-          <div className="title"> <FaChevronRight className='icon' /> Titre de l'article </div>
+          <Title title="Titre de l'article"></Title>
           <div className="intro-img"> </div>
           <div className="img-credit"> <span>Crédit </span>: Juste un test temporaire de style</div>
 
