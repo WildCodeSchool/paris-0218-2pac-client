@@ -6,11 +6,15 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 */
 
+import App from '../App'
 import Login from '../components/Login'
 import SideBar from '../components/SideBar'
 import SideBarButton from '../components/SideBarButton'
 import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
+
+storiesOf('App', module)
+  .add('Whole App', () => <App />)
 
 storiesOf('Footer', module)
   .add('Complete footer', () => <Footer />)
@@ -24,10 +28,6 @@ storiesOf('Login', module)
       <Login />
     </div>)
 
-storiesOf('Nav', module)
-  .add('NavBar', () =>
-    <Button className="Button Nav"> Edouard </Button>
-  )
 storiesOf('SideBar', module)
   .add('Classic', () => <SideBar />)
 
