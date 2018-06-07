@@ -19,3 +19,6 @@ li {
   cursor: pointer;
   list-style: none;
 }
+span {
+margin-right: 1em;
+}
