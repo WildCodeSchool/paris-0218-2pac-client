@@ -18,7 +18,6 @@ import IntroArticle from '../components/IntroArticle'
 import Article from '../components/Article'
 import Contact from '../components/Contact'
 
-
 storiesOf('Footer', module)
   .add('Complete footer', () => <Footer />)
 
@@ -55,22 +54,22 @@ storiesOf('Button', module)
     </Button>)
 
 storiesOf('Title', module)
-  .add('Title', () => <Title title="Exemple de titre"> </Title> )
+  .add('Title', () => <Title title="Exemple de titre"> </Title>)
 
 storiesOf('IntroArticle', module)
-  .add('Intro article', () => <IntroArticle /> )
+  .add('Intro article', () => <IntroArticle />)
 
 storiesOf('BodyArticle', module)
-  .add('Body of articles', () => <BodyArticle /> )
+  .add('Body of articles', () => <BodyArticle />)
 
 storiesOf('Tag', module)
-  .add('Tag button for article', () => <Tag /> )
+  .add('Tag button for article', () => <Tag />)
 
 storiesOf('Container', module)
-  .add('Container for center content', () => <Container /> )
+  .add('Container for center content', () => <Container />)
 
 storiesOf('Article', module)
-  .add('Article template', () => <Article /> )
+  .add('Article template', () => <Article />)
 
 storiesOf('Contact', module)
-  .add('Contact template', () => <Contact /> )
+  .add('Contact template', () => <Contact />)

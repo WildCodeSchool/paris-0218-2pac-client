@@ -1,26 +1,24 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Container from './Container'
 import IntroArticle from './IntroArticle'
 import BodyArticle from './BodyArticle'
 
 const Article = () => {
+  return (
 
-    return (
+    <Container>
 
-      <Container>
+      <div className="intro-article">
+        <IntroArticle />
+      </div>
 
-        <div className="intro-article">
-          <IntroArticle />
-        </div>
+      <div className="article-body">
+        <BodyArticle />
+      </div>
 
-        <div className="article-body">
-          <BodyArticle />
-        </div>
+    </Container>
 
-      </Container>
-
-    )
-
+  )
 }
 
 export default Article

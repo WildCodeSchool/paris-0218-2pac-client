@@ -1,7 +1,7 @@
 import React from 'react'
 import './Tag.css'
 
-const Tag  = () => {
+const Tag = () => {
   return (
 
     <span className="tags"> Tag # </span>

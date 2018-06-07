@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import FaChevronRight from 'react-icons/lib/fa/chevron-right'
 import './Title.css'
 
-const Title  = (props) => {
+const Title = (props) => {
+  return (
 
-    return (
-
-          <div className="title"> <FaChevronRight className='icon' /> {props.title} </div>
-    )
-
+    <div className="title"> <FaChevronRight className='icon' /> {props.title} </div>
+  )
 }
 
 export default Title
