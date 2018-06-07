@@ -7,7 +7,8 @@ import { linkTo } from '@storybook/addon-links'
 */
 
 import Login from '../components/Login'
-import Button from '../components/Button'
+import SideBar from '../components/SideBar'
+import SideBarButton from '../components/SideBarButton'
 import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
 
@@ -27,21 +28,23 @@ storiesOf('Nav', module)
   .add('NavBar', () =>
     <Button className="Button Nav"> Edouard </Button>
   )
+storiesOf('SideBar', module)
+  .add('Classic', () => <SideBar />)
 
-storiesOf('Button', module)
+storiesOf('SideBarButton', module)
   .add('Dark green', () =>
-    <Button onClick={action('clicked')} >
-    Qui sommes nous?
-    </Button>)
+    <SideBarButton onClick={action('clicked')}  style={{ color: 'black' }}>
+      Qui sommes nous?
+    </SideBarButton>)
   .add('Yellow', () =>
-    <Button onClick={action('clicked')} style={{ backgroundColor: '#F4971A' }} >
-    Qui sommes nous?
-    </Button>)
+    <SideBarButton onClick={action('clicked')} style={{ backgroundColor: '#F4971A' }} >
+      Ressources
+    </SideBarButton>)
   .add('Light green', () =>
-    <Button onClick={action('clicked')} style={{ backgroundColor: '#A99C2F' }} >
-    Qui sommes nous?
-    </Button>)
+    <SideBarButton onClick={action('clicked')} style={{ backgroundColor: '#A99C2F' }} >
+      Actualités
+    </SideBarButton>)
   .add('Red', () =>
-    <Button onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
-    Qui sommes nous?
-    </Button>)
+    <SideBarButton onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
+      English
+    </SideBarButton>)
