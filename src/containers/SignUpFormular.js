@@ -3,13 +3,11 @@ import './SignUpFormular.css'
 import FaChevronRight from 'react-icons/lib/fa/chevron-right'
 
 class SignUpFormular extends Component {
-  constructor (props) {
-    super(props)
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log('votre formulaire a été envoyé')
+    alert('votre formulaire a été envoyé')
   }
 
   render () {
