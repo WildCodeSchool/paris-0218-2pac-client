@@ -34,7 +34,7 @@ storiesOf('SideBar', module)
 
 storiesOf('SideBarButton', module)
   .add('Dark green', () =>
-    <SideBarButton onClick={action('clicked')}  style={{ color: 'black' }}>
+    <SideBarButton onClick={action('clicked')} style={{ color: 'black' }}>
       Qui sommes nous?
     </SideBarButton>)
   .add('Yellow', () =>
@@ -49,3 +49,6 @@ storiesOf('SideBarButton', module)
     <SideBarButton onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
       English
     </SideBarButton>)
+
+storiesOf('SignUpFormular', module)
+  .add('Complete formular', () => <SignUpFormular />)
