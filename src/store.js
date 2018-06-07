@@ -5,7 +5,6 @@ const initialState = {
 }
 
 const reducer = (state, action) => {
-  console.log(action, 'prevMenu', state.menu)
   if (action.type === 'SET_MENU') {
     return {
       menu: action.menu

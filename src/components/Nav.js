@@ -11,40 +11,42 @@ const navItems = [
   {title: 'Presse', children: ['On parle de nous (articles ‘presse’)', 'Communiqués de presse (articles ‘communiqués de presse’)', 'Kit presse']}
 ]
 
-const showMenuList = menuIndex => {
+const showMenuList = (menuIndex) => {
   const selectedMenu = navItems[menuIndex]
   if (!selectedMenu || !selectedMenu.children) return
   const menuList = navItems[menuIndex].children
     .map(e => <li key={e}>{e}</li>)
 
-  return <ul>{menuList}</ul>
+  return <ul className="subMenuList">{menuList}</ul>
 }
 
-const NavItem = ({ menuIndex, title }) =>
-  <Button
-    key={String(menuIndex)}
-    onClick={() => action.showOrHideMenu(menuIndex)}
-    onBlur={action.hideMenu}
-    className="Button Item">
-    {title}
-  </Button>
+
+const NavItem = ({ menuIndex, title, menu }) =>
+  <div className='pouet' key={String(menuIndex)}>
+    <Button
+
+      onClick={() => action.showOrHideMenu(menuIndex)}
+      // onBlur={action.hideMenu}
+      className="Button Item">
+      {title}
+    </Button>
+    {menuIndex === menu ? showMenuList(menuIndex) : null}
+  </div>
 
 
 const Nav = ({ menu }) => {
   const items = navItems.map((item, i) => NavItem({
     menuIndex: i,
-    title: item.title
+    title: item.title,
+    menu: menu
   }))
 
   const subMenu = showMenuList(menu)
-
+  console.log(menu)
   return (
     <div>
       <div className="Nav">
         {items}
-      </div>
-      <div>
-        {subMenu}
       </div>
     </div>
   )
