@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './BodyArticle.css'
 
 const BodyArticle = () => {
+  return (
+    <div>
 
-    return (
-      <div>
-
-        <div className="headline">
+      <div className="headline">
           Iracundae vel exclamabant orbis velut blanditiae dicebatur vel et fictis.
-        </div>
-        <div className="content">
+      </div>
+      <div className="content">
 
           Victus universis caro ferina est lactisque abundans copia qua
           sustentantur, et herbae multiplices et siquae alites capi per
@@ -25,10 +24,9 @@ const BodyArticle = () => {
           Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis
           et stationibus servabantur agrariis, laevorsum flexo itinere Osdroenae subsederat.
 
-        </div>
-
       </div>
-    )
 
+    </div>
+  )
 }
 export default BodyArticle

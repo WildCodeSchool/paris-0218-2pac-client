@@ -16,7 +16,6 @@ import BodyArticle from '../components/BodyArticle'
 import IntroArticle from '../components/IntroArticle'
 import Article from '../components/Article'
 
-
 storiesOf('Footer', module)
   .add('Complete footer', () => <Footer />)
 
@@ -53,16 +52,16 @@ storiesOf('Button', module)
     </Button>)
 
 storiesOf('IntroArticle', module)
-  .add('Intro article', () => <IntroArticle /> )
+  .add('Intro article', () => <IntroArticle />)
 
 storiesOf('BodyArticle', module)
-  .add('Body of articles', () => <BodyArticle /> )
+  .add('Body of articles', () => <BodyArticle />)
 
 storiesOf('Tag', module)
-  .add('Tag button for article', () => <Tag /> )
+  .add('Tag button for article', () => <Tag />)
 
 storiesOf('Container', module)
-  .add('Container for center content', () => <Container /> )
+  .add('Container for center content', () => <Container />)
 
 storiesOf('Article', module)
-  .add('Article template', () => <Article /> )
+  .add('Article template', () => <Article />)
