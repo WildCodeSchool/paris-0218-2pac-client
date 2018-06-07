@@ -10,8 +10,7 @@ import Login from '../components/Login'
 import Button from '../components/Button'
 import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
-import Formular from '../containers/Formular'
-import Submit from '../components/Submit'
+import SignUpFormular from '../containers/SignUpFormular'
 
 storiesOf('Footer', module)
   .add('Complete footer', () => <Footer />)
@@ -48,8 +47,9 @@ storiesOf('Button', module)
     Qui sommes nous?
     </Button>)
 
-storiesOf('Formular', module)
-  .add('Complete formular', () => <Formular />)
+    <SideBarButton onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
+      English
+    </SideBarButton>)
 
-storiesOf('Submit', module)
-  .add('Submit', () => <Submit/>)
+storiesOf('SignUpFormular', module)
+  .add('Complete formular', () => <SignUpFormular />)
