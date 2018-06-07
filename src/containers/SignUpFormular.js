@@ -3,7 +3,6 @@ import './SignUpFormular.css'
 import FaChevronRight from 'react-icons/lib/fa/chevron-right'
 
 class SignUpFormular extends Component {
-  }
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -31,5 +30,4 @@ class SignUpFormular extends Component {
     )
   }
 }
-
 export default SignUpFormular
