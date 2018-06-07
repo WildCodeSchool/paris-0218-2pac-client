@@ -12,6 +12,7 @@ import SideBar from '../components/SideBar'
 import SideBarButton from '../components/SideBarButton'
 import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
+import SignUpFormular from '../containers/SignUpFormular'
 
 storiesOf('App', module)
   .add('Whole App', () => <App />)
@@ -33,7 +34,7 @@ storiesOf('SideBar', module)
 
 storiesOf('SideBarButton', module)
   .add('Dark green', () =>
-    <SideBarButton onClick={action('clicked')}  style={{ color: 'black' }}>
+    <SideBarButton onClick={action('clicked')} style={{ color: 'black' }}>
       Qui sommes nous?
     </SideBarButton>)
   .add('Yellow', () =>
@@ -48,3 +49,6 @@ storiesOf('SideBarButton', module)
     <SideBarButton onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
       English
     </SideBarButton>)
+
+storiesOf('SignUpFormular', module)
+  .add('Complete formular', () => <SignUpFormular />)
