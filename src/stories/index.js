@@ -9,13 +9,11 @@ import Nav from '../components/Nav'
 import Header from '../components/Header'
 import HeaderWrapper from '../components/HeaderWrapper'
 
-
 storiesOf('Login', module)
   .add('login text', () =>
     <div style={{background: 'black'}}>
       <Login />
     </div>)
-
 
 storiesOf('Button', module)
   .add('Dark green', () =>
@@ -36,10 +34,10 @@ storiesOf('Button', module)
     </Button>)
 
 storiesOf('Nav', module)
-  .add('Navbar only', () => <Nav /> )
+  .add('Navbar only', () => <Nav />)
 
 storiesOf('Header', module)
-  .add('Header classic with nav', () => <Header /> )
+  .add('Header classic with nav', () => <Header />)
 
 storiesOf('HeaderWrapper', module)
-  .add('Entire header wrapped and functionnal', () => <HeaderWrapper /> )
+  .add('Entire header wrapped and functionnal', () => <HeaderWrapper />)
