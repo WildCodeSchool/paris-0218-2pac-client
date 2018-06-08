@@ -5,6 +5,9 @@ import { action } from '@storybook/addon-actions'
 
 import Login from '../components/Login'
 import Button from '../components/Button'
+import Nav from '../components/Nav'
+import Header from '../components/Header'
+import HeaderWrapper from '../components/HeaderWrapper'
 
 
 storiesOf('Login', module)
@@ -13,10 +16,6 @@ storiesOf('Login', module)
       <Login />
     </div>)
 
-storiesOf('Nav', module)
-  .add('NavBar', () =>
-    <Button className="Button Nav"> Edouard </Button>
-  )
 
 storiesOf('Button', module)
   .add('Dark green', () =>
@@ -35,3 +34,12 @@ storiesOf('Button', module)
     <Button onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
     Qui sommes nous?
     </Button>)
+
+storiesOf('Nav', module)
+  .add('Navbar only', () => <Nav /> )
+
+storiesOf('Header', module)
+  .add('Header classic with nav', () => <Header /> )
+
+storiesOf('HeaderWrapper', module)
+  .add('Entire header wrapped and functionnal', () => <HeaderWrapper /> )
