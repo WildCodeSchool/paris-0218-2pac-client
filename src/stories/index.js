@@ -6,6 +6,7 @@ import { action } from '@storybook/addon-actions'
 import Login from '../components/Login'
 import Button from '../components/Button'
 
+
 storiesOf('Login', module)
   .add('login text', () =>
     <div style={{background: 'black'}}>
