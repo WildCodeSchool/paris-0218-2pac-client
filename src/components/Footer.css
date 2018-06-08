@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+footer {
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #226462;
+  padding: 1.5%;
+}
+
+.footer-desc > .logo {
+  display: inline-block;
+  width: 220px;
+  align-self: flex-start;
+  background-color: transparent;
+}
+
+.desc {
+  display: inline-block;
+  white-space: pre;
+  color: white;
+  margin-left: 55px;
+  letter-spacing: 1px;
+}
+
+.desc span {
+  display: block;
+}
+
+.desc span:first-child {
+  font-weight: 600;
+  font-size: 22px;
+  word-spacing: 1px;
+  color: #F4971A;
+}
+
+.icon {
+  font-size: 17px;
+}
+
+.members-container {
+  padding: 2%;
+}
+
+.intro {
+  color: #707070;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.intro:after {
+  display: block;
+  content: '';
+  background-color: #F4971A;
+  width: 120px;
+  height: 2px;
+  margin: 15px auto 0px;
+}
+
+.logo-container {
+  width: 55%;
+  margin: 40px auto;
+}
+
+.member-logo {
+  margin: 7px;
+}
+
+.member-logo img {
+  max-width: 90px;
+  max-height: 100px;
+}
+
+.mentions {
+  width: 100%;
+  background-color: #F4971A;
+}
+
+.mentions a {
+  display: block;
+  margin: auto;
+  width: 200px;
+  padding: 25px;
+  color: #FAFAFA;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 45em) {
+  /*portable classique*/
+  .footer-desc {
+    display: block;
+  }
+  .footer-desc > .logo {
+    display: block;
+    width: 180px;
+    margin: 10px auto;
+  }
+  .desc {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    letter-spacing: 0px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 65em) {
+  /*tablette classique*/
+}
