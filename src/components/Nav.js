@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from './Button'
 import './Nav.css'
 
 const navItems = [
@@ -19,12 +18,12 @@ class Nav extends React.Component {
 
   render () {
     const items = navItems.map((item, i) =>
-      <Button
+      <button
         onClick={(event) => this.toggleList(event, i)}
         key={i}
-        className="Button Item">
+        className="button Item">
         {item.title}
-      </Button>)
+      </button>)
 
     return (
       <div className="Nav">
