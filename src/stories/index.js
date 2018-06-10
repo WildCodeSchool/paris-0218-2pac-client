@@ -58,17 +58,17 @@ storiesOf('SideBarButton', module)
 storiesOf('SignUpFormular', module)
   .add('Complete formular', () => <SignUpFormular />)
 
-  storiesOf('IntroArticle', module)
-    .add('Intro article', () => <IntroArticle />)
+storiesOf('IntroArticle', module)
+  .add('Intro article', () => <IntroArticle />)
 
-  storiesOf('BodyArticle', module)
-    .add('Body of articles', () => <BodyArticle />)
+storiesOf('BodyArticle', module)
+  .add('Body of articles', () => <BodyArticle />)
 
-  storiesOf('Tag', module)
-    .add('Tag button for article', () => <Tag />)
+storiesOf('Tag', module)
+  .add('Tag button for article', () => <Tag />)
 
-  storiesOf('Container', module)
-    .add('Container for center content', () => <Container />)
+storiesOf('Container', module)
+  .add('Container for center content', () => <Container />)
 
-  storiesOf('Article', module)
-    .add('Article template', () => <Article />)
+storiesOf('Article', module)
+  .add('Article template', () => <Article />)
