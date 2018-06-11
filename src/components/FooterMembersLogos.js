@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry'
+
 import logos08 from './../img/logos/logos-08.png'
 import logos30 from './../img/logos/logos-30.png'
 import logos07 from './../img/logos/logos-07.png'
