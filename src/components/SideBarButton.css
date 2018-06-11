@@ -1,0 +1,24 @@
+.SideBarButton {
+  color: white;
+  padding: .30rem .3rem;
+  font-size: 1rem;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  height: 30px;
+  border-right: 1px solid #707070;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  cursor: pointer;
+  list-style: none;
+}
+span {
+margin-right: 1em;
+}
