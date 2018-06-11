@@ -2,5 +2,14 @@
   display: flex;
   flex-direction: column;
   width: 10rem;
-  height: 10rem;
+  height: 12rem;
+}
+
+button .SideBarButton {
+	margin-left: 10em;
+	
+}
+
+span {
+	margin-left: 0;
 }

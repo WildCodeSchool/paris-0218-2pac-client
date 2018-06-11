@@ -1,4 +1,33 @@
-.AsideLeft_line
-{
-  border-bottom-style: dashed;
+.AsideLeft_Line {
+	background-color: white;
+	width: 14em;
+	height: 115%;
+	margin-top: 4rem;
+	font-family: 'Source Sans Pro', sans-serif;
+	border-style: none none dotted none;
+	border-width: 0.2em;
+	padding-bottom: 0.5em
+}
+.category {
+	background-color: #F4971A;
+	color: white;
+	margin-right: 0.5em;
+}
+h1 {
+	color: #707070;
+	font-size: 1.3em;
+	margin-bottom: 0.5em;
+}
+h1 span {
+	color: #226462;
+	font-size: 1.3em;
+	font-style: bold;
+}
+a {
+	color: #707070;
+	font-style: bold;
+	margin-bottom: 0.5em;
+}
+p {
+	margin-top: 1em;
 }
