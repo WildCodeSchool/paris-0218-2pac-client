@@ -12,6 +12,11 @@ import SideBar from '../components/SideBar'
 import SideBarButton from '../components/SideBarButton'
 import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
+import Container from '../components/Container'
+import Tag from '../components/Tag'
+import BodyArticle from '../components/BodyArticle'
+import IntroArticle from '../components/IntroArticle'
+import Article from '../components/Article'
 import SignUpFormular from '../containers/SignUpFormular'
 
 storiesOf('App', module)
@@ -52,3 +57,18 @@ storiesOf('SideBarButton', module)
 
 storiesOf('SignUpFormular', module)
   .add('Complete formular', () => <SignUpFormular />)
+
+storiesOf('IntroArticle', module)
+  .add('Intro article', () => <IntroArticle />)
+
+storiesOf('BodyArticle', module)
+  .add('Body of articles', () => <BodyArticle />)
+
+storiesOf('Tag', module)
+  .add('Tag button for article', () => <Tag />)
+
+storiesOf('Container', module)
+  .add('Container for center content', () => <Container />)
+
+storiesOf('Article', module)
+  .add('Article template', () => <Article />)
