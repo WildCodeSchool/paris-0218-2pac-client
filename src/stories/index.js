@@ -18,6 +18,8 @@ import BodyArticle from '../components/BodyArticle'
 import IntroArticle from '../components/IntroArticle'
 import Article from '../components/Article'
 import SignUpFormular from '../containers/SignUpFormular'
+import FrontNews from '../components/FrontNews'
+import PreviewArticle from '../components/PreviewArticle'
 
 storiesOf('App', module)
   .add('Whole App', () => <App />)
@@ -72,3 +74,9 @@ storiesOf('Container', module)
 
 storiesOf('Article', module)
   .add('Article template', () => <Article />)
+
+storiesOf('FrontNews', module)
+  .add('Articles à la Une', () => <FrontNews />)
+
+storiesOf('PreviewArticle', module)
+  .add('Preview article', () => <PreviewArticle />)
