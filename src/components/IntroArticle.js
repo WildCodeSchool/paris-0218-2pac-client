@@ -8,6 +8,7 @@ const IntroArticle = () => {
     <div>
 
       <Title title="Titre de l'article"></Title>
+
       <div className="intro-img"> </div>
       <div className="img-credit"> <span>Crédit </span>: Juste un test temporaire de style</div>
 
