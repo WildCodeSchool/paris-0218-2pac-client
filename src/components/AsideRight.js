@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './AsideRight.css'
+
 import ButtonRight from './ButtonRight'
 
 class AsideRight extends Component {
