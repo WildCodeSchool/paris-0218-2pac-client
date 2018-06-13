@@ -1,7 +1,17 @@
+.headline {
+  font-size: 24px;
+  color: #226462 ;
+  word-spacing: 2px;
+}
+
+.content {
+  color:  #707070;
+  font-weight:600;
+  font-size : 17px;
+}
+
 .icon {
-
   color: #F4971A;
-
 }
 
 .title {
@@ -14,27 +24,22 @@
 }
 
 .intro-img {
-
   width: 100%;
   min-height: 150px;
   max-height: 150px;
-  background-image: url('../img/photo_couverture_web.jpg');
-  background-size: cover;
-
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.img-credit {
-
+.img-legend {
   font-size: 10px;
   color: #707070;
-
 }
 
 
-.img-credit span {
-
+.img-legend span {
   text-decoration: underline;
-
 }
 
 .intro-details {
@@ -42,27 +47,20 @@
 }
 
 .category {
-
   background-color: #F4971A;
-  padding: 3px;
+  padding: 0.2rem 0.5rem;
   text-transform: uppercase;
-  margin-right: 25px;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 0.3rem;
+  font-size: 1rem;
   font-weight: 700;
   color: white;
-
 }
 
 .date {
-
   font-weight: 700;
   color: #707070;
-
 }
 
 .tag-container {
-
   float: right;
-
 }

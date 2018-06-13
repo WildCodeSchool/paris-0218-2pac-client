@@ -1,11 +1,9 @@
 import React from 'react'
 import './Tag.css'
 
-const Tag = () => {
+const Tag = ({ tag }) => {
   return (
-
-    <span className="tags"> Tag # </span>
-
+    <span className="tag">{tag.name}</span>
   )
 }
 
