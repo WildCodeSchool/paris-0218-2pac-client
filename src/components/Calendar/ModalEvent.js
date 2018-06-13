@@ -1,46 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
+import React from 'react'
+import Modal from 'react-modal'
 import Form from './Form.js'
 
 const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)'
   }
-};
+}
 
 class ModalEvent extends React.Component {
-  constructor() {
-    super();
+  constructor () {
+    super()
 
     this.state = {
       modalIsOpen: false
-    };
+    }
 
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this)
+    this.afterOpenModal = this.afterOpenModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
   }
 
-  openModal() {
-    this.setState({modalIsOpen: true});
+  openModal () {
+    this.setState({modalIsOpen: true})
   }
 
-  afterOpenModal() {
+  afterOpenModal () {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
+    this.subtitle.style.color = '#f00'
   }
 
-  closeModal() {
-    this.setState({modalIsOpen: false});
+  closeModal () {
+    this.setState({modalIsOpen: false})
   }
 
-  render() {
+  render () {
     return (
       <div>
         <button onClick={this.openModal}>Open Modal</button>
@@ -51,14 +50,12 @@ class ModalEvent extends React.Component {
           style={customStyles}
           contentLabel="Example Modal"
         >
-
-          <h2 ref={subtitle => this.subtitle = subtitle}>In Coming Event</h2>
-
+          <h2 ref={(subtitle) => { this.subtitle = subtitle }}>In Coming Event</h2>
           <button onClick={this.closeModal}>close</button>
           <Form />
         </Modal>
       </div>
-    );
+    )
   }
 }
 
