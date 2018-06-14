@@ -6,9 +6,8 @@ import TiHome from 'react-icons/lib/ti/home'
 import FaPhone from 'react-icons/lib/fa/phone'
 import MdLaunch from 'react-icons/lib/md/launch'
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
-import '../mocks/infoContact.json'
 
-const Contact = ( { contact } ) => {
+const Contact = ( { contactData } ) => {
   return (
 
     <Container>
@@ -19,7 +18,7 @@ const Contact = ( { contact } ) => {
           <div className="sub-title"> Nous trouver </div>
           <div className="find-us-content">
             <div> <TiHome className="contact-icon" /> </div>
-              {contact.address}
+              {contactData.address}
           </div>
 
         </div>
@@ -28,13 +27,13 @@ const Contact = ( { contact } ) => {
           <div className="sub-title"> Nous contacter </div>
           <div className="contact-us-content">
             <div>
-              <MdLaunch className="contact-icon" /> <a href="/"> {contact.website} </a>
+              <MdLaunch className="contact-icon" /> <a href="{contactData.website}"> {contactData.website} </a>
             </div>
             <div>
-              <FaPhone className="contact-icon" /> {contact.phone}
+              <FaPhone className="contact-icon" /> {contactData.phone}
             </div>
             <div>
-              <MdMailOutline className="contact-icon" /> {contact.mail}
+              <MdMailOutline className="contact-icon" /> {contactData.mail}
             </div>
           </div>
         </div>
