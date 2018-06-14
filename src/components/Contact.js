@@ -27,7 +27,7 @@ const Contact = ( { contactData } ) => {
           <div className="sub-title"> Nous contacter </div>
           <div className="contact-us-content">
             <div>
-              <MdLaunch className="contact-icon" /> <a href="{contactData.website}"> {contactData.website} </a>
+              <MdLaunch className="contact-icon" /> <a href="/"> {contactData.website} </a>
             </div>
             <div>
               <FaPhone className="contact-icon" /> {contactData.phone}

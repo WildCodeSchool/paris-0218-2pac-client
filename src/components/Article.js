@@ -1,17 +1,14 @@
 import React from 'react'
 import Container from './Container'
 import Tag from './Tag'
-import FaChevronRight from 'react-icons/lib/fa/chevron-right'
+import ChevronTitle from './ChevronTitle'
 import './Article.css'
 
 const Article = ({ article }) => {
   return (
     <Container>
       <div className="intro-article">
-        <h3 className="title">
-          <FaChevronRight className='icon' />
-          {article.title}
-        </h3>
+        <ChevronTitle title={article.title}> </ChevronTitle>
         <div className="intro-img" style={ { backgroundImage: `url(${article.imageURL})` } }></div>
         <p className="img-legend">{article.imageDescription}</p>
         <div className="intro-details">
