@@ -21,6 +21,9 @@ import Article from '../components/Article'
 import Contact from '../components/Contact'
 import SignUpFormular from '../containers/SignUpFormular'
 
+/* MOCKS IMPORT*/
+import infoContact from '../mocks/infoContact.json'
+
 storiesOf('App', module)
   .add('Whole App', () => <App />)
 
@@ -79,4 +82,4 @@ storiesOf('Article', module)
   .add('Article template', () => <Article />)
 
 storiesOf('Contact', module)
-  .add('Contact template', () => <Contact />)
+  .add('Contact template', () => <Contact contactData={infoContact} />)
