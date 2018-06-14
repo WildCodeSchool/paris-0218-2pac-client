@@ -5,12 +5,29 @@ import ChevronTitle from './ChevronTitle'
 import './Article.css'
 
 const Article = ({ article }) => {
+
+  const noImgFunc = () => {
+    if (article.imageURL === ""){
+      return (
+        <div className="intro-img" style={ { display: "none" } }>
+          <p className="img-legend">{article.imageDescription}</p>
+        </div>
+      )
+    }
+    else {
+      return (
+        <div className="intro-img" style={ { backgroundImage: `url(${article.imageURL})` } }>
+          <p className="img-legend">{article.imageDescription}</p>
+        </div>
+      )
+    }
+  }
+
   return (
     <Container>
       <div className="intro-article">
-        <ChevronTitle title={article.title}> </ChevronTitle>
-        <div className="intro-img" style={ { backgroundImage: `url(${article.imageURL})` } }></div>
-        <p className="img-legend">{article.imageDescription}</p>
+        <ChevronTitle title={article.title} />
+        {noImgFunc()}
         <div className="intro-details">
           <span className="category">{article.category}</span>
           <span className="date">{article.createdAt}</span>

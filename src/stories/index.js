@@ -22,6 +22,7 @@ import SignUpFormular from '../containers/SignUpFormular'
 /* MOCKS IMPORT*/
 import infoContact from '../mocks/infoContact.json'
 import mockedArticle from '../mocks/article.json'
+import noImgArticle from '../mocks/noImgArticle.json'
 
 storiesOf('App', module)
   .add('Whole App', () => <App />)
@@ -74,6 +75,7 @@ storiesOf('Container', module)
 
 storiesOf('Article', module)
   .add('basic article', () => <Article article={mockedArticle} />)
+  .add('Article without img', () => <Article article={noImgArticle} />)
 
 storiesOf('Contact', module)
   .add('Contact template', () => <Contact contactData={infoContact} />)
