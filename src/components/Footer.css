@@ -14,7 +14,7 @@ footer {
 
 .logo {
   display: inline-block;
-  width: 220px;
+  width: 13.75em;
   align-self: flex-start;
 }
 
@@ -22,7 +22,7 @@ footer {
   display: inline-block;
   white-space: pre;
   color: white;
-  margin-left: 55px;
+  margin-left: 3.4375em;
   letter-spacing: 1px;
 }
 
@@ -32,13 +32,13 @@ footer {
 
 .desc span:first-child {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375em;
   word-spacing: 1px;
   color: #F4971A;
 }
 
 .icon {
-  font-size: 17px;
+  font-size: 1.0625em;
 }
 
 .members-container {
@@ -49,7 +49,7 @@ footer {
   color: #707070;
   font-weight: 600;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 1.25em;
   text-align: center;
 }
 
@@ -57,22 +57,22 @@ footer {
   display: block;
   content: '';
   background-color: #F4971A;
-  width: 120px;
+  width: 7.5em;
   height: 2px;
-  margin: 15px auto 0px;
+  margin: 0.9375em auto 0px;
 }
 
 .logo-container {
   width: 55%;
-  margin: 40px auto;
+  margin: 2.5em auto;
 }
 
 .member-logo {
-  margin: 5px;
+  margin: 0.3125em;
 }
 
 .member-logo img {
-  max-width: 80px;
+  max-width: 5em;
 }
 
 .mentions {
@@ -83,11 +83,11 @@ footer {
 .mentions a {
   display: block;
   margin: auto;
-  width: 200px;
-  padding: 25px;
+  width: 12.5em;
+  padding: 1.5625em;
   color: #FAFAFA;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125em;
   text-decoration: none;
   text-align: center;
 }
@@ -99,14 +99,14 @@ footer {
   }
   .logo {
     display: block;
-    width: 180px;
-    margin: 10px auto;
+    width: 11.25em;
+    margin: 0.625em auto;
   }
   .desc {
     display: block;
     width: 90%;
-    margin: 15px auto;
+    margin: 0.9375em auto;
     letter-spacing: 0px;
-    font-size: 14px;
+    font-size: 0.875em;
   }
 }
