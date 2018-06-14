@@ -6,8 +6,9 @@ import TiHome from 'react-icons/lib/ti/home'
 import FaPhone from 'react-icons/lib/fa/phone'
 import MdLaunch from 'react-icons/lib/md/launch'
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
+import '../mocks/infoContact.json'
 
-const Contact = () => {
+const Contact = ( { contact } ) => {
   return (
 
     <Container>
@@ -18,9 +19,7 @@ const Contact = () => {
           <div className="sub-title"> Nous trouver </div>
           <div className="find-us-content">
             <div> <TiHome className="contact-icon" /> </div>
-              7 avenue Pasteur
-              93100 Montreuil
-              France
+              {contact.address}
           </div>
 
         </div>
@@ -29,13 +28,13 @@ const Contact = () => {
           <div className="sub-title"> Nous contacter </div>
           <div className="contact-us-content">
             <div>
-              <MdLaunch className="contact-icon" /> <a href="/"> www.pournuneautrepac.eu </a>
+              <MdLaunch className="contact-icon" /> <a href="/"> {contact.website} </a>
             </div>
             <div>
-              <FaPhone className="contact-icon" /> +33 (0)1 80 89 99 51
+              <FaPhone className="contact-icon" /> {contact.phone}
             </div>
             <div>
-              <MdMailOutline className="contact-icon" /> aurelie.catallo@pouruneautrepac.eu
+              <MdMailOutline className="contact-icon" /> {contact.mail}
             </div>
           </div>
         </div>
