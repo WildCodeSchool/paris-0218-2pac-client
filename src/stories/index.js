@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 /*
 import { linkTo } from '@storybook/addon-links'
 */
-
+import '../App.css'
 import App from '../App'
 import Login from '../components/Login'
 import SideBar from '../components/SideBar'
@@ -14,10 +14,15 @@ import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
 import Container from '../components/Container'
 import Tag from '../components/Tag'
-import BodyArticle from '../components/BodyArticle'
-import IntroArticle from '../components/IntroArticle'
+import ChevronTitle from '../components/ChevronTitle'
 import Article from '../components/Article'
+import Contact from '../components/Contact'
 import SignUpFormular from '../containers/SignUpFormular'
+
+/* MOCKS IMPORT */
+import infoContact from '../mocks/infoContact.json'
+import mockedArticle from '../mocks/article.json'
+import noImgArticle from '../mocks/noImgArticle.json'
 
 storiesOf('App', module)
   .add('Whole App', () => <App />)
@@ -58,17 +63,19 @@ storiesOf('SideBarButton', module)
 storiesOf('SignUpFormular', module)
   .add('Complete formular', () => <SignUpFormular />)
 
-storiesOf('IntroArticle', module)
-  .add('Intro article', () => <IntroArticle />)
-
-storiesOf('BodyArticle', module)
-  .add('Body of articles', () => <BodyArticle />)
+storiesOf('ChevronTitle', module)
+  .add('ChevronTitle', () => <ChevronTitle title="Exemple de titre"> </ChevronTitle>)
 
 storiesOf('Tag', module)
-  .add('Tag button for article', () => <Tag />)
+  .add('short name', () => <Tag tag={ { id: 1, name: 'web' } } />)
+  .add('long name', () => <Tag tag={ { id: 1, name: 'agriculture' } } />)
 
 storiesOf('Container', module)
   .add('Container for center content', () => <Container />)
 
 storiesOf('Article', module)
-  .add('Article template', () => <Article />)
+  .add('basic article', () => <Article article={mockedArticle} />)
+  .add('Article without img', () => <Article article={noImgArticle} />)
+
+storiesOf('Contact', module)
+  .add('Contact template', () => <Contact contactData={infoContact} />)
