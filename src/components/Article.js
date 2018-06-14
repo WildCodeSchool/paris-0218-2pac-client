@@ -5,16 +5,14 @@ import ChevronTitle from './ChevronTitle'
 import './Article.css'
 
 const Article = ({ article }) => {
-
   const noImgFunc = () => {
-    if (article.imageURL === ""){
+    if (article.imageURL === '') {
       return (
-        <div className="intro-img" style={ { display: "none" } }>
+        <div className="intro-img" style={ { display: 'none' } }>
           <p className="img-legend">{article.imageDescription}</p>
         </div>
       )
-    }
-    else {
+    } else {
       return (
         <div className="intro-img" style={ { backgroundImage: `url(${article.imageURL})` } }>
           <p className="img-legend">{article.imageDescription}</p>

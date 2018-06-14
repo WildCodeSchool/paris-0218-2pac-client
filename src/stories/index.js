@@ -19,7 +19,7 @@ import Article from '../components/Article'
 import Contact from '../components/Contact'
 import SignUpFormular from '../containers/SignUpFormular'
 
-/* MOCKS IMPORT*/
+/* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
 import mockedArticle from '../mocks/article.json'
 import noImgArticle from '../mocks/noImgArticle.json'
@@ -67,8 +67,8 @@ storiesOf('ChevronTitle', module)
   .add('ChevronTitle', () => <ChevronTitle title="Exemple de titre"> </ChevronTitle>)
 
 storiesOf('Tag', module)
-  .add('short name', () => <Tag tag={ { id: 1, name: "web" } } />)
-  .add('long name', () => <Tag tag={ { id: 1, name: "agriculture" } } />)
+  .add('short name', () => <Tag tag={ { id: 1, name: 'web' } } />)
+  .add('long name', () => <Tag tag={ { id: 1, name: 'agriculture' } } />)
 
 storiesOf('Container', module)
   .add('Container for center content', () => <Container />)

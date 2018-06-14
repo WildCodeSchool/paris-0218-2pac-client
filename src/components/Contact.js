@@ -7,7 +7,7 @@ import FaPhone from 'react-icons/lib/fa/phone'
 import MdLaunch from 'react-icons/lib/md/launch'
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
 
-const Contact = ( { contactData } ) => {
+const Contact = ({ contactData }) => {
   return (
 
     <Container>
@@ -18,7 +18,7 @@ const Contact = ( { contactData } ) => {
           <div className="sub-title"> Nous trouver </div>
           <div className="find-us-content">
             <div> <TiHome className="contact-icon" /> </div>
-              {contactData.address}
+            {contactData.address}
           </div>
 
         </div>
