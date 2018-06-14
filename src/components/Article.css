@@ -1,5 +1,5 @@
 .headline {
-  font-size: 24px;
+  font-size: 1.5em;
   color: #226462 ;
   word-spacing: 2px;
 }
@@ -7,7 +7,7 @@
 .content {
   color:  #707070;
   font-weight:600;
-  font-size : 17px;
+  font-size : 1.0625em;
 }
 
 .icon {
@@ -18,22 +18,22 @@
   font-weight: 700;
   color: #707070;
   text-transform: uppercase;
-  font-size : 20px;
+  font-size : 1.25em;
   letter-spacing: 1px;
-  padding: 10px 0 15px 0;
+  padding: 0.625em 0 0.9375em 0;
 }
 
 .intro-img {
   width: 100%;
-  min-height: 150px;
-  max-height: 150px;
+  min-height: 9.375em;
+  max-height: 9.375em;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .img-legend {
-  font-size: 10px;
+  font-size: 0.625em;
   color: #707070;
 }
 
@@ -43,12 +43,13 @@
 }
 
 .intro-details {
-  padding: 25px 0 25px 0;
+  padding: 1.5625em 0 1.5625em 0;
 }
 
 .category {
   background-color: #F4971A;
   padding: 0.2rem 0.5rem;
+  margin-right: 2em;
   text-transform: uppercase;
   border-radius: 0.3rem;
   font-size: 1rem;
