@@ -14,7 +14,7 @@ import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
 import Container from '../components/Container'
 import Tag from '../components/Tag'
-import Title from '../components/Title'
+import ChevronTitle from '../components/ChevronTitle'
 import BodyArticle from '../components/BodyArticle'
 import IntroArticle from '../components/IntroArticle'
 import Article from '../components/Article'
@@ -63,8 +63,8 @@ storiesOf('SideBarButton', module)
 storiesOf('SignUpFormular', module)
   .add('Complete formular', () => <SignUpFormular />)
 
-storiesOf('Title', module)
-  .add('Title', () => <Title title="Exemple de titre"> </Title>)
+storiesOf('ChevronTitle', module)
+  .add('ChevronTitle', () => <ChevronTitle title="Exemple de titre"> </ChevronTitle>)
 
 storiesOf('IntroArticle', module)
   .add('Intro article', () => <IntroArticle />)

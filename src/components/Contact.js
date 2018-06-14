@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from './Container'
-import Title from './Title'
+import ChevronTitle from './ChevronTitle'
 import './Contact.css'
 import TiHome from 'react-icons/lib/ti/home'
 import FaPhone from 'react-icons/lib/fa/phone'
@@ -11,7 +11,7 @@ const Contact = ( { contactData } ) => {
   return (
 
     <Container>
-      <Title title="Contacts"></Title>
+      <ChevronTitle title="Contacts"></ChevronTitle>
 
       <div className="container-contact">
         <div className="find-us">

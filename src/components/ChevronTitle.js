@@ -1,6 +1,6 @@
 import React from 'react'
 import FaChevronRight from 'react-icons/lib/fa/chevron-right'
-import './Title.css'
+import './ChevronTitle.css'
 
 const Title = (props) => {
   return (

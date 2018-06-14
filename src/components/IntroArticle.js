@@ -1,13 +1,13 @@
 import React from 'react'
 import './IntroArticle.css'
-import Title from './Title'
+import ChevronTitle from './ChevronTitle'
 import Tag from './Tag'
 
 const IntroArticle = () => {
   return (
     <div>
 
-      <Title title="Titre de l'article"></Title>
+      <ChevronTitle title="Titre de l'article"></ChevronTitle>
 
       <div className="intro-img"> </div>
       <div className="img-credit"> <span>Crédit </span>: Juste un test temporaire de style</div>
