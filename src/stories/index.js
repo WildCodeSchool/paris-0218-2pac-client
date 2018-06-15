@@ -18,6 +18,9 @@ import ChevronTitle from '../components/ChevronTitle'
 import Article from '../components/Article'
 import Contact from '../components/Contact'
 import SignUpFormular from '../containers/SignUpFormular'
+import Une from '../components/Une'
+import ArticlePreview from '../components/ArticlePreview'
+
 
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
@@ -79,3 +82,9 @@ storiesOf('Article', module)
 
 storiesOf('Contact', module)
   .add('Contact template', () => <Contact contactData={infoContact} />)
+
+storiesOf('Une', module)
+  .add('Articles à la une complet', () => <Une />)
+
+storiesOf('ArticlePreview', module)
+    .add('Preview des articles à la unes', () => <ArticlePreview />)
