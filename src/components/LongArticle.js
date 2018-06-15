@@ -6,7 +6,7 @@ const LongArticle = (props) => {
 
     <div className="article-childrens">
       <span className="category">Category</span>
-      <ArticlePreview  title={props.title} description={props.shortDescription} />
+      <ArticlePreview  title={props.title} shortDescription={props.shortDescription} />
     </div>
 
   )

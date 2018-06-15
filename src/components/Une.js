@@ -16,13 +16,17 @@ const Une = ({ uneData }) => {
 
       <div className="long-article-container">
 
-        <LongArticle title="Titre de l'article long" shortDescription="test test test" />
+        <LongArticle title="Titre de l'article long"
+          shortDescription="Une description provisoire de l'article long, qui sera modifié par la suite" />
 
       </div>
 
       <div className="small-article-container">
 
-        <SmallArticle title="Titre de l'article"/>
+        <SmallArticle title="Titre de l'article #1"/>
+        <SmallArticle title="Titre de l'article #2"/>
+        <SmallArticle title="Titre de l'article #3"/>
+        <SmallArticle title="Titre de l'article #4"/>
 
       </div>
 
