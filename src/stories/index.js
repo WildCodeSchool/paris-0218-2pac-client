@@ -18,8 +18,10 @@ import ChevronTitle from '../components/ChevronTitle'
 import Article from '../components/Article'
 import Contact from '../components/Contact'
 import SignUpFormular from '../containers/SignUpFormular'
-import Une from '../components/Une'
 import ArticlePreview from '../components/ArticlePreview'
+import LongArticle from '../components/LongArticle'
+import SmallArticle from '../components/SmallArticle'
+import Une from '../components/Une'
 
 
 /* MOCKS IMPORT */
@@ -30,7 +32,7 @@ import noImgArticle from '../mocks/noImgArticle.json'
 storiesOf('App', module)
   .add('Whole App', () => <App />)
 
-storiesOf('Footer', module)
+storiesOf('*Footer', module)
   .add('Complete footer', () => <Footer />)
 
 storiesOf('FooterMembersLogos', module)
@@ -76,15 +78,21 @@ storiesOf('Tag', module)
 storiesOf('Container', module)
   .add('Container for center content', () => <Container />)
 
-storiesOf('Article', module)
+storiesOf('*Article', module)
   .add('basic article', () => <Article article={mockedArticle} />)
   .add('Article without img', () => <Article article={noImgArticle} />)
 
-storiesOf('Contact', module)
+storiesOf('*Contact', module)
   .add('Contact template', () => <Contact contactData={infoContact} />)
 
-storiesOf('Une', module)
-  .add('Articles à la une complet', () => <Une />)
+storiesOf('LongArticle', module)
+  .add('Long article component', () => <LongArticle />)
+
+storiesOf('SmallArticle', module)
+  .add('Small article component', () => <SmallArticle />)
 
 storiesOf('ArticlePreview', module)
-    .add('Preview des articles à la unes', () => <ArticlePreview />)
+  .add('Preview des articles à la unes', () => <ArticlePreview />)
+
+storiesOf('*Une', module)
+  .add('Articles à la une complet', () => <Une />)
