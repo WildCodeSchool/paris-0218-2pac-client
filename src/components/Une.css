@@ -7,7 +7,6 @@
 
 .long-article-container {
 
-  background-color:#9f5b23;
   width:50%;
   min-height: 35em;
   background-image: url('https://images.unsplash.com/photo-1512907858294-736ec4aa4bba?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=039feedd14b9ddf2ec161dd984d575c2&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb');
@@ -15,6 +14,7 @@
   background-position:center;
   margin: .5em;
   display: flex;
+  overflow-x: hidden;
 
 }
 
@@ -30,6 +30,7 @@
 
   width:50%;
   margin: .5em;
+  overflow-x: hidden;
 
 }
 
@@ -57,4 +58,21 @@
   background-image: url('https://images.unsplash.com/photo-1425934398893-310a009a77f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=330381a5d64e86a159fb2abb5ec3da10&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb');
   background-size:cover;
   background-position:center;
+}
+
+@media screen and (max-width: 45em) {
+
+  .article-container {
+    display: block;
+  }
+
+  .long-article-container {
+    width:100%;
+    min-height: 20em;
+  }
+
+  .small-article-container {
+    width:100%;
+  }
+
 }
