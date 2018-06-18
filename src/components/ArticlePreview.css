@@ -1,0 +1,16 @@
+.preview-container {
+
+  width: 100%;
+  padding: 1em;
+  color: #363636;
+  background-color: rgba(255,255,255,0.7);
+
+}
+
+.preview-container span {
+
+  text-align:justify;
+  width: 100%;
+  display: block;
+
+}
