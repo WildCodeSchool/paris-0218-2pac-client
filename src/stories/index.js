@@ -23,7 +23,6 @@ import LongArticle from '../components/LongArticle'
 import SmallArticle from '../components/SmallArticle'
 import Une from '../components/Une'
 
-
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
 import mockedArticle from '../mocks/article.json'
