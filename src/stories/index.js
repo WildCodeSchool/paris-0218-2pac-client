@@ -28,6 +28,7 @@ import Une from '../components/Une'
 import infoContact from '../mocks/infoContact.json'
 import mockedArticle from '../mocks/article.json'
 import noImgArticle from '../mocks/noImgArticle.json'
+import arrayUne from '../mocks/arrayUne.json'
 
 storiesOf('App', module)
   .add('Whole App', () => <App />)
@@ -95,4 +96,4 @@ storiesOf('ArticlePreview', module)
   .add('Preview des articles à la unes', () => <ArticlePreview />)
 
 storiesOf('*Une', module)
-  .add('Articles à la une complet', () => <Une />)
+  .add('Articles à la une complet', () => <Une uneData={arrayUne}/>)
