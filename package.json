@@ -2,7 +2,9 @@
   "name": "paris-0218-2pac-client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:1107/",
   "dependencies": {
+    "cors": "^2.8.4",
     "lint": "^1.1.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
