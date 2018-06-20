@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './ButtonRight.css'
 
-class ButtonRight extends Component {
-  render () {
+const ButtonRight = () => {
     return (
       <div className="buttons">
         <button className="icon-button-globe"><span ><i className="fal fa-globe"></i></span>Actualités</button>
@@ -15,5 +14,4 @@ class ButtonRight extends Component {
       </div>
     )
   }
-}
 export default ButtonRight
