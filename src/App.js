@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from './components/Header'
 import SideBar from './components/SideBar'
 import Footer from './components/Footer'
-// import AsideLeft from './components/AsideLeft'
+import AsideLeft from './components/AsideLeft'
 import './App.css'
 
 class App extends Component {
@@ -21,11 +21,12 @@ class App extends Component {
 
   render () {
     console.log('render', this.state)
+
     return (
       <div>
         <Header />
         <SideBar />
-        {/* <AsideLeft /> */}
+        <AsideLeft />
         <Footer />
       </div>
     )
