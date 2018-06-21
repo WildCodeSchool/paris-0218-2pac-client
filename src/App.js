@@ -3,6 +3,8 @@ import Header from './components/Header'
 import SideBar from './components/SideBar'
 import Footer from './components/Footer'
 import AsideLeft from './components/AsideLeft'
+import Une from './components/Une'
+import arrayUne from './mocks/arrayUne.json'
 import './App.css'
 
 class App extends Component {
@@ -25,8 +27,15 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <SideBar />
-        <AsideLeft />
+
+        <div className="changing-content">
+
+          <AsideLeft />
+          <Une uneData={arrayUne}/>
+          <SideBar />
+
+        </div>
+
         <Footer />
 
       </div>
