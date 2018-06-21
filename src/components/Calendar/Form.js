@@ -1,5 +1,7 @@
 import React from 'react'
 import './form.css'
+import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
 
 class Form extends React.Component {
   constructor (props) {
@@ -38,47 +40,53 @@ class Form extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-
+          <h2>Création d'un nouvel evenement</h2>
           <h1>{JSON.stringify(this.state, 1, 1)}</h1>
 
-          <label>Title event</label>
-          <input title='title'
+          <TextField style={{width: '90%'}}
+            placeholder="Titre"
+            title='title'
             type='text'
             value={this.state.title}
             onChange={ e => this.setState({title: e.target.value})}/>
 
-          <label>date</label>
-          <input date='date'
+          <TextField style={{width: '45%'}}
+            placeholder="Date"
+            date='date'
             type='date'
             value={this.state.date}
             onChange={ e => this.setState({date: e.target.value})}/>
 
-          <input dtime='dtime'
+          <TextField style={{width: '45%'}}
+            dtime='dtime'
             type='time'
             value={this.state.dtime}
             onChange={ e => this.setState({dtime: e.target.value})}/>
 
-          <label>Fin</label>
-          <input fin='fin'
+          <TextField style={{width: '45%'}}
+            fin='fin'
             type='date'
             value={this.state.fin}
             onChange={ e => this.setState({fin: e.target.value})}/>
 
-          <input ftime='ftime'
+          <TextField style={{width: '45%'}}
+            ftime='ftime'
             type='time'
             value={this.state.ftime}
             onChange={ e => this.setState({ftime: e.target.value})}/>
 
-          <label>
-              Description :
-            <textarea texte='texte'
-              type='text'
-              value={this.state.texte}
-              onChange={ e => this.setState({texte: e.target.value})}/>
-          </label>
+          <TextField style={{width: '90%'}}
+            placeholder="Description"
+            hintText="MultiLine with rows: 2 and rowsMax: 4"
+            multiLine={true}
+            rows={2}
+            rowsMax={4}
+            texte='texte'
+            type='text'
+            value={this.state.texte}
+            onChange={ e => this.setState({texte: e.target.value})}/>
 
-          <button type="submit" value="submit">Ajouter</button>
-          <button>Effacer</button>
+          <Button type="submit" value="submit">Ajouter</Button>
         </form>
       </div>
     )
