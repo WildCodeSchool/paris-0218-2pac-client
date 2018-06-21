@@ -1,0 +1,7 @@
+.tag {
+  padding: 0.1875em;
+  margin: 0 0.3125em 0 0.3125em;
+  color: #707070;
+  border : 1px solid rgba(112, 112, 112, .6);
+  border-radius: 0.3125em;
+}
