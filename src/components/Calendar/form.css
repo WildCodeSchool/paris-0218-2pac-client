@@ -1,0 +1,7 @@
+input, textarea { 
+  border: solid;
+  border-color: black;
+  display: block;
+  margin-top: 10px;
+
+}
