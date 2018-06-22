@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
+import { Router, Link } from "@reach/router";
 import Header from './components/Header'
-import SideBar from './components/SideBar'
 import Footer from './components/Footer'
-import AsideLeft from './components/AsideLeft'
-import Une from './components/Une'
+import SideBar from './components/SideBar'
+
+import Home from './containers/Home'
+import ContactContainer from './containers/ContactContainer'
+import NewsletterContainer from './containers/NewsletterContainer'
+
+/*mocks*/
+import infoContact from './mocks/infoContact.json'
+import article from './mocks/article.json'
 import arrayUne from './mocks/arrayUne.json'
+
 import './App.css'
 
 class App extends Component {
@@ -28,12 +36,13 @@ class App extends Component {
       <div>
         <Header />
 
-        <div className="changing-content">
-
-          <AsideLeft />
-          <Une uneData={arrayUne}/>
+        <div className="changing-content" >
+          <Router>
+            <Home path="/" uneData={arrayUne} />
+            <NewsletterContainer path="/newsletter" />
+            <ContactContainer path="/contact" contactData={infoContact} />
+          </Router>
           <SideBar />
-
         </div>
 
         <Footer />
