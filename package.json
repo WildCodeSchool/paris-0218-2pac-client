@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:1107/",
   "dependencies": {
+    "@reach/router": "^1.1.1",
     "cors": "^2.8.4",
     "lint": "^1.1.2",
     "react": "^16.4.0",
