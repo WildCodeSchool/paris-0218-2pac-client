@@ -7,12 +7,10 @@ class Form extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      eventDate: '',
       title: '',
-      date: '',
-      dtime: '',
-      fin: '',
-      ftime: '',
-      texte: ''
+      shortDescription: '',
+      description: '',
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -26,22 +24,42 @@ class Form extends React.Component {
   handleSubmit (e) {
     console.log(this.state)
     this.setState({
+      eventDate: '',
       title: '',
-      date: '',
-      dtime: '',
-      fin: '',
-      ftime: '',
-      texte: ''
+      shortDescription: '',
+      description: '',
     })
-    e.preventDefault()
+
+    fetch("/auth/createvent",
+
+    {
+          method: 'POST',
+          headers: new Headers({'Content-Type':  'application/json'
+    }),
+          body:  JSON.stringify(this.state),
+      })
+          .then(res => res.json())
+          .then(
+            res  =>  this.setState({"flash":  res.flash}),
+            err  =>  this.setState({"flash":  err.flash})
+      )
   }
 
   render () {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}
+              style={{background: 'white'}}
+              >
           <h2>Création d'un nouvel evenement</h2>
           <h1>{JSON.stringify(this.state, 1, 1)}</h1>
+
+          <TextField style={{width: '45%'}}
+            placeholder="eventDate"
+            date='date'
+            type='date'
+            value={this.state.eventDate}
+            onChange={ e => this.setState({eventDate: e.target.value})}/>
 
           <TextField style={{width: '90%'}}
             placeholder="Titre"
@@ -50,30 +68,11 @@ class Form extends React.Component {
             value={this.state.title}
             onChange={ e => this.setState({title: e.target.value})}/>
 
-          <TextField style={{width: '45%'}}
-            placeholder="Date"
-            date='date'
-            type='date'
-            value={this.state.date}
-            onChange={ e => this.setState({date: e.target.value})}/>
-
-          <TextField style={{width: '45%'}}
-            dtime='dtime'
-            type='time'
-            value={this.state.dtime}
-            onChange={ e => this.setState({dtime: e.target.value})}/>
-
-          <TextField style={{width: '45%'}}
-            fin='fin'
-            type='date'
-            value={this.state.fin}
-            onChange={ e => this.setState({fin: e.target.value})}/>
-
-          <TextField style={{width: '45%'}}
-            ftime='ftime'
-            type='time'
-            value={this.state.ftime}
-            onChange={ e => this.setState({ftime: e.target.value})}/>
+          <TextField style={{width: '90%'}}
+            placeholder ='shortDescription'
+            type='text'
+            value={this.state.shortDescription}
+            onChange={ e => this.setState({shortDescription: e.target.value})}/>
 
           <TextField style={{width: '90%'}}
             placeholder="Description"
@@ -83,8 +82,8 @@ class Form extends React.Component {
             rowsMax={4}
             texte='texte'
             type='text'
-            value={this.state.texte}
-            onChange={ e => this.setState({texte: e.target.value})}/>
+            value={this.state.description}
+            onChange={ e => this.setState({description: e.target.value})}/>
 
           <Button type="submit" value="submit">Ajouter</Button>
         </form>

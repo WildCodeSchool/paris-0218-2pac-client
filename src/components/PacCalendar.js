@@ -30,10 +30,8 @@ class PacCalendar extends React.Component {
                 <Grid item xs={12} sm={6}
                   style={{ 'textAlign': 'center' }}
                 >
-                  <Calendar
-                    onChange={this.onChange}
-                    value={this.state.date}
-                  />
+                <h1> Calendrier </h1>
+                  <Calendar />
                 </Grid>
                 <Grid
                   item xs={12} sm={6}>
