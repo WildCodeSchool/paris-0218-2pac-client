@@ -30,7 +30,7 @@ class Form extends React.Component {
       description: '',
     })
 
-    fetch("/auth/createvent",
+    fetch("/auth/articles",
 
     {
           method: 'POST',
