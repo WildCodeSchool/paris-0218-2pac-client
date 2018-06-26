@@ -11,7 +11,7 @@ class Form extends React.Component {
       eventDate: '',
       categoryId: '',
       imageURL: '',
-      imageDescription: '',
+      imageDescription: ''
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -31,7 +31,7 @@ class Form extends React.Component {
       eventDate: '',
       categoryId: '',
       imageURL: '',
-      imageDescription: '',
+      imageDescription: ''
     })
     e.preventDefault()
   }
@@ -46,47 +46,41 @@ class Form extends React.Component {
           <input type="text" style={{width: '45%'}}
             placeholder="Titre"
             title='title'
-            type='text'
             value={this.state.title}
             onChange={ e => this.setState({title: e.target.value})}/>
 
-          <input type="texte" style={{width: '45%'}}
+          <input type="text" style={{width: '45%'}}
             placeholder="shortDscription"
-            type='text'
             value={this.state.shortDscription}
             onChange={ e => this.setState({shortDscription: e.target.value})}/>
 
-          <textarea type="texte" style={{width: '45%'}}
+          <textarea type="text" style={{width: '45%'}}
             placeholder="description"
-            type='text'
             value={this.state.description}
             onChange={ e => this.setState({description: e.target.value})}/>
 
-          <input type="texte" style={{width: '45%'}}
+          <input type="text" style={{width: '45%'}}
             placeholder="eventDate"
-            type='date'
             value={this.state.eventDate}
             onChange={ e => this.setState({eventDate: e.target.value})}/>
 
           <select name="categoryId" id="categoryId"
             value={this.state.categoryId}
             onChange={ e => this.setState({categoryId: e.target.value})}>
-               <option value="presse">presse</option>
-               <option value="actualité">actualité</option>
-               <option value="évènement">évènement</option>
-               <option value="article">article</option>
+            <option value="presse">presse</option>
+            <option value="actualité">actualité</option>
+            <option value="évènement">évènement</option>
+            <option value="article">article</option>
 
-       </select>
+          </select>
 
-          <input type="texte" style={{width: '45%'}}
+          <input type="text" style={{width: '45%'}}
             placeholder="imageURL"
-            type='text'
             value={this.state.imageURL}
             onChange={ e => this.setState({imageURL: e.target.value})}/>
 
-             <input type="texte" style={{width: '45%'}}
+          <input type="text" style={{width: '45%'}}
             placeholder="imageDescription"
-            type='text'
             value={this.state.imageDescription}
             onChange={ e => this.setState({imageDescription: e.target.value})}/>
 
