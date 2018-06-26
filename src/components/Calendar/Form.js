@@ -1,18 +1,17 @@
 import React from 'react'
 import './form.css'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
 
 class Form extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       title: '',
-      date: '',
-      dtime: '',
-      fin: '',
-      ftime: '',
-      texte: ''
+      shortDscription: '',
+      description: '',
+      eventDate: '',
+      categoryId: '',
+      imageURL: '',
+      imageDescription: '',
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -27,11 +26,12 @@ class Form extends React.Component {
     console.log(this.state)
     this.setState({
       title: '',
-      date: '',
-      dtime: '',
-      fin: '',
-      ftime: '',
-      texte: ''
+      shortDscription: '',
+      description: '',
+      eventDate: '',
+      categoryId: '',
+      imageURL: '',
+      imageDescription: '',
     })
     e.preventDefault()
   }
@@ -43,50 +43,57 @@ class Form extends React.Component {
           <h2>Création d'un nouvel evenement</h2>
           <h1>{JSON.stringify(this.state, 1, 1)}</h1>
 
-          <TextField style={{width: '90%'}}
+          <input type="text" style={{width: '45%'}}
             placeholder="Titre"
             title='title'
             type='text'
             value={this.state.title}
             onChange={ e => this.setState({title: e.target.value})}/>
 
-          <TextField style={{width: '45%'}}
-            placeholder="Date"
-            date='date'
-            type='date'
-            value={this.state.date}
-            onChange={ e => this.setState({date: e.target.value})}/>
-
-          <TextField style={{width: '45%'}}
-            dtime='dtime'
-            type='time'
-            value={this.state.dtime}
-            onChange={ e => this.setState({dtime: e.target.value})}/>
-
-          <TextField style={{width: '45%'}}
-            fin='fin'
-            type='date'
-            value={this.state.fin}
-            onChange={ e => this.setState({fin: e.target.value})}/>
-
-          <TextField style={{width: '45%'}}
-            ftime='ftime'
-            type='time'
-            value={this.state.ftime}
-            onChange={ e => this.setState({ftime: e.target.value})}/>
-
-          <TextField style={{width: '90%'}}
-            placeholder="Description"
-            hintText="MultiLine with rows: 2 and rowsMax: 4"
-            multiLine={true}
-            rows={2}
-            rowsMax={4}
-            texte='texte'
+          <input type="texte" style={{width: '45%'}}
+            placeholder="shortDscription"
             type='text'
-            value={this.state.texte}
-            onChange={ e => this.setState({texte: e.target.value})}/>
+            value={this.state.shortDscription}
+            onChange={ e => this.setState({shortDscription: e.target.value})}/>
 
-          <Button type="submit" value="submit">Ajouter</Button>
+          <textarea type="texte" style={{width: '45%'}}
+            placeholder="description"
+            type='text'
+            value={this.state.description}
+            onChange={ e => this.setState({description: e.target.value})}/>
+
+          <input type="texte" style={{width: '45%'}}
+            placeholder="eventDate"
+            type='date'
+            value={this.state.eventDate}
+            onChange={ e => this.setState({eventDate: e.target.value})}/>
+
+          <select name="categoryId" id="categoryId"
+            value={this.state.categoryId}
+            onChange={ e => this.setState({categoryId: e.target.value})}>
+               <option value="presse">presse</option>
+               <option value="actualité">actualité</option>
+               <option value="évènement">évènement</option>
+               <option value="article">article</option>
+
+       </select>
+
+          <input type="texte" style={{width: '45%'}}
+            placeholder="imageURL"
+            type='text'
+            value={this.state.imageURL}
+            onChange={ e => this.setState({imageURL: e.target.value})}/>
+
+             <input type="texte" style={{width: '45%'}}
+            placeholder="imageDescription"
+            type='text'
+            value={this.state.imageDescription}
+            onChange={ e => this.setState({imageDescription: e.target.value})}/>
+
+          <input type='checkbox' name='checkbox'/>
+          <p> Créer votre évènement </p>
+
+          <button type="submit" value="submit">Ajouter</button>
         </form>
       </div>
     )

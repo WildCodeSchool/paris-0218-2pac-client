@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
 import SideBar from './components/SideBar'
+import Form from './components/Calendar/Form'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -13,6 +14,7 @@ class App extends Component {
         <Header />
         <SideBar />
         <PacCalendar />
+        <Form />
         <Footer />
       </div>
     )
