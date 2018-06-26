@@ -6,7 +6,7 @@ class Form extends React.Component {
     super(props)
     this.state = {
       title: '',
-      shortDscription: '',
+      shortDescription: '',
       description: '',
       eventDate: '',
       categoryId: '',
@@ -26,7 +26,7 @@ class Form extends React.Component {
     console.log(this.state)
     this.setState({
       title: '',
-      shortDscription: '',
+      shortDescription: '',
       description: '',
       eventDate: '',
       categoryId: '',
@@ -34,7 +34,20 @@ class Form extends React.Component {
       imageDescription: ''
     })
     e.preventDefault()
-  }
+    fetch("/articles",
+
+      {
+      method: 'POST',
+      headers: new Headers({'Content-Type': 'application/json'
+      }),
+      body: JSON.stringify(this.state),
+      })
+      .then(res => res.json())
+      .then(
+      res => this.setState({"flash": res.flash}),
+      err => this.setState({"flash": err.flash})
+)
+}
 
   render () {
     return (
@@ -50,16 +63,16 @@ class Form extends React.Component {
             onChange={ e => this.setState({title: e.target.value})}/>
 
           <input type="text" style={{width: '45%'}}
-            placeholder="shortDscription"
-            value={this.state.shortDscription}
-            onChange={ e => this.setState({shortDscription: e.target.value})}/>
+            placeholder="shortDescription"
+            value={this.state.shortDescription}
+            onChange={ e => this.setState({shortDescription: e.target.value})}/>
 
           <textarea type="text" style={{width: '45%'}}
             placeholder="description"
             value={this.state.description}
             onChange={ e => this.setState({description: e.target.value})}/>
 
-          <input type="text" style={{width: '45%'}}
+          <input type="date" style={{width: '45%'}}
             placeholder="eventDate"
             value={this.state.eventDate}
             onChange={ e => this.setState({eventDate: e.target.value})}/>
@@ -67,10 +80,10 @@ class Form extends React.Component {
           <select name="categoryId" id="categoryId"
             value={this.state.categoryId}
             onChange={ e => this.setState({categoryId: e.target.value})}>
-            <option value="presse">presse</option>
-            <option value="actualité">actualité</option>
-            <option value="évènement">évènement</option>
-            <option value="article">article</option>
+            <option value="1">presse</option>
+            <option value="2">actualité</option>
+            <option value="3">évènement</option>
+            <option value="4">article</option>
 
           </select>
 
