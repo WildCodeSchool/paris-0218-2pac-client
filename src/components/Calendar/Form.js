@@ -59,7 +59,7 @@ class Form extends React.Component {
             value={this.state.description}
             onChange={ e => this.setState({description: e.target.value})}/>
 
-          <input type="text" style={{width: '45%'}}
+          <input type="date" style={{width: '45%'}}
             placeholder="eventDate"
             value={this.state.eventDate}
             onChange={ e => this.setState({eventDate: e.target.value})}/>
