@@ -9,7 +9,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: #226462;
-  padding: 1.5%;
+  padding: 0%;
 }
 
 .footer-desc > .logo {
@@ -44,7 +44,7 @@ footer {
 
 .members-container {
   padding: 2%;
-  background-color:white; 
+  background-color:white;
 }
 
 .intro {
