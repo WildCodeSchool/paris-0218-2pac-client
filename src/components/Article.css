@@ -25,16 +25,16 @@
 
 .intro-img {
   width: 100%;
-  min-height: 9.375em;
-  max-height: 9.375em;
-  background-size: contain;
-  background-position: center;
+  min-height: 11em;
+  max-height: 11em;
+  background-size: cover;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
 .img-legend {
   font-size: 0.625em;
-  color: #707070;
+  color: white;
 }
 
 
