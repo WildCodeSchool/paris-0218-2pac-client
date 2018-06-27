@@ -13,6 +13,7 @@ import SideBarButton from '../components/SideBarButton'
 import Footer from '../components/Footer'
 import FooterMembersLogos from '../components/FooterMembersLogos'
 import SignUpFormular from '../containers/SignUpFormular'
+import ArticleForm from '../components/ArticleForm.js'
 
 storiesOf('App', module)
   .add('Whole App', () => <App />)
@@ -52,3 +53,6 @@ storiesOf('SideBarButton', module)
 
 storiesOf('SignUpFormular', module)
   .add('Complete formular', () => <SignUpFormular />)
+
+storiesOf('ArticleForm', module)
+  .add('ArticleForm', () => <ArticleForm />)
