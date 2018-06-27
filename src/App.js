@@ -7,12 +7,11 @@ import SideBar from './components/SideBar'
 import Home from './containers/Home'
 import ContactContainer from './containers/ContactContainer'
 import ArticleContainer from './containers/ArticleContainer'
+import ActualityContainer from './containers/ActualityContainer'
 import NewsletterContainer from './containers/NewsletterContainer'
 
 /*mocks*/
 import infoContact from './mocks/infoContact.json'
-import article from './mocks/article.json'
-import noImgArticle from './mocks/noImgArticle.json'
 import arrayUne from './mocks/arrayUne.json'
 
 import './App.css'
@@ -44,7 +43,8 @@ class App extends Component {
           <Router>
 
             <Home path="/" uneData={arrayUne} />
-            <ArticleContainer path="/article/:id" articles={this.state.articles}/>
+            <ArticleContainer path="/article/:id" articles={this.state.articles} />
+            <ActualityContainer path="/actuality" ActuData={this.state.articles} />
             <NewsletterContainer path="/newsletter" />
             <ContactContainer path="/contact" contactData={infoContact} />
 
