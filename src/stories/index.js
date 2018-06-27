@@ -17,11 +17,12 @@ import Tag from '../components/Tag'
 import ChevronTitle from '../components/ChevronTitle'
 import Article from '../components/Article'
 import Contact from '../components/Contact'
-import SignUpFormular from '../containers/SignUpFormular'
+import SignUpFormular from '../components/SignUpFormular'
 import ArticlePreview from '../components/ArticlePreview'
 import LongArticle from '../components/LongArticle'
 import SmallArticle from '../components/SmallArticle'
 import Une from '../components/Une'
+import Actuality from '../components/Actuality'
 
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
@@ -96,3 +97,6 @@ storiesOf('ArticlePreview', module)
 
 storiesOf('*Une', module)
   .add('Articles à la une complet', () => <Une uneData={arrayUne}/>)
+
+storiesOf('Actualités', module)
+  .add('bloc d\'actu pour la page "actualité" ', () => <Actuality ActuData={arrayUne}/>)
