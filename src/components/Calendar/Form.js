@@ -51,32 +51,22 @@ class Form extends React.Component {
 
   render () {
     return (
-      <div>
+      <div id='formular_articles'>
         <form onSubmit={this.handleSubmit}>
-          <h2>Création d'un nouvel evenement</h2>
-          <h1>{JSON.stringify(this.state, 1, 1)}</h1>
-
-          <input type="text" style={{width: '45%'}}
-            placeholder="Titre"
+        <label>
+          <h1 id='event_title'>Formulaire pour la création d'un nouvel évènement</h1>
+          <h2>Titre :</h2>
+          <input type="text_title"
             title='title'
             value={this.state.title}
             onChange={ e => this.setState({title: e.target.value})}/>
 
-          <input type="text" style={{width: '45%'}}
-            placeholder="shortDescription"
-            value={this.state.shortDescription}
-            onChange={ e => this.setState({shortDescription: e.target.value})}/>
-
-          <textarea type="text" style={{width: '45%'}}
-            placeholder="description"
-            value={this.state.description}
-            onChange={ e => this.setState({description: e.target.value})}/>
-
-          <input type="date" style={{width: '45%'}}
-            placeholder="eventDate"
+            <h2>Date :</h2>
+          <input type="date"
             value={this.state.eventDate}
             onChange={ e => this.setState({eventDate: e.target.value})}/>
 
+            <h2>Choix de la catégorie :</h2>
           <select name="categoryId" id="categoryId"
             value={this.state.categoryId}
             onChange={ e => this.setState({categoryId: e.target.value})}>
@@ -84,23 +74,33 @@ class Form extends React.Component {
             <option value="2">actualité</option>
             <option value="3">évènement</option>
             <option value="4">article</option>
-
           </select>
 
-          <input type="text" style={{width: '45%'}}
-            placeholder="imageURL"
+          <h2>Résumé :</h2>
+          <textarea type="text_resume"
+            value={this.state.shortDescription}
+            onChange={ e => this.setState({shortDescription: e.target.value})}/>
+
+          <h2>Description :</h2>
+          <textarea type="text_description"
+            value={this.state.description}
+            onChange={ e => this.setState({description: e.target.value})}/>
+
+          <h2>Lien de l'image :</h2>
+          <input type="text_URL"
             value={this.state.imageURL}
             onChange={ e => this.setState({imageURL: e.target.value})}/>
 
-          <input type="text" style={{width: '45%'}}
-            placeholder="imageDescription"
+          <h2>Description de l'image :</h2>
+          <input type="text_description_image"
             value={this.state.imageDescription}
             onChange={ e => this.setState({imageDescription: e.target.value})}/>
 
           <input type='checkbox' name='checkbox'/>
-          <p> Créer votre évènement </p>
+          <p>Ressources</p>
 
           <button type="submit" value="submit">Ajouter</button>
+          </label>
         </form>
       </div>
     )
