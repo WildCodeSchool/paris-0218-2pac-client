@@ -7,24 +7,26 @@ const SideBar = () => {
   return (
     <div className="SideBar icon-button-globe">
 
-      <SideBarButton style={{ backgroundColor: '#226462' }}>
-        <span><i className="fas fa-globe"></i></span>Actualités
-      </SideBarButton>
+      <Link to="actuality">
+        <SideBarButton style={{ backgroundColor: '#226462' }}>
+          <span><i className="fas fa-globe"></i></span>Actualités
+        </SideBarButton>
+      </Link>
 
       <SideBarButton style={{ backgroundColor: '#F4971A' }}>
         <span><i className="fas fa-book-open"></i></span>Ressources
       </SideBarButton>
 
       <Link to="contact">
-      <SideBarButton style={{ backgroundColor: '#A99C2F' }}>
-        <span><i className="fas fa-user-alt"></i></span> Contacts
-      </SideBarButton>
+        <SideBarButton style={{ backgroundColor: '#A99C2F' }}>
+          <span><i className="fas fa-user-alt"></i></span> Contacts
+        </SideBarButton>
       </Link>
 
       <Link to="newsletter">
-      <SideBarButton style={{ backgroundColor: '#731717' }}>
-        <span><i className="fas fa-rss"></i></span>Newsletter
-      </SideBarButton>
+        <SideBarButton style={{ backgroundColor: '#731717' }}>
+          <span><i className="fas fa-rss"></i></span>Newsletter
+        </SideBarButton>
       </Link>
 
       <a href="https://twitter.com/pouruneautrepac" target="_blank">
