@@ -10,7 +10,7 @@ class PacCalendar extends React.Component {
     return (
       <div>
         <h1> Calendrier </h1>
-          <Calendar />
+        <Calendar />
       </div>
     )
   }

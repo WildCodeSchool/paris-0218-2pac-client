@@ -34,6 +34,8 @@ class Form extends React.Component {
       imageDescription: ''
     })
     e.preventDefault()
+
+    
     fetch("/articles",
 
       {
@@ -49,20 +51,25 @@ class Form extends React.Component {
 )
 }
 
+
   render () {
     return (
       <div id='formular_articles'>
         <form onSubmit={this.handleSubmit}>
+
         <label>
           <h1 id='event_title'>Formulaire pour la création d'un nouvel évènement</h1>
           <h2>Titre :</h2>
           <input type="text_title"
+
             title='title'
             value={this.state.title}
             onChange={ e => this.setState({title: e.target.value})}/>
 
             <h2>Date :</h2>
           <input type="date"
+
+        
             value={this.state.eventDate}
             onChange={ e => this.setState({eventDate: e.target.value})}/>
 
@@ -74,6 +81,7 @@ class Form extends React.Component {
             <option value="2">actualité</option>
             <option value="3">évènement</option>
             <option value="4">article</option>
+
           </select>
 
           <h2>Résumé :</h2>
