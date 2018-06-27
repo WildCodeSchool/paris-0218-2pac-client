@@ -1,8 +1,7 @@
 import React from 'react'
 import Login from './Login'
 import Search from './Search'
-import Nav from './Nav'
-import Nav2 from './Nav2'
+import Nav3 from './Nav3'
 import './Header.css'
 import logo from './../img/logo_horizon.png'
 
@@ -16,8 +15,7 @@ const Header = ({ menu }) => {
           <Search />
         </div>
       </div>
-      <Nav menu={menu} />
-      <Nav2 />
+      <Nav3 />
     </div>
   )
 }
