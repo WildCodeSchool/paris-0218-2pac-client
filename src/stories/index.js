@@ -23,6 +23,7 @@ import LongArticle from '../components/LongArticle'
 import SmallArticle from '../components/SmallArticle'
 import Une from '../components/Une'
 import Actuality from '../components/Actuality'
+import Page404 from '../components/Page404'
 
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
@@ -100,3 +101,6 @@ storiesOf('*Une', module)
 
 storiesOf('Actualités', module)
   .add('bloc d\'actu pour la page "actualité" ', () => <Actuality ActuData={arrayUne}/>)
+
+storiesOf('Page404', module)
+  .add('à ton avis', () => <Page404 />)
