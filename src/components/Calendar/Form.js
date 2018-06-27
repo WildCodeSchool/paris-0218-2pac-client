@@ -34,27 +34,26 @@ class Form extends React.Component {
       imageDescription: ''
     })
     e.preventDefault()
-    fetch("/articles",
+    fetch('/articles',
 
       {
-      method: 'POST',
-      headers: new Headers({'Content-Type': 'application/json'
-      }),
-      body: JSON.stringify(this.state),
+        method: 'POST',
+        headers: new Headers({'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(this.state)
       })
       .then(res => res.json())
       .then(
-      res => this.setState({"flash": res.flash}),
-      err => this.setState({"flash": err.flash})
-)
-}
+        res => this.setState({'flash': res.flash}),
+        err => this.setState({'flash': err.flash})
+      )
+  }
 
   render () {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <h2>Création d'un nouvel evenement</h2>
-          <h1>{JSON.stringify(this.state, 1, 1)}</h1>
+          <h2>Ajout d'un article</h2>
 
           <input type="text" style={{width: '45%'}}
             placeholder="Titre"
