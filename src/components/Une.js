@@ -17,15 +17,15 @@ const Une = ({ uneData }) => {
       <ChevronTitle title="à la une" />
 
       <div className="article-container">
+        <Link to={`/article/${longArticle.id}`}>
         <div className="long-article-container" style={{ backgroundImage: `url(${longArticle.imageURL})` }}>
-          <Link to={`/article/${longArticle.id}`}>
             <LongArticle
               title={longArticle.title}
               category={longArticle.category}
               shortDescription={longArticle.shortDescription}
             />
-          </Link>
         </div>
+      </Link>
 
         <div className="small-article-container">
           {smallArticles.map(article =>
