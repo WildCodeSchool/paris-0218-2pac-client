@@ -2,10 +2,13 @@ import React from 'react'
 import Article from '../components/Article'
 
 const ArticleContainer = (props) => {
-  return (
+  const article = props.articles.find(article => String(article.id) === props.id)
 
+  return (
     <div className="router-container">
-      <Article article={props.article} />
+      {
+        article !== undefined ? <Article article={article} /> : 'Not found'
+      }
     </div>
 
   )

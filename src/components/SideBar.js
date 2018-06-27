@@ -1,7 +1,7 @@
 import React from 'react'
 import './SideBar.css'
 import SideBarButton from './SideBarButton'
-import { Router, Link } from "@reach/router";
+import { Link } from "@reach/router";
 
 const SideBar = () => {
   return (

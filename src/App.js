@@ -6,27 +6,31 @@ import SideBar from './components/SideBar'
 
 import Home from './containers/Home'
 import ContactContainer from './containers/ContactContainer'
+import ArticleContainer from './containers/ArticleContainer'
 import NewsletterContainer from './containers/NewsletterContainer'
 
 /*mocks*/
 import infoContact from './mocks/infoContact.json'
 import article from './mocks/article.json'
+import noImgArticle from './mocks/noImgArticle.json'
 import arrayUne from './mocks/arrayUne.json'
 
 import './App.css'
 
 class App extends Component {
-  state: {
+  state = {
     articles: []
-    }
+  }
 
   componentDidMount () {
-    fetch('/auth/getArticles')
+    fetch('/articles')
       .then(response => response.json())
       .then(data => {
         console.log(data)
         this.setState({ articles: data })
       })
+
+    this.setState({ articles: arrayUne }) // todo : rm
   }
 
   render () {
@@ -38,9 +42,12 @@ class App extends Component {
 
         <div className="changing-content" >
           <Router>
+
             <Home path="/" uneData={arrayUne} />
+            <ArticleContainer path="/article/:id" articles={this.state.articles}/>
             <NewsletterContainer path="/newsletter" />
             <ContactContainer path="/contact" contactData={infoContact} />
+
           </Router>
           <SideBar />
         </div>
