@@ -9,7 +9,7 @@ const navItems = [
   {title: 'Comprendre la PAC', children: ['L’ABC de la PAC', 'La PAC, ça m’impacte ?', 'La PAC 2015-2020', 'La réforme de la PAC', 'Chiffres-clés', 'Sigles']},
   {title: 'Notre vision', children: ['Orientations communes', 'Bilan de l’actuelle PAC', 'Système agro-alimentaire souhaité', '12 priorités pour la PAC post 2020', 'PAAC souhaitée']},
   {title: 'Agir', children: ['Interpeller ses représentants', 'Devenir membre', 'Participer à un événeme']},
-  {title: 'Presse', children: ['On parle de nous', 'Communiqués de presse ', 'Kit presse']}
+  {title: 'Presse', children: ['On parle de nous', 'Communiqués de presse', 'Kit presse']}
 ]
 
 const showMenuList = (menuIndex) => {

@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './Login'
 import Search from './Search'
 import Nav from './Nav'
+import Nav2 from './Nav2'
 import './Header.css'
 import logo from './../img/logo_horizon.png'
 
@@ -16,6 +17,7 @@ const Header = ({ menu }) => {
         </div>
       </div>
       <Nav menu={menu} />
+      <Nav2 />
     </div>
   )
 }
