@@ -27,9 +27,11 @@ const SideBar = () => {
       </SideBarButton>
       </Link>
 
+      <a href="https://twitter.com/pouruneautrepac" target="_blank">
       <SideBarButton style={{ backgroundColor: '#00aced' }}>
         <span><i className="fab fa-twitter"></i></span>
       </SideBarButton>
+      </a>
 
     </div>
   )
