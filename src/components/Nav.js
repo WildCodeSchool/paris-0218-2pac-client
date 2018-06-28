@@ -2,7 +2,6 @@ import React from 'react'
 
 import './Nav.css'
 
-
 const Nav3 = ({ menu }) => {
   return (
     <div>

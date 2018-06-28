@@ -1,8 +1,7 @@
-
 .navbar {
-  margin-left: 5rem;
-
+  margin-left: 20rem;
 }
+
 nav {
 width: 80%;
 margin: auto;
@@ -83,7 +82,58 @@ nav li:hover .submenu {
   background-color: #226462;
 }
 
+.submenu {
+  display: none;
+}
 
+nav input[type=checkbox] {
+  display: none;
+}
+
+nav label {
+  display: none;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+nav > ul > li > a {
+  padding:  20px 30px;
+  color: #707070;
+}
+
+
+nav > ul > li:hover a  {
+  padding: 15px 30px 20px 30px;
+  color: white;
+}
+
+nav li:hover .submenu {
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  padding: 0px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  padding: 1px 30px;
+  font-size: 13px;
+  width: 200px;
+}
+
+.submenu li {
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+
+.menu:hover {
+  background-color: #226462;
+}
 
 li:hover {
   background-color: #707070;
@@ -100,5 +150,4 @@ p {
 
 p:hover {
   color: white;
-
 }
