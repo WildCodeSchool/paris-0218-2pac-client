@@ -2,11 +2,16 @@
   "name": "paris-0218-2pac-client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:1107/",
   "dependencies": {
+    "cors": "^2.8.4",
+    "lint": "^1.1.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "react-icons": "^2.2.7",
+    "react-responsive-masonry": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
