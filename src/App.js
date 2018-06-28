@@ -3,6 +3,7 @@ import { Router, Link } from "@reach/router";
 import Header from './components/Header'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
+import AsideLeft from './components/AsideLeft'
 
 import Home from './containers/Home'
 import ContactContainer from './containers/ContactContainer'
@@ -22,7 +23,7 @@ class App extends Component {
   }
 
   componentDidMount () {
-    fetch('/articles')
+    fetch('/articlesCat')
       .then(response => response.json())
       .then(data => {
         console.log(data)
@@ -34,6 +35,16 @@ class App extends Component {
 
   render () {
     console.log('render', this.state)
+
+          const articles = this.state.articles.slice(0, 5).map(article =>
+          <AsideLeft
+            key={article.id}
+            title={article.title}
+            categoryId={article.name}
+            shortDescription={article.shortDescription}
+            />
+            )
+
 
     return (
       <div>
@@ -50,6 +61,7 @@ class App extends Component {
 
           </Router>
           <SideBar />
+          {articles}
         </div>
 
         <Footer />
