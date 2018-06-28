@@ -1,53 +1,63 @@
 import React from 'react'
-import Button from './Button'
+
 import './Nav.css'
-import { action } from '../store'
 
-const navItems = [
-  {title: 'Home', children: []},
-  {title: 'Qui sommes nous ?', children: ['Présentation', 'Historique', 'Nos actions', 'Nos membres']},
-  {title: 'Comprendre la PAC', children: ['L’ABC de la PAC', 'La PAC, ça m’impacte ?', 'La PAC 2015-2020', 'La réforme de la PAC', 'Chiffres-clés', 'Sigles']},
-  {title: 'Notre vision', children: ['Orientations communes', 'Bilan de l’actuelle PAC', 'Système agro-alimentaire souhaité', '12 priorités pour la PAC post 2020', 'PAAC souhaitée']},
-  {title: 'Agir', children: ['Interpeller ses représentants', 'Devenir membre', 'Participer à un événeme']},
-  {title: 'Presse', children: ['On parle de nous', 'Communiqués de presse', 'Kit presse']}
-]
-
-const showMenuList = (menuIndex) => {
-  const selectedMenu = navItems[menuIndex]
-  if (!selectedMenu || !selectedMenu.children) return
-  const menuList = navItems[menuIndex].children
-    .map(e => <li className="subMenuItem" key={e}>{e}</li>)
-
-  return <ul className="subMenuList">{menuList}</ul>
-}
-
-const NavItem = ({ menuIndex, title, menu }) =>
-  <div key={String(menuIndex)} className="test">
-    <Button
-      onClick={() => action.showOrHideMenu(menuIndex)}
-      className="Button Item">
-      {title}
-    </Button>
-    <div className="subMenuBlock">
-      {menuIndex === menu ? showMenuList(menuIndex) : null}
-    </div>
-  </div>
-
-const Nav = ({ menu }) => {
-  const items = navItems.map((item, i) => NavItem({
-    menuIndex: i,
-    title: item.title,
-    menu: menu
-  }))
-
-  console.log(menu)
+const Nav3 = ({ menu }) => {
   return (
-    <div className="navItems">
-      <div className="Nav">
-        {items}
-      </div>
+    <div>
+      <nav>
+    <input type="checkbox" name="menu-mobile" role="button"/>
+    <ul className='navbar'>
+      <li className="menu"><a href="#">Qui sommes nous ?</a>
+        <ul className="submenu">
+          <li><a href="#">Présentation</a></li>
+          <li><a href="#">Historique</a></li>
+          <li><a href="#">Nos actions</a></li>
+          <li><a href="#">Nos membres</a></li>
+        </ul>
+      </li>
+      <li className="menu"><a href="#">Comprendre la PAC</a>
+        <ul className="submenu">
+          <li><a href="#">L’ABC de la PAC</a></li>
+          <li><a href="#">La PAC, ça m’impacte ?</a></li>
+          <li><a href="#">La PAC 2015-2020</a></li>
+          <li><a href="#">La réforme de la PAC</a></li>
+          <li><a href="#">Chiffres-clés</a></li>
+          <li><a href="#">Sigles</a></li>
+        </ul>
+      </li>
+      <li className="menu"><a href="#">Notre vision</a>
+        <ul className="submenu">
+          <li><a href="#">Orientations communes</a></li>
+          <li><a href="#">Bilan de l’actuelle PAC</a></li>
+          <li><a href="#">Système agro-alimentaire souhaité</a></li>
+          <li><a href="#">12 priorités pour la PAC post 2020</a></li>
+          <li><a href="#">PAAC souhaitée</a></li>
+        </ul>
+      </li>
+      <li className="menu"><a href="#">Agir</a>
+        <ul className="submenu">
+          <li><a href="#">Interpeller ses représentants</a></li>
+          <li><a href="#">Devenir membre</a></li>
+          <li><a href="#">Participer à un événeme</a></li>
+        </ul>
+      </li>
+      <li className="menu"><a href="#">Presse</a>
+        <ul className="submenu">
+          <li><a href="#">On parle de nous</a></li>
+          <li><a href="#">Communiqués de presse</a></li>
+          <li><a href="#">Kit presse</a></li>
+        </ul>
+      </li>
+      <li className="menu"><a href="#">Content in english</a>
+        <ul className="submenu">
+          <li><a href="#">See you soon</a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav>
     </div>
   )
 }
 
-export default Nav
+export default Nav3
