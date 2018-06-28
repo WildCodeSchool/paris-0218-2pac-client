@@ -4,14 +4,15 @@
   "private": true,
   "proxy": "http://localhost:1107/",
   "dependencies": {
+    "@reach/router": "^1.1.1",
     "cors": "^2.8.4",
     "lint": "^1.1.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4",
-    "redux": "^4.0.0",
     "react-icons": "^2.2.7",
-    "react-responsive-masonry": "^2.0.0"
+    "react-responsive-masonry": "^2.0.0",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
