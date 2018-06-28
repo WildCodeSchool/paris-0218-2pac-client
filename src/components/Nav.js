@@ -32,7 +32,7 @@ const Nav3 = ({ menu }) => {
         <ul className='navbar'>
           <li className="menu"><a href="#">Qui sommes nous ?</a>
             <ul className="submenu">
-            <li><Link to='Presentation'>Présentation</Link></li>
+              <li><Link to='Presentation'>Présentation</Link></li>
               <li><Link to='Historique'>Historique</Link></li>
               <li><Link to='NosActions'>Nos actions</Link></li>
               <li><Link to=''>Nos membres</Link></li>
@@ -98,7 +98,7 @@ const Nav3 = ({ menu }) => {
         <SystemeAgro path="SystemeAgro" />
         <Priorite2020 path="Priorite2020" />
         <PAAC path="PAAC" />
-      {/* chiffre clé, interpeller ses représentants/devenir membre/participer a un évènement, kit de presse, see you soon*/}
+        {/* chiffre clé, interpeller ses représentants/devenir membre/participer a un évènement, kit de presse, see you soon */}
         <WhoWeAre path="WhoWeAre" />
         <WhatWeDo path="WhatWeDo" />
         <WhatWeWant path="WhatWeWant" />

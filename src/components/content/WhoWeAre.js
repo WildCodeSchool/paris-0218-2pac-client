@@ -4,12 +4,12 @@ import './Content.css'
 const WhoWeAre = ({children}) => {
   return (
     <div className="container-content">
-      <h2>Content in English - Who we are</h2>
+      <h1>Content in English - Who we are</h1>
       <p>The platform <em>Pour une autre PAC</em> (<em>For Another Common Agricultural Policy</em>) is a French inter-association body created for a common reflection and action in view of the reform of the Common Agricultural Policy.</p>
-      <p> </p>
+
       <p>In 2007, an association named <em>Groupe PAC 2013</em> is created to weigh on the discussions surrounding the preparation of the 2013-2020 CAP reform. Then strong of 15 member organizations, it is progressively acknowledged by French and European political leaders for its expertise, and representativity.</p>
       <p>Now named <em>Pour une autre PAC</em>, the platform is again mobilized in 2017, as debates surrounding the post-2020 CAP reforms begin. With stronger ambitions and an increased number of members, it continues the fight for more durable, fair and coherent agricultural policies.</p>
-      <p> </p>
+
       <p>The major strength of <em>Pour une autre PAC </em>is the common mobilization of dozens of associations, federations and syndicates, with various interests, around a common and specific goal: pushing for a positive reform of the CAP. There is no other such organization or structure in France working on the CAP.</p>
       <p><em>Pour une autre PAC </em>gathers around some thirty member organizations, structured in four categories. All work at national level and demonstrate a direct link between their domain of activity and the CAP.</p>
       <ul>

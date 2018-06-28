@@ -4,7 +4,7 @@ import './Content.css'
 const LaPacCaMinpaqute = ({children}) => {
   return (
     <div className="container-content">
-    <h2>La PAC, ça m’impacte ?</h2>
+      <h1>La PAC, ça m’impacte ?</h1>
       <p>La Politique Agricole Commune (PAC) structure le modèle agro-alimentaire européen. Elle ne concerne pas uniquement les agriculteurs qui touchent des aides, mais bien chaque citoyen, en tant que mangeur, contribuable, électeur, promeneur, parent, etc.</p>
       <p>La politique agricole de l’UE a ainsi un impact direct sur biens des aspects de la vie quotidienne des citoyen·ne·s européen·ne·s :</p>
       <ul>

@@ -4,15 +4,14 @@ import './Content.css'
 const CommuniqeDePresse = ({children}) => {
   return (
     <div className="container-content">
-      <h2>Presse - Communiqués de presse</h2>
-      <h3>Pour une autre PAC (depuis 2017)</h3>
+      <h1>Presse - Communiqués de presse</h1>
+      <h2>Pour une autre PAC (depuis 2017)</h2>
       <ul>
         <li>Futur budget de la PAC (3 mai 2018)</li>
         <li>Déclaration commune avec nos homologues allemands (16 avril 2018)</li>
         <li>Relance de la plateforme <em>Pour une autre PAC </em>(28 novembre 2017)</li>
       </ul>
-      <p> </p>
-      <h3>Groupe PAC 2013 (2010 à 2014)</h3>
+      <h2>Groupe PAC 2013 (2010 à 2014)</h2>
       <ul>
         <li>Mise en œuvre du verdissement en France (24 juillet 2014)</li>
         <li>Réaction au discours de Cournon (4 octobre 2013)</li>

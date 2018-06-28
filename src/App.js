@@ -24,10 +24,10 @@ class App extends Component {
 
     return (
       <div>
-          <Header />
-          <SideBar />
-          <AsideLeft />
-          <Footer />
+        <Header />
+        <SideBar />
+        <AsideLeft />
+        <Footer />
       </div>
     )
   }

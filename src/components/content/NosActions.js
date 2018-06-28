@@ -5,7 +5,7 @@ const NosActions = ({children}) => {
   return (
     <div className="container-content">
       <h2>Nos actions</h2>
-      <p><em> Pour une autre PAC </em> anime un travail collectif s’articulant autour de trois axes :</p>
+      <p><i> Pour une autre PAC </i> anime un travail collectif s’articulant autour de trois axes :</p>
       <ul>
         <li>Favoriser l’échange entre parties prenantes à but non lucratif sur la thématique de la PAC, en France et dans l’Union européenne :
           <ul>
@@ -16,7 +16,7 @@ const NosActions = ({children}) => {
         </li>
         <li>Promouvoir une réforme ambitieuse de la PAC et orienter sa définition vers plus de durabilité, de justice et de cohérence :
           <ul>
-            <li>assurer la reprise des idées défendues par <em> Pour une autre PAC </em> dans la prochaine PAC et dans sa déclinaison française,</li>
+            <li>assurer la reprise des idées défendues par <i> Pour une autre PAC </i> dans la prochaine PAC et dans sa déclinaison française,</li>
             <li>améliorer la reconnaissance de la place de la société civile française dans les discussions politiques autour de la PAC,</li>
             <li>favoriser la coopération interministérielle dans la définition des positions françaises sur la PAC.</li>
           </ul>

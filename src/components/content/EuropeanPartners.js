@@ -7,12 +7,10 @@ const EuropeanPartners = ({children}) => {
       <h2>Content in English - European partners</h2>
       <p><em>Pour une autre PAC</em> partners with other civil society’s movements accross Europe for various projects:</p>
       <ul>
-        <li>at European level: <a href="http://www.goodfoodgoodfarming.eu/">Good Food Good Farming</a>, <a href="http://www.arc2020.eu/">ARC2020</a>, <a href="http://www.foeeurope.org/">Friends of the      Earth Europe</a>, <a href="https://www.slowfood.com/sloweurope/en/">Slow Food Europe</a></li>
-        <li>in Germany: <a href="https://www.meine-landwirtschaft.de/">Meine Landwirtschaft</a> (devoted to citizen mobilization) and another platform (devoted to advocacy) co-chaired by <a href="      https://www.bund.net/">BUND</a> and <a href="http://www.abl-ev.de/start/">AbL</a></li>
+        <li>at European level: <a href="http://www.goodfoodgoodfarming.eu/">Good Food Good Farming</a>, <a href="http://www.arc2020.eu/">ARC2020</a>, <a href="http://www.foeeurope.org/">Friends of the Earth Europe</a>, <a href="https://www.slowfood.com/sloweurope/en/">Slow Food Europe</a></li>
+        <li>in Germany: <a href="https://www.meine-landwirtschaft.de/">Meine Landwirtschaft</a> (devoted to citizen mobilization) and another platform (devoted to advocacy) co-chaired by <a href="https://www.bund.net/">BUND</a> and <a href="http://www.abl-ev.de/start/">AbL</a></li>
         <li>in Germany, Poland and France: <a href="https://www.boell.de/">Heinrich-Böll Stiftung</a></li>
       </ul>
-      <p> </p>
-      <p> </p>
       <p>Some of our members are part of the following European networks:</p>
       <ul>
         <li><a href="https://viacampesina.org/fr/">European Coordination Via Campesina</a></li>
