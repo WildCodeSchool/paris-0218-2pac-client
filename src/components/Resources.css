@@ -9,9 +9,9 @@
 
 .resource {
 
-  min-width: 20vw;
+  min-width: 60vw;
   max-width: 20vw;
-  min-height: 35vh;
+  min-height: 12vh;
   margin: .7em;
   background-size: cover;
   background-position: center;

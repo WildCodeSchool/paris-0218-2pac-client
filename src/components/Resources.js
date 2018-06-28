@@ -6,14 +6,14 @@ import { Link } from "@reach/router";
 const Resources = ({ ResourceData }) => {
   return (
 
-    <div className="resources-container">
+    <div>
       {ResourceData.map(documents =>
-        <Link to={`/documents/${documents.id}`}>
+
             <div className="resource" >
-              <span category={documents.category} className="category">{documents.category}</span>
+              <span url={documents.url} className="category">{documents.url}</span>
               <DocumentPreview title={documents.title} shortDescription={documents.shortDescription} url={documents.url}/>
             </div>
-        </Link>
+
       )}
 
     </div>
