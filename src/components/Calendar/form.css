@@ -1,5 +1,6 @@
+
 h2, p {
-  color: white;
+  color: black;
 }
 
 .formular_articles, input, textarea, h2, button, select {
@@ -11,7 +12,7 @@ h2, p {
 #event_title {
   font-size: 2rem;
   text-align: center;
-  color: white;
+  color: black;
   text-decoration-line: underline;
   margin-bottom: 3rem;
 }
@@ -62,6 +63,13 @@ input[type='text_URL'] {
   width: ;
 }
 
-input[type='text_description_image'] {
-  width: ;
+input[type='text'] {
+  background-color: #F4971A;
+  color: white;
+  border-radius: 0.3em;
+  border-color: white;
+  padding: 0.4em;
+  position: relative;
+  margin-top: 1em;
+  margin-right: 10em;
 }
