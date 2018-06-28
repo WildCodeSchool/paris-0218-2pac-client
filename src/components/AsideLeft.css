@@ -1,7 +1,17 @@
+
+.aside-left-container {
+	width: 25em;
+	min-height: 35em;
+  max-height: 35em;
+	background-color: red;
+	overflow: hidden;
+
+}
+
 .AsideLeft_Line {
 	background-color: white;
-	width: 14em;
-	height: 115%;
+	/*width: 14em;
+	height: 115%;*/
 	margin-top: 0rem;
 	font-family: 'Source Sans Pro', sans-serif;
 	border-style: none none dotted none;

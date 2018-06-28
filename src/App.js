@@ -36,24 +36,14 @@ class App extends Component {
   render () {
     console.log('render', this.state)
 
-          const articles = this.state.articles.slice(0, 5).map(article =>
-          <AsideLeft
-            key={article.id}
-            title={article.title}
-            categoryId={article.name}
-            shortDescription={article.shortDescription}
-            />
-            )
-
-
     return (
       <div>
         <Header />
-        {articles}
+
         <div className="changing-content" >
           <Router>
 
-            <Home path="/" uneData={arrayUne} />
+            <Home path="/" uneData={arrayUne} data={this.state.articles} />
             <ArticleContainer path="/article/:id" articles={this.state.articles} />
             <ActualityContainer path="/actuality" ActuData={this.state.articles} />
             <NewsletterContainer path="/newsletter" />
