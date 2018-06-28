@@ -1,7 +1,7 @@
 import React from 'react'
 import './Content.css'
 
-const NosAction = ({children}) => {
+const NosActions = ({children}) => {
   return (
     <div className="container-content">
       <h2>Nos actions</h2>
@@ -36,4 +36,4 @@ const NosAction = ({children}) => {
   )
 }
 
-export default NosAction
+export default NosActions
