@@ -49,7 +49,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-
+        {articles}
         <div className="changing-content" >
           <Router>
 
@@ -61,7 +61,7 @@ class App extends Component {
 
           </Router>
           <SideBar />
-          {articles}
+
         </div>
 
         <Footer />
