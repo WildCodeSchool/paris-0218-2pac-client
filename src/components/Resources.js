@@ -10,7 +10,7 @@ const Resources = ({ ResourceData }) => {
       {ResourceData.map(documents =>
 
             <div className="resource" >
-              <span url={documents.url} className="category">{documents.url}</span>
+              <span category={documents.name} className="category">{documents.name}</span>
               <DocumentPreview title={documents.title} shortDescription={documents.shortDescription} url={documents.url}/>
             </div>
 
