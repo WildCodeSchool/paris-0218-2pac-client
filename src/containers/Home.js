@@ -2,6 +2,8 @@ import React from 'react'
 import AsideLeft from '../components/AsideLeft'
 import SideBar from '../components/SideBar'
 import Une from '../components/Une'
+import { Link } from "@reach/router";
+
 import './RouterContainer.css'
 
 const Home = (props) => {
@@ -12,13 +14,16 @@ const Home = (props) => {
 
     <div className="router-container">
       <div className="aside-left-container">
-        {data.slice(0, 5).map(article =>
-        <AsideLeft
-          key={article.id}
-          title={article.title}
-          categoryId={article.name}
-          shortDescription={article.shortDescription}
-          />
+      <h1 className="filactu"><span>></span>FIL D'ACTUALITÉS</h1>
+        {data.slice(0, 3).map(article =>
+        <Link to={`/article/${article.id}`}>
+          <AsideLeft
+            key={article.id}
+            title={article.title}
+            categoryId={article.name}
+            shortDescription={article.shortDescription}
+            />
+        </Link>
           )}
       </div>
       <Une uneData={props.uneData} />

@@ -30,7 +30,7 @@ const SideBar = () => {
       </Link>
 
       <a href="https://twitter.com/pouruneautrepac" target="_blank">
-      <SideBarButton style={{ backgroundColor: '#00aced' }}>
+      <SideBarButton style={{ backgroundColor: '#707070' }}>
         <span><i className="fab fa-twitter"></i></span>
       </SideBarButton>
       </a>
