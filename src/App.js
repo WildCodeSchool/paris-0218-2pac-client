@@ -10,11 +10,11 @@ import PacCalendar from './components/PacCalendar'
 
 class App extends Component {
   state = {
-    newArticles: []
+    newArticles: [],
   }
 
   componentDidMount () {
-    fetch('http://localhost:1107/articles')
+    fetch('/articles')
       .then(res => res.json())
       .then(data => this.setState({ newArticles: data }))
   }

@@ -1,6 +1,6 @@
 
 h2, p {
-  color: white;
+  color: black;
 }
 
 .formular_articles, input, textarea, h2, button, select {
@@ -12,7 +12,7 @@ h2, p {
 #event_title {
   font-size: 2rem;
   text-align: center;
-  color: white;
+  color: black;
   text-decoration-line: underline;
   margin-bottom: 3rem;
 }

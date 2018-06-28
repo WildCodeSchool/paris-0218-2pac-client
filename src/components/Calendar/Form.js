@@ -35,7 +35,7 @@ class Form extends React.Component {
     })
     e.preventDefault()
 
-    
+
     fetch("/articles",
 
       {
@@ -45,10 +45,6 @@ class Form extends React.Component {
       body: JSON.stringify(this.state),
       })
       .then(res => res.json())
-      .then(
-      res => this.setState({"flash": res.flash}),
-      err => this.setState({"flash": err.flash})
-)
 }
 
 
@@ -69,7 +65,7 @@ class Form extends React.Component {
             <h2>Date :</h2>
           <input type="date"
 
-        
+
             value={this.state.eventDate}
             onChange={ e => this.setState({eventDate: e.target.value})}/>
 

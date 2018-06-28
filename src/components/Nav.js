@@ -1,34 +1,57 @@
 import React from 'react'
 import './Nav.css'
 
-const navItems = [
-  {title: 'Qui sommes nous ?', children: ['Présentation', 'Historique', 'Nos actions', 'Nos membres']},
-  {title: 'Comprendre la PAC', children: ['L’ABC de la PAC', 'La PAC, ça m’impacte ?', 'La PAC 2015-2020', 'La réforme de la PAC', 'Chiffres-clés', 'Sigles']},
-  {title: 'Notre vision', children: []},
-  {title: 'Agir', children: []},
-  {title: 'Presse', children: []}
-]
 
 class Nav extends React.Component {
-  toggleList = (event, i) => {
-    if (navItems[i].children) {
-      navItems[i].children.map(e => console.log(e))
-    }
-  }
 
   render () {
-    const items = navItems.map((item, i) =>
-      <button
-        onClick={(event) => this.toggleList(event, i)}
-        key={i}
-        className="button Item">
-        {item.title}
-      </button>)
-
     return (
-      <div className="Nav">
-        {items}
-      </div>
+    <div className="Nav">
+      <ul id='nav'>
+        <li><a href="#home">Home</a></li>
+        <li className="divider-vertical"><a href="#news">News</a></li>
+        <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </li>
+        <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </li>
+        <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </li>
+          <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </li>
+        <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </li>
+      </ul>
+    </div>
     )
   }
 }
