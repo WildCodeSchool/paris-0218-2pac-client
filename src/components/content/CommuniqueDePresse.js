@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const CommuniqeDePresse = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h1>Presse - Communiqués de presse</h1>
       <h2>Pour une autre PAC (depuis 2017)</h2>
       <ul>
@@ -21,6 +23,7 @@ const CommuniqeDePresse = ({children}) => {
         <li>Analyse de la Communication de la Commission européenne (26 novembre 2010)</li>
         <li>Analyse du projet de la Commission européenne pour la PAC post 2013 (18 octobre 2010)</li>
       </ul>
+      </Container>
     </div>
   )
 }

@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const EuropeanPartners = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h2>Content in English - European partners</h2>
       <p><em>Pour une autre PAC</em> partners with other civil society’s movements accross Europe for various projects:</p>
       <ul>
@@ -25,6 +27,7 @@ const EuropeanPartners = ({children}) => {
         <li><a href="https://wfto-europe.org/">World Fair Trade Organization Europe</a></li>
         <li><a href="https://urgenci.net/">Urgenci</a></li>
       </ul>
+      </Container>
     </div>
   )
 }

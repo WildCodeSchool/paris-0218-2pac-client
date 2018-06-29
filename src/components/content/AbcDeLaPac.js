@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const AbcDeLaPac = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
 
       <h1>L’ABC de la PAC</h1>
 
@@ -25,6 +27,7 @@ const AbcDeLaPac = ({children}) => {
         <li><a href="http://www.vie-publique.fr/decouverte-institutions/union-europeenne/action/politiques-communautaires/qu-est-ce-que-politique-agricole-commune-pac.html">http://www.vie-publique.fr/decouverte-institutions/union-europeenne/action/politiques-communautaires/qu-est-ce-que-politique-agricole-commune-pac.html</a></li>
         <li><a href="https://www.touteleurope.eu/actualite/l-agriculture-et-la-peche-dans-l-union-europeenne.html">https://www.touteleurope.eu/actualite/l-agriculture-et-la-peche-dans-l-union-europeenne.html</a></li>
       </ul>
+    </Container>
     </div>
   )
 }

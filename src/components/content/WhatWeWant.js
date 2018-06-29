@@ -1,10 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const WhatWeWant = ({children}) => {
   return (
-    <div className="container-content">
-
+    <div>
+      <Container>
       <h1>Content in English - What we want</h1>
       <h2>Putting the future Common Agricultural and Food Policy at the service of all citizens</h2>
       <p>An agricultural and food policy is much more than a mere sector budget: it implies a choice by society. As it is, a deal between European farmers and citizens is urgently needed; one that would push forward the necessary change of the current agro-industrial system, and seal a joint commitment to sustainable food chains. On this depends the long-term sustainability of the EU’s agricultural means – first and foremost the means for its farmers to be guaranteed stable prices within fair business models. A Common Agricultural and Food Policy, through deals of well-defined transition modalities and schedules, is hence of primary concern to farmers themselves, whose current production model matches neither the reality of a globalized market, nor the expectations of citizens.</p>
@@ -26,6 +27,7 @@ const WhatWeWant = ({children}) => {
 
       <h2>Rethinking the Common Agricultural and Food Policy’s governance in its conception and implementation</h2>
       <p>The future Common Agricultural and Food Policy must clearly state its European added value, in contrast with a re-nationalization of agricultural policies which would deprive the EU of the means to reach its declared goals. The European scale, and the European scale alone, can guarantee financial solidarity between farmers and citizens between all member states. The future policy must also make room for democratic, deliberative processes on all scales of decision-making and implementation processes, allowing both for citizens to get involved in the debated issues, and for representatives of related governance issues – food, land, health and environment – to have their say and play their role. Finally a mandatory, independent and binding evaluation of the proposed schemes must be decided, so as to restore the legitimacy and understandability of the Common Agricultural and Food Policy in the eyes of its beneficiaries.</p>
+      </Container>
     </div>
   )
 }

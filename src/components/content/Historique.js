@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const Historique = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h1>Historique</h1>
       <p>En 2009, une association loi 1901 baptisée Groupe PAC 2013 est créée afin de peser sur les discussions entourant la préparation de la réforme 2013-2020 de la politique agricole commune (PAC).  Alors composée d’une quinzaine d’organisations membres, elle s’est faite progressivement reconnaitre par les décideur·euse·s politiques françai·se·s et européen·ne·s pour son expertise et sa représentativité.
         Quelques-unes des réalisations du Groupe PAC 2013 sont accessibles ci-dessous :</p>
@@ -16,6 +18,7 @@ const Historique = ({children}) => {
         <li>Analyse du « verdissement » de la PAC (avril 2012)</li>
         <p>Désormais dénommée Pour une autre PAC, la plateforme s’est remobilisée en 2017, alors que les débats sur la réforme de la PAC post 2020 se sont ouverts. Elle poursuit son combat pour l’intégration de représentant·e·s de la société civile dans les arènes de négociation politique de la PAC.</p>
       </ul>
+      </Container>
     </div>
   )
 }

@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const SystemeAgro = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <p class="p9">
         <span class="s1">
     Notre vision - Système agro-alimentaire souhaité
@@ -855,6 +857,7 @@ const SystemeAgro = ({children}) => {
       <p class="p8">
 
       </p>
+      </Container>
     </div>
   )
 }

@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const Sigles = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h2>Comprendre la PAC – Sigles</h2>
       <table>
         <tbody>
@@ -801,6 +803,7 @@ const Sigles = ({children}) => {
           </tr>
         </tbody>
       </table>
+      </Container>
     </div>
   )
 }

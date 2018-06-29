@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const OnParleDeNous = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h2>Presse - On parle de nous</h2>
       <ul>
         <li><a href="http://www.arc2020.eu/french-german-alliance-cap-declaration/">ARC2020</a> (17 avril 2018)</li>
@@ -24,6 +26,7 @@ const OnParleDeNous = ({children}) => {
         <li><a href="http://www.lafranceagricole.fr/actualites/gestion-et-droit/pac-2020-trente-organisations-unies-pour-peser-dans-les-debats-1,2,1300767425.html">La France Agricole</a> (28 novembre 2017)</li>
         <li><a href="https://www.alternatives-economiques.fr/bientot-une-nouvelle-pac/00080401">Alternatives économiques</a> (1<sup>er</sup> septembre 2017)</li>
       </ul>
+      </Container>
     </div>
   )
 }

@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const NosActions = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h2>Nos actions</h2>
       <p><i> Pour une autre PAC </i> anime un travail collectif s’articulant autour de trois axes :</p>
       <ul>
@@ -32,6 +34,7 @@ const NosActions = ({children}) => {
       <p>Rapports d’activités 2013</p>
       <p>Rapports d’activités 2014</p>
       <p>Rapport d’activités 2017</p>
+      </Container>
     </div>
   )
 }

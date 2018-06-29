@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const LaPac20152020 = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h1>La PAC 2015-2020</h1>
       <p>Contenu à venir.</p>
       <p>En attendant, vous pouvez vous reporter sur les sites suivants :</p>
@@ -14,6 +16,7 @@ const LaPac20152020 = ({children}) => {
       <p>Contenu à venir.</p>
       <p>En attendant, vous pouvez vous reporter sur les sites suivants :</p>
       <p><a href="https://www.supagro.fr/capeye/pac-application/"> https://www.supagro.fr/capeye/pac-application/</a></p>
+      </Container>
     </div>
   )
 }

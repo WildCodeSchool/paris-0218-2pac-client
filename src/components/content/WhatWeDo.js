@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const WhatWeDo = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h1>Content in English - What we do</h1>
       <p><em>Pour une autre PAC </em>leads and coordinates collective work articulated around three axes:</p>
       <ul>
@@ -29,6 +31,7 @@ const WhatWeDo = ({children}) => {
           </ul>
         </li>
       </ul>
+      </Container>
     </div>
   )
 }

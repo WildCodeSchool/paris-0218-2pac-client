@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const WhoWeAre = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h1>Content in English - Who we are</h1>
       <p>The platform <em>Pour une autre PAC</em> (<em>For Another Common Agricultural Policy</em>) is a French inter-association body created for a common reflection and action in view of the reform of the Common Agricultural Policy.</p>
 
@@ -60,6 +62,7 @@ const WhoWeAre = ({children}) => {
           </ul>
         </li>
       </ul>
+      </Container>
     </div>
   )
 }

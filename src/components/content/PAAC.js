@@ -1,9 +1,11 @@
 import React from 'react'
 import './Content.css'
+import Container from '../Container'
 
 const PAAC = ({children}) => {
   return (
-    <div className="container-content">
+    <div>
+    <Container>
       <h1>Notre vision – Nos 12 priorités pour la PAC post 2020</h1>
 
       <p>Osons une vraie réforme de la PAC, pour le bénéfice de tous·tes les citoyen·ne·s européen·ne·s!</p>
@@ -74,6 +76,7 @@ const PAAC = ({children}) => {
 
       <p>PAC souhaitée par la plateforme <i>Pour une autre PAC </i> à télécharger</p>
 
+      </Container>
     </div>
 
   )
