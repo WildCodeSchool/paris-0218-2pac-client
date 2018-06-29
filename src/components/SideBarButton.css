@@ -1,14 +1,19 @@
 .SideBarButton {
+  display: block;
+  min-width: 11em;
+  padding: .7em .7em .7em .7em;
+  margin-bottom: .6em;
   color: white;
-  padding: .30rem .3rem;
   font-size: 1rem;
-  border-top: none;
-  border-bottom: none;
-  border-left: none;
-  height: 30px;
-  border-right: 1px solid #707070;
-  margin-top: auto;
-  margin-bottom: auto;
+  border:none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.SideBarButton:hover {
+
+  padding-left:1.2em;
+
 }
 
 a {

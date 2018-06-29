@@ -3,3 +3,11 @@
 p {
   white-space: pre-line;
 }
+
+.changing-content {
+
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  margin: 2.5em auto;
+}

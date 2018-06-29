@@ -1,12 +1,15 @@
 import React from 'react'
 import ArticlePreview from './ArticlePreview'
+import { Link } from "@reach/router";
 
 const LongArticle = (props) => {
   return (
-    <a href='/' className="article-childrens">
+
+    <div className="article-childrens">
       <span category={props.category} className="category">{props.category}</span>
       <ArticlePreview title={props.title} shortDescription={props.shortDescription} />
-    </a>
+    </div>
+    
   )
 }
 
