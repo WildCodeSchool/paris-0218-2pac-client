@@ -9,7 +9,7 @@ import './Une.css'
 const Une = ({ uneData }) => {
   const articles = uneData
   const longArticle = articles[0]
-  const smallArticles = articles.slice(1)
+  const smallArticles = articles.slice(1,5)
 
   return (
 

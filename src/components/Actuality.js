@@ -10,7 +10,7 @@ const Actuality = ({ ActuData }) => {
       {ActuData.map(article =>
         <Link to={`/article/${article.id}`}>
             <div className="actuality" style={{ backgroundImage: `url(${article.imageURL})` }} >
-              <span category={article.name} className="category">{article.name}</span>
+              <span category={article.category} className="category">{article.category}</span>
               <ArticlePreview title={article.title} shortDescription={article.shortDescription} />
             </div>
         </Link>

@@ -32,7 +32,7 @@ class App extends Component {
         this.setState({ articles: data })
       })*/
 
-    // this.setState({ articles: arrayUne }) // todo :
+    this.setState({ articles: arrayUne }) // todo :
 
     fetch('/documentsCat')
       .then(response => response.json())
