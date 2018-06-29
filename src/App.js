@@ -34,7 +34,7 @@ class App extends Component {
 
     // this.setState({ articles: arrayUne }) // todo :
 
-    fetch('/documents')
+    fetch('/documentsCat')
       .then(response => response.json())
       .then(data => {
         console.log(data)
