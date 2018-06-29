@@ -23,12 +23,12 @@ class App extends Component {
   }
 
   componentDidMount () {
-    fetch('/articlesCat')
+    /*fetch('/articlesCat')
       .then(response => response.json())
       .then(data => {
         console.log(data)
         this.setState({ articles: data })
-      })
+      })*/
 
     this.setState({ articles: arrayUne }) // todo : rm
   }
