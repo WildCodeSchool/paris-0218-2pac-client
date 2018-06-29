@@ -9,6 +9,7 @@ import Home from './containers/Home'
 import ContactContainer from './containers/ContactContainer'
 import ArticleContainer from './containers/ArticleContainer'
 import ActualityContainer from './containers/ActualityContainer'
+import ResourcesContainer from './containers/ResourcesContainer'
 import NewsletterContainer from './containers/NewsletterContainer'
 
 /*mocks*/
@@ -19,7 +20,8 @@ import './App.css'
 
 class App extends Component {
   state = {
-    articles: []
+    articles: [],
+    documents: []
   }
 
   componentDidMount () {
@@ -30,11 +32,27 @@ class App extends Component {
         this.setState({ articles: data })
       })*/
 
-    this.setState({ articles: arrayUne }) // todo : rm
+    // this.setState({ articles: arrayUne }) // todo :
+
+    fetch('/documentsCat')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        this.setState({ documents: data })
+      })
   }
 
   render () {
     console.log('render', this.state)
+
+    const articles = this.state.articles.slice(0, 5).map(article =>
+          <AsideLeft
+            key={article.id}
+            title={article.title}
+            categoryId={article.name}
+            shortDescription={article.shortDescription}
+            />
+            )
 
     return (
       <div>
@@ -46,6 +64,7 @@ class App extends Component {
             <Home path="/" uneData={arrayUne} data={this.state.articles} />
             <ArticleContainer path="/article/:id" articles={this.state.articles} />
             <ActualityContainer path="/actuality" ActuData={this.state.articles} />
+            <ResourcesContainer path="/resources" ResourceData={this.state.documents} />
             <NewsletterContainer path="/newsletter" />
             <ContactContainer path="/contact" contactData={infoContact} />
 
