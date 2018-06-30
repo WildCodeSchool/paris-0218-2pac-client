@@ -29,8 +29,8 @@ const Nav3 = ({ menu }) => {
     <div>
       <nav>
         <ul className='navbar'>
-        <li><Link to='/'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-        viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></Link></li>
+        <li><Link to='/'><span id='homeButton'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span></Link></li>
           <li className="menu"><a href="#">Qui sommes nous ?</a>
             <ul className="submenu">
               <li><Link to='Presentation'>Présentation</Link></li>

@@ -10,14 +10,22 @@ nav > ul > li {
   position: relative;
 }
 
+nav a:only-child {
+  border-left: none;
+}
+
+#homeButton {
+  /*position: absolute;*/
+}
+
 .submenu {
   display: none;
 }
 
 nav a {
   display: inline-block;
-  /*border-right: 1px solid #CCC;xs*/
-}
+  border-left: 1px solid #CCC;
+ }
 
 nav > ul > li > a {
   padding: 20px 30px;
@@ -55,5 +63,6 @@ nav li:hover .submenu {
 
 .menu:hover > a {
   color: #fff;
+  border-style: none;
 }
 

@@ -9,13 +9,13 @@ const SideBar = () => {
 
       <Link to="actuality">
         <SideBarButton style={{ backgroundColor: '#226462' }}>
-          <span><i className="fas fa-globe"></i></span>Actualités
+          <span><i className="fas fa-globe"></i></span> Actualités
         </SideBarButton>
       </Link>
 
       <Link to="resources">
       <SideBarButton style={{ backgroundColor: '#F4971A' }}>
-        <span><i className="fas fa-book-open"></i></span>Ressources
+        <span><i className="fas fa-book-open"></i></span> Ressources
       </SideBarButton>
       </Link>
 
@@ -27,12 +27,12 @@ const SideBar = () => {
 
       <Link to="newsletter">
         <SideBarButton style={{ backgroundColor: '#731717' }}>
-          <span><i className="fas fa-rss"></i></span>Newsletter
+          <span><i className="fas fa-rss"></i></span> Rester connecté
         </SideBarButton>
       </Link>
 
       <a href="https://twitter.com/pouruneautrepac" target="_blank">
-      <SideBarButton style={{ backgroundColor: '#707070' }}>
+      <SideBarButton style={{ backgroundColor: '#707070'}}>
         <span><i className="fab fa-twitter"></i></span>
       </SideBarButton>
       </a>
