@@ -35,7 +35,7 @@ class App extends Component {
     this.setState({ articles: arrayUne }) // todo :
 
     fetch('/documentsCat')
-      .then(response => response.json())
+      //.then(response => response.json()) mit en commentaire pour éviter de voir l'erreur à chaque chargement
       .then(data => {
         console.log(data)
         this.setState({ documents: data })
