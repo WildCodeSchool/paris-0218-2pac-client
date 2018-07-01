@@ -1,15 +1,13 @@
 import React from 'react'
 import AsideLeft from '../components/AsideLeft'
-import SideBar from '../components/SideBar'
 import Une from '../components/Une'
 import ChevronTitle from '../components/ChevronTitle'
-import { Link } from "@reach/router";
+import { Link } from '@reach/router'
 
 import './RouterContainer.css'
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars'
 
 const Home = (props) => {
-
   const data = props.data
 
   return (
@@ -18,7 +16,7 @@ const Home = (props) => {
 
       <div className="aside-left-container">
         <h1 className="filactu"><ChevronTitle ChevronColor="#226462" title="Fil d'actualité" /> </h1>
-        <Scrollbars style={{ width: "20em", height: "37em"}} autoHide autoHideTimeout={500} autoHideDuration={500}>
+        <Scrollbars style={{ width: '20em', height: '37em' }} autoHide autoHideTimeout={500} autoHideDuration={500}>
           <div className="aside-left-articles">
             {data.slice(0, 5).map(article =>
               <Link to={`/article/${article.id}`}>
@@ -27,7 +25,7 @@ const Home = (props) => {
                   title={article.title}
                   category={article.category}
                   shortDescription={article.shortDescription}
-                  />
+                />
               </Link>
             )}
           </div>

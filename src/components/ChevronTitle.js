@@ -4,8 +4,7 @@ import './ChevronTitle.css'
 
 const Title = (props) => {
   return (
-
-    <div className="title"> <FaChevronRight className='icon' style={{color: `${props.ChevronColor}` }}/> {props.title} </div>
+    <div className="title"> <FaChevronRight className='icon' style={{ color: `${props.ChevronColor}` }} /> {props.title} </div>
   )
 }
 
