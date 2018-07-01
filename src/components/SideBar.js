@@ -1,5 +1,4 @@
 import React from 'react'
-import './SideBar.css'
 import SideBarButton from './SideBarButton'
 import { Link } from '@reach/router'
 
