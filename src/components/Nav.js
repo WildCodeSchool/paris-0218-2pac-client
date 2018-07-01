@@ -7,14 +7,19 @@ import AbcDeLaPac from './content/AbcDeLaPac'
 import LaPacCaMimpacte from './content/LaPacCaMimpacte'
 import LaPac20152020 from './content/LaPac20152020'
 import ReformeDeLaPac from './content/ReformeDeLaPac'
+import ChiffresCles from './content/ChiffresCles'
 import Sigles from './content/Sigles'
 import OrientationsCommunes from './content/OrientationsCommunes'
 import BilanActuel from './content/BilanActuel'
 import SystemeAgro from './content/SystemeAgro'
 import Priorite2020 from './content/Priorite2020'
 import PAAC from './content/PAAC'
+import NosRepresentants from './content/NosRepresentants'
+import BecomeMember from './content/BecomeMember'
+import EventsParticipation from './content/EventsParticipation'
 import OnParleDeNous from './content/OnParleDeNous'
 import CommuniqueDePresse from './content/CommuniqueDePresse'
+import PressKit from './content/PressKit'
 import WhoWeAre from './content/WhoWeAre'
 import WhatWeDo from './content/WhatWeDo'
 import WhatWeWant from './content/WhatWeWant'
@@ -45,7 +50,7 @@ const Nav3 = ({ menu }) => {
               <li><Link to='LaPacCaMimpacte'>La PAC, ça m’impacte ?</Link></li>
               <li><Link to='LaPac20152020'>La PAC 2015-2020</Link></li>
               <li><Link to='ReformeDeLaPac'>La réforme de la PAC</Link></li>
-              <li><Link to=''>Chiffres-clés</Link></li>
+              <li><Link to='ChiffresCles'>Chiffres-clés</Link></li>
               <li><Link to='Sigles'>Sigles</Link></li>
             </ul>
           </li>
@@ -60,26 +65,25 @@ const Nav3 = ({ menu }) => {
           </li>
           <li className="menu"><a href="#">Agir</a>
             <ul className="submenu">
-              <li><Link to=''>Interpeller ses représentants</Link></li>
-              <li><Link to=''>Devenir membre</Link></li>
-              <li><Link to=''>Participer à un événement</Link></li>
+              <li><Link to='NosRepresentants'>Interpeller ses représentants</Link></li>
+              <li><Link to='BecomeMember'>Devenir membre</Link></li>
+              <li><Link to='EventsParticipation'>Participer à un événement</Link></li>
             </ul>
           </li>
           <li className="menu"><a href="#">Presse</a>
             <ul className="submenu">
               <li><Link to='OnParleDeNous'>On parle de nous</Link></li>
               <li><Link to='CommuniqueDePresse'>Communiqués de presse</Link></li>
-              <li><Link to=''>Kit presse</Link></li>
+              <li><Link to='PressKit'>Kit presse</Link></li>
             </ul>
           </li>
           <li className="menu"><a href="#"> ▾ content in English 🇬🇧</a>
             <ul className="submenu">
-              <li><Link to=''>See you soon</Link></li>
               <li><Link to='WhoWeAre'>Who we are</Link></li>
               <li><Link to='WhatWeDo'>What we do</Link></li>
               <li><Link to='WhatWeWant'>What we want</Link></li>
               <li><Link to='EuropeanPartners'>European Partners</Link></li>
-              <li><Link to='CapInFrance'>the cap in France</Link></li>
+              <li><Link to='CapInFrance'>The Cap in France</Link></li>
               <li><Link to='ContactUs'>Contact Us</Link></li>
             </ul>
           </li>
@@ -94,13 +98,20 @@ const Nav3 = ({ menu }) => {
         <LaPacCaMimpacte path="LaPacCaMimpacte" />
         <LaPac20152020 path="LaPac20152020" />
         <ReformeDeLaPac path="ReformeDeLaPac" />
+        <ChiffresCles path='ChiffresCles' />
         <Sigles path="Sigles" />
         <OrientationsCommunes path="OrientationsCommunes" />
         <BilanActuel path="BilanActuel" />
         <SystemeAgro path="SystemeAgro" />
         <Priorite2020 path="Priorite2020" />
         <PAAC path="PAAC" />
-        {/* chiffre clé, interpeller ses représentants/devenir membre/participer a un évènement, kit de presse, see you soon */}
+        <NosRepresentants path='NosRepresentants' />
+        <BecomeMember path='BecomeMember' />
+        <EventsParticipation path='EventsParticipation' />
+        <OnParleDeNous path='OnParleDeNous' />
+        <CommuniqueDePresse path='CommuniqueDePresse' />
+        <PressKit  path='PressKit' />
+        {/* nos membres et legalNotice */}
         <WhoWeAre path="WhoWeAre" />
         <WhatWeDo path="WhatWeDo" />
         <WhatWeWant path="WhatWeWant" />

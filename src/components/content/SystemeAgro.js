@@ -1,15 +1,12 @@
 import React from 'react'
-import './Content.css'
-import Container from '../Container'
+import ContainerForCreate from '../ContainerForCreate'
 
 const SystemeAgro = ({children}) => {
   return (
     <div>
-    <Container>
+    <ContainerForCreate>
       <p class="p9">
-        <span class="s1">
-    Notre vision - Système agro-alimentaire souhaité
-        </span>
+        <h1>Système agro-alimentaire souhaité</h1>
       </p>
       <p class="p6">
 
@@ -857,7 +854,7 @@ const SystemeAgro = ({children}) => {
       <p class="p8">
 
       </p>
-      </Container>
+      </ContainerForCreate>
     </div>
   )
 }

@@ -1,15 +1,15 @@
 import React from 'react'
 import './Content.css'
-import Container from '../Container'
+import ContainerForCreate from '../ContainerForCreate'
 
 const ContactUs = ({children}) => {
   return (
     <div>
-    <Container>
-      <h1>Content in English - Contact us</h1>
+    <ContainerForCreate>
+      <h1>Contact us</h1>
       <p>For any question, please contact us by email at <a href="mailto:aurelie.catallo@pouruneautrepac.eu"> aurelie.catallo[@]pouruneautrepac.eu </a> or by phone: +33 180 89 99 51.</p>
       <p>English and German writing or speaking welcome!</p>
-      </Container>
+      </ContainerForCreate>
     </div>
   )
 }

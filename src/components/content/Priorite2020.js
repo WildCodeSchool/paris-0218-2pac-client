@@ -1,11 +1,12 @@
 import React from 'react'
 import './Content.css'
-import Container from '../Container'
+import ContainerForCreate from '../ContainerForCreate'
 
 const Priorite2020 = ({children}) => {
   return (
     <div>
-        <Container>
+        <ContainerForCreate>
+        <h1>Nos 12 priorités pour la PAAC post 2020</h1>
       <p>Osons une vraie réforme de la PAC, pour le bénéfice de tous·tes les citoyen·ne·s européen·ne·s !</p>
 
       <p>Forte de son budget annuel de plus de 50 milliards €, la Politique Agricole Commune (PAC) de l’Union européenne (UE) structure le système agro-alimentaire européen. Aujourd’hui, une majorité de son budget est dépensée au profit de l’agriculture intensive et de pratiques qui nuisent au développement durable des territoires ruraux, à la santé et à l’environnement, privant ainsi les citoyen·ne·s européen·ne·s d’une utilisation judicieuse de l’argent public. À partir de 2021, une nouvelle PAC doit entrer en vigueur. Les négociations pour en définir les contours ont déjà commencé. Ce processus constitue une véritable opportunité pour la rendre plus juste, plus durable et plus cohérente.</p>
@@ -69,7 +70,7 @@ const Priorite2020 = ({children}) => {
       <p>PAAC post 2020 souhaitée par la plateforme <i>Pour une autre PAC</i> à télécharger</p>
       <p>Notre vision – La PAAC à horizon 2030</p>
       <p>PAC souhaitée par la plateforme<i> Pour une autre PAC </i>à télécharger</p>
-        </Container>
+        </ContainerForCreate>
     </div>
 
   )

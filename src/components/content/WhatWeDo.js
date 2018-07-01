@@ -1,12 +1,12 @@
 import React from 'react'
 import './Content.css'
-import Container from '../Container'
+import ContainerForCreate from '../ContainerForCreate'
 
 const WhatWeDo = ({children}) => {
   return (
     <div>
-    <Container>
-      <h1>Content in English - What we do</h1>
+    <ContainerForCreate>
+      <h1>What we do</h1>
       <p><em>Pour une autre PAC </em>leads and coordinates collective work articulated around three axes:</p>
       <ul>
         <li>Forume. encouraging communication and engagement between the non-for-profit stakeholders in CAP-related topics:
@@ -31,7 +31,7 @@ const WhatWeDo = ({children}) => {
           </ul>
         </li>
       </ul>
-      </Container>
+      </ContainerForCreate>
     </div>
   )
 }

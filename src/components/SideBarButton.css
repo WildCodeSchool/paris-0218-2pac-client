@@ -19,6 +19,6 @@ li {
   list-style: none;
 }
 
-.SideBarButton svg {
-  margin-right: 0.5em;
-}
+#sideBar { 
+  margin-right: 1em;
+ }
