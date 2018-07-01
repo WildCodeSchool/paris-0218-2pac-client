@@ -8,6 +8,8 @@
   border:none;
   cursor: pointer;
   transition: .3s;
+  border-radius: 12px;
+
 }
 
 .SideBarButton:hover {
