@@ -1,32 +1,5 @@
 import React from 'react'
 import { Router, Link } from '@reach/router'
-import Presentation from './content/Presentation'
-import Historique from './content/Historique'
-import NosActions from './content/NosActions'
-import MembersOfPac from './content/MembersOfPac'
-import AbcDeLaPac from './content/AbcDeLaPac'
-import LaPacCaMimpacte from './content/LaPacCaMimpacte'
-import LaPac20152020 from './content/LaPac20152020'
-import ReformeDeLaPac from './content/ReformeDeLaPac'
-import ChiffresCles from './content/ChiffresCles'
-import Sigles from './content/Sigles'
-import OrientationsCommunes from './content/OrientationsCommunes'
-import BilanActuel from './content/BilanActuel'
-import SystemeAgro from './content/SystemeAgro'
-import Priorite2020 from './content/Priorite2020'
-import PAAC from './content/PAAC'
-import NosRepresentants from './content/NosRepresentants'
-import BecomeMember from './content/BecomeMember'
-import EventsParticipation from './content/EventsParticipation'
-import OnParleDeNous from './content/OnParleDeNous'
-import CommuniqueDePresse from './content/CommuniqueDePresse'
-import PressKit from './content/PressKit'
-import WhoWeAre from './content/WhoWeAre'
-import WhatWeDo from './content/WhatWeDo'
-import WhatWeWant from './content/WhatWeWant'
-import EuropeanPartners from './content/EuropeanPartners'
-import CapInFrance from './content/CapInFrance'
-import ContactUs from './content/ContactUs'
 
 import './Nav.css'
 
@@ -78,7 +51,7 @@ const Nav3 = ({ menu }) => {
               <li><Link to='PressKit'>Kit presse</Link></li>
             </ul>
           </li>
-          <li className="menu"><a href="#"> ▾ content in English 🇬🇧</a>
+          <li className="menu"><a href="#">▾&nbsp;&nbsp;&nbsp;Content in English 🇬🇧</a>
             <ul className="submenu">
               <li><Link to='WhoWeAre'>Who we are</Link></li>
               <li><Link to='WhatWeDo'>What we do</Link></li>
@@ -91,36 +64,7 @@ const Nav3 = ({ menu }) => {
         </ul>
       </nav>
 
-      <Router>
-        <Presentation path="Presentation" />
-        <Historique path="Historique" />
-        <NosActions path="NosActions" />
-        <MembersOfPac path="MembersOfPac" />
-        <AbcDeLaPac path="AbcDeLaPac" />
-        <LaPacCaMimpacte path="LaPacCaMimpacte" />
-        <LaPac20152020 path="LaPac20152020" />
-        <ReformeDeLaPac path="ReformeDeLaPac" />
-        <ChiffresCles path='ChiffresCles' />
-        <Sigles path="Sigles" />
-        <OrientationsCommunes path="OrientationsCommunes" />
-        <BilanActuel path="BilanActuel" />
-        <SystemeAgro path="SystemeAgro" />
-        <Priorite2020 path="Priorite2020" />
-        <PAAC path="PAAC" />
-        <NosRepresentants path='NosRepresentants' />
-        <BecomeMember path='BecomeMember' />
-        <EventsParticipation path='EventsParticipation' />
-        <OnParleDeNous path='OnParleDeNous' />
-        <CommuniqueDePresse path='CommuniqueDePresse' />
-        <PressKit path='PressKit' />
-        {/* nos membres et legalNotice */}
-        <WhoWeAre path="WhoWeAre" />
-        <WhatWeDo path="WhatWeDo" />
-        <WhatWeWant path="WhatWeWant" />
-        <EuropeanPartners path="EuropeanPartners" />
-        <CapInFrance path="CapInFrance" />
-        <ContactUs path="ContactUs" />
-      </Router>
+
     </div>
   )
 }
