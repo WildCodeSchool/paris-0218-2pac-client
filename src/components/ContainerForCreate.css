@@ -4,9 +4,14 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.container-article {
+/*body {
+  line-height: 1;/*interlineaje
+}
+*/
+
+/*.container-article {
   background-color:white;
   max-width: 50%;
   margin: 2.5em 25em;
   padding: 2em;
-}
+}*/
