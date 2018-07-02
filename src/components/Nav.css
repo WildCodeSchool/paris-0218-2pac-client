@@ -1,8 +1,18 @@
 nav {
   height: 3.5em;
-  background-color: #fff;
+  width:100%;
+  /*background-color: blue;*/
   border-bottom: 1px solid #CCC;
-  padding-left: 11em;
+  margin: auto;
+
+}
+
+.navbar {
+
+  display: flex;
+  justify-content: center;
+
+
 }
 
 nav > ul > li {
@@ -14,8 +24,9 @@ nav a:only-child {
   border-left: none;
 }
 
-#homeButton {
-  /*position: absolute;*/
+#homeButton svg{
+  width: 45px;
+  margin: 0;
 }
 
 .submenu {
@@ -25,18 +36,19 @@ nav a:only-child {
 nav a {
   display: inline-block;
   border-left: 1px solid #CCC;
+  height: 1.0em;
  }
 
 nav > ul > li > a {
   padding: 20px 30px;
-} 
+}
 
 .submenu li a {
   padding: 1rem;
   font-size: 1rem;
   width: 12rem;
   background-color: #fff;
-  border: 1px solid #CCC; 
+  border: 1px solid #CCC;
   border-top-width: 0em;
   margin: 0rem;
 }
