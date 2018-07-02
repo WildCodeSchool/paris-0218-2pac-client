@@ -21,7 +21,7 @@ const Une = ({ uneData }) => {
           <div className="long-article-container" style={{ backgroundImage: `url(${longArticle.imageURL})` }}>
             <LongArticle
               title={longArticle.title}
-              category={longArticle.category}
+              category={longArticle.categoryId}
               shortDescription={longArticle.shortDescription}
             />
           </div>
@@ -33,7 +33,7 @@ const Une = ({ uneData }) => {
               <SmallArticle
                 key={article.id}
                 title={article.title}
-                category={article.category}
+                category={article.categoryId}
                 style={{ backgroundImage: `url(${article.imageURL})` }}
               />
             </Link>

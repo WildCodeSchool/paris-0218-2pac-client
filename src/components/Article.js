@@ -27,7 +27,7 @@ const Article = ({ article }) => {
         <ChevronTitle title={article.title} />
         {noImgFunc()}
         <div className="intro-details">
-          <span className="category">{article.category}</span>
+          <span className="category">{article.categoryId}</span>
           <span className="date">{article.createdAt}</span>
           <span className="tag-container">
             {article.tags.map(tag => <Tag key={tag.id} tag={tag} />)}

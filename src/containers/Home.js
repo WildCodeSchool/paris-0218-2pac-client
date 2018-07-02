@@ -23,7 +23,7 @@ const Home = (props) => {
                 <AsideLeft
                   key={article.id}
                   title={article.title}
-                  category={article.category}
+                  category={article.categoryId}
                   shortDescription={article.shortDescription}
                 />
               </Link>
