@@ -3,6 +3,7 @@ import { Router, Link } from '@reach/router'
 import Presentation from './content/Presentation'
 import Historique from './content/Historique'
 import NosActions from './content/NosActions'
+import MembersOfPac from './content/MembersOfPac'
 import AbcDeLaPac from './content/AbcDeLaPac'
 import LaPacCaMimpacte from './content/LaPacCaMimpacte'
 import LaPac20152020 from './content/LaPac20152020'
@@ -34,14 +35,14 @@ const Nav3 = ({ menu }) => {
     <div>
       <nav>
         <ul className='navbar'>
-        <li><Link to='/'><span id='homeButton'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-        viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span></Link></li>
+          <li><Link to='/'><span id='homeButton'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span></Link></li>
           <li className="menu"><a href="#">Qui sommes nous ?</a>
             <ul className="submenu">
               <li><Link to='Presentation'>Présentation</Link></li>
               <li><Link to='Historique'>Historique</Link></li>
               <li><Link to='NosActions'>Nos actions</Link></li>
-              <li><Link to=''>Nos membres</Link></li>
+              <li><Link to='MembersOfPac'>Nos membres</Link></li>
             </ul>
           </li>
           <li className="menu"><a href="#">Comprendre la PAC</a>
@@ -94,6 +95,7 @@ const Nav3 = ({ menu }) => {
         <Presentation path="Presentation" />
         <Historique path="Historique" />
         <NosActions path="NosActions" />
+        <MembersOfPac path="MembersOfPac" />
         <AbcDeLaPac path="AbcDeLaPac" />
         <LaPacCaMimpacte path="LaPacCaMimpacte" />
         <LaPac20152020 path="LaPac20152020" />
@@ -110,7 +112,7 @@ const Nav3 = ({ menu }) => {
         <EventsParticipation path='EventsParticipation' />
         <OnParleDeNous path='OnParleDeNous' />
         <CommuniqueDePresse path='CommuniqueDePresse' />
-        <PressKit  path='PressKit' />
+        <PressKit path='PressKit' />
         {/* nos membres et legalNotice */}
         <WhoWeAre path="WhoWeAre" />
         <WhatWeDo path="WhatWeDo" />

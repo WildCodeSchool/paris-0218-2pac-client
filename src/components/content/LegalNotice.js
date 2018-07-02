@@ -5,11 +5,11 @@ import ContainerForCreate from '../ContainerForCreate'
 const LegalNotice = () => {
   return (
     <div>
-    <ContainerForCreate>
+      <ContainerForCreate>
 
-    </ContainerForCreate>
+      </ContainerForCreate>
     </div>
- )
+  )
 }
 
 export default LegalNotice
