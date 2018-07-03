@@ -2,7 +2,6 @@ import React from 'react'
 import Contact from '../components/Contact'
 import SideBar from '../components/SideBar'
 
-
 const ContactContainer = (props) => {
   return (
 

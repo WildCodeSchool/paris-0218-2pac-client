@@ -1,44 +1,94 @@
 import React from 'react'
+import './ArticleForm.css'
 
-class ArticleForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Titre de l'article :
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <label>
-          Catégorie d'article :
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value="news">Actualité</option>
-            <option value="event">Evénement</option>
-            <option value="newspaper">Presse</option>
-            <option value="newsrelease">Communiqué de presse</option>
-          </select>
-        </label>
-
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
+const initialInputValues = {
+  title: '',
+  shortDescription: '',
+  description: '',
+  eventDate: '',
+  categoryId: '0',
+  imageURL: '',
+  imageDescription: ''
 }
 
-  export default ArticleForm
+class ArticleForm extends React.Component {
+state = {
+  inputs: initialInputValues
+}
+
+handleChange = (e) => {
+  const inputs = {
+    ...this.state.inputs,
+    [e.target.name]: e.target.value
+  }
+
+  this.setState({ inputs: inputs })
+}
+
+reset = () => {
+  this.setState({ inputs: initialInputValues })
+}
+
+handleSubmit = (e) => {
+  e.preventDefault()
+
+  const data = this.state.inputs
+
+  // todo: handle server side
+  if (data.categoryId !== '3') {
+    data.eventDate = undefined
+  }
+
+  fetch('/articles', {
+    method: 'POST',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+    body: JSON.stringify(data)
+  })
+    .then(res => res.json())
+    .then(res => {
+      this.reset()
+    })
+}
+
+render () {
+  const inputs = this.state.inputs
+
+  return (
+    <form id='formular_articles' onSubmit={this.handleSubmit}>
+      <label>Titre :
+        <input type="text_title" name='title' value={inputs.title} onChange={this.handleChange} />
+      </label>
+      <label>Choix de la catégorie :
+        <select id="categoryId" name='categoryId' value={inputs.categoryId} onChange={this.handleChange}>
+          <option value="0">article</option>
+          <option value="1">presse</option>
+          <option value="2">actualité</option>
+          <option value="3">évènement</option>
+        </select>
+      </label>
+      {
+        inputs.categoryId === '3'
+          ? <label>Date :
+            <input type="date" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
+          </label>
+          : ''
+      }
+      <label>Résumé :
+        <textarea type="text_resume" name='shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
+      </label>
+      <label>Description :
+        <textarea type="text_description" name='description' value={inputs.description} onChange={this.handleChange} />
+      </label>
+      <label>Lien de l'image :
+        <input type="text_URL" name='imageURL' value={inputs.imageURL} onChange={this.handleChange} />
+      </label>
+      <label>Description de l'image :
+        <input type="text_description_image" name='imageDescription' value={inputs.imageDescription} onChange={this.handleChange} />
+      </label>
+      <button type="submit" value="submit">Ajouter</button>
+    </form>
+  )
+}
+}
+
+export default ArticleForm

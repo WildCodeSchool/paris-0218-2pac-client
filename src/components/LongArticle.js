@@ -1,6 +1,6 @@
 import React from 'react'
 import ArticlePreview from './ArticlePreview'
-import { Link } from "@reach/router";
+import { Link } from '@reach/router'
 
 const LongArticle = (props) => {
   return (
@@ -9,7 +9,7 @@ const LongArticle = (props) => {
       <span category={props.category} className="category">{props.category}</span>
       <ArticlePreview title={props.title} shortDescription={props.shortDescription} />
     </div>
-    
+
   )
 }
 
