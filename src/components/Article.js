@@ -1,11 +1,9 @@
 import React from 'react'
 import Container from './Container'
-import Tag from './Tag'
 import ChevronTitle from './ChevronTitle'
 import './Article.css'
 
 const Article = ({ article }) => {
-
   const noImgFunc = () => {
     if (article.imageURL === '') {
       return (

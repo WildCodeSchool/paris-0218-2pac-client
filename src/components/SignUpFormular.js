@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './SignUpFormular.css'
 import FaChevronRight from 'react-icons/lib/fa/chevron-right'
 

@@ -34,7 +34,6 @@ class ArticleForm extends React.Component {
 
     const data = this.state.inputs
 
-
     fetch('/articles', {
       method: 'POST',
       headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -82,6 +81,6 @@ class ArticleForm extends React.Component {
       </form>
     )
   }
-  }
+}
 
 export default ArticleForm

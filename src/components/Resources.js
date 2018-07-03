@@ -1,7 +1,6 @@
 import React from 'react'
 import DocumentPreview from './DocumentPreview'
 import './Resources.css'
-import { Link } from '@reach/router'
 
 const Resources = ({ ResourceData }) => {
   return (

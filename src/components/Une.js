@@ -18,15 +18,15 @@ const Une = ({ uneData }) => {
 
       <div className="article-container">
         {longArticle.map(longArticle =>
-        <Link to={`/article/${longArticle.id}`}>
-          <div className="long-article-container" style={{ backgroundImage: `url(${longArticle.imageURL})` }}>
-            <LongArticle
-              title={longArticle.title}
-              category={longArticle.name}
-              shortDescription={longArticle.shortDescription}
-            />
-          </div>
-        </Link>
+          <Link to={`/article/${longArticle.id}`}>
+            <div className="long-article-container" style={{ backgroundImage: `url(${longArticle.imageURL})` }}>
+              <LongArticle
+                title={longArticle.title}
+                category={longArticle.name}
+                shortDescription={longArticle.shortDescription}
+              />
+            </div>
+          </Link>
         )}
 
         <div className="small-article-container">
