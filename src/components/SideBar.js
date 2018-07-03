@@ -12,9 +12,11 @@ const SideBar = () => {
         </SideBarButton>
       </Link>
 
-      <SideBarButton style={{ backgroundColor: '#F4971A' }}>
-        <span><i className="fas fa-book-open"></i></span>Ressources
-      </SideBarButton>
+      <Link to="resources">
+        <SideBarButton style={{ backgroundColor: '#F4971A' }}>
+          <span><i className="fas fa-book-open"></i></span>Ressources
+        </SideBarButton>
+      </Link>
 
       <Link to="contact">
         <SideBarButton style={{ backgroundColor: '#A99C2F' }}>

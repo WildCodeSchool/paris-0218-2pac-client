@@ -10,7 +10,7 @@ const Page404 = () => {
       <h1>La page que vous cherchez à afficher n'existe pas, malheureusement :( </h1>
       <Link to="/">
         <div className="return-home">
-        Revenez à la page d'acceuil !
+        Revenez à la page d'accueil !
         </div>
       </Link>
 

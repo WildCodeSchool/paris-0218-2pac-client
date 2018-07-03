@@ -1,44 +1,87 @@
 import React from 'react'
+import './ArticleForm.css'
+
+const initialInputValues = {
+  title: '',
+  shortDescription: '',
+  description: '',
+  eventDate: '',
+  categoryId: '',
+  imageURL: '',
+  imageDescription: ''
+}
 
 class ArticleForm extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {value: ''}
-
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+  state = {
+    inputs: initialInputValues
   }
 
-  handleChange (event) {
-    this.setState({value: event.target.value})
+  handleChange = (e) => {
+    const inputs = {
+      ...this.state.inputs,
+      [e.target.name]: e.target.value
+    }
+
+    this.setState({ inputs: inputs })
   }
 
-  handleSubmit (event) {
-    alert('A name was submitted: ' + this.state.value)
-    event.preventDefault()
+  reset = () => {
+    this.setState({ inputs: initialInputValues })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+
+    const data = this.state.inputs
+
+
+    fetch('/articles', {
+      method: 'POST',
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(res => {
+        this.reset()
+      })
   }
 
   render () {
+    const inputs = this.state.inputs
+
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Titre de l'article :
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+      <form id='formular_articles' onSubmit={this.handleSubmit}>
+        <label>Titre :
+          <input type="text_title" name='title' value={inputs.title} onChange={this.handleChange} />
         </label>
-        <label>
-          Catégorie d'article :
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value="news">Actualité</option>
-            <option value="event">Evénement</option>
-            <option value="newspaper">Presse</option>
-            <option value="newsrelease">Communiqué de presse</option>
+        <label>Choix de la catégorie :
+          <select id="categoryId" name='categoryId' value={inputs.categoryId} onChange={this.handleChange}>
+            <option value="1">article</option>
+            <option value="2">presse</option>
+            <option value="3">actualité</option>
+            <option value="4">évènement</option>
           </select>
         </label>
 
-        <input type="submit" value="Submit" />
+        <label>Résumé :
+          <textarea type="text_resume" name='shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
+        </label>
+        <label>Description :
+          <textarea type="text_description" name='description' value={inputs.description} onChange={this.handleChange} />
+        </label>
+        <label>Date :
+          <input type="eventDate" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
+        </label>
+        <label>Lien de l'image :
+          <input type="text_URL" name='imageURL' value={inputs.imageURL} onChange={this.handleChange} />
+        </label>
+        <label>Description de l'image :
+          <input type="text_description_image" name='imageDescription' value={inputs.imageDescription} onChange={this.handleChange} />
+        </label>
+        <button type="submit" value="submit">Ajouter</button>
       </form>
     )
   }
-}
+  }
 
 export default ArticleForm
