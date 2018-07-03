@@ -1,14 +1,16 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 
 const BecomeMember = () => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Devenir membre</h1>
         <p> Contenu à venir ... </p>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

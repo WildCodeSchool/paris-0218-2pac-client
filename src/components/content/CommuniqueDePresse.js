@@ -1,12 +1,13 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 import BulletedList from '../BulletedList'
 
 const CommuniqueDePresse = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Communiqués de presse</h1>
         <h2>Pour une autre PAC (depuis 2017)</h2>
         <ul>
@@ -25,7 +26,8 @@ const CommuniqueDePresse = ({children}) => {
           <li><BulletedList /> Analyse de la Communication de la Commission européenne (26 novembre 2010)</li>
           <li><BulletedList /> Analyse du projet de la Commission européenne pour la PAC post 2013 (18 octobre 2010)</li>
         </ul>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

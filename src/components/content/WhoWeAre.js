@@ -1,12 +1,13 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 import BulletedList from '../BulletedList'
 
 const WhoWeAre = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Who we are</h1>
         <p>The platform <i>Pour une autre PAC</i> (<em>For Another Common Agricultural Policy</em>) is a French inter-association body created for a common reflection and action in view of the reform of the Common Agricultural Policy.</p>
 
@@ -14,7 +15,8 @@ const WhoWeAre = ({children}) => {
         <p>Now named <i>Pour une autre PAC</i>, the platform is again mobilized in 2017, as debates surrounding the post-2020 CAP reforms begin. With stronger ambitions and an increased number of members, it continues the fight for more durable, fair and coherent agricultural policies.</p>
 
         <p>The major strength of <i>Pour une autre PAC </i>is the common mobilization of dozens of associations, federations and syndicates, with various interests, around a common and specific goal: pushing for a positive reform of the CAP. There is no other such organization or structure in France working on the CAP.</p>
-        <p><i>Pour une autre PAC </i>gathers around some thirty member organizations, structured in four categories. All work at national level and demonstrate a direct link between their domain of activity and the CAP.</p>
+        <p><i>Pour une autre PAC </i>gathers around some thirty member organizations, structured in four categories. All work at national level and demonstrate a direct link between their domain of activity and the CAP.</p><br/>
+
         <ul>
           <li><BulletedList /> Farmer’s Organizations:
             <ul>
@@ -63,7 +65,8 @@ const WhoWeAre = ({children}) => {
             </ul>
           </li>
         </ul>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

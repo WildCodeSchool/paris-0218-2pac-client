@@ -1,15 +1,17 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 import BulletedList from '../BulletedList.js'
 
 const LaPacCaMinpaqute = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>La PAC, ça m’impacte ?</h1>
         <p>La Politique Agricole Commune (PAC) structure le modèle agro-alimentaire européen. Elle ne concerne pas uniquement les agriculteurs qui touchent des aides, mais bien chaque citoyen, en tant que mangeur, contribuable, électeur, promeneur, parent, etc.</p>
         <p>La politique agricole de l’UE a ainsi un impact direct sur biens des aspects de la vie quotidienne des citoyen·ne·s européen·ne·s :</p>
+        <p></p>
         <ul>
           <li><BulletedList /><strong> Alimentation</strong>: La PAC détermine largement l’échelle de production des différents types de denrées alimentaires qui sont développées dans l’UE (par exemple en subventionnant davantage les grandes cultures que les fruits ou légumes frais). Elle structure aussi leur répartition géographique, poussant plutôt à la spécialisation des territoires. Après réforme, la PAC pourrait enfin pleinement inclure un volet sur l’éducation à l’alimentation des citoyen·ne·s européen·ne·s, en particulier des enfants.</li>
           <li><BulletedList /><strong> Santé publique</strong>: En favorisant certains types d’agriculture, la PAC a une influence sur la qualité de l’air et de l’eau (pouvant être dégradée par des émissions polluantes issues des engrais, des pesticides ou de l’élevage industriel), ainsi que sur la qualité sanitaire des aliments (positive en agroécologie, mais potentiellement négative si le produit contient des résidus de pesticides).</li>
@@ -20,7 +22,8 @@ const LaPacCaMinpaqute = ({children}) => {
           <li><BulletedList /><strong> Bien-être animal :</strong> Les citoyen·ne·s européen·ne·s sont de plus en plus sensibles au bien-être des animaux d’élevage. Or une large majorité des élevages de l’UE bénéficient de subventions de la PAC. Cette dernière représente donc un levier important pour favoriser une meilleure prise en compte du bien-être animal par les éleveur·se·s européen·ne·s.</li>
           <li><BulletedList /><strong> Prix des denrées alimentaires</strong>: La PAC dessine les écarts de prix entre aliments sains (par exemple, les fruits et légumes ou les légumineuses produits en agroécologie) et ceux pouvant avoir un impact négatif sur la santé (sucre issu des betteraves, produits contenant de l’huile de palme importée, fruits et légumes contenant de nombreux résidus de pesticides, etc.)</li>
         </ul>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

@@ -1,10 +1,12 @@
 import React from 'react'
-import ContainerForCreate from '../ContainerForCreate'
+import './Content.css'
+import Container from '../Container'
 
 const BilanActuel = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Bilan de l'actuelle PAC</h1>
 
         <p>La Politique Agricole Commune (PAC) 2015-2020 a manqué sa cible. Elle était annoncée comme plus verte et plus juste, mais elle n’a en réalité pas changé de cap ni arrêté les fortes pressions sur la nature et les paysans. En effet, la PAC 2015-2020 s’est illustrée par le maintien d’un soutien public massif au profit de l’agriculture agro-industrielle. En France, la confiance des agriculteurs en cette politique a été profondément ébranlée par son incohérence, sa complexité et surtout, par l’instabilité des dispositifs et de leurs dotations budgétaires.
@@ -80,7 +82,8 @@ const BilanActuel = ({children}) => {
         <p>En clair, la combinaison entre des erreurs stratégiques européennes et françaises dans la définition et la mise en œuvre de la PAC a encore un peu plus terni l’image de la PAC auprès de ses bénéficiaires et des citoyens. La réforme de 2015 n’a su restaurer ni sa légitimité, ni sa lisibilité. La gouvernance de la PAC ne s’est pas non plus ouverte à la participation démocratique demandée par la société civile : cette politique demeure impénétrable, opaque et incompréhensible pour l’immense majorité des citoyens européens. Il sera donc primordial que la prochaine révision s’attèle à redorer son image et restaurer son sens, sans quoi la PAC pourrait définitivement perdre toute justification auprès des contribuables européens et tout intérêt aux yeux de ses bénéficiaires.</p>
 
         <p>Bilan de l’actuelle PAC de la plateforme <i>Pour une autre PAC </i> à télécharger</p>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

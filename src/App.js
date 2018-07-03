@@ -39,6 +39,7 @@ import WhatWeWant from './components/content/WhatWeWant'
 import EuropeanPartners from './components/content/EuropeanPartners'
 import CapInFrance from './components/content/CapInFrance'
 import ContactUs from './components/content/ContactUs'
+import LegalNotice from './components/content/LegalNotice'
 
 /* mocks */
 import infoContact from './mocks/infoContact.json'
@@ -124,6 +125,7 @@ class App extends Component {
             <EuropeanPartners path="/EuropeanPartners" />
             <CapInFrance path="/CapInFrance" />
             <ContactUs path="/ContactUs" />
+            <LegalNotice path="/LegalNotice" />
 
           </Router>
           <SideBar />

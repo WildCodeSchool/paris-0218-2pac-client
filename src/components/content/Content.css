@@ -6,8 +6,20 @@ td:first-child {
   color: #F4971A;
 }
 
-body{
+.fix-content-article{
     text-align: justify;
     text-justify: inter-word;
     line-height: 1.2;
+}
+
+.orange{
+  color:#F4971A;
+}
+
+.green{
+  color:#226462;
+}
+
+.bold{
+  font-weight: bold;
 }

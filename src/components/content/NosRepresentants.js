@@ -1,14 +1,16 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 
 const NosRepresentants = () => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Interpeller ses Représentants</h1>
         <p> Contenu à venir ... </p>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

@@ -1,12 +1,13 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 import BulletedList from '../BulletedList'
 
 const OnParleDeNous = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>On parle de nous</h1>
         <ul>
           <li><BulletedList /> <a href="http://www.arc2020.eu/french-german-alliance-cap-declaration/">ARC2020</a> (17 avril 2018)</li>
@@ -27,7 +28,8 @@ const OnParleDeNous = ({children}) => {
           <li><BulletedList /> <a href="http://www.lafranceagricole.fr/actualites/gestion-et-droit/pac-2020-trente-organisations-unies-pour-peser-dans-les-debats-1,2,1300767425.html">La France Agricole</a> (28 novembre 2017)</li>
           <li><BulletedList /> <a href="https://www.alternatives-economiques.fr/bientot-une-nouvelle-pac/00080401">Alternatives économiques</a> (1<sup>er</sup> septembre 2017)</li>
         </ul>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

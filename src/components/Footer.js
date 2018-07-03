@@ -4,6 +4,7 @@ import './Footer.css'
 import FaChevronRight from 'react-icons/lib/fa/chevron-right'
 import FaCircle from 'react-icons/lib/fa/circle'
 import FooterMembersLogos from './FooterMembersLogos'
+import { Link } from '@reach/router'
 
 export default class Footer extends Component {
   render () {
@@ -24,7 +25,7 @@ export default class Footer extends Component {
           <FooterMembersLogos />
         </div>
 
-        <div className='mentions'> <a href='/'> <FaCircle /> Mentions légales <FaCircle /> </a> </div>
+        <div className='mentions'> <Link to="/LegalNotice"> <FaCircle /> Mentions légales <FaCircle /> </Link> </div>
       </footer>
     )
   }

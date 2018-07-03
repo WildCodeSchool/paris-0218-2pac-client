@@ -1,11 +1,12 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 
 const WhatWeWant = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>What we want</h1>
 
         <h2>Putting the future Common Agricultural and Food Policy at the service of all citizens</h2>
@@ -28,7 +29,8 @@ const WhatWeWant = ({children}) => {
         <br/>
         <h2>Rethinking the Common Agricultural and Food Policy’s governance in its conception and implementation</h2>
         <p>The future Common Agricultural and Food Policy must clearly state its European added value, in contrast with a re-nationalization of agricultural policies which would deprive the EU of the means to reach its declared goals. The European scale, and the European scale alone, can guarantee financial solidarity between farmers and citizens between all member states. The future policy must also make room for democratic, deliberative processes on all scales of decision-making and implementation processes, allowing both for citizens to get involved in the debated issues, and for representatives of related governance issues – food, land, health and environment – to have their say and play their role. Finally a mandatory, independent and binding evaluation of the proposed schemes must be decided, so as to restore the legitimacy and understandability of the Common Agricultural and Food Policy in the eyes of its beneficiaries.</p>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

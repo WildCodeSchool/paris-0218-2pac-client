@@ -1,11 +1,12 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 
 const Priorite2020 = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Nos 12 priorités pour la PAAC post 2020</h1>
         <p>Osons une vraie réforme de la PAC, pour le bénéfice de tous·tes les citoyen·ne·s européen·ne·s !</p>
 
@@ -70,7 +71,8 @@ const Priorite2020 = ({children}) => {
         <p>PAAC post 2020 souhaitée par la plateforme <i>Pour une autre PAC</i> à télécharger</p>
         <p>Notre vision – La PAAC à horizon 2030</p>
         <p>PAC souhaitée par la plateforme<i> Pour une autre PAC </i>à télécharger</p>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
 
   )

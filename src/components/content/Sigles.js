@@ -1,11 +1,12 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 
 const Sigles = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Comprendre la PAC – Sigles</h1>
         <table>
           <tbody>
@@ -787,7 +788,7 @@ const Sigles = ({children}) => {
             </tr>
             <tr>
               <td width="85">
-                <p>TAFTA (ou TTIP)</p>
+                <p>TAFTA(ou TTIP)</p>
               </td>
               <td width="397">
                 <p>Accord de libre-échange entre les Etats-Unis et l’UE</p>
@@ -803,7 +804,8 @@ const Sigles = ({children}) => {
             </tr>
           </tbody>
         </table>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

@@ -1,12 +1,13 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 import BulletedList from '../BulletedList'
 
 const EuropeanPartners = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>European partners</h1>
         <p><i>Pour une autre PAC</i> partners with other civil society’s movements accross Europe for various projects:</p>
         <ul>
@@ -28,7 +29,8 @@ const EuropeanPartners = ({children}) => {
           <li><BulletedList /> <a href="https://wfto-europe.org/">World Fair Trade Organization Europe</a></li>
           <li><BulletedList /> <a href="https://urgenci.net/">Urgenci</a></li>
         </ul>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

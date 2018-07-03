@@ -1,16 +1,16 @@
 import React from 'react'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 
 const OrientationsCommunes = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Orientations Communes </h1>
         <strong>
     Un autre PAACte entre les paysan·ne·s et la société
         </strong>
-
         <p> La Politique Agricole Commune (PAC) 2014-2020 a manqué sa cible. Elle était annoncée comme plus verte et plus juste, mais elle n’a en réalité pas changé de cap ni arrêté le rouleau compresseur auquel la nature et les agriculteur·rice·s sont soumis. En effet, la PAC 2014-2020 s’est illustrée par le manque total d’ambition du verdissement, la discrimination des critères envers les petites fermes, l’absence de plafonnement, la persistance du déséquilibre entre 1er et 2ème piliers et le parachèvement de la dérégulation. De surcroît, en France, la confiance des agriculteur·rice·s en cette politique a été profondément ébranlée par son incohérence, sa complexité, son incapacité à leur permettre de tirer un revenu de leur production, et surtout, par l’instabilité des dispositifs.
         </p>
         <p>
@@ -63,7 +63,8 @@ const OrientationsCommunes = ({children}) => {
   La future PAAC doit affirmer sa plus-value européenne, par opposition à une renationalisation des politiques agricoles, qui viderait de sa substance l’ambition des objectifs fixés par l’UE. Le niveau européen est garant de la solidarité financière entre citoyen·ne·s et agriculteur·rice·s des différents États membres.Par ailleurs, la définition de la future PAAC appelle à un processus démocratique délibératif à toutes les échelles de prise de décision et de mise en œuvre, au sein duquel, d’une part, les citoyen·ne·s sont réellement associé·e·s et d’autre part, les instances de gouvernance impliquées sont élargies à celles chargées de l’alimentation, des territoires, de la santé et de l’environnement. Enfin, une obligation d’évaluation indépendante et décisive des dispositifs doit être instaurée, afin de restaurer la légitimité et la lisibilité de la PAAC auprès de ses bénéficiaires.
         </p>
         <p>Orientations communes de la plateforme <i>Pour une autre PAC à télécharger</i></p>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

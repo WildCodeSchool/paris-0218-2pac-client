@@ -1,12 +1,13 @@
 import React from 'react'
 import BulletedList from '../BulletedList.js'
 import './Content.css'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 
 const NosActions = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Nos actions</h1>
         <p><i> Pour une autre PAC </i> anime un travail collectif s’articulant autour de trois axes :</p>
         <ul>
@@ -35,7 +36,8 @@ const NosActions = ({children}) => {
         <p>Rapports d’activités 2013</p>
         <p>Rapports d’activités 2014</p>
         <p>Rapport d’activités 2017</p>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }

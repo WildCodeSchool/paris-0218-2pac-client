@@ -1,11 +1,13 @@
 import React from 'react'
-import ContainerForCreate from '../ContainerForCreate'
+import Container from '../Container'
 import BulletedList from '../BulletedList'
+import './Content.css'
 
 const MembersOfPac = ({children}) => {
   return (
     <div>
-      <ContainerForCreate>
+      <Container>
+        <div class="fix-content-article">
         <h1>Nos membres</h1>
         <ul>
           <li><BulletedList /> Organisations paysannes :</li>
@@ -54,7 +56,8 @@ const MembersOfPac = ({children}) => {
             <li> - <a href="https://slowfood.fr/">Slow Food</a></li>
           </ul>
         </ul>
-      </ContainerForCreate>
+        </div>
+      </Container>
     </div>
   )
 }
