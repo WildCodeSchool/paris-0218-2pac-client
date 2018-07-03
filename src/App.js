@@ -20,35 +20,34 @@ import './App.css'
 class App extends Component {
   state = {
     articles: [],
-    documents: [],
+    documents: []
   }
 
   isMountedv2 = false
 
   async componentDidMount () {
-
-    this.isMountedv2 = true;
+    this.isMountedv2 = true
 
     try {
       await fetch('/articlesCat')
-      .then(response => response.json())
-      .then(dbArticles => {
-        this.setState({ articles: dbArticles })
-      })
+        .then(response => response.json())
+        .then(dbArticles => {
+          this.setState({ articles: dbArticles })
+        })
 
       await fetch('/documentsCat')
-      .then(response => response.json())
-      .then(dbDoc => {
-        this.setState({ documents: dbDoc })
-      })
-    } catch(e) {
+        .then(response => response.json())
+        .then(dbDoc => {
+          this.setState({ documents: dbDoc })
+        })
+    } catch (e) {
       if (this.isMountedv2) {
         this.setState({e})
       }
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.isMountedv2 = false
   }
 
