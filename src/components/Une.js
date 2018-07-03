@@ -8,7 +8,7 @@ import './Une.css'
 
 const Une = ({ uneData }) => {
   const articles = uneData
-  const longArticle = articles[0]
+  const longArticle = articles.slice(0, 1)
   const smallArticles = articles.slice(1)
 
   return (
@@ -17,6 +17,7 @@ const Une = ({ uneData }) => {
       <ChevronTitle title="à la une" />
 
       <div className="article-container">
+        {longArticle.map(longArticle =>
         <Link to={`/article/${longArticle.id}`}>
           <div className="long-article-container" style={{ backgroundImage: `url(${longArticle.imageURL})` }}>
             <LongArticle
@@ -26,15 +27,16 @@ const Une = ({ uneData }) => {
             />
           </div>
         </Link>
+        )}
 
         <div className="small-article-container">
-          {smallArticles.map(article =>
-            <Link to={`/article/${article.id}`}>
+          {smallArticles.map(smallArticle =>
+            <Link to={`/article/${smallArticle.id}`}>
               <SmallArticle
-                key={article.id}
-                title={article.title}
-                category={article.categoryId}
-                style={{ backgroundImage: `url(${article.imageURL})` }}
+                key={smallArticle.id}
+                title={smallArticle.title}
+                category={smallArticle.categoryId}
+                style={{ backgroundImage: `url(${smallArticle.imageURL})` }}
               />
             </Link>
           )}

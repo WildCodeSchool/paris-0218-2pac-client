@@ -23,16 +23,17 @@ class App extends Component {
   }
 
   componentDidMount () {
-    fetch('/articles')
+    fetch('/articlesCat')
       .then(response => response.json())
       .then(dbArticles => {
         this.setState({ articles: dbArticles })
       })
 
-    fetch('/documents')
+    fetch('/documentsCat')
       .then(response => response.json())
       .then(dbDoc => {
         this.setState({ documents: dbDoc })
+        console.log(this.state.documents)
       })
 
   }
