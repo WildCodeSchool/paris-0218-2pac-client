@@ -5,6 +5,7 @@ import ChevronTitle from './ChevronTitle'
 import './Article.css'
 
 const Article = ({ article }) => {
+
   const noImgFunc = () => {
     if (article.imageURL === '') {
       return (

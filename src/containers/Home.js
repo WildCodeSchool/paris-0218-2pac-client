@@ -16,7 +16,7 @@ const Home = (props) => {
 
       <div className="aside-left-container">
         <h1 className="filactu"><ChevronTitle ChevronColor="#226462" title="Fil d'actualité" /> </h1>
-        <Scrollbars style={{ width: '20em', height: '37em' }} autoHide autoHideTimeout={500} autoHideDuration={500}>
+        <Scrollbars style={{ width: '16em', height: '37em' }} autoHide autoHideTimeout={500} autoHideDuration={500}>
           <div className="aside-left-articles">
             {data.slice(0, 5).map(article =>
               <Link to={`/article/${article.id}`}>
