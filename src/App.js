@@ -59,7 +59,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-
+        <UploadForm />
         <div className="changing-content" >
           <Router>
 

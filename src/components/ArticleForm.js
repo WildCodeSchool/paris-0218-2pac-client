@@ -6,7 +6,7 @@ const initialInputValues = {
   shortDescription: '',
   description: '',
   eventDate: '',
-  categoryId: '0',
+  categoryId: '',
   imageURL: '',
   imageDescription: ''
 }
@@ -34,10 +34,6 @@ handleSubmit = (e) => {
 
   const data = this.state.inputs
 
-  // todo: handle server side
-  if (data.categoryId !== '3') {
-    data.eventDate = undefined
-  }
 
   fetch('/articles', {
     method: 'POST',
@@ -60,24 +56,21 @@ render () {
       </label>
       <label>Choix de la catégorie :
         <select id="categoryId" name='categoryId' value={inputs.categoryId} onChange={this.handleChange}>
-          <option value="0">article</option>
-          <option value="1">presse</option>
-          <option value="2">actualité</option>
-          <option value="3">évènement</option>
+          <option value="1">article</option>
+          <option value="2">presse</option>
+          <option value="3">actualité</option>
+          <option value="4">évènement</option>
         </select>
       </label>
-      {
-        inputs.categoryId === '3'
-          ? <label>Date :
-            <input type="date" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
-          </label>
-          : ''
-      }
+
       <label>Résumé :
         <textarea type="text_resume" name='shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
       </label>
       <label>Description :
         <textarea type="text_description" name='description' value={inputs.description} onChange={this.handleChange} />
+      </label>
+      <label>Date :
+        <input type="eventDate" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
       </label>
       <label>Lien de l'image :
         <input type="text_URL" name='imageURL' value={inputs.imageURL} onChange={this.handleChange} />
