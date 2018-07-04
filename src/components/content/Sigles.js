@@ -8,10 +8,11 @@ const Sigles = ({children}) => {
       <Container>
         <div class="fix-content-article">
         <h1>Comprendre la PAC – Sigles</h1>
+        <br/>
         <table>
           <tbody>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>AB</p>
               </td>
               <td width="397">
@@ -19,7 +20,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>AEE</p>
               </td>
               <td width="397">
@@ -27,7 +28,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>ALE</p>
               </td>
               <td width="397">
@@ -35,7 +36,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>ANC</p>
               </td>
               <td width="397">
@@ -43,7 +44,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>AOP</p>
               </td>
               <td width="397">
@@ -51,7 +52,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>APE</p>
               </td>
               <td width="397">
@@ -59,7 +60,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>ASP</p>
               </td>
               <td width="397">
@@ -67,7 +68,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>ATR</p>
               </td>
               <td width="397">
@@ -75,7 +76,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>BCAE</p>
               </td>
               <td width="397">
@@ -83,7 +84,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>BEE</p>
               </td>
               <td width="397">
@@ -91,7 +92,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CAB</p>
               </td>
               <td width="397">
@@ -99,7 +100,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CDG</p>
               </td>
               <td width="397">
@@ -107,7 +108,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CE</p>
               </td>
               <td width="397">
@@ -115,7 +116,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CETA</p>
               </td>
               <td width="397">
@@ -123,7 +124,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CFP</p>
               </td>
               <td width="397">
@@ -131,7 +132,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CGDD</p>
               </td>
               <td width="397">
@@ -139,7 +140,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>COMAGRI</p>
               </td>
               <td width="397">
@@ -147,7 +148,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>COMBUDG</p>
               </td>
               <td width="397">
@@ -155,7 +156,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>COMDEVE</p>
               </td>
               <td width="397">
@@ -163,7 +164,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>COMECON</p>
               </td>
               <td width="397">
@@ -171,7 +172,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>COMENVI</p>
               </td>
               <td width="397">
@@ -179,7 +180,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>COMINTA</p>
               </td>
               <td width="397">
@@ -187,7 +188,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>Conseil AGRI</p>
               </td>
               <td width="397">
@@ -195,7 +196,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>COP</p>
               </td>
               <td width="397">
@@ -203,7 +204,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>Coreper</p>
               </td>
               <td width="397">
@@ -211,7 +212,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CPD</p>
               </td>
               <td width="397">
@@ -219,7 +220,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CSA</p>
               </td>
               <td width="397">
@@ -227,7 +228,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>CSO</p>
               </td>
               <td width="397">
@@ -235,7 +236,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DBV</p>
               </td>
               <td width="397">
@@ -243,7 +244,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DDT</p>
               </td>
               <td width="397">
@@ -251,7 +252,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DG AGRI</p>
               </td>
               <td width="397">
@@ -259,7 +260,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DG BUDG</p>
               </td>
               <td width="397">
@@ -267,7 +268,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DG DEVCO</p>
               </td>
               <td width="397">
@@ -275,7 +276,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DG ENVI</p>
               </td>
               <td width="397">
@@ -283,7 +284,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DG REGIO</p>
               </td>
               <td width="397">
@@ -291,7 +292,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DG SANTE</p>
               </td>
               <td width="397">
@@ -299,7 +300,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DGAL</p>
               </td>
               <td width="397">
@@ -307,7 +308,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DGER</p>
               </td>
               <td width="397">
@@ -315,7 +316,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DGPE</p>
               </td>
               <td width="397">
@@ -323,7 +324,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DJA</p>
               </td>
               <td width="397">
@@ -331,7 +332,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DPB</p>
               </td>
               <td width="397">
@@ -339,7 +340,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>DRAAF</p>
               </td>
               <td width="397">
@@ -347,7 +348,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>EARL</p>
               </td>
               <td width="397">
@@ -355,7 +356,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>EM</p>
               </td>
               <td width="397">
@@ -363,7 +364,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>ERMG</p>
               </td>
               <td width="397">
@@ -371,7 +372,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>FAC</p>
               </td>
               <td width="397">
@@ -379,7 +380,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>FAO</p>
               </td>
               <td width="397">
@@ -387,7 +388,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>FEADER</p>
               </td>
               <td width="397">
@@ -395,7 +396,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>FEAGA</p>
               </td>
               <td width="397">
@@ -403,7 +404,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>FEDER</p>
               </td>
               <td width="397">
@@ -411,7 +412,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>FESI</p>
               </td>
               <td width="397">
@@ -419,7 +420,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>FNSEA</p>
               </td>
               <td width="397">
@@ -427,7 +428,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>FSE</p>
               </td>
               <td width="397">
@@ -435,7 +436,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>GAEC</p>
               </td>
               <td width="397">
@@ -443,7 +444,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>GAL</p>
               </td>
               <td width="397">
@@ -451,7 +452,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>GES</p>
               </td>
               <td width="397">
@@ -459,7 +460,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>GIEE</p>
               </td>
               <td width="397">
@@ -467,7 +468,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>IAA</p>
               </td>
               <td width="397">
@@ -475,7 +476,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>ICHN</p>
               </td>
               <td width="397">
@@ -483,7 +484,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>IGP</p>
               </td>
               <td width="397">
@@ -491,7 +492,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>IFT</p>
               </td>
               <td width="397">
@@ -499,7 +500,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>JA</p>
               </td>
               <td width="397">
@@ -507,7 +508,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>JRC</p>
               </td>
               <td width="397">
@@ -515,7 +516,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>LEADER</p>
               </td>
               <td width="397">
@@ -523,7 +524,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>MAA</p>
               </td>
               <td width="397">
@@ -531,7 +532,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>MAB</p>
               </td>
               <td width="397">
@@ -539,7 +540,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>MAEC</p>
               </td>
               <td width="397">
@@ -547,7 +548,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>Mercosur</p>
               </td>
               <td width="397">
@@ -555,7 +556,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>MSA</p>
               </td>
               <td width="397">
@@ -563,7 +564,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>MTES</p>
               </td>
               <td width="397">
@@ -571,7 +572,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>OCDE</p>
               </td>
               <td width="397">
@@ -579,7 +580,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>OCM</p>
               </td>
               <td width="397">
@@ -587,7 +588,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>OGM</p>
               </td>
               <td width="397">
@@ -595,7 +596,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>OMC</p>
               </td>
               <td width="397">
@@ -603,7 +604,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>OP</p>
               </td>
               <td width="397">
@@ -611,7 +612,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>PAC</p>
               </td>
               <td width="397">
@@ -619,7 +620,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>PCAE</p>
               </td>
               <td width="397">
@@ -627,7 +628,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>PDRR</p>
               </td>
               <td width="397">
@@ -635,7 +636,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>PE</p>
               </td>
               <td width="397">
@@ -643,7 +644,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>PEI</p>
               </td>
               <td width="397">
@@ -651,7 +652,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>POSEI</p>
               </td>
               <td width="397">
@@ -659,7 +660,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>PP</p>
               </td>
               <td width="397">
@@ -667,7 +668,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>PSE</p>
               </td>
               <td width="397">
@@ -675,7 +676,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>RICA</p>
               </td>
               <td width="397">
@@ -683,7 +684,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>RPB</p>
               </td>
               <td width="397">
@@ -691,7 +692,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>RPB</p>
               </td>
               <td width="397">
@@ -699,7 +700,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>RPUE</p>
               </td>
               <td width="397">
@@ -707,7 +708,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>RRN</p>
               </td>
               <td width="397">
@@ -715,7 +716,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>RUP</p>
               </td>
               <td width="397">
@@ -723,7 +724,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>SAFER</p>
               </td>
               <td width="397">
@@ -731,7 +732,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>SAPS (ou SPS)</p>
               </td>
               <td width="397">
@@ -739,7 +740,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>SAU</p>
               </td>
               <td width="397">
@@ -747,7 +748,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>SGAE</p>
               </td>
               <td width="397">
@@ -755,7 +756,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>SFS</p>
               </td>
               <td width="397">
@@ -763,7 +764,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>SIA</p>
               </td>
               <td width="397">
@@ -771,7 +772,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>SIE</p>
               </td>
               <td width="397">
@@ -779,7 +780,7 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>STG</p>
               </td>
               <td width="397">
@@ -787,15 +788,15 @@ const Sigles = ({children}) => {
               </td>
             </tr>
             <tr>
-              <td width="85">
-                <p>TAFTA(ou TTIP)</p>
+              <td width="100">
+                <p>TAFTA (ou TTIP)</p>
               </td>
               <td width="397">
                 <p>Accord de libre-échange entre les Etats-Unis et l’UE</p>
               </td>
             </tr>
             <tr>
-              <td width="85">
+              <td width="115">
                 <p>UE</p>
               </td>
               <td width="397">
