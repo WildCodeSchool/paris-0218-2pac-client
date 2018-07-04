@@ -12,7 +12,6 @@ nav {
   display: flex;
   justify-content: center;
 
-
 }
 
 nav > ul > li {
@@ -51,6 +50,8 @@ nav > ul > li > a {
   border: 1px solid #CCC;
   border-top-width: 0em;
   margin: 0rem;
+  transition: all .2s;
+  color: black;
 }
 
 .submenu li a:hover {
@@ -66,15 +67,19 @@ nav li:hover .submenu {
   z-index: 1000;
 }
 
+.menu {
+
+  transition: all .3s;
+
+}
+
 .menu:hover {
   display: inline-block;
   height: 3.5rem;
   background-color: #226462;
-  border: 1px solid #CCC;
 }
 
 .menu:hover > a {
   color: #fff;
   border-style: none;
 }
-
