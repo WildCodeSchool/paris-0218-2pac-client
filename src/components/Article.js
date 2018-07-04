@@ -26,7 +26,7 @@ const Article = ({ article }) => {
         <ChevronTitle title={article.title} />
         {noImgFunc()}
         <div className="intro-details">
-          <span className="category">{article.name}</span>
+          <span className="category">{article.category}</span>
           <span className="date">{article.createdAt}</span>
 
         </div>

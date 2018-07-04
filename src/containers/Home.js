@@ -7,8 +7,18 @@ import { Link } from '@reach/router'
 import './RouterContainer.css'
 import { Scrollbars } from 'react-custom-scrollbars'
 
-const Home = (props) => {
-  const data = props.data
+const AsideLeftArticle = ({ article }) =>
+  <Link to={`/article/${article.id}`}>
+    <AsideLeft
+      title={article.title}
+      category={article.category}
+      shortDescription={article.shortDescription}
+    />
+  </Link>
+
+const Home = ({ articles }) => {
+  const leftArticles = articles.slice(0, 5)
+    .map(article => <AsideLeftArticle key={article.id} article={article} />)
 
   return (
     <div className="router-container">
@@ -16,20 +26,11 @@ const Home = (props) => {
         <h1 className="filactu"><ChevronTitle ChevronColor="#226462" title="Fil d'actualité" /> </h1>
         <Scrollbars style={{ width: '16em', height: '37em' }} autoHide autoHideTimeout={500} autoHideDuration={500}>
           <div className="aside-left-articles">
-            {data.slice(0, 5).map(article =>
-              <Link to={`/article/${article.id}`}>
-                <AsideLeft
-                  key={article.id}
-                  title={article.title}
-                  category={article.name}
-                  shortDescription={article.shortDescription}
-                />
-              </Link>
-            )}
+            {leftArticles}
           </div>
         </Scrollbars>
       </div>
-      <Une uneData={props.uneData} />
+      <Une articles={articles} />
     </div>
   )
 }

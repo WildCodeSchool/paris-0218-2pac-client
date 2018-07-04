@@ -1,11 +1,11 @@
 import React from 'react'
 import ArticlePreview from './ArticlePreview'
 
-const LongArticle = (props) => {
+const LongArticle = ({ article }) => {
   return (
     <div className="article-childrens">
-      <span category={props.category} className="category">{props.category}</span>
-      <ArticlePreview title={props.title} shortDescription={props.shortDescription} />
+      <span category={article.category} className="category">{article.category}</span>
+      <ArticlePreview title={article.title} shortDescription={article.shortDescription} />
     </div>
   )
 }

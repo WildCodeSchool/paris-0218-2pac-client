@@ -1,13 +1,12 @@
 import React from 'react'
 import ArticlePreview from './ArticlePreview'
 
-const SmallArticle = (props) => {
+const SmallArticle = ({ article }) => {
   return (
-
-    <div>
-      <div className="small-article" style={props.style}>
-        <span category={props.category} className="category">{props.category}</span>
-        <ArticlePreview title={props.title} />
+    <div style={{ backgroundImage: `url(${article.imageURL})` }}>
+      <div className="small-article" style={article.style}>
+        <span category={article.category} className="category">{article.category}</span>
+        <ArticlePreview title={article.title} />
       </div>
     </div>
   )

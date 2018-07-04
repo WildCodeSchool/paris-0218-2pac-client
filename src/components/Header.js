@@ -10,10 +10,6 @@ const Header = ({ menu }) => {
     <div className="headerBlock">
       <div className="mainHeader">
         <img className="logo" src={logo} alt="logo" />
-        <div className="blockSearchLogin">
-          <Login />
-          <Search />
-        </div>
       </div>
       <Nav />
     </div>

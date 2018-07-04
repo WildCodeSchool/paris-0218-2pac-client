@@ -2,11 +2,11 @@ import React from 'react'
 import Resources from '../components/Resources'
 import Container from '../components/Container'
 
-const ResourcesContainer = (props) => {
+const ResourcesContainer = ({ documents }) => {
   return (
     <div className="router-container">
       <Container>
-        <Resources ResourceData={props.ResourceData} />
+        <Resources documents={documents} />
       </Container>
     </div>
 

@@ -3,21 +3,18 @@ import ArticlePreview from './ArticlePreview'
 import './Actuality.css'
 import { Link } from '@reach/router'
 
-const Actuality = ({ ActuData }) => {
+const Actuality = ({ articles }) => {
   return (
-
     <div className="actu-container">
-      {ActuData.map(article =>
+      {articles.map(article =>
         <Link to={`/article/${article.id}`}>
           <div className="actuality" style={{ backgroundImage: `url(${article.imageURL})` }} >
-            <span category={article.name} className="category">{article.name}</span>
+            <span category={article.category} className="category">{article.category}</span>
             <ArticlePreview title={article.title} shortDescription={article.shortDescription} />
           </div>
         </Link>
       )}
-
     </div>
-
   )
 }
 
