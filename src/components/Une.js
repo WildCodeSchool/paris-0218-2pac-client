@@ -15,8 +15,8 @@ const Une = ({ articles }) => {
       <ChevronTitle title="à la une" />
 
       <div className="article-container">
-        { longArticle ?
-          <Link to={`/article/${longArticle.id}`}>
+        { longArticle
+          ? <Link to={`/article/${longArticle.id}`}>
             <div className="long-article-container" style={{ backgroundImage: `url(${longArticle.imageURL})` }}>
               <LongArticle article={longArticle} />
             </div>

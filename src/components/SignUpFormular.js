@@ -40,7 +40,6 @@ class SignUpFormular extends React.Component {
       </div>
     )
   }
-
 }
 
 export default SignUpFormular
