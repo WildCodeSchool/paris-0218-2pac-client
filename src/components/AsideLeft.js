@@ -3,12 +3,11 @@ import './AsideLeft.css'
 
 const AsideLeft = props => {
   return (
-    <div className="AsideLeft_Line">
-      <h1><span>>>></span>FIL D'ACTUALITÉS</h1>
-      <span className="category"><b>{props.categoryId}</b></span>
-      <span className="title"><b>{props.title}</b></span>
+    <div className="aside-left-content">
+      <span className="category"><b>{props.category}</b></span>
+      <span className="aside-left-title"><b>{props.title}</b></span>
       <p>{props.shortDescription}</p>
-      <p><a className="mb" href="#lien vers la page de l'article">>>> Lire la suite</a></p>
+      <p><span className="aside-link" > Lire la suite</span></p>
     </div>
   )
 }

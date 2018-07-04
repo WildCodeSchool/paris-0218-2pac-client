@@ -8,6 +8,7 @@ import { linkTo } from '@storybook/addon-links'
 import '../App.css'
 import App from '../App'
 import Login from '../components/Login'
+
 import SideBar from '../components/SideBar'
 import SideBarButton from '../components/SideBarButton'
 import Footer from '../components/Footer'
@@ -17,11 +18,13 @@ import Tag from '../components/Tag'
 import ChevronTitle from '../components/ChevronTitle'
 import Article from '../components/Article'
 import Contact from '../components/Contact'
-import SignUpFormular from '../containers/SignUpFormular'
+import SignUpFormular from '../components/SignUpFormular'
 import ArticlePreview from '../components/ArticlePreview'
 import LongArticle from '../components/LongArticle'
 import SmallArticle from '../components/SmallArticle'
 import Une from '../components/Une'
+import Actuality from '../components/Actuality'
+import Page404 from '../components/Page404'
 
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
@@ -44,10 +47,13 @@ storiesOf('Login', module)
       <Login />
     </div>)
 
+storiesOf('Button', module)
+
 storiesOf('SideBar', module)
   .add('Classic', () => <SideBar />)
 
 storiesOf('SideBarButton', module)
+
   .add('Dark green', () =>
     <SideBarButton onClick={action('clicked')} style={{ color: 'black' }}>
       Qui sommes nous?
@@ -61,6 +67,7 @@ storiesOf('SideBarButton', module)
       Actualités
     </SideBarButton>)
   .add('Red', () =>
+
     <SideBarButton onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
       English
     </SideBarButton>)
@@ -96,3 +103,9 @@ storiesOf('ArticlePreview', module)
 
 storiesOf('*Une', module)
   .add('Articles à la une complet', () => <Une uneData={arrayUne}/>)
+
+storiesOf('Actualités', module)
+  .add('bloc d\'actu pour la page "actualité" ', () => <Actuality ActuData={arrayUne}/>)
+
+storiesOf('Page404', module)
+  .add('à ton avis', () => <Page404 />)

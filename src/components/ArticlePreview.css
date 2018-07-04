@@ -1,15 +1,18 @@
 .preview-container {
 
-  width: 100%;
-  padding: 1em;
-  color: #363636;
+  width: calc(100%);
   background-color: rgba(255,255,255,0.7);
 
+}
+
+.preview-title {
+  padding: .5em;
 }
 
 .preview-container span {
 
   text-align:justify;
+  padding-bottom: .5em;
   width: 100%;
   display: block;
 

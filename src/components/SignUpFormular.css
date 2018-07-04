@@ -1,0 +1,51 @@
+#SignUpText {
+	color : white;
+  margin: 0.5em;
+}
+
+
+
+#formular_container {
+	font-family: 'Source Sans Pro', sans-serif;
+	max-width: 730px;
+	max-height: 325px;
+	margin: 0 3em 0 1.5em;
+	background-color: #731717;
+	padding: 2em 7.2em 3em 6em;
+}
+
+::placeholder {
+	color: #F4971A;
+}
+
+input[type='submit'] {
+  background-color: #F4971A;
+  color: white;
+  border-radius: 0.3em;
+  border-color: white;
+  padding: 0.4em;
+  position: relative;
+  margin-top: 2em;
+  margin-right: 10em;
+}
+
+input[name='lastName'] {
+  width: 26em;
+  margin-right: 2.9em;
+  margin-top: 2em;
+}
+
+input[name='firstName'] {
+  width: 33em;
+  margin-top: 2em;
+}
+
+input[name='mail'] {
+  width: 62.5em;
+  margin-top: 2em;
+}
+
+input[name='phone'] {
+  width: 62.5em;
+  margin-top: 2em;
+}

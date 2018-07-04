@@ -1,40 +1,39 @@
 import React from 'react'
 import Container from './Container'
 import ChevronTitle from './ChevronTitle'
-import SmallArticle from './SmallArticle'
 import LongArticle from './LongArticle'
+import SmallArticle from './SmallArticle'
+import { Link } from '@reach/router'
 import './Une.css'
 
-const Une = ({ uneData }) => {
-  return (
+const Une = ({ articles }) => {
+  const longArticle = articles[0]
+  const smallArticles = articles.slice(1, 5)
 
+  return (
     <Container>
       <ChevronTitle title="à la une" />
 
       <div className="article-container">
-        {uneData.slice(0, 1).map(data => <div
-          className="long-article-container"
-          style={{ backgroundImage: `url(${data.imageURL})` }}
-        >
-          <LongArticle
-            title={data.title}
-            category={data.category}
-            shortDescription={data.shortDescription}
-          />
-        </div>)}
+        { longArticle ?
+          <Link to={`/article/${longArticle.id}`}>
+            <div className="long-article-container" style={{ backgroundImage: `url(${longArticle.imageURL})` }}>
+              <LongArticle article={longArticle} />
+            </div>
+          </Link>
+          : <div>Loading..</div>
+        }
 
         <div className="small-article-container">
-          {uneData.slice(1).map(data => <SmallArticle
-            key={data.id}
-            title={data.title}
-            category={data.category}
-            style={{ backgroundImage: `url(${data.imageURL})` }}
-          />)}
+          {smallArticles.map(article =>
+            <Link key={article.id} to={`/article/${article.id}`}>
+              <SmallArticle article={article} />
+            </Link>
+          )}
         </div>
       </div>
 
     </Container>
-
   )
 }
 

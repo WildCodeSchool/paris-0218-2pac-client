@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from './Container'
-import Tag from './Tag'
 import ChevronTitle from './ChevronTitle'
 import './Article.css'
 
@@ -29,9 +28,7 @@ const Article = ({ article }) => {
         <div className="intro-details">
           <span className="category">{article.category}</span>
           <span className="date">{article.createdAt}</span>
-          <span className="tag-container">
-            {article.tags.map(tag => <Tag key={tag.id} tag={tag} />)}
-          </span>
+
         </div>
       </div>
       <div className="article-body">

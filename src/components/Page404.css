@@ -1,0 +1,17 @@
+.return-home {
+
+  display: block;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  padding: 1em;
+  background-color: rgba(0,0,0,0.1);
+  transition: .3s;
+}
+
+.return-home:hover {
+
+  padding: 1em 1.5em;
+  background-color: rgba(0,0,0,0.2);
+
+}

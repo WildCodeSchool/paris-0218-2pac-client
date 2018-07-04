@@ -5,13 +5,13 @@
 }
 
 .container-content {
-
-  padding: 2.1875em;
-  width: 50%;
+  padding: 2.187em;
+  width: 100%;
   min-width: 50%;
-  margin: auto;
+  margin: 0 2em 0;
+  border-radius: 7px 7px 0 0;
+  background-color:white;
   box-shadow: 0 0em 0.625em rgba(0,0,0,0.2);
-
 }
 
 @media screen and (max-width: 45em) {
