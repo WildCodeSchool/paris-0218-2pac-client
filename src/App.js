@@ -75,35 +75,35 @@ class App extends Component {
             <NewsletterContainer path="/newsletter" />
             <ContactContainer path="/contact" contactData={infoContact} />
 
-            <Presentation path="/Presentation" />
-            <Historique path="/Historique" />
-            <NosActions path="/NosActions" />
-            <MembersOfPac path="/MembersOfPac" />
-            <AbcDeLaPac path="/AbcDeLaPac" />
-            <LaPacCaMimpacte path="/LaPacCaMimpacte" />
-            <LaPac20152020 path="/LaPac20152020" />
-            <ReformeDeLaPac path="/ReformeDeLaPac" />
-            <ChiffresCles path='/ChiffresCles' />
-            <Sigles path="/Sigles" />
-            <OrientationsCommunes path="/OrientationsCommunes" />
-            <BilanActuel path="/BilanActuel" />
-            <SystemeAgro path="/SystemeAgro" />
-            <Priorite2020 path="/Priorite2020" />
+            <Presentation path="/presentation" />
+            <Historique path="/historique" />
+            <NosActions path="/nos-actions" />
+            <MembersOfPac path="/members-of-pac" />
+            <AbcDeLaPac path="/abc-de-la-pac" />
+            <LaPacCaMimpacte path="/la-pac-ca-mimpacte" />
+            <LaPac20152020 path="/la-pac-20152020" />
+            <ReformeDeLaPac path="/reforme-de-la-pac" />
+            <ChiffresCles path='/chiffres-cles' />
+            <Sigles path="/sigles" />
+            <OrientationsCommunes path="/orientations-communes" />
+            <BilanActuel path="/bilan-actuel" />
+            <SystemeAgro path="/systeme-agro" />
+            <Priorite2020 path="/priorite-2020" />
             <PAAC path="/PAAC" />
-            <NosRepresentants path='/NosRepresentants' />
-            <BecomeMember path='/BecomeMember' />
-            <EventsParticipation path='/EventsParticipation' />
-            <OnParleDeNous path='/OnParleDeNous' />
-            <CommuniqueDePresse path='/CommuniqueDePresse' />
-            <PressKit path='/PressKit' />
+            <NosRepresentants path='/nos-representants' />
+            <BecomeMember path='/become-member' />
+            <EventsParticipation path='/events-participation' />
+            <OnParleDeNous path='/on-parle-de-nous' />
+            <CommuniqueDePresse path='/communique-de-presse' />
+            <PressKit path='/press-kit' />
             {/* nos membres et legalNotice */}
-            <WhoWeAre path="/WhoWeAre" />
-            <WhatWeDo path="/WhatWeDo" />
-            <WhatWeWant path="/WhatWeWant" />
-            <EuropeanPartners path="/EuropeanPartners" />
-            <CapInFrance path="/CapInFrance" />
-            <ContactUs path="/ContactUs" />
-            <LegalNotice path="/LegalNotice" />
+            <WhoWeAre path="/who-we-are" />
+            <WhatWeDo path="/what-we-do" />
+            <WhatWeWant path="/what-we-want" />
+            <EuropeanPartners path="/european-partners" />
+            <CapInFrance path="/cap-in-france" />
+            <ContactUs path="/contact-us" />
+            <LegalNotice path="/legal-notice" />
 
           </Router>
           <SideBar />

@@ -11,15 +11,13 @@ li {
   background-image: url('../img/photo_couverture_web.jpg');
   background-size: cover;
   display: flex;
-  justify-content: space-around;
-  height: 200px;
+  justify-content: flex-start;
 }
 
 .logo {
   width: 250px;
   background-color: white;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 4% 0 4% 15%;
 }
 
 .blockSearchLogin{
