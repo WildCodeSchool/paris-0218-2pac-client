@@ -25,6 +25,7 @@ import SmallArticle from '../components/SmallArticle'
 import Une from '../components/Une'
 import Actuality from '../components/Actuality'
 import Page404 from '../components/Page404'
+import { NewDocumentForm } from '../components/DocumentForms'
 
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
@@ -109,3 +110,6 @@ storiesOf('Actualités', module)
 
 storiesOf('Page404', module)
   .add('à ton avis', () => <Page404 />)
+
+storiesOf('DocumentForms', module)
+  .add('NewDocumentForm', () => <NewDocumentForm />)
