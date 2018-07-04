@@ -1,14 +1,15 @@
 import React from 'react'
-import DocumentPreview from './DocumentPreview'
+import api from '../api'
 import './Resources.css'
 
 const Resources = ({ documents }) => {
   return (
     <div>
       {documents.map(doc =>
-        <div className="resource" >
-          <span category={doc.name} className="category">{doc.name}</span>
-          <DocumentPreview title={doc.title} shortDescription={doc.shortDescription} url={doc.url}/>
+        <div key={doc.id} className="resource" >
+          <span className="category">{doc.type}</span>
+          <p>{doc.shortDescription.slice(0, 140)}..</p>
+          <a target="_blank" href={`${api.hostUrl}/medias/documents/${doc.url}`}>{doc.url}</a>
         </div>
       )}
     </div>
