@@ -3,11 +3,9 @@ import Contact from '../components/Contact'
 
 const ContactContainer = (props) => {
   return (
-
     <div className="router-container">
       <Contact contactData={props.contactData} />
     </div>
-
   )
 }
 

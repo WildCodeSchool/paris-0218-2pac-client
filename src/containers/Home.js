@@ -11,9 +11,7 @@ const Home = (props) => {
   const data = props.data
 
   return (
-
     <div className="router-container">
-
       <div className="aside-left-container">
         <h1 className="filactu"><ChevronTitle ChevronColor="#226462" title="Fil d'actualité" /> </h1>
         <Scrollbars style={{ width: '16em', height: '37em' }} autoHide autoHideTimeout={500} autoHideDuration={500}>
@@ -31,10 +29,8 @@ const Home = (props) => {
           </div>
         </Scrollbars>
       </div>
-
       <Une uneData={props.uneData} />
     </div>
-
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBarButton from './SideBarButton'
 import { Link } from '@reach/router'
+import './SideBar.css'
 
 const SideBar = () => {
   return (
@@ -20,13 +21,13 @@ const SideBar = () => {
 
       <Link to="contact">
         <SideBarButton style={{ backgroundColor: '#A99C2F' }}>
-          <span><i className="fas fa-user-alt"></i></span> Contacts
+          <span><i className="fas fa-user-alt"></i></span>Contacts
         </SideBarButton>
       </Link>
 
       <Link to="newsletter">
         <SideBarButton style={{ backgroundColor: '#731717' }}>
-          <span><i className="fas fa-rss"></i></span>Newsletter
+          <span><i className="fas fa-rss"></i></span>Rester connecté
         </SideBarButton>
       </Link>
 

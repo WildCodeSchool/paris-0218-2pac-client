@@ -66,7 +66,7 @@ footer {
 
 .logo-container {
   width: 55%;
-  margin: 2.5em auto;
+  margin: 40px auto;
 }
 
 .member-logo {
@@ -96,7 +96,7 @@ footer {
 }
 
 @media screen and (max-width: 45em) {
-
+  /*portable classique*/
   .footer-desc {
     display: block;
   }
@@ -104,12 +104,6 @@ footer {
     display: block;
     width: 11.25em;
     margin: 0.625em auto;
-  }
-  .desc {
-    display: block;
-    width: 90%;
-    margin: 0.9375em auto;
-    letter-spacing: 0px;
-    font-size: 0.875em;
+
   }
 }

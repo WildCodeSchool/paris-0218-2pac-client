@@ -8,6 +8,7 @@ import { linkTo } from '@storybook/addon-links'
 import '../App.css'
 import App from '../App'
 import Login from '../components/Login'
+
 import SideBar from '../components/SideBar'
 import SideBarButton from '../components/SideBarButton'
 import Footer from '../components/Footer'
@@ -46,10 +47,13 @@ storiesOf('Login', module)
       <Login />
     </div>)
 
+storiesOf('Button', module)
+
 storiesOf('SideBar', module)
   .add('Classic', () => <SideBar />)
 
 storiesOf('SideBarButton', module)
+
   .add('Dark green', () =>
     <SideBarButton onClick={action('clicked')} style={{ color: 'black' }}>
       Qui sommes nous?
@@ -63,6 +67,7 @@ storiesOf('SideBarButton', module)
       Actualités
     </SideBarButton>)
   .add('Red', () =>
+
     <SideBarButton onClick={action('clicked')} style={{ backgroundColor: '#731717' }} >
       English
     </SideBarButton>)

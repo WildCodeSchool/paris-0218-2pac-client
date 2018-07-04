@@ -3,29 +3,24 @@
   min-width: 11em;
   padding: .7em .7em .7em .7em;
   margin-bottom: .6em;
+  margin-left: 10em;
   color: white;
   font-size: 1rem;
   border:none;
   cursor: pointer;
   transition: .3s;
-  border-radius: 12px;
-
 }
 
 .SideBarButton:hover {
-
   padding-left:1.2em;
-
 }
 
-a {
-  text-decoration: none;
+.SideBarButton span {
+  margin-left: 0;
+  margin-right: 0.6em;
 }
 
 li {
   cursor: pointer;
   list-style: none;
-}
-span {
-margin-right: 1em;
 }
