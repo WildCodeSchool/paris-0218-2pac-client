@@ -68,10 +68,10 @@ export class NewDocumentForm extends React.Component {
               <input type="text_title" name='title' value={inputs.title} onChange={this.handleChange} />
             </label>
             <label>Document
-              <input id="doc" type="file" name="document" onChange={this.handleChange} accept="image/png, image/jpeg, application/pdf, .word, .ppt, .pdf, .docx" />
+              <input type="file" name="document" onChange={this.handleChange} accept="image/png, image/jpeg, application/pdf, .word, .ppt, .pdf, .docx" />
             </label>
             <label>Catégorie
-              <select id="typeId" name='typeId' value={inputs.typeId} onChange={this.handleChange}>
+              <select name='typeId' value={inputs.typeId} onChange={this.handleChange}>
                 <option value={1}>Textes politiques</option>
                 <option value={2}>Documents de position des organisations membres</option>
                 <option value={3}>Documents réservés aux membres</option>
