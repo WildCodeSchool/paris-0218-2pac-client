@@ -9,8 +9,10 @@ const NosActions = ({children}) => {
       <Container>
         <div class="fix-content-article">
         <h1>Nos actions</h1>
+        <br/>
         <p><i> Pour une autre PAC </i> anime un travail collectif s’articulant autour de trois axes :</p>
-        <ul>
+        <br/>
+        <ul className="circle-list">
           <li><BulletedList /> Favoriser l’échange entre parties prenantes à but non lucratif sur la thématique de la PAC, en France et dans l’Union européenne :
             <ul>
               <li>suivre l’actualité politique française et européenne en lien avec la réforme de la PAC,</li>
@@ -33,6 +35,7 @@ const NosActions = ({children}) => {
             </ul>
           </li>
         </ul>
+        <br/>
         <p>Rapports d’activités 2013</p>
         <p>Rapports d’activités 2014</p>
         <p>Rapport d’activités 2017</p>
