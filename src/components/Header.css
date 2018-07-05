@@ -12,6 +12,8 @@ li {
   background-size: cover;
   display: flex;
   justify-content: flex-start;
+  width: 100%;
+  height: 15em;
 }
 
 .logo {

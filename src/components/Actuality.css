@@ -1,13 +1,11 @@
 .actu-container {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  width: 70em;
 }
 
 .actuality {
-
   min-width: 20vw;
   max-width: 20vw;
   min-height: 35vh;
@@ -21,7 +19,6 @@
   box-shadow: 0 0em 0.825em rgba(0,0,0,0.4);
   border-radius: 7px 7px 0 0;
   transition: .5s;
-
 }
 
 .actuality:hover {
