@@ -7,7 +7,7 @@ const NosActions = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Nos actions</h1>
         <br/>
         <p><i> Pour une autre PAC </i> anime un travail collectif s’articulant autour de trois axes :</p>

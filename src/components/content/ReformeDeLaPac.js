@@ -6,7 +6,7 @@ const ReformDeLaPac = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Réformer la PAC</h1>
         <br/>
         <p>Contenu à venir.</p>

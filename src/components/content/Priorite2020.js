@@ -6,7 +6,7 @@ const Priorite2020 = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Nos 12 priorités pour la PAAC post 2020</h1>
         <br/>
         <h2 className="cherry">Osons une vraie réforme de la PAC, pour le bénéfice de tous·tes les citoyen·ne·s européen·ne·s !</h2>
@@ -16,7 +16,7 @@ const Priorite2020 = ({children}) => {
         <p>La future politique agricole et alimentaire commune (PAAC) que la plateforme<i>Pour une autre PAC</i> défend permettra à tou·te·s les paysan·ne·s volontaires de l’UE d'entrer dans la transition agroécologique des modèles agricoles et alimentaires européens. À horizon 2030, une refonte de la PAC plus ambitieuse achèvera alors de réorienter le système agro-alimentaire de l’UE vers une prise en compte totale des enjeux de revenu agricole, d’alimentation, de santé, de dynamisation des campagnes, d’environnement, de bien-être animal, comme des principes de solidarité et de démocratie.</p>
         <br/>
 
-        <p className="orange"><strong><i>«Citoyen·ne·s et alimentation»</i></strong></p>
+        <h2 className="orange"><strong><i>«Citoyen·ne·s et alimentation»</i></strong></h2>
         <br/>
         <p className="cherry"><strong>Co-construire la PAC avec les citoyen·ne·s et les acteur·trice·s publics de l’environnement et de la santé</strong></p>
         <p>Ouvrir les instances de gouvernance à la société civile et aux décideur·se·s en charge de l’environnement et de la santé à toutes les échelles territoriales</p>
@@ -31,7 +31,7 @@ const Priorite2020 = ({children}) => {
 
         <p>Attribuer des financements importants pour le maintien et le développement de l’agriculture biologique</p>
         <br/>
-        <p className="orange"><strong><i>«Paysan·ne·s et fermes»</i></strong></p>
+        <h2 className="orange"><strong><i>«Paysan·ne·s et fermes»</i></strong></h2>
         <br/>
         <p className="cherry"><strong>Stimuler l’emploi agricole plutôt que l’agrandissement des fermes</strong></p>
 
@@ -51,7 +51,7 @@ const Priorite2020 = ({children}) => {
         <p>Refuser tout nouvel accord de libre·échange et mettre en place un dispositif de remboursement des aides PAC pour les matières premières exportées en dehors de l’UE</p>
         <br/>
 
-        <p className="orange"><strong><i>«Transition agroécologique»</i></strong></p>
+        <h2 className="orange"><strong><i>«Transition agroécologique»</i></strong></h2>
         <br/>
         <p className="cherry"><strong>Rendre les conditions d'octroi des aides lisibles et efficaces par rapport aux objectifs visés</strong></p>
         <p>Adapter la conditionnalité pour rehausser l’ambition des critères environnementaux et créer une conditionnalité sociale et de bien-être animal</p>
@@ -68,11 +68,7 @@ const Priorite2020 = ({children}) => {
 
         <p>Renoncer à tout financement public des assurances privées et financer à la place l’amélioration de la résilience des fermes</p>
         <br/>
-        <p>Les 12 priorités pour la PAC post 2020 de la plateforme</p>
-        <p>Notre vision – La PAAC post 2020</p>
-        <p>PAAC post 2020 souhaitée par la plateforme <i>Pour une autre PAC</i> à télécharger</p>
-        <p>Notre vision – La PAAC à horizon 2030</p>
-        <p>PAC souhaitée par la plateforme<i> Pour une autre PAC </i>à télécharger</p>
+         <p>PAC souhaitée par la plateforme<i> Pour une autre PAC </i>à télécharger</p>
         </div>
       </Container>
     </div>

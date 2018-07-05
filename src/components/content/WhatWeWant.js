@@ -6,9 +6,9 @@ const WhatWeWant = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>What we want</h1>
-
+        <br/>
         <h2>Putting the future Common Agricultural and Food Policy at the service of all citizens</h2>
         <p>An agricultural and food policy is much more than a mere sector budget: it implies a choice by society. As it is, a deal between European farmers and citizens is urgently needed; one that would push forward the necessary change of the current agro-industrial system, and seal a joint commitment to sustainable food chains. On this depends the long-term sustainability of the EU’s agricultural means – first and foremost the means for its farmers to be guaranteed stable prices within fair business models. A Common Agricultural and Food Policy, through deals of well-defined transition modalities and schedules, is hence of primary concern to farmers themselves, whose current production model matches neither the reality of a globalized market, nor the expectations of citizens.</p>
         <br/>

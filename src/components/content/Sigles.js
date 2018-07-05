@@ -6,7 +6,7 @@ const Sigles = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Comprendre la PAC – Sigles</h1>
         <br/>
         <table>

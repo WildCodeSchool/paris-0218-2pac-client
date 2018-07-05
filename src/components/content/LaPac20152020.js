@@ -6,7 +6,7 @@ const LaPac20152020 = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>La PAC 2015-2020</h1>
         <br/>
         <p>Contenu à venir...</p>

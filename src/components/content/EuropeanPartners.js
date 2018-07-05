@@ -7,9 +7,11 @@ const EuropeanPartners = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>European partners</h1>
+        <br/>
         <p><i>Pour une autre PAC</i> partners with other civil society’s movements accross Europe for various projects:</p>
+        <br/>
         <ul>
           <li><BulletedList /> at European level: <a href="http://www.goodfoodgoodfarming.eu/">Good Food Good Farming</a>, <a href="http://www.arc2020.eu/">ARC2020</a>, <a href="http://www.foeeurope.org/">Friends of the Earth Europe</a>, <a href="https://www.slowfood.com/sloweurope/en/">Slow Food Europe</a></li>
           <li><BulletedList /> in Germany: <a href="https://www.meine-landwirtschaft.de/">Meine Landwirtschaft</a> (devoted to citizen mobilization) and another platform (devoted to advocacy) co-chaired by <a href="https://www.bund.net/">BUND</a> and <a href="http://www.abl-ev.de/start/">AbL</a></li>

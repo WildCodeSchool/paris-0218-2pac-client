@@ -6,7 +6,7 @@ const LegalNotice = () => {
   return (
     <div>
       <Container>
-      <div class="fix-content-article">
+      <div className="fix-content-article">
       <p>
  <h1> Mentions légales</h1>
   <br />

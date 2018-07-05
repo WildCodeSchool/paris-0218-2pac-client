@@ -6,7 +6,7 @@ const BilanActuel = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Bilan de l'actuelle PAC</h1>
         <br/>
         <p>La Politique Agricole Commune (PAC) 2015-2020 a manqué sa cible. Elle était annoncée comme plus verte et plus juste, mais elle n’a en réalité pas changé de cap ni arrêté les fortes pressions sur la nature et les paysans. En effet, la PAC 2015-2020 s’est illustrée par le maintien d’un soutien public massif au profit de l’agriculture agro-industrielle. En France, la confiance des agriculteurs en cette politique a été profondément ébranlée par son incohérence, sa complexité et surtout, par l’instabilité des dispositifs et de leurs dotations budgétaires.

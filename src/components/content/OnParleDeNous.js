@@ -7,9 +7,10 @@ const OnParleDeNous = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>On parle de nous</h1>
-        <ul>
+        <br/>
+        <ul className="list-padding">
           <li><BulletedList /> <a href="http://www.arc2020.eu/french-german-alliance-cap-declaration/">ARC2020</a> (17 avril 2018)</li>
           <li><BulletedList /> <a href="https://www.humanite.fr/union-europeenne-une-pac-liberale-stop-ou-encore-653827">L’Humanité</a> (17 avril 2018)</li>
           <li><BulletedList /> <a href="http://www.lafranceagricole.fr/actualites/gestion-et-droit/pac-2020-un-plaidoyer-dong-franco-allemandes-pour-une-autre-pac-1,3,1887864349.html">La France Agricole</a> (16 avril 2018)</li>

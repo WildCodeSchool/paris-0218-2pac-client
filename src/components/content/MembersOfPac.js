@@ -7,7 +7,7 @@ const MembersOfPac = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Nos membres</h1>
         <br/>
         <ul className="circle-list">

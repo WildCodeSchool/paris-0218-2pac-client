@@ -56,6 +56,9 @@ td{
   margin-left: 4em;
 }
 
+.list-padding ul li{
+  padding: 2em;
+}
 .center-title{
   text-align: center;
 }
