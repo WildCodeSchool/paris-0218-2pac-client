@@ -3,7 +3,7 @@ import './SignUpFormular.css'
 import ChevronTitle from './ChevronTitle'
 
 const initialInputValues = {
-  reuseableInfo: '',
+  reuseableInfo: false,
   firstName: '',
   lastName: '',
   phoneNumber: '',
@@ -15,12 +15,40 @@ class SignUpFormular extends React.Component {
     inputs: initialInputValues
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault()
-    alert('votre formulaire a été envoyé')
+handleChange = (e) => {
+    const inputs = {
+      ...this.state.inputs,
+      [e.target.name]: e.target.value
+
+    }
+
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
+    return this.setState({ inputs: { ...this.state.inputs, [e.target.name]: value } })
+
+    this.setState({ inputs: inputs })
   }
 
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    // alert('votre formulaire a été envoyé')
+
+    const data = this.state.inputs
+    console.log(data)
+
+    fetch('/subscribers', {
+      method: 'POST',
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify(data)
+    })
+    // .then(res => res.json())
+    // .then(res => this.reset())
+}
+
   render () {
+
+  const inputs = this.state.inputs
+
     return (
       <div id='formular_container'>
         <p><ChevronTitle ChevronColor="white" TextColor="white" title="Recevoir des nouvelles de pour une autre Pac" /> </p>
@@ -29,18 +57,18 @@ class SignUpFormular extends React.Component {
         <form onSubmit={this.handleSubmit}>
 
           <div>
-            <input type='checkbox' name='checkbox'/>
+            <input type='checkbox' name='reuseableInfo' checked={inputs.reuseableInfo} onChange={this.handleChange}/>
             <span>J'accepte que ces données soient utilisées par Pour une autre PAC.</span>
           </div>
 
           <div>
-            <input type='text' name='lastName' placeholder='Nom' />
-            <input type='text' name='firstName' placeholder='Prénom' />
+            <input type='text' name='lastName' placeholder='Nom' value={inputs.lastName} onChange={this.handleChange}/>
+            <input type='text' name='firstName' placeholder='Prénom' value={inputs.firstName} onChange={this.handleChange} />
           </div>
 
           <div>
-            <input type='tel' name='number' placeholder='Numéro de téléphone' />
-            <input type='mail' name='mail' placeholder='Adresse e-mail' />
+            <input type='text' name='phoneNumber' placeholder='Numéro de téléphone' value={inputs.phoneNumber} onChange={this.handleChange}/>
+            <input type='text' name='email' placeholder='Adresse e-mail' value={inputs.email} onChange={this.handleChange}/>
           </div>
 
           <input type='submit' value="➔ S'inscrire" />
