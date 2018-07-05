@@ -1,51 +1,60 @@
-#SignUpText {
-	color : white;
-  margin: 0.5em;
-}
+    
+    #formular_container {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    width: 100%;
+    background-color: #731717;
+    padding: 4em;
+    font-weight: bold;
+    line-height: 2em
+    }
 
+    ::placeholder {
+    color:
+    #F4971A
+    ;
+    }
+    
+    #formular_container p {
+      color: white;
+    }
 
+    input[type='submit'] {
+    background-color:
+    #F4971A
+    ;
+    color: white;
+    border-radius: 0.3em;
+    border: 0.2em solid white;
+    padding: 0.4em;
+    margin-top: 2em;
+    margin-right: 10em;
+    }
 
-#formular_container {
-	font-family: 'Source Sans Pro', sans-serif;
-	max-width: 730px;
-	max-height: 325px;
-	margin: 0 3em 0 1.5em;
-	background-color: #731717;
-	padding: 2em 7.2em 3em 6em;
-}
+    input[name='lastName'] { 
+    width: calc(50% - 1.3em);
+    margin-top: 2em;
+    margin-right: 0.3em
+     }
+    input[name='firstName'] {
+    width: calc(50% - 1em);
+    margin-top: 2em;
+    }    
+    input[name='mail'] {
+    width: 98%;
+    margin-top: 2em;
+    }
 
-::placeholder {
-	color: #F4971A;
-}
+    input[name='number'] {
+    width: 98%;
+    margin-top: 2em;
+    }
 
-input[type='submit'] {
-  background-color: #F4971A;
-  color: white;
-  border-radius: 0.3em;
-  border-color: white;
-  padding: 0.4em;
-  position: relative;
-  margin-top: 2em;
-  margin-right: 10em;
-}
-
-input[name='lastName'] {
-  width: 26em;
-  margin-right: 2.9em;
-  margin-top: 2em;
-}
-
-input[name='firstName'] {
-  width: 33em;
-  margin-top: 2em;
-}
-
-input[name='mail'] {
-  width: 62.5em;
-  margin-top: 2em;
-}
-
-input[name='phone'] {
-  width: 62.5em;
-  margin-top: 2em;
-}
+    input[type='checkbox'] {
+    -ms-transform: scale(1.2); /* IE */
+    -moz-transform: scale(1.2); /* FF */
+    -webkit-transform: scale(1.2); /* Safari and Chrome */
+    -o-transform: scale(1.2); /* Opera */
+    margin-right: 1.2em;
+   
+    }
