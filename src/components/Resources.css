@@ -7,18 +7,45 @@
 
 .resource {
   min-width: 30vw;
-  height: 10vh;
   margin: 0em 0 1.5em 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  box-shadow: 0 0em 0.825em rgba(0,0,0,0.2);
-  transition: .5s;
+  box-shadow: 0 0em 0.825em rgba(0,0,0,0.1);
+  display:flex;
+  justify-content: space-between;
 }
 
+.resource span {
+  color: #226462;
+  font-weight: bold;
+  display: block;
+  width: 15em;
+  max-width: 15em;
+  text-align: center;
+  }
+
 .resource:hover {
-  box-shadow: 0 0em 1em rgba(0,0,0,0.4);
+  box-shadow: 0 0em 0.9em rgba(0,0,0,0.2);
+}
+
+.category_resources {
+  display: inline;
+  background-color: #F4971A;
+  color: white;
+  font-weight: bold;
+  padding: 0.2em 0.5em;
+  border-radius: .3rem;
+}
+
+.resource a {
+color: #707070;
+transition: .2s;
+width: 15em;
+max-width: 15em;
+text-align: center;
+}
+
+.resource a:hover {
+color: #F4971A;
 }

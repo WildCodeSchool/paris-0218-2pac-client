@@ -9,5 +9,5 @@ const getDocuments = () => fetch('/documents')
 export default {
   hostUrl,
   getArticles,
-  getDocuments,
+  getDocuments
 }

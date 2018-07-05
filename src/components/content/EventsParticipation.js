@@ -6,9 +6,9 @@ const EventsParticipation = () => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
-        <h1>Participer à un évènement</h1>
-        <p> Contenu à venir ... </p>
+        <div className="fix-content-article">
+          <h1>Participer à un évènement</h1>
+          <p> Contenu à venir ... </p>
         </div>
       </Container>
     </div>

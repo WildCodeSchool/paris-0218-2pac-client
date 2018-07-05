@@ -12,16 +12,6 @@ nav {
   display: flex;
   justify-content: center;
 
-
-}
-
-nav > ul > li {
-  float: left;
-  position: relative;
-}
-
-nav a:only-child {
-  border-left: none;
 }
 
 #homeButton svg{
@@ -39,8 +29,17 @@ nav a {
   height: 1.0em;
  }
 
+ nav > ul > li {
+   float: left;
+   position: relative;
+ }
+
 nav > ul > li > a {
   padding: 20px 30px;
+}
+
+nav a:only-child {
+  border-left: none;
 }
 
 .submenu li a {
@@ -51,11 +50,8 @@ nav > ul > li > a {
   border: 1px solid #CCC;
   border-top-width: 0em;
   margin: 0rem;
-}
-
-.submenu li a:hover {
-  background-color: #707070;
-  color: #fff;
+  transition: all .2s;
+  color: #363636;
 }
 
 nav li:hover .submenu {
@@ -66,11 +62,14 @@ nav li:hover .submenu {
   z-index: 1000;
 }
 
+.menu {
+  transition: all .3s;
+}
+
 .menu:hover {
   display: inline-block;
   height: 3.5rem;
   background-color: #226462;
-  border: 1px solid #CCC;
 }
 
 .menu:hover > a {
@@ -78,3 +77,7 @@ nav li:hover .submenu {
   border-style: none;
 }
 
+.submenu li a:hover {
+  background-color: #707070;
+  color: #fff;
+}

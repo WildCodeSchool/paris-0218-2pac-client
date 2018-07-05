@@ -6,9 +6,9 @@ const NosRepresentants = () => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
-        <h1>Interpeller ses Représentants</h1>
-        <p> Contenu à venir ... </p>
+        <div className="fix-content-article">
+          <h1>Interpeller ses Représentants</h1>
+          <p> Contenu à venir ... </p>
         </div>
       </Container>
     </div>

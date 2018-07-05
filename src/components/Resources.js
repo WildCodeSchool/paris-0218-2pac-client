@@ -7,9 +7,9 @@ const Resources = ({ documents }) => {
     <div>
       {documents.map(doc =>
         <div key={doc.id} className="resource" >
-          <span className="category">{doc.type}</span>
-          <p>{doc.shortDescription.slice(0, 140)}..</p>
-          <a target="_blank" href={`${api.hostUrl}/medias/documents/${doc.url}`}>{doc.url}</a>
+          <span>{doc.title}</span>
+          <div className="category_resources">{doc.type}</div>
+          <a target="_blank" href={`${api.hostUrl}/medias/documents/${doc.url}`}>Télécharger</a>
         </div>
       )}
     </div>
