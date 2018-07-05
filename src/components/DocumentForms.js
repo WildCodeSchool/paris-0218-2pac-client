@@ -7,20 +7,20 @@ const initialInputValues = {
   shortDescription: '',
   typeId: 1,
   isMemberOnly: false,
-  isResource: false,
+  isResource: false
 }
 
-const fakeInputValues = {
-  title: 'Fake document',
-  shortDescription: 'fake fake',
-  typeId: 3,
-  isMemberOnly: true,
-  isResource: false,
-}
+// const fakeInputValues = {
+//   title: 'Fake document',
+//   shortDescription: 'fake fake',
+//   typeId: 3,
+//   isMemberOnly: true,
+//   isResource: false
+// }
 
 export class NewDocumentForm extends React.Component {
   state = {
-    inputs: initialInputValues,
+    inputs: initialInputValues
     // inputs: fakeInputValues,
   }
 
@@ -36,6 +36,9 @@ export class NewDocumentForm extends React.Component {
 
   reset = () => {
     this.setState({ inputs: initialInputValues })
+
+    // only way to reset the value of the input type file
+    document.getElementById('document_file').value = ''
   }
 
   handleSubmit = (e) => {
@@ -53,8 +56,8 @@ export class NewDocumentForm extends React.Component {
       method: 'POST',
       body: formData
     })
-    .then(res => res.json())
-    .then(res => this.reset())
+      .then(res => res.json())
+      .then(res => this.reset())
   }
 
   render () {
@@ -68,7 +71,7 @@ export class NewDocumentForm extends React.Component {
               <input type="text_title" name='title' value={inputs.title} onChange={this.handleChange} />
             </label>
             <label>Document
-              <input type="file" name="document" onChange={this.handleChange} accept="image/png, image/jpeg, application/pdf, .word, .ppt, .pdf, .docx" />
+              <input id="document_file" type="file" name="document" onChange={this.handleChange} accept="image/png, image/jpeg, application/pdf, .word, .ppt, .pdf, .docx" />
             </label>
             <label>Catégorie
               <select name='typeId' value={inputs.typeId} onChange={this.handleChange}>

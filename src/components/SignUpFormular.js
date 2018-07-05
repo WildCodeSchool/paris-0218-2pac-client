@@ -76,7 +76,6 @@ handleChange = (e) => {
       </div>
     )
   }
-
 }
 
 export default SignUpFormular

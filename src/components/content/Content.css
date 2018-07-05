@@ -1,12 +1,10 @@
-/*.container-article h1 {
-  color: #226462;
-}*/
+
+td{
+  padding: .3em;
+}
 
 td:first-child {
   color: #F4971A;
-}
-td{
-  padding: .3em;
 }
 
 .fix-content-article h1{
@@ -62,4 +60,3 @@ td{
 .center-title{
   text-align: center;
 }
-

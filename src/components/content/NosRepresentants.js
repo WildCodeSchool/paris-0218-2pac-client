@@ -7,8 +7,8 @@ const NosRepresentants = () => {
     <div>
       <Container>
         <div className="fix-content-article">
-        <h1>Interpeller ses Représentants</h1>
-        <p> Contenu à venir ... </p>
+          <h1>Interpeller ses Représentants</h1>
+          <p> Contenu à venir ... </p>
         </div>
       </Container>
     </div>

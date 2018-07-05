@@ -13,5 +13,5 @@ export default {
   hostUrl,
   getArticles,
   getDocuments,
-  getSubscribers,
+  getSubscribers
 }
