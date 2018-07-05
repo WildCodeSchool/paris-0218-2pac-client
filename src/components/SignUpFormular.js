@@ -1,6 +1,6 @@
 import React from 'react'
 import './SignUpFormular.css'
-import FaChevronRight from 'react-icons/lib/fa/chevron-right'
+import ChevronTitle from './ChevronTitle'
 
 const initialInputValues = {
   reuseableInfo: '',
@@ -23,17 +23,20 @@ class SignUpFormular extends React.Component {
   render () {
     return (
       <div id='formular_container'>
-        <p><FaChevronRight className='icon' />RECEVOIR DES NOUVELLES DE <span>POUR UNE AUTRE PAC</span></p><br />
+        <p><ChevronTitle ChevronColor="white" TextColor="white" title="Recevoir des nouvelles de pour une autre Pac"  /> </p>
         <p>En remplissant ce formulaire, la plateforme <i>Pour une autre PAC </i>
             pourra utiliser ces données pour vous informer des ses prochaines actions.</p>
         <form onSubmit={this.handleSubmit}>
           <label>
             <input type='checkbox' name='checkbox'/>
-            <p>J'accepte que ces données soient utilisées par <span>Pour une autre PAC.</span></p>
+            <span>J'accepte que ces données soient utilisées par <span>Pour une autre PAC.</span></span>
+            <div>
             <input type='text' name='lastName' placeholder='Nom' />
             <input type='text' name='firstName' placeholder='Prénom' />
-            <input type='mail' name='mail' placeholder='Adresse mail' />
-            <input type='number' name='number' placeholder='Numéro de téléphone' />
+            </div>
+            <input type='tel' name='number' placeholder='Numéro de téléphone' />
+            <input type='mail' name='mail' placeholder='Adresse e-mail' />
+
           </label>
           <input type='submit' value="➔ S'inscrire" />
         </form>
