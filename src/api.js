@@ -6,8 +6,12 @@ const getArticles = () => fetch('/articles')
 const getDocuments = () => fetch('/documents')
   .then(response => response.json())
 
+const getSubscribers = () => fetch('/subscribers')
+  .then(response => response.json())
+
 export default {
   hostUrl,
   getArticles,
   getDocuments,
+  getSubscribers,
 }
