@@ -35,9 +35,7 @@ const Article = ({ article }) => {
         <p className="headline">
           {article.shortDescription}
         </p>
-        <p className="content">
-          {article.description}
-        </p>
+        <p className="content" dangerouslySetInnerHTML={{ __html: article.description }}></p>
       </div>
     </Container>
   )
