@@ -26,6 +26,7 @@ import Une from '../components/Une'
 import Actuality from '../components/Actuality'
 import Page404 from '../components/Page404'
 import { NewDocumentForm } from '../components/DocumentForms'
+import ArticleForm from '../components/ArticleForm'
 
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
@@ -113,3 +114,6 @@ storiesOf('Page404', module)
 
 storiesOf('DocumentForms', module)
   .add('NewDocumentForm', () => <NewDocumentForm />)
+
+storiesOf('formulaire de création', module)
+  .add("création d'articles et d'évènements", () => <ArticleForm />)

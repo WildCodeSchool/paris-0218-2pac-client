@@ -3,7 +3,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  white-space: wrap;
 }
 
 .resource {
@@ -15,8 +14,6 @@
   box-shadow: 0 0em 0.825em rgba(0,0,0,0.1);
   display:flex;
   justify-content: space-between;
-  transition: .5s;
-  padding: 1em;
 }
 
 .resource span {
@@ -51,5 +48,4 @@ text-align: center;
 
 .resource a:hover {
 color: #F4971A;
-
 }
