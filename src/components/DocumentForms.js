@@ -10,9 +10,18 @@ const initialInputValues = {
   isResource: false
 }
 
+// const fakeInputValues = {
+//   title: 'Fake document',
+//   shortDescription: 'fake fake',
+//   typeId: 3,
+//   isMemberOnly: true,
+//   isResource: false
+// }
+
 export class NewDocumentForm extends React.Component {
   state = {
     inputs: initialInputValues
+    // inputs: fakeInputValues,
   }
 
   handleChange = e => {

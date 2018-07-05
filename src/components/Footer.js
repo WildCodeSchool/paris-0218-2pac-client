@@ -25,7 +25,7 @@ export default class Footer extends Component {
           <FooterMembersLogos />
         </div>
 
-        <div className='mentions'> <Link to="/LegalNotice"> <FaCircle /> Mentions légales <FaCircle /> </Link> </div>
+        <div className='mentions'> <Link to="/legal-notice"> <FaCircle /> Mentions légales <FaCircle /> </Link> </div>
       </footer>
     )
   }
