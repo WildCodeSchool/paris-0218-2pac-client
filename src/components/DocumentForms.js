@@ -36,6 +36,9 @@ export class NewDocumentForm extends React.Component {
 
   reset = () => {
     this.setState({ inputs: initialInputValues })
+
+    // only way to reset the value of the input type file
+    document.getElementById('document_file').value = ''
   }
 
   handleSubmit = (e) => {
@@ -68,7 +71,7 @@ export class NewDocumentForm extends React.Component {
               <input type="text_title" name='title' value={inputs.title} onChange={this.handleChange} />
             </label>
             <label>Document
-              <input type="file" name="document" onChange={this.handleChange} accept="image/png, image/jpeg, application/pdf, .word, .ppt, .pdf, .docx" />
+              <input id="document_file" type="file" name="document" onChange={this.handleChange} accept="image/png, image/jpeg, application/pdf, .word, .ppt, .pdf, .docx" />
             </label>
             <label>Catégorie
               <select name='typeId' value={inputs.typeId} onChange={this.handleChange}>
