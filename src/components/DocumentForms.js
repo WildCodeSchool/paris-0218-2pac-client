@@ -7,20 +7,20 @@ const initialInputValues = {
   shortDescription: '',
   typeId: 1,
   isMemberOnly: false,
-  isResource: false,
+  isResource: false
 }
 
-const fakeInputValues = {
-  title: 'Fake document',
-  shortDescription: 'fake fake',
-  typeId: 3,
-  isMemberOnly: true,
-  isResource: false,
-}
+// const fakeInputValues = {
+//   title: 'Fake document',
+//   shortDescription: 'fake fake',
+//   typeId: 3,
+//   isMemberOnly: true,
+//   isResource: false
+// }
 
 export class NewDocumentForm extends React.Component {
   state = {
-    inputs: initialInputValues,
+    inputs: initialInputValues
     // inputs: fakeInputValues,
   }
 
@@ -53,8 +53,8 @@ export class NewDocumentForm extends React.Component {
       method: 'POST',
       body: formData
     })
-    .then(res => res.json())
-    .then(res => this.reset())
+      .then(res => res.json())
+      .then(res => this.reset())
   }
 
   render () {

@@ -6,11 +6,11 @@ const ChiffresCles = () => {
   return (
     <div>
       <Container>
-      <div className="fix-content-article">
-        <h1>Chiffres-clés</h1>
-        <br/>
-        <p> Contenu à venir ... </p>
-      </div>
+        <div className="fix-content-article">
+          <h1>Chiffres-clés</h1>
+          <br/>
+          <p> Contenu à venir ... </p>
+        </div>
       </Container>
     </div>
   )

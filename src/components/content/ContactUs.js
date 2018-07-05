@@ -7,10 +7,10 @@ const ContactUs = ({children}) => {
     <div>
       <Container>
         <div className="fix-content-article">
-        <h1>Contact us</h1>
-        <br/>
-        <p>For any question, please contact us by email at <a href="mailto:aurelie.catallo@pouruneautrepac.eu"> aurelie.catallo@pouruneautrepac.eu </a> or by phone: +33 180 89 99 51.</p>
-        <p>English and German writing or speaking welcome!</p>
+          <h1>Contact us</h1>
+          <br/>
+          <p>For any question, please contact us by email at <a href="mailto:aurelie.catallo@pouruneautrepac.eu"> aurelie.catallo@pouruneautrepac.eu </a> or by phone: +33 180 89 99 51.</p>
+          <p>English and German writing or speaking welcome!</p>
         </div>
       </Container>
     </div>

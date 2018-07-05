@@ -14,15 +14,6 @@ nav {
 
 }
 
-nav > ul > li {
-  float: left;
-  position: relative;
-}
-
-nav a:only-child {
-  border-left: none;
-}
-
 #homeButton svg{
   width: 45px;
   margin: 0;
@@ -38,8 +29,17 @@ nav a {
   height: 1.0em;
  }
 
+ nav > ul > li {
+   float: left;
+   position: relative;
+ }
+
 nav > ul > li > a {
   padding: 20px 30px;
+}
+
+nav a:only-child {
+  border-left: none;
 }
 
 .submenu li a {
@@ -52,11 +52,6 @@ nav > ul > li > a {
   margin: 0rem;
   transition: all .2s;
   color: #363636;
-}
-
-.submenu li a:hover {
-  background-color: #707070;
-  color: #fff;
 }
 
 nav li:hover .submenu {
@@ -80,4 +75,9 @@ nav li:hover .submenu {
 .menu:hover > a {
   color: #fff;
   border-style: none;
+}
+
+.submenu li a:hover {
+  background-color: #707070;
+  color: #fff;
 }

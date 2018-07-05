@@ -7,8 +7,8 @@ const BecomeMember = () => {
     <div>
       <Container>
         <div className="fix-content-article">
-        <h1>Devenir membre</h1>
-        <p> Contenu à venir ... </p>
+          <h1>Devenir membre</h1>
+          <p> Contenu à venir ... </p>
         </div>
       </Container>
     </div>

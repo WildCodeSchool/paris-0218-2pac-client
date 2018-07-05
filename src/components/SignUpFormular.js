@@ -23,7 +23,7 @@ class SignUpFormular extends React.Component {
   render () {
     return (
       <div id='formular_container'>
-        <p><ChevronTitle ChevronColor="white" TextColor="white" title="Recevoir des nouvelles de pour une autre Pac"  /> </p>
+        <p><ChevronTitle ChevronColor="white" TextColor="white" title="Recevoir des nouvelles de pour une autre Pac" /> </p>
         <p>En remplissant ce formulaire, la plateforme <i>Pour une autre PAC </i>
             pourra utiliser ces données pour vous informer des ses prochaines actions.</p>
         <form onSubmit={this.handleSubmit}>
@@ -48,7 +48,6 @@ class SignUpFormular extends React.Component {
       </div>
     )
   }
-
 }
 
 export default SignUpFormular

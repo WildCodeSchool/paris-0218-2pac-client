@@ -7,8 +7,8 @@ const EventsParticipation = () => {
     <div>
       <Container>
         <div className="fix-content-article">
-        <h1>Participer à un évènement</h1>
-        <p> Contenu à venir ... </p>
+          <h1>Participer à un évènement</h1>
+          <p> Contenu à venir ... </p>
         </div>
       </Container>
     </div>
