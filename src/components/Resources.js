@@ -7,8 +7,8 @@ const Resources = ({ documents }) => {
     <div>
       {documents.map(doc =>
         <div key={doc.id} className="resource" >
-          <div className="category_resources">{doc.type}</div>
           <span>{doc.title}</span>
+          <div className="category_resources">{doc.type}</div>
           <a target="_blank" href={`${api.hostUrl}/medias/documents/${doc.url}`}>Télécharger</a>
         </div>
       )}

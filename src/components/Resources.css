@@ -20,11 +20,13 @@
 }
 
 .resource span {
-color: #226462;
-font-weight: bold; 
+  color: #226462;
+  font-weight: bold;
+  display: block;
+  width: 15em;
+  max-width: 15em;
+  text-align: center;
   }
-.resource p {
-}
 
 .resource:hover {
   box-shadow: 0 0em 0.9em rgba(0,0,0,0.2);
@@ -42,6 +44,9 @@ font-weight: bold;
 .resource a {
 color: #707070;
 transition: .2s;
+width: 15em;
+max-width: 15em;
+text-align: center;
 }
 
 .resource a:hover {
