@@ -1,60 +1,88 @@
+#formular_container {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  width: 50em;
+  min-width: 50%;
+  margin: 0 2em 0;
+  padding: 2.187em;
+  background-color: #731717;
+  border-radius: 7px 7px 0 0;
+  font-weight: bold;
+  line-height: 1.5em
+}
 
-    #formular_container {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: white;
-    width: 100%;
-    background-color: #731717;
-    padding: 4em;
-    font-weight: bold;
-    line-height: 2em
-    }
+::placeholder {
+  color: #F4971A;
+}
 
-    ::placeholder {
-    color:
-    #F4971A
-    ;
-    }
+#formular_container p {
+  color: white;
+}
 
-    #formular_container p {
-      color: white;
-    }
+form {
+width: 100%;
+}
 
-    input[type='submit'] {
-    background-color:
-    #F4971A
-    ;
-    color: white;
-    border-radius: 0.3em;
-    border: 0.2em solid white;
-    padding: 0.4em;
-    margin-top: 2em;
-    margin-right: 10em;
-    }
+form div:first-child {
 
-    input[name='lastName'] {
-    width: calc(50% - 1.3em);
-    margin-top: 2em;
-    margin-right: 0.3em
-     }
-    input[name='firstName'] {
-    width: calc(50% - 1em);
-    margin-top: 2em;
-    }
-    input[name='mail'] {
-    width: 98%;
-    margin-top: 2em;
-    }
+  padding: 1em 0em 1em;
 
-    input[name='number'] {
-    width: 98%;
-    margin-top: 2em;
-    }
+}
 
-    input[type='checkbox'] {
-    -ms-transform: scale(1.2); /* IE */
-    -moz-transform: scale(1.2); /* FF */
-    -webkit-transform: scale(1.2); /* Safari and Chrome */
-    -o-transform: scale(1.2); /* Opera */
-    margin-right: 1.2em;
+form div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
 
-    }
+form div:nth-child(3) {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+input[type='checkbox'] {
+  -ms-transform: scale(1.2);
+  /* IE */
+  -moz-transform: scale(1.2);
+  /* FF */
+  -webkit-transform: scale(1.2);
+  /* Safari and Chrome */
+  -o-transform: scale(1.2);
+  /* Opera */
+  margin-right: .7em;
+}
+
+input {
+  margin : 1em;
+  border: 2px solid transparent;
+  transition: .3s;
+  outline-width: 0;
+}
+
+input:focus {
+
+  border: 2px solid #F4971A;
+  border-radius: 5px;
+
+}
+
+input[name='lastName'], input[name='firstName'] {
+  width:50%;
+  padding: .5em;
+}
+
+input[name='number'], input[name='mail'] {
+  width: calc(100% - 3.25em);
+  padding: .5em;
+}
+
+input[type='submit'] {
+  background-color: #F4971A;
+  color: white;
+  border-radius: 0.3em;
+  border: 0.15em solid white;
+  padding: 0.7em;
+  cursor: pointer;
+}

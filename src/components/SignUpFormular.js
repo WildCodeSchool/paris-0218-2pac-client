@@ -27,17 +27,22 @@ class SignUpFormular extends React.Component {
         <p>En remplissant ce formulaire, la plateforme <i>Pour une autre PAC </i>
             pourra utiliser ces données pour vous informer des ses prochaines actions.</p>
         <form onSubmit={this.handleSubmit}>
-          <label>
+
+          <div>
             <input type='checkbox' name='checkbox'/>
-            <span>J'accepte que ces données soient utilisées par <span>Pour une autre PAC.</span></span>
-            <div>
+            <span>J'accepte que ces données soient utilisées par Pour une autre PAC.</span>
+          </div>
+
+          <div>
             <input type='text' name='lastName' placeholder='Nom' />
             <input type='text' name='firstName' placeholder='Prénom' />
-            </div>
+          </div>
+
+          <div>
             <input type='tel' name='number' placeholder='Numéro de téléphone' />
             <input type='mail' name='mail' placeholder='Adresse e-mail' />
+          </div>
 
-          </label>
           <input type='submit' value="➔ S'inscrire" />
         </form>
       </div>
