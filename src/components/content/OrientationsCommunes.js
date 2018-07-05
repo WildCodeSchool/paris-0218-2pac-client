@@ -6,7 +6,7 @@ const OrientationsCommunes = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Orientations Communes </h1>
         <br/>
         <p className="center-title"><h2>Un autre PAACte entre les paysan·ne·s et la société </h2></p>
@@ -17,8 +17,7 @@ const OrientationsCommunes = ({children}) => {
         <p>&emsp;&emsp;&emsp;Face à ce constat, la réforme de cette politique apparait comme l’opportunité majeure pour toute une génération de réinsuffler des perspectives d’avenir pour le secteur agricole français, tout en répondant aux multiples attentes sociétales en matière d’alimentation, d’emploi, de bien-être animal, d’environnement, de santé, de respect des paysans des pays en développement, ainsi que de luttes contre les changements climatiques, contre l’artificialisation et l’accaparement des terres.
         </p>
         <br/>
-        <p>&emsp;&emsp;&emsp;Réunissant trente organisations paysannes, environnementales, de solidarité internationale et de citoyen·ne·s-consommateur·rice·s, la plateforme
-          <i>Pour une autre PAC</i> demande aux décideur·se·s politiques de porter avec ambition et courage une révision complète de la PAC pour la transformer en un nouveau PAACte (pacte fondé sur une nouvelle politique agricole et alimentaire commune) entre les paysan·ne·s et la société, permettant tout à la fois aux premier·ère·s de vivre fièrement de leur métier et à leurs concitoyen·ne·s de profiter des bienfaits de leur activité.
+        <p>&emsp;&emsp;&emsp;Réunissant trente organisations paysannes, environnementales, de solidarité internationale et de citoyen·ne·s-consommateur·rice·s, la plateforme  <i>Pour une autre PAC</i> demande aux décideur·se·s politiques de porter avec ambition et courage une révision complète de la PAC pour la transformer en un nouveau PAACte (pacte fondé sur une nouvelle politique agricole et alimentaire commune) entre les paysan·ne·s et la société, permettant tout à la fois aux premier·ère·s de vivre fièrement de leur métier et à leurs concitoyen·ne·s de profiter des bienfaits de leur activité.
         </p>
         <br/>
         <p>

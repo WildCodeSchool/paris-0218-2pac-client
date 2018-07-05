@@ -1,4 +1,4 @@
-    
+
     #formular_container {
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
@@ -14,7 +14,7 @@
     #F4971A
     ;
     }
-    
+
     #formular_container p {
       color: white;
     }
@@ -31,7 +31,7 @@
     margin-right: 10em;
     }
 
-    input[name='lastName'] { 
+    input[name='lastName'] {
     width: calc(50% - 1.3em);
     margin-top: 2em;
     margin-right: 0.3em
@@ -39,7 +39,7 @@
     input[name='firstName'] {
     width: calc(50% - 1em);
     margin-top: 2em;
-    }    
+    }
     input[name='mail'] {
     width: 98%;
     margin-top: 2em;
@@ -56,5 +56,5 @@
     -webkit-transform: scale(1.2); /* Safari and Chrome */
     -o-transform: scale(1.2); /* Opera */
     margin-right: 1.2em;
-   
+
     }

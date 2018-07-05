@@ -7,7 +7,7 @@ const Presentation = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Présentation</h1>
         <br/>
         <p>Pour une autre PAC est une plateforme française inter-organisations constituant un espace commun de réflexion et d’action, en vue de la refonte de la politique agricole commune (PAC).</p>

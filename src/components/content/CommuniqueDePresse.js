@@ -7,8 +7,9 @@ const CommuniqueDePresse = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Communiqués de presse</h1>
+        <br/>
         <h2>Pour une autre PAC (depuis 2017)</h2>
         <ul>
           <li><BulletedList /> Futur budget de la PAC (3 mai 2018)</li>

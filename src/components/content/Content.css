@@ -43,6 +43,9 @@ td{
 .green{
   color: #226462;
 }
+.cherry{
+  color: #731717;
+}
 
 .bold{
   font-weight: bold;
@@ -53,6 +56,9 @@ td{
   margin-left: 4em;
 }
 
+.list-padding ul li{
+  padding: 2em;
+}
 .center-title{
   text-align: center;
 }

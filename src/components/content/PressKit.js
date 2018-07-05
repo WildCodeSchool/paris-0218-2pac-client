@@ -6,7 +6,7 @@ const PressKit = () => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
         <h1>Kit Presse</h1>
         <p> Contenu à venir ... </p>
         </div>

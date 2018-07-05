@@ -7,7 +7,7 @@ const AbcDeLaPac = ({children}) => {
   return (
     <div>
       <Container>
-        <div class="fix-content-article">
+        <div className="fix-content-article">
           <h1>L’ABC de la PAC</h1>
           <br/>
           <p>La Politique Agricole Commune est une politique de l’Union européenne dédiée à l’agriculture et au développement rural. Elle est en place depuis 1962. Elle visait à l’époque à développer la production agricole afin de nourrir les Européen·ne·s à la sortie de la deuxième guerre mondiale. Pour cela, trois outils principaux ont été introduits pour stimuler l’agriculture européenne : les taxes à l’importation (effet dissuasif sur les importations), la garantie des prix aux agriculteur·rice·s (effet incitatif sur la production) et les restitutions aux exportations (effet incitatif sur l’exportation). Elle a vite atteint son objectif d’augmenter la production européenne, puis a atteint un effet pervers : la surproduction. La PAC constituait alors le premier poste de dépense de l’UE et son coût augmentait en même temps que la surproduction.</p>
@@ -28,9 +28,9 @@ const AbcDeLaPac = ({children}) => {
           <br/>
           <p>Pour plus d’informations sur les fondamentaux de la PAC, vous pouvez consulter le <u>Guide de la PAC</u> réalisée par la plateforme en 2011, ainsi que vous reportez aux sites suivants :</p>
           <ul>
-            <li><BulletedList /> <a href="https://www.supagro.fr/capeye/histoire-de-la-pac/">https://www.supagro.fr/capeye/histoire-de-la-pac/</a></li>
-            <li><BulletedList /> <a href="http://www.vie-publique.fr/decouverte-institutions/union-europeenne/action/politiques-communautaires/qu-est-ce-que-politique-agricole-commune-pac.html">http://www.vie-publique.fr/decouverte-institutions/union-europeenne/action/politiques-communautaires/qu-est-ce-que-politique-agricole-commune-pac.html</a></li>
-            <li><BulletedList /> <a href="https://www.touteleurope.eu/actualite/l-agriculture-et-la-peche-dans-l-union-europeenne.html">https://www.touteleurope.eu/actualite/l-agriculture-et-la-peche-dans-l-union-europeenne.html</a></li>
+            <li><BulletedList /> <a href="https://www.supagro.fr/capeye/histoire-de-la-pac">https://www.supagro.fr/capeye</a></li>
+            <li><BulletedList /> <a href="http://www.vie-publique.fr/decouverte-institutions/union-europeenne/action/politiques-communautaires/qu-est-ce-que-politique-agricole-commune-pac.html">http://www.vie-publique.fr</a></li>
+            <li><BulletedList /> <a href="https://www.touteleurope.eu/actualite/l-agriculture-et-la-peche-dans-l-union-europeenne.html">https://www.touteleurope.eu</a></li>
           </ul>
         </div>
       </Container>
