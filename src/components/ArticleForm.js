@@ -62,7 +62,7 @@ class ArticleForm extends React.Component {
     const inputs = this.state.inputs
 
     return (
-      <form id='formular_articles' onSubmit={this.handleSubmit}>
+      <div id='formular_articles' onSubmit={this.handleSubmit}>
         <label>Titre :
           <input type="text" name='title' value={inputs.title} onChange={this.handleChange} />
         </label>
@@ -111,8 +111,8 @@ class ArticleForm extends React.Component {
           }}
           onChange={this.handleEditorChange}
         />
-        <button type="submit" value="submit">Ajouter</button>
-      </form>
+        <button onClick={ this.handleSubmit }>Ajouter</button>
+      </div>
     )
   }
 }
