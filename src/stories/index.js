@@ -27,12 +27,14 @@ import Actuality from '../components/Actuality'
 import Page404 from '../components/Page404'
 import { NewDocumentForm } from '../components/DocumentForms'
 import ArticleForm from '../components/ArticleForm'
+import Subscribers from '../components/Subscribers'
 
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
 import mockedArticle from '../mocks/article.json'
 import noImgArticle from '../mocks/noImgArticle.json'
 import arrayUne from '../mocks/arrayUne.json'
+import mockedSubscribers from '../mocks/subscribers.json'
 
 storiesOf('App', module)
   .add('Whole App', () => <App />)
@@ -117,3 +119,6 @@ storiesOf('DocumentForms', module)
 
 storiesOf('formulaire de création', module)
   .add("création d'articles et d'évènements", () => <ArticleForm />)
+
+storiesOf('Subscribers', module)
+  .add('Abonnés à la Newsletter ', () => <Subscribers subscribers={mockedSubscribers} />)

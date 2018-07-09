@@ -1,0 +1,39 @@
+#Subscribers {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 60rem;
+  height: 45rem;
+  margin: auto;
+  background-color: #A99C2F;
+}
+
+th {
+	padding-right: 1em;
+	width: 25%;
+	background-color: #731717;
+	color: white;
+	font-weight: bold;
+	
+}
+
+td {
+	padding-right: 1em;
+	padding-left: 0em;
+	width: 25%;
+	background-color: #731717;
+	color: white;
+	text-align: center;
+
+
+}
+
+caption {
+
+	font-size: 2em;
+	font-family: 'Source Sans Pro', sans-serif;
+ 	height: 3em;  
+  	min-width: 50%;
+    
+    border-radius: 3px 3px 3px 3px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
