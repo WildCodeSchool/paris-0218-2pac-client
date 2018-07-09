@@ -63,38 +63,39 @@ class ArticleForm extends React.Component {
 
     return (
       <div id='formular_articles' onSubmit={this.handleSubmit}>
-        <label>Titre :
-          <input type="text" name='title' value={inputs.title} onChange={this.handleChange} />
-        </label>
+      <h1>Formulaire pour la création et l'édition de contenu</h1>
         <label>Choix de la catégorie :
-          <select id="categoryId" name='categoryId' value={inputs.categoryId} onChange={this.handleChange}>
+          <select id="categoryId" name='categoryId' id='ArticleForm_categoryId' value={inputs.categoryId} onChange={this.handleChange}>
             <option value={1}>article</option>
             <option value={2}>presse</option>
             <option value={3}>actualité</option>
             <option value={4}>évènement</option>
           </select>
         </label>
+        <label>Titre :
+          <input type="text" name='title' id='ArticleForm_title' value={inputs.title} onChange={this.handleChange} />
+        </label>
         <label>Résumé :
-          <textarea type="text" name='shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
+          <textarea type="text" name='shortDescription' id='ArticleForm_shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
         </label>
         {
           inputs.categoryId === '4'
             ? <label>Date :
-                <input type="date" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
+                <input type="date" name='eventDate' id='ArticleForm_eventDate' value={inputs.eventDate} onChange={this.handleChange} />
               </label>
             : ''
         }
         <label>Lien de l'image :
-          <input type="text" name='imageURL' value={inputs.imageURL} onChange={this.handleChange} />
+          <input type="text" name='imageURL' id='ArticleForm_imageURL' value={inputs.imageURL} onChange={this.handleChange} />
         </label>
         <label>Description de l'image :
-          <input type="text" name='imageDescription' value={inputs.imageDescription} onChange={this.handleChange} />
+          <input type="text" name='imageDescription' id='ArticleForm_imageDescription' value={inputs.imageDescription} onChange={this.handleChange} />
         </label>
         <Editor
           init={{
             height: 500,
-            plugins: 'print link image media preview fullpage charmap insertdatetime lists textcolor wordcount imagetools help',
-            toolbar: 'media image link | undo redo | formatselect | fontsizeselect | bold italic strikethrough textcolor colorpicker forecolor backcolor | alignleft aligncenter alignright alignjustify | umlist bullist outdent indent | help',
+            plugins: 'print link image media preview fullpage insertdatetime lists textcolor wordcount imagetools help',
+            toolbar: 'media image link | undo redo | fontsizeselect | bold italic underline strikethrough textcolor colorpicker forecolor backcolor | alignleft aligncenter alignright alignjustify | umlist bullist outdent indent | help',
             image_advtab: true,
             content_css:[ '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' ],
             textcolor_map: [
@@ -111,7 +112,7 @@ class ArticleForm extends React.Component {
           }}
           onChange={this.handleEditorChange}
         />
-        <button onClick={ this.handleSubmit }>Ajouter</button>
+        <button type='onclick' onClick={ this.handleSubmit }>Ajouter</button>
       </div>
     )
   }
