@@ -11,7 +11,22 @@ const AdminHome = () =>
     <Link to='documents'>Documents</Link>
   </div>
 
-const AdminUsers = () => <div>Users</div>
+const User = ({ user }) =>
+  <li>
+    <span><strong>{user.username}</strong></span>
+    <label> isAdmin<input type='checkbox' checked={user.isAdmin} readOnly /></label>
+  </li>
+
+const AdminUsers = ({ users }) => {
+  const _users = users.map(user => <User key={user.id} user={user} />)
+
+  return (
+    <div>
+      {_users}
+    </div>
+  )
+}
+
 const AdminArticles = () => <div>Articles</div>
 const AdminDocuments = () => <div>Documents</div>
 const AdminSubscribers = () => <div>Subscribers</div>
@@ -90,14 +105,23 @@ class AdminAuth extends Component {
 class AdminContainer extends Component {
   state = {
     loggedAs: undefined,
+    users: [],
     articles: [],
     documents: []
   }
 
   syncDatas = () => {
-    api.getArticles().then(articles => { this.setState({ articles: articles }) })
+    api.getUsers()
+      .then(users => { this.setState({ users: users }) })
+      .catch(console.log)
 
-    api.getDocuments().then(documents => { this.setState({ documents: documents }) })
+    api.getArticles()
+      .then(articles => { this.setState({ articles: articles }) })
+      .catch(console.log)
+
+    api.getDocuments()
+      .then(documents => { this.setState({ documents: documents }) })
+      .catch(console.log)
   }
 
   onLoggedIn = user => {
@@ -127,10 +151,10 @@ class AdminContainer extends Component {
     return (
       <div>
         <AdminAuth loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
-        { loggedAs
+        { loggedAs && loggedAs.isAdmin
           ? <Router>
             <AdminHome path="/" />
-            <AdminUsers path='users' />
+            <AdminUsers path='users' users={this.state.users} />
             <AdminArticles path='articles' />
             <AdminArticleNew path='articles/new' />
             <AdminArticleEdit path='articles/:id' />
@@ -139,7 +163,7 @@ class AdminContainer extends Component {
             <AdminDocumentEdit path='documents/:id' />
             <AdminSubscribers path='subscribers' />
           </Router>
-          : <div>You must sign in</div>
+          : <div>You must sign in with an admin account</div>
         }
       </div>
     )
