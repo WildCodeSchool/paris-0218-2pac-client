@@ -51,12 +51,6 @@ class AdminAuth extends Component {
     api.signOut().then(() => this.props.onLoggedOut())
   }
 
-  componentDidMount () {
-    api.whoami()
-      .then(response => this.setState({ message: response.error || '', loggedAs: response.user }))
-      .catch(console.log)
-  }
-
   render () {
     const { loggedAs } = this.props
 
@@ -104,6 +98,15 @@ class AdminContainer extends Component {
 
   componentDidMount () {
     this.syncDatas()
+
+    api.whoami()
+      .then(response => {
+        if (response.error) {
+          return console.log(response.error)
+        }
+
+        this.setState({ loggedAs: response.user })
+    }).catch(console.log)
   }
 
   render () {
