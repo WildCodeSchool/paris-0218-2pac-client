@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
-import { Router } from '@reach/router'
+import { Router, Link } from '@reach/router'
 
 import api from '../api.js'
 // import '../App.css'
 
-const AdminHome = () => <div>Admin zone</div>
+const AdminHome = () =>
+  <div>Admin zone
+    <Link to='users'>Users</Link>
+    <Link to='articles'>Articles</Link>
+    <Link to='documents'>Documents</Link>
+  </div>
+
+const AdminUsers = () => <div>Users</div>
 const AdminArticles = () => <div>Articles</div>
 const AdminDocuments = () => <div>Documents</div>
 const AdminSubscribers = () => <div>Subscribers</div>
+
+const AdminArticleNew = (props) => <div>AdminArticleNew</div>
+const AdminArticleEdit = (props) => <div>AdminArticleEdit {props.id}</div>
+const AdminDocumentNew = (props) => <div>AdminDocumentNew</div>
+const AdminDocumentEdit = (props) => <div>AdminDocumentEdit {props.id}</div>
 
 class AdminAuth extends Component {
   state = {
@@ -106,7 +118,7 @@ class AdminContainer extends Component {
         }
 
         this.setState({ loggedAs: response.user })
-    }).catch(console.log)
+      }).catch(console.log)
   }
 
   render () {
@@ -118,8 +130,13 @@ class AdminContainer extends Component {
         { loggedAs
           ? <Router>
             <AdminHome path="/" />
+            <AdminUsers path='users' />
             <AdminArticles path='articles' />
+            <AdminArticleNew path='articles/new' />
+            <AdminArticleEdit path='articles/:id' />
             <AdminDocuments path='documents' />
+            <AdminDocumentNew path='documents/new' />
+            <AdminDocumentEdit path='documents/:id' />
             <AdminSubscribers path='subscribers' />
           </Router>
           : <div>You must sign in</div>
