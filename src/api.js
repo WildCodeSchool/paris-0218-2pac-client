@@ -13,7 +13,6 @@ const getDocuments = () => fetch('/documents')
 const getSubscribers = () => fetch('/subscribers')
   .then(response => response.json())
 
-
 // AUTH
 
 const authenticatedFetch = (route, options = {}) => {
@@ -48,19 +47,19 @@ const signIn = credentials => fetch('/signin', {
   },
   body: JSON.stringify(credentials)
 })
-.then(response => response.json())
-.then(response => {
-  if (response.error) { return response }
+  .then(response => response.json())
+  .then(response => {
+    if (response.error) { return response }
 
-  const { user, token } = response
+    const { user, token } = response
 
-  if (!token) { throw Error('Missing JWT in response!') }
-  if (!user) { throw Error('Missing User in response!') }
+    if (!token) { throw Error('Missing JWT in response!') }
+    if (!user) { throw Error('Missing User in response!') }
 
-  jwt.set(token)
+    jwt.set(token)
 
-  return response
-})
+    return response
+  })
 
 const signOut = () => {
   jwt.remove()
@@ -75,5 +74,5 @@ export default {
   getSubscribers,
   signIn,
   whoami,
-  signOut,
+  signOut
 }

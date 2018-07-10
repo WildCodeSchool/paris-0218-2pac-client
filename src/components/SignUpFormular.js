@@ -15,26 +15,17 @@ class SignUpFormular extends React.Component {
     inputs: initialInputValues
   }
 
-handleChange = (e) => {
-    const inputs = {
-      ...this.state.inputs,
-      [e.target.name]: e.target.value
-
-    }
-
+  handleChange = (e) => {
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
+
     return this.setState({ inputs: { ...this.state.inputs, [e.target.name]: value } })
-
-    this.setState({ inputs: inputs })
   }
-
 
   handleSubmit = (e) => {
     e.preventDefault()
     // alert('votre formulaire a été envoyé')
 
     const data = this.state.inputs
-    console.log(data)
 
     fetch('/subscribers', {
       method: 'POST',
@@ -43,11 +34,10 @@ handleChange = (e) => {
     })
     // .then(res => res.json())
     // .then(res => this.reset())
-}
+  }
 
   render () {
-
-  const inputs = this.state.inputs
+    const inputs = this.state.inputs
 
     return (
       <div id='formular_container'>

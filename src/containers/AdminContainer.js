@@ -13,7 +13,7 @@ class AdminAuth extends Component {
   state = {
     username: '',
     password: '',
-    message: '',
+    message: ''
   }
 
   handleChange = e => {
@@ -29,7 +29,7 @@ class AdminAuth extends Component {
 
     const credentials = {
       username: this.state.username,
-      password: this.state.password,
+      password: this.state.password
     }
 
     api.signIn(credentials)
@@ -62,33 +62,30 @@ class AdminAuth extends Component {
 
     return (
       <div>
-      { loggedAs
-        ?
-        <div>
-          <span>Logged as <strong>{loggedAs.username}</strong></span>
-          <input type='button' value='Sign Out' onClick={this.signout}/>
-        </div>
-        :
-        <div>
-          <form onSubmit={this.signin}>
-            <input type='text' placeholder='username' name='username' value={this.state.username} onChange={this.handleChange} />
-            <input type='password' placeholder='password' name='password' value={this.state.password} onChange={this.handleChange} />
-            <input type='submit' value='Sign in' />
-            <span>{this.state.message}</span>
-          </form>
-        </div>
-      }
+        { loggedAs
+          ? <div>
+            <span>Logged as <strong>{loggedAs.username}</strong></span>
+            <input type='button' value='Sign Out' onClick={this.signout}/>
+          </div>
+          : <div>
+            <form onSubmit={this.signin}>
+              <input type='text' placeholder='username' name='username' value={this.state.username} onChange={this.handleChange} />
+              <input type='password' placeholder='password' name='password' value={this.state.password} onChange={this.handleChange} />
+              <input type='submit' value='Sign in' />
+              <span>{this.state.message}</span>
+            </form>
+          </div>
+        }
       </div>
     )
   }
 }
 
 class AdminContainer extends Component {
-
   state = {
     loggedAs: undefined,
     articles: [],
-    documents: [],
+    documents: []
   }
 
   syncDatas = () => {
@@ -116,15 +113,13 @@ class AdminContainer extends Component {
       <div>
         <AdminAuth loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
         { loggedAs
-          ?
-          <Router>
+          ? <Router>
             <AdminHome path="/" />
             <AdminArticles path='articles' />
             <AdminDocuments path='documents' />
             <AdminSubscribers path='subscribers' />
           </Router>
-          :
-          <div>You must sign in</div>
+          : <div>You must sign in</div>
         }
       </div>
     )
