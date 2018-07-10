@@ -1,3 +1,5 @@
+import jwt from './jwt'
+
 const hostUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000'
 
 // Datas
@@ -14,14 +16,8 @@ const getSubscribers = () => fetch('/subscribers')
 
 // AUTH
 
-// helpers
-
-const LOCALSTORAGE_JWT = 'JWT'
-
-const getToken = () => localStorage.getItem(LOCALSTORAGE_JWT)
-
 const authenticatedFetch = (route, options = {}) => {
-  const token = getToken()
+  const token = jwt.get()
 
   if (!token) {
     return Promise.reject(Error(`missing token for authenticated fetch '${route}'`))
@@ -37,7 +33,9 @@ const authenticatedFetch = (route, options = {}) => {
 }
 
 const whoami = () => {
-  if (!getToken()) { return Promise.resolve({}) }
+  const token = jwt.get()
+
+  if (!token) { return Promise.resolve({}) }
 
   return authenticatedFetch('/whoami')
     .then(response => response.json())
@@ -59,13 +57,14 @@ const signIn = credentials => fetch('/signin', {
   if (!token) { throw Error('Missing JWT in response!') }
   if (!user) { throw Error('Missing User in response!') }
 
-  localStorage.setItem(LOCALSTORAGE_JWT, token)
+  jwt.set(token)
 
   return response
 })
 
 const signOut = () => {
-  localStorage.removeItem(LOCALSTORAGE_JWT)
+  jwt.remove()
+
   return Promise.resolve()
 }
 
