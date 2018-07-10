@@ -107,6 +107,7 @@ class App extends Component {
 
           </Router>
           <SideBar />
+
         </div>
         <Footer />
       </div>

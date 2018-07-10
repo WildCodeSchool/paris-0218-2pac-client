@@ -9,9 +9,15 @@ const getDocuments = () => fetch('/documents')
 const getSubscribers = () => fetch('/subscribers')
   .then(response => response.json())
 
+// const deleteDocument = (documentId) => fetch('/documents')
+// .then(() => res.json('ok'))
+// .catch(next)
+
+
 export default {
   hostUrl,
   getArticles,
   getDocuments,
-  getSubscribers
+  getSubscribers,
+  // deleteDocument
 }
