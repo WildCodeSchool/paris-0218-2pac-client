@@ -63,7 +63,7 @@ class ArticleForm extends React.Component {
 
     return (
       <div id='formular_articles' onSubmit={this.handleSubmit}>
-      <h1>Formulaire pour la création et l'édition de contenu</h1>
+      <h1>Formulaire pour la création de contenu</h1>
         <label>Choix de la catégorie :
           <select id="categoryId" name='categoryId' id='ArticleForm_categoryId' value={inputs.categoryId} onChange={this.handleChange}>
             <option value={1}>article</option>
