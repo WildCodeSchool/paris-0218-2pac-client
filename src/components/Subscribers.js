@@ -1,11 +1,12 @@
 import React from 'react'
 import './Subscribers.css'
+import ChevronTitle from './ChevronTitle'
 
 const Subscribers = ({ subscribers }) => {
   return (
-    <div>
+    <div className="containerSusbscribers">
 
-      <caption>Abonnés à la Newsletter</caption>
+      <caption><ChevronTitle ChevronColor="white" TextColor="black" title="Abonnés à la Newsletter" /></caption>
 
       <tr>
         <th>Nom</th>
@@ -19,11 +20,11 @@ const Subscribers = ({ subscribers }) => {
           <table>
 
             <tr>
-              <td>{subscriber.lastName}</td>
-              <td>{subscriber.firstName}</td>
-              <td>{subscriber.phoneNumber}</td>
-              <td>{subscriber.email}</td>
-              <td>{subscriber.reuseableInfo ? 'O' : 'N'}</td>
+              <td >{subscriber.lastName}</td>
+              <td className="tableSubscribers">{subscriber.firstName}</td>
+              <td className="tableSubscribers">{subscriber.phoneNumber}</td>
+              <td className="tableSubscribers">{subscriber.email}</td>
+              <td className="tableSubscribers">{subscriber.reuseableInfo ? 'Oui' : 'Non'}</td>
             </tr>
           </table>
 

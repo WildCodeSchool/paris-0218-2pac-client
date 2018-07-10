@@ -1,17 +1,11 @@
-#Subscribers {
-  font-family: 'Source Sans Pro', sans-serif;
-  width: 60rem;
-  height: 45rem;
-  margin: auto;
-  background-color: #A99C2F;
-}
-
 th {
+	font-family: 'Source Sans Pro', sans-serif;
 	padding-right: 1em;
 	width: 25%;
 	background-color: #731717;
 	color: white;
 	font-weight: bold;
+	font-size: 1.1em;
 	
 }
 
@@ -22,18 +16,23 @@ td {
 	background-color: #731717;
 	color: white;
 	text-align: center;
-
-
+	border-radius: 5px 5px 5px 5px; 
+	border:3px solid white;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 caption {
-
-	font-size: 2em;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	text-align: left;
 	font-family: 'Source Sans Pro', sans-serif;
  	height: 3em;  
   	min-width: 50%;
-    
     border-radius: 3px 3px 3px 3px;
     font-weight: bold;
     line-height: 1.5em;
+}
+
+.subscribers td {
+	color: white;
 }
