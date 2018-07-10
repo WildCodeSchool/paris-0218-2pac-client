@@ -14,7 +14,6 @@ class AdminAuth extends Component {
     username: '',
     password: '',
     message: '',
-    loggedAs: undefined,
   }
 
   handleChange = e => {
@@ -40,15 +39,16 @@ class AdminAuth extends Component {
           return
         }
 
-        this.setState({ username: '', password: '', loggedAs: response.user })
+        this.setState({ username: '', password: '' })
+
+        this.props.onLoggedIn(response.user) // todo: put in setState cb ?
       })
   }
 
   signout = e => {
     e.preventDefault()
 
-    api.signOut()
-      .then(() => this.setState({ loggedAs: undefined }))
+    api.signOut().then(() => this.props.onLoggedOut())
   }
 
   componentDidMount () {
@@ -58,12 +58,14 @@ class AdminAuth extends Component {
   }
 
   render () {
+    const { loggedAs } = this.props
+
     return (
       <div>
-      { this.state.loggedAs
+      { loggedAs
         ?
         <div>
-          <span>Logged as <strong>{this.state.loggedAs.username}</strong></span>
+          <span>Logged as <strong>{loggedAs.username}</strong></span>
           <input type='button' value='Sign Out' onClick={this.signout}/>
         </div>
         :
@@ -84,8 +86,9 @@ class AdminAuth extends Component {
 class AdminContainer extends Component {
 
   state = {
+    loggedAs: undefined,
     articles: [],
-    documents: []
+    documents: [],
   }
 
   syncDatas = () => {
@@ -94,20 +97,35 @@ class AdminContainer extends Component {
     api.getDocuments().then(documents => { this.setState({ documents: documents }) })
   }
 
+  onLoggedIn = user => {
+    this.setState({ loggedAs: user })
+  }
+
+  onLoggedOut = () => {
+    this.setState({ loggedAs: undefined })
+  }
+
   componentDidMount () {
     this.syncDatas()
   }
 
   render () {
+    const { loggedAs } = this.state
+
     return (
       <div>
-        <AdminAuth />
-        <Router>
-          <AdminHome path="/" />
-          <AdminArticles path='articles' />
-          <AdminDocuments path='documents' />
-          <AdminSubscribers path='subscribers' />
-        </Router>
+        <AdminAuth loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
+        { loggedAs
+          ?
+          <Router>
+            <AdminHome path="/" />
+            <AdminArticles path='articles' />
+            <AdminDocuments path='documents' />
+            <AdminSubscribers path='subscribers' />
+          </Router>
+          :
+          <div>You must sign in</div>
+        }
       </div>
     )
   }
