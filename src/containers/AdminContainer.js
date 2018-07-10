@@ -36,11 +36,11 @@ class AdminAuth extends Component {
     api.signIn(credentials)
       .then(response => {
         if (response.error) {
-          this.setState({ username: '', password: '', message: response.error })
+          this.setState({ message: response.error })
           return
         }
 
-        this.setState({ loggedAs: response.user })
+        this.setState({ username: '', password: '', loggedAs: response.user })
       })
   }
 
@@ -72,8 +72,8 @@ class AdminAuth extends Component {
             <input type='text' placeholder='username' name='username' value={this.state.username} onChange={this.handleChange} />
             <input type='password' placeholder='password' name='password' value={this.state.password} onChange={this.handleChange} />
             <input type='submit' value='Sign in' />
+            <span>{this.state.message}</span>
           </form>
-          <div>{this.state.message}</div>
         </div>
       }
       </div>
