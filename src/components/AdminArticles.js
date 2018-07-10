@@ -6,7 +6,7 @@ import { Link } from '@reach/router'
 const AdminArticles = ({ articles }) => {
   return (
     <div>
-    <Link to='/admin-articles'>Ajouter un article</Link>
+    <Link to='/admin-articles'><button className="admin-docs-title"><span>Ajouter un article</span></button></Link>
       {articles.map(doc =>
         <div key={doc.id} className="admin-article" >
           <span>{doc.title}</span>
