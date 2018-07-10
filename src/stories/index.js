@@ -31,6 +31,8 @@ import Admin from '../components/Admin'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminArticles from '../components/AdminArticles'
 
+import AdminContainer from '../containers/AdminContainer'
+
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
 import mockedArticle from '../mocks/article.json'
@@ -125,8 +127,13 @@ storiesOf('formulaire de création', module)
 storiesOf('Interface admin', module)
   .add("LinkTo", () => <Admin />)
 
+// Admin area
+
 storiesOf('Documents admin', module)
   .add("AdminDocuments", () => <AdminDocuments documents={mockedDocuments} />)
 
 storiesOf('Articles admin', module)
   .add("AdminArticles", () => <AdminArticles articles={mockedArticles} />)
+
+storiesOf('AdminContainer', module)
+  .add('AdminContainer', () => <AdminContainer />)

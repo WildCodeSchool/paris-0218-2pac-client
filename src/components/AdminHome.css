@@ -1,0 +1,28 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  width: 30rem;
+  height: 5rem;
+  line-height: 4rem;
+  margin: 0.4rem;
+}
+
+.orange {
+  background-color: #F4971A;
+}
+
+.green {
+  background-color: #226462;
+}
+
+.cherry {
+  background-color: #731717;
+}

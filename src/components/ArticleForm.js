@@ -1,5 +1,5 @@
 import React from 'react'
-import { Editor } from '@tinymce/tinymce-react';
+import { Editor } from '@tinymce/tinymce-react'
 import './ArticleForm.css'
 
 const initialInputValues = {
@@ -46,10 +46,10 @@ class ArticleForm extends React.Component {
       headers: new Headers({ 'Content-Type': 'application/json' }),
       body: JSON.stringify(data)
     })
-    .then(res => res.json())
-    .then(res => {
+      .then(res => res.json())
+      .then(res => {
       // this.reset()
-    })
+      })
   }
 
   handleEditorChange = e => {
@@ -80,8 +80,8 @@ class ArticleForm extends React.Component {
         {
           inputs.categoryId === '4'
             ? <label>Date :
-                <input type="date" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
-              </label>
+              <input type="date" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
+            </label>
             : ''
         }
         <label>Lien de l'image :
@@ -96,18 +96,18 @@ class ArticleForm extends React.Component {
             plugins: 'print link image media preview fullpage charmap insertdatetime lists textcolor wordcount imagetools help',
             toolbar: 'media image link | undo redo | formatselect | fontsizeselect | bold italic strikethrough textcolor colorpicker forecolor backcolor | alignleft aligncenter alignright alignjustify | umlist bullist outdent indent | help',
             image_advtab: true,
-            content_css:[ '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' ],
+            content_css: [ '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' ],
             textcolor_map: [
-              "FFFFFF", "White",
-              "000000", "Black",
-              "9D9D9C", "Grey",
-              "333333", "Very dark gray",
-              "226462", "Dark green",
-              "A99C2F", "Olive",
-              "F4971A", "Orange",
-              "731717", "Dark red",
-              "FF0000", "Red",
-            ],
+              'FFFFFF', 'White',
+              '000000', 'Black',
+              '9D9D9C', 'Grey',
+              '333333', 'Very dark gray',
+              '226462', 'Dark green',
+              'A99C2F', 'Olive',
+              'F4971A', 'Orange',
+              '731717', 'Dark red',
+              'FF0000', 'Red'
+            ]
           }}
           onChange={this.handleEditorChange}
         />
