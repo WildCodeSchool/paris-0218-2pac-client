@@ -24,17 +24,20 @@
 }
 
 .intro-img {
+  position: relative;
   width: 100%;
   min-height: 11em;
   max-height: 11em;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 2rem; 
 }
 
 .img-legend {
-  font-size: 0.625em;
-  color: white;
+  position: absolute;
+  font-size: 0.8rem;
+  padding-top: 11.5rem; 
 }
 
 

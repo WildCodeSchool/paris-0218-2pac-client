@@ -8,6 +8,11 @@ import ArticleForm from '../components/ArticleForm'
 import api from '../api.js'
 // import '../App.css'
 
+const AdminHome = () => <div>Admin</div>
+const AdminArticles = () => <div>Articles</div>
+const AdminDocuments = () => <div>Documents</div>
+const AdminSubscribers = () => <div>Subscribers</div>
+
 const User = ({ user }) =>
   <li>
     <span><strong>{user.username}</strong></span>
@@ -106,6 +111,10 @@ class AdminContainer extends Component {
   }
 
   syncDatas = () => {
+    api.getArticles().then(articles => { this.setState({ articles: articles }) })
+
+    api.getDocuments().then(documents => { this.setState({ documents: documents }) })
+
     api.getUsers()
       .then(users => { this.setState({ users: users }) })
       .catch(console.log)
@@ -129,6 +138,16 @@ class AdminContainer extends Component {
 
   componentDidMount () {
     this.syncDatas()
+  }
+
+  render () {
+    return (
+      <Router>
+        <AdminHome path="/" />
+        <AdminArticles path='articles' />
+        <AdminDocuments path='documents' />
+        <AdminSubscribers path='subscribers' />
+      </Router> 
 
     api.whoami()
       .then(response => {

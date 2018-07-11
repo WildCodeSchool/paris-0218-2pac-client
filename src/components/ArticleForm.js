@@ -1,5 +1,6 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
+// import api from '../api'
 import './ArticleForm.css'
 
 const initialInputValues = {
@@ -17,7 +18,7 @@ class ArticleForm extends React.Component {
     inputs: initialInputValues
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     const inputs = {
       ...this.state.inputs,
       [e.target.name]: e.target.value
@@ -30,7 +31,7 @@ class ArticleForm extends React.Component {
     this.setState({ inputs: initialInputValues })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault()
 
     const data = this.state.inputs
@@ -62,7 +63,7 @@ class ArticleForm extends React.Component {
     const inputs = this.state.inputs
 
     return (
-      <form id='formular_articles' onSubmit={this.handleSubmit}>
+      <div id='formular_articles' onSubmit={this.handleSubmit}>
         <label>Titre :
           <input type="text" name='title' value={inputs.title} onChange={this.handleChange} />
         </label>
@@ -112,7 +113,7 @@ class ArticleForm extends React.Component {
           onChange={this.handleEditorChange}
         />
         <button type="submit" value="submit">Ajouter</button>
-      </form>
+      </div>
     )
   }
 }
