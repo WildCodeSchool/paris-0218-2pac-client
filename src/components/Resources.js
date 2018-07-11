@@ -15,7 +15,7 @@ class Resources extends Component {
   state = {
     sortByDate: 1,
     filters: {
-      typeId: 0
+      typeId: "0"
     },
   }
 
@@ -35,24 +35,24 @@ class Resources extends Component {
     const { filters, sortByDate } = this.state
 
     const resourceCards = documents
-      .filter(doc => !filters.typeId || filters.typeId == doc.typeId)
+      .filter(doc => filters.typeId === "0" || filters.typeId === String(doc.typeId))
       .sort((a, b) => sortByDate * ((new Date(b.createdAt)) - (new Date(a.createdAt))))
       .map(doc => <ResourceCard key={doc.id} doc={doc} />)
+
+    console.log({ typeId: filters.typeId, sortByDate })
 
     return (
       <div>
         <div className="resource-filters">
           <input type="button" value={`${this.state.sortByDate > 0 ? '▼' : '▲'} date`} onClick={this.toggleSortByDate} />
-          <label>type
-            <select name="typeId" value={this.state.filters.typeId} onChange={this.handleFilterChange}>
-              <option value={0}></option>
-              <option value={1}>Textes politiques</option>
-              <option value={2}>Documents de position des organisations membres</option>
-              <option value={3}>Documents réservés aux membres</option>
-              <option value={4}>Travaux de recherche</option>
-              <option value={5}>Autres documents de position</option>
-            </select>
-          </label>
+          <select name="typeId" value={this.state.filters.typeId} onChange={this.handleFilterChange}>
+            <option value={0}>-- FILTRER PAR TYPE --</option>
+            <option value={1}>Textes politiques</option>
+            <option value={2}>Documents de position des organisations membres</option>
+            <option value={3}>Documents réservés aux membres</option>
+            <option value={4}>Travaux de recherche</option>
+            <option value={5}>Autres documents de position</option>
+          </select>
         </div>
         <div className="resource-cards">
           <span>{resourceCards.length} resultats</span>
