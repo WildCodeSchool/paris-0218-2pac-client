@@ -28,10 +28,17 @@ import Page404 from '../components/Page404'
 import { NewDocumentForm } from '../components/DocumentForms'
 import ArticleForm from '../components/ArticleForm'
 import Subscribers from '../components/Subscribers'
+import AdminDocuments from '../components/AdminDocuments'
+import AdminArticles from '../components/AdminArticles'
+
+import AdminContainer from '../containers/AdminContainer'
+
 
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
 import mockedArticle from '../mocks/article.json'
+import mockedArticles from '../mocks/articles.json'
+import mockedDocuments from '../mocks/documents.json'
 import noImgArticle from '../mocks/noImgArticle.json'
 import arrayUne from '../mocks/arrayUne.json'
 import mockedSubscribers from '../mocks/subscribers.json'
@@ -106,10 +113,10 @@ storiesOf('ArticlePreview', module)
   .add('Preview des articles à la unes', () => <ArticlePreview />)
 
 storiesOf('*Une', module)
-  .add('Articles à la une complet', () => <Une uneData={arrayUne}/>)
+  .add('Articles à la une complet', () => <Une articles={mockedArticles} />)
 
 storiesOf('Actualités', module)
-  .add('bloc d\'actu pour la page "actualité" ', () => <Actuality ActuData={arrayUne}/>)
+  .add('bloc d\'actu pour la page "actualité" ', () => <Actuality articles={mockedArticles} />)
 
 storiesOf('Page404', module)
   .add('à ton avis', () => <Page404 />)
@@ -120,5 +127,18 @@ storiesOf('DocumentForms', module)
 storiesOf('formulaire de création', module)
   .add("création d'articles et d'évènements", () => <ArticleForm />)
 
+
 storiesOf('Subscribers', module)
   .add('Abonnés à la Newsletter ', () => <Subscribers subscribers={mockedSubscribers} />)
+
+       // Admin area
+
+storiesOf('Documents admin', module)
+  .add("AdminDocuments", () => <AdminDocuments documents={mockedDocuments} />)
+
+storiesOf('Articles admin', module)
+  .add("AdminArticles", () => <AdminArticles articles={mockedArticles} />)
+
+storiesOf('AdminContainer', module)
+  .add('AdminContainer', () => <AdminContainer />)
+

@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.resource {
+.admin-document {
   min-width: 30vw;
   margin: 0em 0 1.5em 0;
   background-size: cover;
@@ -16,17 +16,35 @@
   justify-content: space-between;
 }
 
-.resource span {
+.admin-docs-title{
+  text-align: center;
+  width: 77em;
+  background-color: #226462;
+  border-radius: .3rem;
+  margin-bottom: 3em;
+  min-height: 6em;
+  box-shadow: 0 0em 0.825em rgba(0,0,0,0.1);
+  cursor: pointer;
+ /* transition: 5s;*/
+
+}
+
+.admin-docs-title span{
+  font-size: 2em;
+  color: #ffffff;
+}
+
+.admin-document span {
   color: #226462;
   font-weight: bold;
   display: block;
   width: 15em;
   max-width: 15em;
   text-align: center;
-  padding-top: 0.2em;
+  padding-top: 0.4em;
   }
 
-.resource:hover {
+.admin-document:hover {
   box-shadow: 0 0em 0.9em rgba(0,0,0,0.2);
 }
 
@@ -39,15 +57,22 @@
   border-radius: .3rem;
 }
 
-.resource a {
+.admin-document a {
 color: #707070;
 transition: .2s;
 width: 15em;
 max-width: 15em;
 text-align: center;
-padding-top: 0.2em;
 }
 
-.resource a:hover {
+.admin-document a:hover {
 color: #F4971A;
 }
+
+.admin-document button{
+  background-color: #F4971A;
+  color: #ffffff;
+  border-radius: .3rem;
+  padding: 0.2em 0.5em;
+}
+
