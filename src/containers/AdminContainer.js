@@ -147,7 +147,7 @@ class AdminContainer extends Component {
         <AdminArticles path='articles' />
         <AdminDocuments path='documents' />
         <AdminSubscribers path='subscribers' />
-      </Router>
+      </Router> 
 
     api.whoami()
       .then(response => {
