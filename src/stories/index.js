@@ -27,7 +27,6 @@ import Actuality from '../components/Actuality'
 import Page404 from '../components/Page404'
 import { NewDocumentForm } from '../components/DocumentForms'
 import ArticleForm from '../components/ArticleForm'
-import Admin from '../components/Admin'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminArticles from '../components/AdminArticles'
 
@@ -123,9 +122,6 @@ storiesOf('DocumentForms', module)
 
 storiesOf('formulaire de création', module)
   .add("création d'articles et d'évènements", () => <ArticleForm />)
-
-storiesOf('Interface admin', module)
-  .add("LinkTo", () => <Admin />)
 
 // Admin area
 

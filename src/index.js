@@ -8,7 +8,7 @@ import './index.css'
 
 ReactDOM.render(
   <Router>
-    <App path='/' />
+    <App path='/*' />
     <AdminContainer path='/admin/*' />
   </Router>, document.getElementById('root'))
 registerServiceWorker()
