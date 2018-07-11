@@ -115,7 +115,7 @@ export default {
   getSubscribers,
   newArticle,
   updateArticle,
-  deleteArticle
+  deleteArticle,
   signIn,
   whoami,
   signOut
