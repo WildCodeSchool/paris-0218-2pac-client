@@ -11,12 +11,11 @@ const ResourceCard = ({ doc }) =>
   </div>
 
 class Resources extends Component {
-
   state = {
     sortByDate: 1,
     filters: {
-      typeId: "0"
-    },
+      typeId: '0'
+    }
   }
 
   toggleSortByDate = () => {
@@ -26,7 +25,9 @@ class Resources extends Component {
   handleFilterChange = e => {
     const { name, value } = e.target
 
-    this.setState({ filters: { ...this.state.filters, [name]: value }})
+    this.setState({
+      filters: { ...this.state.filters, [name]: value }
+    })
   }
 
   render () {
@@ -35,11 +36,9 @@ class Resources extends Component {
     const { filters, sortByDate } = this.state
 
     const resourceCards = documents
-      .filter(doc => filters.typeId === "0" || filters.typeId === String(doc.typeId))
+      .filter(doc => filters.typeId === '0' || filters.typeId === String(doc.typeId))
       .sort((a, b) => sortByDate * ((new Date(b.createdAt)) - (new Date(a.createdAt))))
       .map(doc => <ResourceCard key={doc.id} doc={doc} />)
-
-    console.log({ typeId: filters.typeId, sortByDate })
 
     return (
       <div>

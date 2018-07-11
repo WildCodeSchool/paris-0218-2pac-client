@@ -4,7 +4,6 @@ const hostUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000'
 
 const _fetch = (route, options = {}) => fetch(route, options)
   .then(async res => {
-
     if (res.status >= 400) {
       const json = await res.json()
 
@@ -64,7 +63,6 @@ const signOut = () => {
   return Promise.resolve()
 }
 
-
 // Datas
 
 const getUsers = () => _fetch.authenticated('/users')
@@ -78,7 +76,6 @@ const getSubscribers = () => _fetch('/subscribers')
 // const deleteDocument = (documentId) => fetch('/documents')
 // .then(() => res.json('ok'))
 // .catch(next)
-
 
 export default {
   hostUrl,
