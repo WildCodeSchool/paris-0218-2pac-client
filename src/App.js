@@ -58,10 +58,12 @@ class App extends Component {
 
   onLoggedIn = user => {
     store.dispatch({ type: 'LOG_IN', as: user })
+    window.location = window.location // reload datas
   }
 
   onLoggedOut = () => {
     store.dispatch({ type: 'LOG_OUT' })
+    window.location = window.location // reload datas
   }
 
   syncDatas = () => {
