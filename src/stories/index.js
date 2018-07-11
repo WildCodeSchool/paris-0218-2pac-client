@@ -30,6 +30,8 @@ import ArticleForm from '../components/ArticleForm'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminArticles from '../components/AdminArticles'
 
+import Resources from '../components/Resources'
+
 import AdminContainer from '../containers/AdminContainer'
 
 /* MOCKS IMPORT */
@@ -123,13 +125,16 @@ storiesOf('DocumentForms', module)
 storiesOf('formulaire de création', module)
   .add("création d'articles et d'évènements", () => <ArticleForm />)
 
+storiesOf('Resources Page', module)
+  .add('Cards list with filters', () => <Resources documents={mockedDocuments} />)
+
 // Admin area
 
 storiesOf('Documents admin', module)
-  .add("AdminDocuments", () => <AdminDocuments documents={mockedDocuments} />)
+  .add('AdminDocuments', () => <AdminDocuments documents={mockedDocuments} />)
 
 storiesOf('Articles admin', module)
-  .add("AdminArticles", () => <AdminArticles articles={mockedArticles} />)
+  .add('AdminArticles', () => <AdminArticles articles={mockedArticles} />)
 
 storiesOf('AdminContainer', module)
   .add('AdminContainer', () => <AdminContainer />)
