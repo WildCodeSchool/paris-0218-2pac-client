@@ -1,12 +1,11 @@
 import React from 'react'
 import './Subscribers.css'
-import ChevronTitle from './ChevronTitle'
 
 const Subscribers = ({ subscribers }) => {
   return (
     <div className="containerSusbscribers">
 
-      <caption><ChevronTitle ChevronColor="white" TextColor="black" title="Abonnés à la Newsletter" /></caption>
+      <div className="admin-subscribers-title"><span>Abonnés à la Newsletter</span></div>
 
       <tr>
         <th>Nom</th>
