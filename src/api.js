@@ -9,9 +9,42 @@ const getDocuments = () => fetch('/documents')
 const getSubscribers = () => fetch('/subscribers')
   .then(response => response.json())
 
+// créer un article
+const newArticle = article => fetch('/articles', {
+  method: 'post',
+  body: JSON.stringify(article),
+  headers: {
+   'Content-Type': 'application/json'
+  },
+  'credentials': 'include'
+})
+
+// éditer un article
+const updateArticle = (id, article) => fetch(`/articles/${id}`, {
+  method: 'put',
+  body: JSON.stringify(article),
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  'credentials': 'include'
+})
+
+// supprimer un article
+const deleteArticle = (id, article) => fetch(`/articles/${id}`, {
+  method: 'delete',
+  body: JSON.stringify(article),
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  'credentials': 'include'
+})
+
 export default {
   hostUrl,
   getArticles,
   getDocuments,
-  getSubscribers
+  getSubscribers,
+  newArticle,
+  updateArticle,
+  deleteArticle
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react';
+import api from '../api'
 import './ArticleForm.css'
 
 const initialInputValues = {
@@ -17,7 +18,7 @@ class ArticleForm extends React.Component {
     inputs: initialInputValues
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     const inputs = {
       ...this.state.inputs,
       [e.target.name]: e.target.value
@@ -30,7 +31,7 @@ class ArticleForm extends React.Component {
     this.setState({ inputs: initialInputValues })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault()
 
     const data = this.state.inputs
@@ -41,15 +42,15 @@ class ArticleForm extends React.Component {
 
     console.log({ data })
 
-    fetch('http://localhost:5000/articles', {
-      method: 'POST',
-      headers: new Headers({ 'Content-Type': 'application/json' }),
-      body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(res => {
-      // this.reset()
-    })
+    // fetch('http://localhost:5000/articles', {
+    //   method: 'POST',
+    //   headers: new Headers({ 'Content-Type': 'application/json' }),
+    //   body: JSON.stringify(data)
+    // })
+    // .then(res => res.json())
+    // .then(res => {
+    //   // this.reset()
+    // })
   }
 
   handleEditorChange = e => {
@@ -63,39 +64,38 @@ class ArticleForm extends React.Component {
 
     return (
       <div id='formular_articles' onSubmit={this.handleSubmit}>
-      <h1>Formulaire pour la création de contenu</h1>
+        <label>Titre :
+          <input type="text" name='title' value={inputs.title} onChange={this.handleChange} />
+        </label>
         <label>Choix de la catégorie :
-          <select id="categoryId" name='categoryId' id='ArticleForm_categoryId' value={inputs.categoryId} onChange={this.handleChange}>
+          <select id="categoryId" name='categoryId' value={inputs.categoryId} onChange={this.handleChange}>
             <option value={1}>article</option>
             <option value={2}>presse</option>
             <option value={3}>actualité</option>
             <option value={4}>évènement</option>
           </select>
         </label>
-        <label>Titre :
-          <input type="text" name='title' id='ArticleForm_title' value={inputs.title} onChange={this.handleChange} />
-        </label>
         <label>Résumé :
-          <textarea type="text" name='shortDescription' id='ArticleForm_shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
+          <textarea type="text" name='shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
         </label>
         {
           inputs.categoryId === '4'
             ? <label>Date :
-                <input type="date" name='eventDate' id='ArticleForm_eventDate' value={inputs.eventDate} onChange={this.handleChange} />
+                <input type="date" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
               </label>
             : ''
         }
         <label>Lien de l'image :
-          <input type="text" name='imageURL' id='ArticleForm_imageURL' value={inputs.imageURL} onChange={this.handleChange} />
+          <input type="text" name='imageURL' value={inputs.imageURL} onChange={this.handleChange} />
         </label>
         <label>Description de l'image :
-          <input type="text" name='imageDescription' id='ArticleForm_imageDescription' value={inputs.imageDescription} onChange={this.handleChange} />
+          <input type="text" name='imageDescription' value={inputs.imageDescription} onChange={this.handleChange} />
         </label>
         <Editor
           init={{
             height: 500,
-            plugins: 'print link image media preview fullpage insertdatetime lists textcolor wordcount imagetools help',
-            toolbar: 'media image link | undo redo | fontsizeselect | bold italic underline strikethrough textcolor colorpicker forecolor backcolor | alignleft aligncenter alignright alignjustify | umlist bullist outdent indent | help',
+            plugins: 'print link image media preview fullpage charmap insertdatetime lists textcolor wordcount imagetools help',
+            toolbar: 'media image link | undo redo | formatselect | fontsizeselect | bold italic strikethrough textcolor colorpicker forecolor backcolor | alignleft aligncenter alignright alignjustify | umlist bullist outdent indent | help',
             image_advtab: true,
             content_css:[ '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' ],
             textcolor_map: [
@@ -112,7 +112,7 @@ class ArticleForm extends React.Component {
           }}
           onChange={this.handleEditorChange}
         />
-        <button type='onclick' onClick={ this.handleSubmit }>Ajouter</button>
+        <button type="submit" value="submit">Ajouter</button>
       </div>
     )
   }

@@ -104,7 +104,6 @@ class App extends Component {
             <CapInFrance path="/cap-in-france" />
             <ContactUs path="/contact-us" />
             <LegalNotice path="/legal-notice" />
-
           </Router>
           <SideBar />
         </div>
