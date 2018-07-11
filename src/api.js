@@ -16,26 +16,17 @@ const _fetch = (route, options = {}) => fetch(route, options)
 _fetch.authenticated = (route, options = {}) => {
   const token = jwt.get()
 
-  if (!token) {
-    return Promise.reject(Error(`missing token for authenticated fetch '${route}'`))
-  }
+  const headers = token
+    ? { ...options.headers, 'Authorization': `JWT ${token}` }
+    : options.headers
 
   return _fetch(route, {
     ...options,
-    headers: {
-      ...options.headers,
-      'Authorization': `JWT ${token}`
-    }
+    headers
   })
 }
 
-const whoami = () => {
-  const token = jwt.get()
-
-  if (!token) { return Promise.resolve({}) }
-
-  return _fetch.authenticated('/whoami')
-}
+const whoami = () => _fetch.authenticated('/whoami')
 
 const signIn = credentials => _fetch('/signin', {
   method: 'post',
@@ -67,11 +58,11 @@ const signOut = () => {
 
 const getUsers = () => _fetch.authenticated('/users')
 
-const getArticles = () => _fetch('/articles')
+const getArticles = () => _fetch.authenticated('/articles')
 
-const getDocuments = () => _fetch('/documents')
+const getDocuments = () => _fetch.authenticated('/documents')
 
-const getSubscribers = () => _fetch('/subscribers')
+const getSubscribers = () => _fetch.authenticated('/subscribers')
 
 // const deleteDocument = (documentId) => fetch('/documents')
 // .then(() => res.json('ok'))
