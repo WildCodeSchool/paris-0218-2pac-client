@@ -71,9 +71,11 @@ class App extends Component {
   }
 
   componentDidMount () {
-    this.syncDatas()
-
     this.unsubscribe = store.subscribe(() => this.forceUpdate())
+
+    api.whoami().then(res => store.dispatch({ type: 'LOG_IN', as: res.user }))
+
+    this.syncDatas()
   }
 
   componentWillUnmount () {
