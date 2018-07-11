@@ -14,7 +14,7 @@ const newArticle = article => fetch('/articles', {
   method: 'post',
   body: JSON.stringify(article),
   headers: {
-   'Content-Type': 'application/json'
+    'Content-Type': 'application/json'
   },
   'credentials': 'include'
 })
