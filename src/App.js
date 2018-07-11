@@ -11,6 +11,8 @@ import ActualityContainer from './containers/ActualityContainer'
 import ResourcesContainer from './containers/ResourcesContainer'
 import NewsletterContainer from './containers/NewsletterContainer'
 
+import AuthForm from './containers/AuthForm'
+
 import Presentation from './components/content/Presentation'
 import Historique from './components/content/Historique'
 import NosActions from './components/content/NosActions'
@@ -44,12 +46,22 @@ import LegalNotice from './components/content/LegalNotice'
 import infoContact from './mocks/infoContact.json'
 
 import api from './api.js'
+import store from './store.js'
+
 import './App.css'
 
 class App extends Component {
   state = {
     articles: [],
     documents: []
+  }
+
+  onLoggedIn = user => {
+    store.dispatch({ type: 'LOG_IN', as: user })
+  }
+
+  onLoggedOut = () => {
+    store.dispatch({ type: 'LOG_OUT' })
   }
 
   syncDatas = () => {
@@ -60,11 +72,20 @@ class App extends Component {
 
   componentDidMount () {
     this.syncDatas()
+
+    this.unsubscribe = store.subscribe(() => this.forceUpdate())
+  }
+
+  componentWillUnmount () {
+    this.unsubscribe()
   }
 
   render () {
+    const _state = store.getState()
+
     return (
       <div>
+        <AuthForm loggedAs={_state.loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
         <Header />
         <div className="changing-content" >
           <Router>
