@@ -32,7 +32,6 @@ handleChange = (e) => {
     // alert('votre formulaire a été envoyé')
 
     const data = this.state.inputs
-    console.log(data)
 
     fetch('/subscribers', {
       method: 'POST',

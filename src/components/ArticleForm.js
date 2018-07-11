@@ -42,15 +42,15 @@ class ArticleForm extends React.Component {
 
     console.log({ data })
 
-    // fetch('http://localhost:5000/articles', {
-    //   method: 'POST',
-    //   headers: new Headers({ 'Content-Type': 'application/json' }),
-    //   body: JSON.stringify(data)
-    // })
-    // .then(res => res.json())
-    // .then(res => {
-    //   // this.reset()
-    // })
+    fetch('http://localhost:5000/articles', {
+      method: 'POST',
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(res => {
+      // this.reset()
+      })
   }
 
   handleEditorChange = e => {

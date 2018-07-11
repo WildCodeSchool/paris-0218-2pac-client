@@ -106,6 +106,7 @@ class App extends Component {
             <LegalNotice path="/legal-notice" />
           </Router>
           <SideBar />
+
         </div>
         <Footer />
       </div>
