@@ -10,8 +10,8 @@ const AdminDocuments = ({ documents }) => {
       {documents.map(doc =>
         <div key={doc.id} className="admin-document" >
           <span>{doc.title}</span>
-          <button onClick={() => { api.updateDocument(documents.id) }}>Modifier</button>
-          <button onClick={() => { api.deleteDocument(documents.id) }}>Supprimer</button>
+          <button onClick={() => { api.updateDocument(doc.id) }}>Modifier</button>
+          <button onClick={() => { api.deleteDocument(doc.id) }}>Supprimer</button>
         </div>
       )}
     </div>
