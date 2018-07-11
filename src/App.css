@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 
+a {
+  text-decoration: none;
+}
+
+li {
+  cursor: pointer;
+  list-style: none;
+}
+
 p {
   white-space: pre-line;
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from '@reach/router'
 import api from '../api.js'
+import './AuthForm.css'
 
 class AuthForm extends Component {
   state = {
@@ -52,6 +54,7 @@ class AuthForm extends Component {
           ? <div>
             <span>Logged as <strong>{loggedAs.username}</strong></span>
             <input type='button' value='Sign Out' onClick={this.signout}/>
+            {loggedAs.isAdmin ? <Link to='/admin'><button>admin</button></Link> : ''}
           </div>
           : <div>
             <form onSubmit={this.signin}>

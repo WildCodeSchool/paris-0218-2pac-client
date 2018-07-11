@@ -2,9 +2,13 @@ import React, { Component } from 'react'
 import { Router, Link } from '@reach/router'
 import AdminHome from '../components/AdminHome'
 import AdminArticles from '../components/AdminArticles'
+import Header from '../components/Header'
 import AdminDocuments from '../components/AdminDocuments'
 import ArticleForm from '../components/ArticleForm'
 
+import AuthForm from './AuthForm'
+
+import store from '../store.js'
 import api from '../api.js'
 // import '../App.css'
 
@@ -31,72 +35,6 @@ const AdminArticleEdit = (props) => <div>AdminArticleEdit {props.id}</div>
 const AdminDocumentNew = (props) => <div>AdminDocumentNew</div>
 const AdminDocumentEdit = (props) => <div>AdminDocumentEdit {props.id}</div>
 
-class AdminAuth extends Component {
-  state = {
-    username: '',
-    password: '',
-    message: ''
-  }
-
-  handleChange = e => {
-    const { name: key, value } = e.target
-
-    this.setState({ [key]: value })
-  }
-
-  signin = e => {
-    e.preventDefault()
-
-    this.setState({ message: '' })
-
-    const credentials = {
-      username: this.state.username,
-      password: this.state.password
-    }
-
-    api.signIn(credentials)
-      .then(response => {
-        if (response.error) {
-          this.setState({ message: response.error })
-          return
-        }
-
-        this.setState({ username: '', password: '' })
-
-        this.props.onLoggedIn(response.user) // todo: put in setState cb ?
-      })
-  }
-
-  signout = e => {
-    e.preventDefault()
-
-    api.signOut().then(() => this.props.onLoggedOut())
-  }
-
-  render () {
-    const { loggedAs } = this.props
-
-    return (
-      <div>
-        { loggedAs
-          ? <div>
-            <span>Logged as <strong>{loggedAs.username}</strong></span>
-            <input type='button' value='Sign Out' onClick={this.signout}/>
-          </div>
-          : <div>
-            <form onSubmit={this.signin}>
-              <input type='text' placeholder='username' name='username' value={this.state.username} onChange={this.handleChange} />
-              <input type='password' placeholder='password' name='password' value={this.state.password} onChange={this.handleChange} />
-              <input type='submit' value='Sign in' />
-              <span>{this.state.message}</span>
-            </form>
-          </div>
-        }
-      </div>
-    )
-  }
-}
-
 class AdminContainer extends Component {
   state = {
     loggedAs: undefined,
@@ -120,35 +58,34 @@ class AdminContainer extends Component {
   }
 
   onLoggedIn = user => {
-    this.setState({ loggedAs: user })
+    store.dispatch({ type: 'LOG_IN', as: user })
+    window.location = window.location // reload datas
   }
 
   onLoggedOut = () => {
-    this.setState({ loggedAs: undefined })
+    store.dispatch({ type: 'LOG_OUT' })
+    window.location = window.location // reload datas
   }
 
   componentDidMount () {
+    this.unsubscribe = store.subscribe(() => this.forceUpdate())
+
+    api.whoami().then(res => store.dispatch({ type: 'LOG_IN', as: res.user }))
+
     this.syncDatas()
+  }
 
-    api.whoami()
-      .then(response => {
-        if (response.error) {
-          return console.log(response.error)
-        }
-
-        this.setState({ loggedAs: response.user })
-      }).catch(console.log)
+  componentWillUnmount () {
+    this.unsubscribe()
   }
 
   render () {
-    const { loggedAs } = this.state
+    const { loggedAs } = store.getState()
 
     return (
       <div>
-        <div>
-          <Link to='/admin'>ADMIN</Link>
-          <AdminAuth loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
-        </div>
+        <AuthForm loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
+        <Header />
         { loggedAs && loggedAs.isAdmin
           ? <Router>
             <AdminHome path="/" />

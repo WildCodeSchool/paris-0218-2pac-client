@@ -11,6 +11,8 @@ import ActualityContainer from './containers/ActualityContainer'
 import ResourcesContainer from './containers/ResourcesContainer'
 import NewsletterContainer from './containers/NewsletterContainer'
 
+import Nav from './components/Nav'
+
 import AuthForm from './containers/AuthForm'
 
 import Presentation from './components/content/Presentation'
@@ -85,12 +87,13 @@ class App extends Component {
   }
 
   render () {
-    const _state = store.getState()
+    const { loggedAs } = store.getState()
 
     return (
       <div>
-        <AuthForm loggedAs={_state.loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
+        <AuthForm loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
         <Header />
+        <Nav />
         <div className="changing-content" >
           <Router>
             <Home path="/" articles={this.state.articles} />
