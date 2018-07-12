@@ -35,14 +35,12 @@ import Resources from '../components/Resources'
 
 import AdminContainer from '../containers/AdminContainer'
 
-
 /* MOCKS IMPORT */
 import infoContact from '../mocks/infoContact.json'
 import mockedArticle from '../mocks/article.json'
 import mockedArticles from '../mocks/articles.json'
 import mockedDocuments from '../mocks/documents.json'
 import noImgArticle from '../mocks/noImgArticle.json'
-import arrayUne from '../mocks/arrayUne.json'
 import mockedSubscribers from '../mocks/subscribers.json'
 
 storiesOf('App', module)
@@ -129,18 +127,15 @@ storiesOf('DocumentForms', module)
 storiesOf('formulaire de création', module)
   .add("création d'articles et d'évènements", () => <ArticleForm />)
 
-
-
 storiesOf('Subscribers', module)
   .add('Abonnés à la Newsletter ', () => <Subscribers subscribers={mockedSubscribers} />)
 
-       // Admin area
+// Admin area
 
 storiesOf('Resources Page', module)
   .add('Cards list with filters', () => <Resources documents={mockedDocuments} />)
 
 // Admin area
-
 
 storiesOf('Documents admin', module)
   .add('AdminDocuments', () => <AdminDocuments documents={mockedDocuments} />)
@@ -150,4 +145,3 @@ storiesOf('Articles admin', module)
 
 storiesOf('AdminContainer', module)
   .add('AdminContainer', () => <AdminContainer />)
-

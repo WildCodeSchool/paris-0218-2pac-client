@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Router, Link } from '@reach/router'
+import { Router } from '@reach/router'
 import AdminNav from '../components/AdminNav'
 import AdminArticles from '../components/AdminArticles'
 import Header from '../components/Header'
 import AdminDocuments from '../components/AdminDocuments'
+import AdminSubscribers from '../components/AdminSubscribers'
 import ArticleForm from '../components/ArticleForm'
 
 import AuthForm from './AuthForm'
@@ -29,7 +30,6 @@ const AdminUsers = ({ users }) => {
 }
 
 const AdminHome = () => <div>Admin home</div>
-const AdminSubscribers = () => <div>Subscribers</div>
 
 const AdminArticleNew = (props) => <div><ArticleForm /></div>
 const AdminArticleEdit = (props) => <div>AdminArticleEdit {props.id}</div>
@@ -41,7 +41,8 @@ class AdminContainer extends Component {
     loggedAs: undefined,
     users: [],
     articles: [],
-    documents: []
+    documents: [],
+    subscribers: []
   }
 
   syncDatas = () => {
@@ -55,6 +56,10 @@ class AdminContainer extends Component {
 
     api.getDocuments()
       .then(documents => { this.setState({ documents: documents }) })
+      .catch(console.log)
+
+    api.getSubscribers()
+      .then(subscribers => { this.setState({ subscribers: subscribers }) })
       .catch(console.log)
   }
 
@@ -88,8 +93,7 @@ class AdminContainer extends Component {
         <AuthForm loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
         <Header />
         { loggedAs && loggedAs.isAdmin
-          ?
-          <div>
+          ? <div>
             <AdminNav />
             <div id='admin-router-view'>
               <Router>
@@ -101,7 +105,7 @@ class AdminContainer extends Component {
                 <AdminDocuments path='documents' documents={this.state.documents} />
                 <AdminDocumentNew path='documents/new' />
                 <AdminDocumentEdit path='documents/:id' />
-                <AdminSubscribers path='subscribers' />
+                <AdminSubscribers path='subscribers' subscribers={this.state.subscribers} />
               </Router>
             </div>
           </div>

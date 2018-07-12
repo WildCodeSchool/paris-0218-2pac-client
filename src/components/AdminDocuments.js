@@ -5,7 +5,7 @@ import { Link } from '@reach/router'
 
 const AdminDocuments = ({ documents }) => {
   const deleteDocument = id => {
-    api.deleteDocument(id).then(() => window.location = window.location)
+    api.deleteDocument(id).then(() => { window.location = window.location })
   }
 
   return (

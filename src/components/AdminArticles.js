@@ -5,7 +5,7 @@ import './AdminArticles.css'
 
 const AdminArticles = ({ articles }) => {
   const deleteArticle = id => {
-    api.deleteArticle(id).then(() => window.location = window.location)
+    api.deleteArticle(id).then(() => { window.location = window.location })
   }
 
   return (
