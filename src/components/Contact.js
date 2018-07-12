@@ -9,10 +9,8 @@ import MdMailOutline from 'react-icons/lib/md/mail-outline'
 
 const Contact = ({ contactData }) => {
   return (
-
-    <Container>
+    <div>
       <ChevronTitle title="Contacts"></ChevronTitle>
-
       <div className="container-contact">
         <div className="find-us">
           <div className="sub-title"> Nous trouver </div>
@@ -20,9 +18,7 @@ const Contact = ({ contactData }) => {
             <div> <TiHome className="contact-icon" /> </div>
             {contactData.address}
           </div>
-
         </div>
-
         <div className="contact-us">
           <div className="sub-title"> Nous contacter </div>
           <div className="contact-us-content">
@@ -38,9 +34,7 @@ const Contact = ({ contactData }) => {
           </div>
         </div>
       </div>
-
-    </Container>
-
+    </div>
   )
 }
 

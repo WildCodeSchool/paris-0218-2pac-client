@@ -3,7 +3,7 @@ import api from '../api'
 import './Resources.css'
 
 const ResourceCard = ({ doc }) =>
-  <div className="resource" >
+  <div className="resource card" >
     <span>{doc.createdAt}</span>
     <span>{doc.title}</span>
     <div className="category_resources">{doc.type}</div>

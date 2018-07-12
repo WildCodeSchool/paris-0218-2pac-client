@@ -1,62 +1,68 @@
-#formular_articles h1{
+#formular_articles h2, #formular_articles p {
   color: white;
-  text-align: center;
-  text-decoration: underline;
 }
 
-.formular_articles, input, textarea, select {
+.formular_articles, input, textarea, h2, button, select {
   font-size: 1rem;
+  /*margin-left: 4rem;*/
   margin: 0.15rem;
-  margin-left: 4rem;
 }
 
+#event_title {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  text-decoration-line: underline;
+  margin-bottom: 3rem;
+}
 
 #formular_articles {
   font-family: 'Source Sans Pro', sans-serif;
   width: 60rem;
-  height: 78rem;
+  height: 45rem;
   margin: auto;
-  background-color: #731717;
+  background-color: #A99C2F;
   padding: 2em 2em 2.5em 2.5em;
 }
 
-button[type='onclick'] {
+::placeholder {
+  color: #F4971A;
+}
+/*
+button[type='submit'] {
   background-color: #F4971A;
   color: white;
-  border-radius: 0.4em;
+  border-radius: 0.3em;
   border-color: white;
-  padding: 0.5em 1em 0.5em 1em;
+  padding: 0.4em;
   position: relative;
-  margin-top: 1.5em;
-  margin-left: 55em;
-  font-size: 1rem;
+  margin-top: 1em;
+  margin-right: 10em;
 }
 
-#ArticleForm_categoryId {
-  margin-bottom: 1rem;
+input[type='text_title'] {
+  width: 15rem;
 }
 
-#ArticleForm_title {
-  width: 59.5rem;
-  margin-bottom: 1rem;
+textarea[type='text_resume'] {
+  width: 50rem;
+  height: 4rem;
 }
 
-#ArticleForm_shortDescription {
-  width: 59.5rem;
+textarea[type='text_description'] {
+  width: 50rem;
   height: 10rem;
-  margin-bottom: 1rem;
 }
 
-#ArticleForm_eventDate {
+input[type='date'] {
   font-size: 1rem;
-  margin-bottom: 1rem;
 }
 
-#ArticleForm_imageURL {
-  width: 59.5rem;
-  margin-bottom: 1rem;
+input[type='text_URL'] {
+  width: ;
 }
 
-#ArticleForm_imageDescription {
-  width: 59.5rem;
+input[type='text_description_image'] {
+  width: ;
 }
+*/

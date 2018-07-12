@@ -7,25 +7,25 @@ const SideBar = () => {
   return (
     <div className="SideBar icon-button-globe">
 
-      <Link to="actuality">
+      <Link to="/actuality">
         <SideBarButton style={{ backgroundColor: '#226462' }}>
           <span><i className="fas fa-globe"></i></span>Actualités
         </SideBarButton>
       </Link>
 
-      <Link to="resources">
+      <Link to="/resources">
         <SideBarButton style={{ backgroundColor: '#F4971A' }}>
           <span><i className="fas fa-book-open"></i></span>Ressources
         </SideBarButton>
       </Link>
 
-      <Link to="contact">
+      <Link to="/contact">
         <SideBarButton style={{ backgroundColor: '#A99C2F' }}>
           <span><i className="fas fa-user-alt"></i></span>Contacts
         </SideBarButton>
       </Link>
 
-      <Link to="newsletter">
+      <Link to="/newsletter">
         <SideBarButton style={{ backgroundColor: '#731717' }}>
           <span><i className="fas fa-rss"></i></span>Rester connecté
         </SideBarButton>

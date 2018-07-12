@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from './Container'
 import ChevronTitle from './ChevronTitle'
 import LongArticle from './LongArticle'
 import SmallArticle from './SmallArticle'
@@ -11,7 +10,7 @@ const Une = ({ articles }) => {
   const smallArticles = articles.slice(1, 5)
 
   return (
-    <Container>
+    <div>
       <ChevronTitle title="à la une" />
 
       <div className="article-container">
@@ -32,8 +31,7 @@ const Une = ({ articles }) => {
           )}
         </div>
       </div>
-
-    </Container>
+    </div>
   )
 }
 

@@ -10,7 +10,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: #226462;
-  padding: 0%;
+  padding: 1rem;
 }
 
 .footer-desc > .logo {
