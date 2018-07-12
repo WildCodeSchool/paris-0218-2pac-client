@@ -4,11 +4,7 @@ import Container from '../components/Container'
 
 const AdminArticlesContainer = ({ articles }) => {
   return (
-    <div className="router-container">
-      <Container>
-        <AdminArticles articles={articles} />
-      </Container>
-    </div>
+    <AdminArticles articles={articles} />
   )
 }
 

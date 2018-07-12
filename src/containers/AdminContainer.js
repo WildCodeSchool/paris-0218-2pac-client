@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Router, Link } from '@reach/router'
-import AdminHome from '../components/AdminHome'
+import AdminNav from '../components/AdminNav'
 import AdminArticles from '../components/AdminArticles'
 import Header from '../components/Header'
 import AdminDocuments from '../components/AdminDocuments'
@@ -28,6 +28,7 @@ const AdminUsers = ({ users }) => {
   )
 }
 
+const AdminHome = () => <div>Admin home</div>
 const AdminSubscribers = () => <div>Subscribers</div>
 
 const AdminArticleNew = (props) => <div><ArticleForm /></div>
@@ -87,17 +88,23 @@ class AdminContainer extends Component {
         <AuthForm loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
         <Header />
         { loggedAs && loggedAs.isAdmin
-          ? <Router>
-            <AdminHome path="/" />
-            <AdminUsers path='users' users={this.state.users} />
-            <AdminArticles path='articles' articles={this.state.articles} />
-            <AdminArticleNew path='articles/new' />
-            <AdminArticleEdit path='articles/:id' />
-            <AdminDocuments path='documents' documents={this.state.documents} />
-            <AdminDocumentNew path='documents/new' />
-            <AdminDocumentEdit path='documents/:id' />
-            <AdminSubscribers path='subscribers' />
-          </Router>
+          ?
+          <div>
+            <AdminNav />
+            <div id='admin-router-view'>
+              <Router>
+                <AdminHome path='/' />
+                <AdminUsers path='users' users={this.state.users} />
+                <AdminArticles path='articles' articles={this.state.articles} />
+                <AdminArticleNew path='articles/new' />
+                <AdminArticleEdit path='articles/:id' />
+                <AdminDocuments path='documents' documents={this.state.documents} />
+                <AdminDocumentNew path='documents/new' />
+                <AdminDocumentEdit path='documents/:id' />
+                <AdminSubscribers path='subscribers' />
+              </Router>
+            </div>
+          </div>
           : <div>You must sign in with an admin account</div>
         }
       </div>
