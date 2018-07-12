@@ -55,7 +55,8 @@ import './App.css'
 class App extends Component {
   state = {
     articles: [],
-    documents: []
+    documents: [],
+    subscribers: []
   }
 
   onLoggedIn = user => {
@@ -72,6 +73,8 @@ class App extends Component {
     api.getArticles().then(articles => { this.setState({ articles: articles }) })
 
     api.getDocuments().then(documents => { this.setState({ documents: documents }) })
+
+    api.getSubscribers().then(subscribers => { this.setState({ subscribers: subscribers }) })
   }
 
   componentDidMount () {
