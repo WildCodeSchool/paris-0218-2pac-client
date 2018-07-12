@@ -15,13 +15,11 @@ class SignUpFormular extends React.Component {
     inputs: initialInputValues
   }
 
-
   handleChange = (e) => {
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
 
     return this.setState({ inputs: { ...this.state.inputs, [e.target.name]: value } })
   }
-
 
   handleSubmit = (e) => {
     e.preventDefault()
