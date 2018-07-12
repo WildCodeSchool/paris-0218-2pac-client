@@ -43,9 +43,9 @@ class Resources extends Component {
     return (
       <div>
         <div className="resource-filters">
-          <input type="button" value={`${this.state.sortByDate > 0 ? '▼' : '▲'} date`} onClick={this.toggleSortByDate} />
+          <input type="button" value={`${this.state.sortByDate > 0 ? '▼' : '▲'} Date`} onClick={this.toggleSortByDate} />
           <select name="typeId" value={this.state.filters.typeId} onChange={this.handleFilterChange}>
-            <option value={0}>-- FILTRER PAR TYPE --</option>
+            <option value={0}>--- Filtrer par type ---</option>
             <option value={1}>Textes politiques</option>
             <option value={2}>Documents de position des organisations membres</option>
             <option value={3}>Documents réservés aux membres</option>
@@ -54,7 +54,7 @@ class Resources extends Component {
           </select>
         </div>
         <div className="resource-cards">
-          <span>{resourceCards.length} resultats</span>
+          <span className="search-result">{resourceCards.length} RESULTATS</span>
           {resourceCards}
         </div>
       </div>
