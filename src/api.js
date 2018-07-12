@@ -64,9 +64,9 @@ const getDocuments = () => _fetch.authenticated('/documents')
 
 const getSubscribers = () => _fetch.authenticated('/subscribers')
 
-// const deleteDocument = (documentId) => fetch('/documents')
-// .then(() => res.json('ok'))
-// .catch(next)
+const deleteArticle = id => _fetch.authenticated(`/articles/${id}`, { method: 'DELETE' })
+
+const deleteDocument = id => _fetch.authenticated(`/documents/${id}`, { method: 'DELETE' })
 
 export default {
   hostUrl,
@@ -74,6 +74,8 @@ export default {
   getArticles,
   getDocuments,
   getSubscribers,
+  deleteArticle,
+  deleteDocument,
   signIn,
   whoami,
   signOut
