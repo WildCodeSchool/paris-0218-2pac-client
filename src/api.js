@@ -64,9 +64,21 @@ const getDocuments = () => _fetch.authenticated('/documents')
 
 const getSubscribers = () => _fetch.authenticated('/subscribers')
 
-// const deleteDocument = (documentId) => fetch('/documents')
-// .then(() => res.json('ok'))
-// .catch(next)
+const deleteArticle = (id, articles) => fetch(`/articles/${id}`,
+  {
+    method: 'DELETE',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+    body: JSON.stringify(articles)
+  })
+  .then(res => console.log(res.json()))
+
+const deleteDocument = (id, documents) => fetch(`/documents/${id}`,
+  {
+    method: 'DELETE',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+    body: JSON.stringify(documents)
+  })
+  .then(res => console.log(res.json()))
 
 export default {
   hostUrl,
@@ -76,5 +88,7 @@ export default {
   getSubscribers,
   signIn,
   whoami,
-  signOut
+  signOut,
+  deleteArticle,
+  deleteDocument
 }
