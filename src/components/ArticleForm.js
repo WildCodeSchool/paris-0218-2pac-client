@@ -1,6 +1,6 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
-import './ArticleForm.css'
+// import './ArticleForm.css'
 
 const initialInputValues = {
   title: '',
@@ -62,6 +62,7 @@ class ArticleForm extends React.Component {
     const inputs = this.state.inputs
 
     return (
+      <div>
       <form id='formular_articles' onSubmit={this.handleSubmit}>
         <label>Titre :
           <input type="text" name='title' value={inputs.title} onChange={this.handleChange} />
@@ -90,29 +91,30 @@ class ArticleForm extends React.Component {
         <label>Description de l'image :
           <input type="text" name='imageDescription' value={inputs.imageDescription} onChange={this.handleChange} />
         </label>
-        <Editor
-          init={{
-            height: 500,
-            plugins: 'print link image media preview fullpage charmap insertdatetime lists textcolor wordcount imagetools help',
-            toolbar: 'media image link | undo redo | formatselect | fontsizeselect | bold italic strikethrough textcolor colorpicker forecolor backcolor | alignleft aligncenter alignright alignjustify | umlist bullist outdent indent | help',
-            image_advtab: true,
-            content_css: [ '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' ],
-            textcolor_map: [
-              'FFFFFF', 'White',
-              '000000', 'Black',
-              '9D9D9C', 'Grey',
-              '333333', 'Very dark gray',
-              '226462', 'Dark green',
-              'A99C2F', 'Olive',
-              'F4971A', 'Orange',
-              '731717', 'Dark red',
-              'FF0000', 'Red'
-            ]
-          }}
-          onChange={this.handleEditorChange}
-        />
         <button type="submit" value="submit">Ajouter</button>
       </form>
+      <Editor
+        init={{
+          height: 500,
+          plugins: 'print link image media preview fullpage charmap insertdatetime lists textcolor wordcount imagetools help',
+          toolbar: 'media image link | undo redo | formatselect | fontsizeselect | bold italic strikethrough textcolor colorpicker forecolor backcolor | alignleft aligncenter alignright alignjustify | umlist bullist outdent indent | help',
+          image_advtab: true,
+          content_css: [ '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' ],
+          textcolor_map: [
+            'FFFFFF', 'White',
+            '000000', 'Black',
+            '9D9D9C', 'Grey',
+            '333333', 'Very dark gray',
+            '226462', 'Dark green',
+            'A99C2F', 'Olive',
+            'F4971A', 'Orange',
+            '731717', 'Dark red',
+            'FF0000', 'Red'
+          ]
+        }}
+        onChange={this.handleEditorChange}
+      />
+      </div>
     )
   }
 }

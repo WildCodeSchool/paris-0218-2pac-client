@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
 
+import ArticleForm from './containers/ArticleForm'
+
 import Home from './containers/Home'
 import ContactContainer from './containers/ContactContainer'
 import ArticleContainer from './containers/ArticleContainer'
@@ -91,6 +93,8 @@ class App extends Component {
 
   render () {
     const { loggedAs } = store.getState()
+
+    return <ArticleForm />
 
     return (
       <div>
