@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminSubscribers from '../components/AdminSubscribers'
 import ArticleForm from '../components/ArticleForm'
+import './AdminContainer.css'
 
 import AuthForm from './AuthForm'
 
@@ -30,7 +31,7 @@ const AdminUsers = ({ users }) => {
   )
 }
 
-const AdminHome = () => <div>Admin home</div>
+const AdminHome = () => <div className="admin-home">Admin home</div>
 
 const mockedArticle = {
   title: "Les chatons",

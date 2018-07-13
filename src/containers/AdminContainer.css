@@ -1,0 +1,11 @@
+.admin-home {
+background-color: #F4971A;
+color: white;
+font-weight: bold;
+border-radius: 0.3em;
+border: 0.15em solid white;
+padding: 0.7em;
+cursor: pointer; 
+width: 10%;
+text-align: center;
+}

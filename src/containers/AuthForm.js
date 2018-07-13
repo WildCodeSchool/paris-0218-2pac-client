@@ -51,10 +51,10 @@ class AuthForm extends Component {
     return (
       <div id='auth-form'>
         { loggedAs
-          ? <div>
+          ? <div className="auth-form-inside">
             <span>Logged as <strong>{loggedAs.username}</strong></span>
             <input type='button' value='Sign Out' onClick={this.signout}/>
-            {loggedAs.isAdmin ? <Link to='/admin'><button>admin</button></Link> : ''}
+            {loggedAs.isAdmin ? <Link to='/admin'><button>Admin</button></Link> : ''}
           </div>
           : <div>
             <form onSubmit={this.signin}>
