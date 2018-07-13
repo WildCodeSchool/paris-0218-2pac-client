@@ -141,7 +141,7 @@ class App extends Component {
             </Router>
           </div>
           <div id='app-sidebar-right'>
-            <SideBar />
+            <SideBar articles={this.state.articles} />
           </div>
         </div>
         <Footer />

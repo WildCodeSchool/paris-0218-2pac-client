@@ -1,0 +1,12 @@
+.react-calendar {
+  width: 14rem;
+}
+
+.calendar-event-day {
+  background-color: #226462;
+  color: white;
+}
+
+.calendar-event-day:hover, .calendar-event-day:focus {
+  background-color: #f4971a !important;
+}
