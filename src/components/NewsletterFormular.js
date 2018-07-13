@@ -1,5 +1,5 @@
 import React from 'react'
-import './SignUpFormular.css'
+import './NewsletterFormular.css'
 import ChevronTitle from './ChevronTitle'
 
 const initialInputValues = {
@@ -10,7 +10,7 @@ const initialInputValues = {
   email: ''
 }
 
-class SignUpFormular extends React.Component {
+class NewsletterFormular extends React.Component {
   state = {
     inputs: initialInputValues
   }
@@ -40,7 +40,7 @@ class SignUpFormular extends React.Component {
     const inputs = this.state.inputs
 
     return (
-      <div id='formular_container'>
+      <div id='subscribers-form'>
         <p><ChevronTitle ChevronColor="white" TextColor="white" title="Recevoir des nouvelles de pour une autre Pac" /> </p>
         <p>En remplissant ce formulaire, la plateforme <i>Pour une autre PAC </i>
             pourra utiliser ces données pour vous informer des ses prochaines actions.</p>
@@ -68,4 +68,4 @@ class SignUpFormular extends React.Component {
   }
 }
 
-export default SignUpFormular
+export default NewsletterFormular

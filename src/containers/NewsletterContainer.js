@@ -1,13 +1,9 @@
 import React from 'react'
-import SignUpFormular from '../components/SignUpFormular'
+import NewsletterFormular from '../components/NewsletterFormular'
 
 const NewsletterContainer = (props) => {
   return (
-
-    <div className="router-container">
-      <SignUpFormular />
-    </div>
-
+    <NewsletterFormular />
   )
 }
 

@@ -2,95 +2,103 @@ import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import './ArticleForm.css'
 
-const initialInputValues = {
+const freshArticle = {
   title: '',
   shortDescription: '',
   description: '',
   eventDate: '',
   categoryId: 1,
   imageURL: '',
-  imageDescription: ''
+  imageDescription: '',
+  isMemberOnly: false
 }
 
 class ArticleForm extends React.Component {
   state = {
-    inputs: initialInputValues
+    article: this.props.article || freshArticle,
   }
 
-  handleChange = (e) => {
-    const inputs = {
-      ...this.state.inputs,
-      [e.target.name]: e.target.value
+  handleChange = e => {
+    const { name } = e.target
+    let value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
+
+    if (name === 'categoryId') {
+      value = Number(value)
     }
 
-    this.setState({ inputs: inputs })
+    return this.setState({ article: { ...this.state.article, [name]: value } })
   }
 
   reset = () => {
-    this.setState({ inputs: initialInputValues })
+    this.setState({ article: freshArticle })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault()
 
-    const data = this.state.inputs
+    const article = this.state.article
 
-    if (data.categoryId !== '4') {
-      data.eventDate = undefined
+    if (article.categoryId !== 4) {
+      article.eventDate = ''
     }
 
-    console.log({ data })
 
-    fetch('http://localhost:5000/articles', {
-      method: 'POST',
-      headers: new Headers({ 'Content-Type': 'application/json' }),
-      body: JSON.stringify(data)
-    })
-      .then(res => res.json())
-      .then(res => {
-      // this.reset()
-      })
+    this.props.submitArticle(article)
+      // .then(res => this.reset())
   }
 
   handleEditorChange = e => {
     const content = e.target.getContent()
 
-    this.setState({ inputs: { ...this.state.inputs, description: content } })
+    this.setState({ article: { ...this.state.article, description: content } })
   }
 
   render () {
-    const inputs = this.state.inputs
+    const article = this.state.article
 
     return (
-      <form id='formular_articles' onSubmit={this.handleSubmit}>
-        <label>Titre :
-          <input type="text" name='title' value={inputs.title} onChange={this.handleChange} />
-        </label>
-        <label>Choix de la catégorie :
-          <select id="categoryId" name='categoryId' value={inputs.categoryId} onChange={this.handleChange}>
-            <option value={1}>article</option>
-            <option value={2}>presse</option>
-            <option value={3}>actualité</option>
-            <option value={4}>évènement</option>
-          </select>
-        </label>
-        <label>Résumé :
-          <textarea type="text" name='shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
-        </label>
-        {
-          inputs.categoryId === '4'
-            ? <label>Date :
-              <input type="date" name='eventDate' value={inputs.eventDate} onChange={this.handleChange} />
-            </label>
-            : ''
-        }
-        <label>Lien de l'image :
-          <input type="text" name='imageURL' value={inputs.imageURL} onChange={this.handleChange} />
-        </label>
-        <label>Description de l'image :
-          <input type="text" name='imageDescription' value={inputs.imageDescription} onChange={this.handleChange} />
-        </label>
-        <Editor
+      <div id='article-form'>
+        <form onSubmit={this.handleSubmit}>
+          <label>titre
+            <input type="text" name='title' value={article.title} onChange={this.handleChange} />
+          </label>
+          <label>catégorie
+            <select id="categoryId" name='categoryId' value={article.categoryId} onChange={this.handleChange}>
+              <option value={1}>article</option>
+              <option value={2}>presse</option>
+              <option value={3}>actualité</option>
+              <option value={4}>évènement</option>
+            </select>
+          </label>
+          <label>résumé
+            <textarea type="text" name='shortDescription' value={article.shortDescription} onChange={this.handleChange} />
+          </label>
+          {
+            article.categoryId === 4
+              ? <label>Date :
+                <input type="date" name='eventDate' value={article.eventDate} onChange={this.handleChange} />
+              </label>
+              : ''
+          }
+          <label>cover image
+            <input type="text" name='imageURL' value={article.imageURL} onChange={this.handleChange} />
+          </label>
+          <label>description de l'image
+            <input type="text" name='imageDescription' value={article.imageDescription} onChange={this.handleChange} />
+          </label>
+          <label>contenu membre
+            <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
+          </label>
+          <label>description
+            <div>
+
+            </div>
+          </label>
+          <button type="submit" value="submit">valider</button>
+        </form>
+        <Editor apiKey='cwyqiu11xr2rk71h157w64bzbwi5evps8y0belarj25soekt'
+          initialValue={this.state.article.description}
+          onChange={this.handleEditorChange}
           init={{
             height: 500,
             plugins: 'print link image media preview fullpage charmap insertdatetime lists textcolor wordcount imagetools help',
@@ -109,10 +117,8 @@ class ArticleForm extends React.Component {
               'FF0000', 'Red'
             ]
           }}
-          onChange={this.handleEditorChange}
         />
-        <button type="submit" value="submit">Ajouter</button>
-      </form>
+      </div>
     )
   }
 }

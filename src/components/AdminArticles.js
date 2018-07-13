@@ -14,7 +14,7 @@ const AdminArticles = ({ articles }) => {
       {articles.map(article =>
         <div key={article.id} className="admin-article" >
           <span>{article.title}</span>
-          <button onClick={() => {}}>Modifier</button>
+          <Link to={`/admin/articles/edit/${article.id}`}><button>Modifier</button></Link>
           <button onClick={() => deleteArticle(article.id)}>Supprimer</button>
         </div>
       )}

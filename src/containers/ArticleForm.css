@@ -1,0 +1,10 @@
+.demo-wrapper {
+
+}
+
+.demo-editor {
+  background-color: white;
+  min-height: 30rem;
+  border: 0.1rem solid #F1F1F1;
+  padding: 1rem;
+}

@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
 
+import ArticleForm from './components/ArticleForm'
+
 import Home from './containers/Home'
 import ContactContainer from './containers/ContactContainer'
 import ArticleContainer from './containers/ArticleContainer'
@@ -97,53 +99,56 @@ class App extends Component {
         <AuthForm loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
         <Header />
         <Nav />
-        <div className="changing-content" >
-          <Router>
-            <Home path="/" articles={this.state.articles} />
-            <ArticleContainer path="/article/:id" articles={this.state.articles} />
-            <ActualityContainer path="/actuality" articles={this.state.articles} />
-            <ResourcesContainer path="/resources" documents={this.state.documents} />
-            <NewsletterContainer path="/newsletter" />
-            <ContactContainer path="/contact" contactData={infoContact} />
-
-            <Presentation path="/presentation" />
-            <Historique path="/historique" />
-            <NosActions path="/nos-actions" />
-            <MembersOfPac path="/members-of-pac" />
-            <AbcDeLaPac path="/abc-de-la-pac" />
-            <LaPacCaMimpacte path="/la-pac-ca-mimpacte" />
-            <LaPac20152020 path="/la-pac-20152020" />
-            <ReformeDeLaPac path="/reforme-de-la-pac" />
-            <ChiffresCles path='/chiffres-cles' />
-            <Sigles path="/sigles" />
-            <OrientationsCommunes path="/orientations-communes" />
-            <BilanActuel path="/bilan-actuel" />
-            <SystemeAgro path="/systeme-agro" />
-            <Priorite2020 path="/priorite-2020" />
-            <PAAC path="/PAAC" />
-            <NosRepresentants path='/nos-representants' />
-            <BecomeMember path='/become-member' />
-            <EventsParticipation path='/events-participation' />
-            <OnParleDeNous path='/on-parle-de-nous' />
-            <CommuniqueDePresse path='/communique-de-presse' />
-            <PressKit path='/press-kit' />
-            {/* nos membres et legalNotice */}
-            <WhoWeAre path="/who-we-are" />
-            <WhatWeDo path="/what-we-do" />
-            <WhatWeWant path="/what-we-want" />
-            <EuropeanPartners path="/european-partners" />
-            <CapInFrance path="/cap-in-france" />
-            <ContactUs path="/contact-us" />
-            <LegalNotice path="/legal-notice" />
-
-          </Router>
-          <SideBar />
-
+        <div id='app-content'>
+          <div id='app-sidebar-left'></div>
+          <div id='app-center' className='container'>
+            <Router>
+              <Home path="/" articles={this.state.articles} />
+              <ArticleContainer path="/article/:id" articles={this.state.articles} />
+              <ActualityContainer path="/actuality" articles={this.state.articles} />
+              <ResourcesContainer path="/resources" documents={this.state.documents} />
+              <NewsletterContainer path="/newsletter" />
+              <ContactContainer path="/contact" contactData={infoContact} />
+              <Presentation path="/presentation" />
+              <Historique path="/historique" />
+              <NosActions path="/nos-actions" />
+              <MembersOfPac path="/members-of-pac" />
+              <AbcDeLaPac path="/abc-de-la-pac" />
+              <LaPacCaMimpacte path="/la-pac-ca-mimpacte" />
+              <LaPac20152020 path="/la-pac-20152020" />
+              <ReformeDeLaPac path="/reforme-de-la-pac" />
+              <ChiffresCles path='/chiffres-cles' />
+              <Sigles path="/sigles" />
+              <OrientationsCommunes path="/orientations-communes" />
+              <BilanActuel path="/bilan-actuel" />
+              <SystemeAgro path="/systeme-agro" />
+              <Priorite2020 path="/priorite-2020" />
+              <PAAC path="/PAAC" />
+              <NosRepresentants path='/nos-representants' />
+              <BecomeMember path='/become-member' />
+              <EventsParticipation path='/events-participation' />
+              <OnParleDeNous path='/on-parle-de-nous' />
+              <CommuniqueDePresse path='/communique-de-presse' />
+              <PressKit path='/press-kit' />
+              {/* nos membres et legalNotice */}
+              <WhoWeAre path="/who-we-are" />
+              <WhatWeDo path="/what-we-do" />
+              <WhatWeWant path="/what-we-want" />
+              <EuropeanPartners path="/european-partners" />
+              <CapInFrance path="/cap-in-france" />
+              <ContactUs path="/contact-us" />
+              <LegalNotice path="/legal-notice" />
+            </Router>
+          </div>
+          <div id='app-sidebar-right'>
+            <SideBar />
+          </div>
         </div>
         <Footer />
       </div>
     )
   }
 }
+
 
 export default App
