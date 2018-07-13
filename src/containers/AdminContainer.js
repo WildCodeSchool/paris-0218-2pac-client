@@ -11,6 +11,7 @@ import AuthForm from './AuthForm'
 
 import store from '../store.js'
 import api from '../api.js'
+
 // import '../App.css'
 
 const User = ({ user }) =>
@@ -31,8 +32,31 @@ const AdminUsers = ({ users }) => {
 
 const AdminHome = () => <div>Admin home</div>
 
-const AdminArticleNew = (props) => <div><ArticleForm /></div>
-const AdminArticleEdit = (props) => <div>AdminArticleEdit {props.id}</div>
+const mockedArticle = {
+  title: "Les chatons",
+  shortDescription: "les chatons c'est trop mignons",
+  description: "<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<h1>Les chatons</h1>\n<p><img src=\"https://www.vulgaris-medical.com/sites/default/files/field/image/actualites/2018/02/26/le-chat-source-de-bienfaits-pour-votre-sante_1.jpg\" alt=\"petits chatons\" width=\"295\" height=\"221\" /></p>\n<p>trop mignons!</p>\n</body>\n</html>",
+  eventDate: '2018-10-02',
+  categoryId: 4,
+  imageURL: "https://kocipunkt.whiskas.pl/upload/2016/07/ZYWIENIE_Podstawy_%C5%BCywienia_koci%C4%85t.png",
+  imageDescription: "petits chatons",
+  isMemberOnly: true
+}
+
+const AdminArticleNew = () => <div><ArticleForm submitArticle={api.newArticle} /></div>
+
+const AdminArticleEdit = ({ id, articles }) => {
+
+  const article = articles.find(article => article.id == id)
+
+  return (
+    <div>
+      {article ? <ArticleForm article={article} submitArticle={api.updateArticle} /> : <div>Loading..</div>}
+    </div>
+  )
+}
+
+
 const AdminDocumentNew = (props) => <div>AdminDocumentNew</div>
 const AdminDocumentEdit = (props) => <div>AdminDocumentEdit {props.id}</div>
 
@@ -101,10 +125,10 @@ class AdminContainer extends Component {
                 <AdminUsers path='users' users={this.state.users} />
                 <AdminArticles path='articles' articles={this.state.articles} />
                 <AdminArticleNew path='articles/new' />
-                <AdminArticleEdit path='articles/:id' />
+                <AdminArticleEdit path='articles/edit/:id' articles={this.state.articles} />
                 <AdminDocuments path='documents' documents={this.state.documents} />
                 <AdminDocumentNew path='documents/new' />
-                <AdminDocumentEdit path='documents/:id' />
+                <AdminDocumentEdit path='documents/edit/:id' />
                 <AdminSubscribers path='subscribers' subscribers={this.state.subscribers} />
               </Router>
             </div>
