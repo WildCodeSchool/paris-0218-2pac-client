@@ -120,7 +120,7 @@ class AdminContainer extends Component {
         { loggedAs && loggedAs.isAdmin
           ? <div>
             <AdminNav />
-            <div id='admin-router-view'>
+            <div id='admin-router-view' className="admin-general-container">
               <Router>
                 <AdminHome path='/' />
                 <AdminUsers path='users' users={this.state.users} />
