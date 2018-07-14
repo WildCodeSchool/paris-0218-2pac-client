@@ -16,13 +16,13 @@ const AbcDeLaPac = ({children}) => {
 
           <p>La PAC est divisée en trois parties, qui ont chacune des objectifs et des modes de fonctionnement différents :</p>
           <br/>
-          <p>
+          <div>
             <ul>
               <li><BulletedList /> Le premier pilier représente 70% du budget de la PAC. Il attribue des aides dites directes aux agriculteur·rice·s. Ces aides consistent en un revenu de base qui n’est pas lié à ce qu’ils ou elles produisent ni comment ils ou elles produisent, mais à la surface qu’ils ou elles exploitent et à leur potentiel de productivité.</li>
               <li><BulletedList /> Le deuxième pilier porte sur le développement rural. Il a la particularité d’être co-financé par de l’argent européen et de l’argent national (venant de l’États, des collectivités territoriales, ou encore des agences de l’eau). Il apporte un soutien complémentaire aux agriculteur·rice·s en situation de désavantage compétitif du fait de la zone géographique dans laquelle ils ou elles sont situé·e·s, de leurs pratiques ou du démarrage de leur activité. Il accompagne aussi l’évolution des fermes vers plus de compétitivité ou une meilleure prise en compte de l’environnement.</li>
               <li><BulletedList /> L’organisation commune des marchés régit les interventions de l’UE sur les marchés de produits agricoles en cas de crise et appuie la structuration de certaines filières. Elle sert aussi de garde-fou aux importations et exportations de produits agricoles. Les agriculteur·rice·s e touchent pas d’aides par le biais de l’organisation commune des marchés.</li>
             </ul>
-          </p>
+          </div>
           <br/>
           <p>En France, la PAC est gérée par le ministère en charge de l’agriculture, ainsi qu’en partie par les Régions pour ce qui relève du développement rural. La France est l’État membre de l’UE qui bénéficie le plus du budget de la PAC : elle reçoit environ 9 milliards d’euros par an. Ces aides sont très majoritairement versées aux agriculteur·rice·s français·es, mais une toute petite partie est également allouée à des acteur·rice·s du secteur forestier, à des structures d’animation territoriale en zones rurales, ainsi qu’à des groupements chargés de la commercialisation de certains types de produits.</p>
           <br/>
