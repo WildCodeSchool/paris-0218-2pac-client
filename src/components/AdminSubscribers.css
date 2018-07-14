@@ -47,5 +47,20 @@ color:#FFFFFF
 background-color: #F4971A;
 color: #707070;
 padding: .5em;
+}
 
+.csv-link{
+  min-width: 8em;
+  padding: .6em .6em .6em .6em;
+  background-color: #F4971A;
+  font-size: 1rem;
+  border:none;
+  cursor: pointer;
+  float: right;
+  margin-top: 1em;
+  border-radius: .2em;
+}
+
+.csv-link span{
+  color: #ffffff;
 }
