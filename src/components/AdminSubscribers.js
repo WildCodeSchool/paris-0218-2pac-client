@@ -33,7 +33,7 @@ const AdminSubscribers = ({ subscribers }) => {
         </tbody>
       </table>
       <button className="csv-link">
-        <CSVLink data={subscribers} ><span>Télécharger</span></CSVLink>
+        <CSVLink data={subscribers} filename={"subscribers.csv"}><span>Télécharger</span></CSVLink>
       </button>
     </div>
   )

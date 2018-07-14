@@ -61,13 +61,17 @@
 }
 
 .resource-filters input {
-   min-width: 6vw;
+    min-width: 6vw;
     border: 1px solid #F4971A;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
     outline-width: 0;
     border-radius: 0.2em;
+    font-size: 1em;
+    background-color: #F4F4F4;
+
+
 }
 
 .resource-filters select {
@@ -76,6 +80,8 @@
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+    font-size: 1em;
+    padding: 0.5em;
     /*outline-width: 0;*/
 }
 
