@@ -4,8 +4,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
 
-import ArticleForm from './components/ArticleForm'
-
 import Home from './containers/Home'
 import ContactContainer from './containers/ContactContainer'
 import ArticleContainer from './containers/ArticleContainer'
@@ -75,8 +73,6 @@ class App extends Component {
     api.getArticles().then(articles => { this.setState({ articles: articles }) })
 
     api.getDocuments().then(documents => { this.setState({ documents: documents }) })
-
-    api.getSubscribers().then(subscribers => { this.setState({ subscribers: subscribers }) })
   }
 
   componentDidMount () {
@@ -149,6 +145,5 @@ class App extends Component {
     )
   }
 }
-
 
 export default App

@@ -121,7 +121,6 @@ storiesOf('DocumentForm', module)
 storiesOf('formulaire de création', module)
   .add("création d'articles et d'évènements", () => <ArticleForm />)
 
-
 // Admin area
 
 storiesOf('Resources Page', module)
@@ -140,4 +139,3 @@ storiesOf('Subscribers admin', module)
 
 storiesOf('AdminContainer', module)
   .add('AdminContainer', () => <AdminContainer />)
-

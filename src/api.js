@@ -13,15 +13,15 @@ const _fetch = (route, options = {}) => {
     ...options,
     headers
   })
-  .then(async res => {
-    if (res.status >= 400) {
-      const json = await res.json()
+    .then(async res => {
+      if (res.status >= 400) {
+        const json = await res.json()
 
-      throw Error(json.error || res.statusText)
-    }
+        throw Error(json.error || res.statusText)
+      }
 
-    return res.json()
-  })
+      return res.json()
+    })
 }
 
 const whoami = () => _fetch('/whoami')
@@ -33,18 +33,18 @@ const signIn = credentials => _fetch('/signin', {
   },
   body: JSON.stringify(credentials)
 })
-.then(response => {
-  if (response.error) { return response }
+  .then(response => {
+    if (response.error) { return response }
 
-  const { user, token } = response
+    const { user, token } = response
 
-  if (!token) { throw Error('Missing JWT in response!') }
-  if (!user) { throw Error('Missing User in response!') }
+    if (!token) { throw Error('Missing JWT in response!') }
+    if (!user) { throw Error('Missing User in response!') }
 
-  jwt.set(token)
+    jwt.set(token)
 
-  return response
-})
+    return response
+  })
 
 const signOut = () => {
   jwt.remove()
@@ -101,7 +101,6 @@ const updateDocument = doc => _fetch(`/documents/${doc.id}`, {
 const deleteDocument = id => _fetch(`/documents/${id}`, { method: 'delete' })
 
 const getSubscribers = () => _fetch('/subscribers')
-
 
 export default {
   hostUrl,

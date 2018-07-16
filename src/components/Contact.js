@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from './Container'
 import ChevronTitle from './ChevronTitle'
 import './Contact.css'
 import TiHome from 'react-icons/lib/ti/home'

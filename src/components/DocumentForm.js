@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from './Container'
 import './DocumentForm.css'
 
 const freshDocument = {
@@ -8,7 +7,7 @@ const freshDocument = {
   typeId: 1,
   isMemberOnly: false,
   isResource: false,
-  isArchived: false,
+  isArchived: false
 }
 
 class DocumentForm extends React.Component {
@@ -41,7 +40,7 @@ class DocumentForm extends React.Component {
     console.log({ doc })
 
     this.props.submitDocument(doc)
-    .then(res => res.json())
+      .then(res => res.json())
     // .then(res => this.reset())
   }
 

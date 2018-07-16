@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
-import { Link, navigate } from '@reach/router'
+import { navigate } from '@reach/router'
 import Calendar from 'react-calendar'
 import './EventsCalendar.css'
 
 const isSameDay = (d1, d2) =>
-  d1.getFullYear() === d2.getFullYear()
-    && d1.getMonth() === d2.getMonth()
-    && d1.getDate() === d2.getDate()
+  d1.getFullYear() === d2.getFullYear() &&
+    d1.getMonth() === d2.getMonth() &&
+    d1.getDate() === d2.getDate()
 
 class EventsCalendar extends Component {
-
   onClickDay = date => {
     const { events } = this.props
 

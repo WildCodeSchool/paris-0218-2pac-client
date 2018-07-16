@@ -8,7 +8,7 @@ const SideBar = ({ articles }) => {
   const events = articles.filter(article => article.categoryId === 4)
 
   return (
-    <div className="SideBar icon-button-globe">
+    <div id="sidebar" className="icon-button-globe">
 
       <Link to="/actuality">
         <SideBarButton style={{ backgroundColor: '#226462' }}>
