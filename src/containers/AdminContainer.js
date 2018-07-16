@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminSubscribers from '../components/AdminSubscribers'
 import ArticleForm from '../components/ArticleForm'
+import DocumentForm from '../components/DocumentForm'
 
 import AuthForm from './AuthForm'
 
@@ -46,7 +47,6 @@ const mockedArticle = {
 const AdminArticleNew = () => <div><ArticleForm submitArticle={api.newArticle} /></div>
 
 const AdminArticleEdit = ({ id, articles }) => {
-
   const article = articles.find(article => article.id == id)
 
   return (
@@ -57,8 +57,17 @@ const AdminArticleEdit = ({ id, articles }) => {
 }
 
 
-const AdminDocumentNew = (props) => <div>AdminDocumentNew</div>
-const AdminDocumentEdit = (props) => <div>AdminDocumentEdit {props.id}</div>
+const AdminDocumentNew = (props) => <div><DocumentForm submitDocument={api.newDocument} /></div>
+
+const AdminDocumentEdit = ({ id, documents }) => {
+  const doc = documents.find(doc => doc.id == id)
+
+  return (
+    <div>
+      {doc ? <DocumentForm doc={doc} submitDocument={api.updateDocument} /> : <div>Loading..</div>}
+    </div>
+  )
+}
 
 class AdminContainer extends Component {
   state = {
@@ -128,7 +137,7 @@ class AdminContainer extends Component {
                 <AdminArticleEdit path='articles/edit/:id' articles={this.state.articles} />
                 <AdminDocuments path='documents' documents={this.state.documents} />
                 <AdminDocumentNew path='documents/new' />
-                <AdminDocumentEdit path='documents/edit/:id' />
+                <AdminDocumentEdit path='documents/edit/:id' documents={this.state.documents} />
                 <AdminSubscribers path='subscribers' subscribers={this.state.subscribers} />
               </Router>
             </div>

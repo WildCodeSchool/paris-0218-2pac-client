@@ -78,10 +78,30 @@ const deleteArticle = id => _fetch(`/articles/${id}`, { method: 'delete' })
 
 const getDocuments = () => _fetch('/documents')
 
-const getSubscribers = () => _fetch('/subscribers')
+const toFormData = json => {
+  const formData = new FormData()
 
+  for (const [ key, value ] of Object.entries(json)) {
+    formData.set(key, value)
+  }
+
+  return formData
+}
+
+const newDocument = doc => _fetch('/documents', {
+  method: 'post',
+  body: toFormData(doc)
+})
+
+const updateDocument = doc => _fetch(`/documents/${doc.id}`, {
+  method: 'put',
+  body: toFormData(doc)
+})
 
 const deleteDocument = id => _fetch(`/documents/${id}`, { method: 'delete' })
+
+const getSubscribers = () => _fetch('/subscribers')
+
 
 export default {
   hostUrl,
@@ -91,8 +111,10 @@ export default {
   updateArticle,
   deleteArticle,
   getDocuments,
-  getSubscribers,
+  newDocument,
+  updateDocument,
   deleteDocument,
+  getSubscribers,
   signIn,
   whoami,
   signOut

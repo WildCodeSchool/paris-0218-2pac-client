@@ -24,8 +24,8 @@ import SmallArticle from '../components/SmallArticle'
 import Une from '../components/Une'
 import Actuality from '../components/Actuality'
 import Page404 from '../components/Page404'
-import { NewDocumentForm } from '../components/DocumentForms'
 import ArticleForm from '../components/ArticleForm'
+import DocumentForm from '../components/DocumentForm'
 import AdminSubscribers from '../components/AdminSubscribers'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminArticles from '../components/AdminArticles'
@@ -114,8 +114,9 @@ storiesOf('Actualités', module)
 storiesOf('Page404', module)
   .add('à ton avis', () => <Page404 />)
 
-storiesOf('DocumentForms', module)
-  .add('NewDocumentForm', () => <NewDocumentForm />)
+storiesOf('DocumentForm', module)
+  .add('DocumentForm new', () => <DocumentForm />)
+  .add('DocumentForm edit', () => <DocumentForm doc={mockedDocuments[0]} />)
 
 storiesOf('formulaire de création', module)
   .add("création d'articles et d'évènements", () => <ArticleForm />)
