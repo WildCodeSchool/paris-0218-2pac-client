@@ -14,7 +14,7 @@ const AdminDocuments = ({ documents }) => {
       {documents.map(doc =>
         <div key={doc.id} className="admin-document" >
           <span>{doc.title}</span>
-          <button onClick={() => {}}>Modifier</button>
+          <Link to={`/admin/documents/edit/${doc.id}`}><button>Modifier</button></Link>
           <button onClick={() => deleteDocument(doc.id)}>Supprimer</button>
         </div>
       )}

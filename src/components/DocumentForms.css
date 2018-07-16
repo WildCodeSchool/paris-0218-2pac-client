@@ -1,8 +1,8 @@
-form#documents_form {
+form #documents_form {
   display: flex;
   flex-direction: column;
 	font-family: 'Source Sans Pro', sans-serif;
-	background-color: #731717;
+	background-color: red;
 	padding: 2rem;
 }
 
@@ -15,7 +15,7 @@ input, textarea, select {
   display: block;
 }
 
-textarea {
+textarea .document-form-description {
   min-width: 20rem;
   height: 3rem;
 }

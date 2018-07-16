@@ -10,19 +10,11 @@ const initialInputValues = {
   isResource: false
 }
 
-// const fakeInputValues = {
-//   title: 'Fake document',
-//   shortDescription: 'fake fake',
-//   typeId: 3,
-//   isMemberOnly: true,
-//   isResource: false
-// }
 
 export class NewDocumentForm extends React.Component {
   state = {
     inputs: initialInputValues
-    // inputs: fakeInputValues,
-  }
+    }
 
   handleChange = e => {
     switch (e.target.name) {
@@ -83,7 +75,7 @@ export class NewDocumentForm extends React.Component {
               </select>
             </label>
             <label>Description
-              <textarea type="text_resume" name='shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
+              <textarea className="document-form-description" type="text_resume" name='shortDescription' value={inputs.shortDescription} onChange={this.handleChange} />
             </label>
             <label>Accessible uniquement aux membres
               <input type='checkbox' name='isMemberOnly' checked={inputs.isMemberOnly} onChange={this.handleChange} />
@@ -100,3 +92,5 @@ export class NewDocumentForm extends React.Component {
     )
   }
 }
+
+export default NewDocumentForm

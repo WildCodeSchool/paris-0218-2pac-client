@@ -78,6 +78,16 @@ const deleteArticle = id => _fetch(`/articles/${id}`, { method: 'delete' })
 
 const getDocuments = () => _fetch('/documents')
 
+
+const newDocument = document => _fetch('/documents', {
+  method: 'post',
+  headers: {
+    'content-type': 'application/json'
+  },
+  body: JSON.stringify(document)
+})
+
+
 const getSubscribers = () => _fetch('/subscribers')
 
 
