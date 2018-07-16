@@ -38,7 +38,6 @@ class DocumentForm extends React.Component {
     const doc = this.state.doc
 
     this.props.submitDocument(doc)
-      .then(res => res.json())
     // .then(res => this.reset())
   }
 
