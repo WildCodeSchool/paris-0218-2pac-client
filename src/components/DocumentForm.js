@@ -37,8 +37,6 @@ class DocumentForm extends React.Component {
 
     const doc = this.state.doc
 
-    console.log({ doc })
-
     this.props.submitDocument(doc)
       .then(res => res.json())
     // .then(res => this.reset())
@@ -48,8 +46,8 @@ class DocumentForm extends React.Component {
     const doc = this.state.doc
 
     return (
-      <div>
-        <form id='document-form' onSubmit={this.handleSubmit}>
+      <div id='document-form'>
+        <form onSubmit={this.handleSubmit}>
           <label>titre
             <input type='text' name='title' value={doc.title} onChange={this.handleChange} />
           </label>

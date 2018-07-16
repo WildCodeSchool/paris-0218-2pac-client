@@ -1,21 +1,25 @@
-form#documents_form {
+#document-form {
   display: flex;
   flex-direction: column;
-	font-family: 'Source Sans Pro', sans-serif;
-	background-color: #731717;
-	padding: 2rem;
+  width: 50rem;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
-label {
-	color: white;
-  margin: 0.3rem;
+#document-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-input, textarea, select {
-  display: block;
+#document-form form label {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem;
+  font-size: 1rem;
 }
 
-textarea {
-  min-width: 20rem;
-  height: 3rem;
+#document-form form label > * {
+
 }
