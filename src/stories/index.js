@@ -7,7 +7,6 @@ import { linkTo } from '@storybook/addon-links'
 */
 import '../App.css'
 import App from '../App'
-import Login from '../components/Login'
 
 import SideBar from '../components/SideBar'
 import SideBarButton from '../components/SideBarButton'
@@ -18,7 +17,7 @@ import Tag from '../components/Tag'
 import ChevronTitle from '../components/ChevronTitle'
 import Article from '../components/Article'
 import Contact from '../components/Contact'
-import SignUpFormular from '../components/SignUpFormular'
+import NewsletterFormular from '../components/NewsletterFormular'
 import ArticlePreview from '../components/ArticlePreview'
 import LongArticle from '../components/LongArticle'
 import SmallArticle from '../components/SmallArticle'
@@ -27,7 +26,7 @@ import Actuality from '../components/Actuality'
 import Page404 from '../components/Page404'
 import { NewDocumentForm } from '../components/DocumentForms'
 import ArticleForm from '../components/ArticleForm'
-import Subscribers from '../components/Subscribers'
+import AdminSubscribers from '../components/AdminSubscribers'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminArticles from '../components/AdminArticles'
 
@@ -51,12 +50,6 @@ storiesOf('*Footer', module)
 
 storiesOf('FooterMembersLogos', module)
   .add('Footer members logo section', () => <FooterMembersLogos />)
-
-storiesOf('Login', module)
-  .add('login text', () =>
-    <div style={{background: 'black'}}>
-      <Login />
-    </div>)
 
 storiesOf('Button', module)
 
@@ -83,8 +76,8 @@ storiesOf('SideBarButton', module)
       English
     </SideBarButton>)
 
-storiesOf('SignUpFormular', module)
-  .add('Complete formular', () => <SignUpFormular />)
+storiesOf('NewsletterFormular', module)
+  .add('Complete formular', () => <NewsletterFormular />)
 
 storiesOf('ChevronTitle', module)
   .add('ChevronTitle', () => <ChevronTitle title="Exemple de titre"> </ChevronTitle>)
@@ -127,8 +120,6 @@ storiesOf('DocumentForms', module)
 storiesOf('formulaire de création', module)
   .add("création d'articles et d'évènements", () => <ArticleForm />)
 
-storiesOf('Subscribers', module)
-  .add('Abonnés à la Newsletter ', () => <Subscribers subscribers={mockedSubscribers} />)
 
 // Admin area
 
@@ -143,5 +134,9 @@ storiesOf('Documents admin', module)
 storiesOf('Articles admin', module)
   .add('AdminArticles', () => <AdminArticles articles={mockedArticles} />)
 
+storiesOf('Subscribers admin', module)
+  .add('AdminSubscribers', () => <AdminSubscribers subscribers={mockedSubscribers} />)
+
 storiesOf('AdminContainer', module)
   .add('AdminContainer', () => <AdminContainer />)
+
