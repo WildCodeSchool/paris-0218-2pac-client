@@ -7,9 +7,7 @@ const SystemeAgro = ({children}) => {
     <div>
       <Container>
         <div className="fix-content-article">
-          <p>
             <h1>Système agro-alimentaire souhaité</h1>
-          </p>
           <br/>
           <h2 className="cherry">
             <b>
@@ -21,7 +19,7 @@ const SystemeAgro = ({children}) => {
     Réformer la Politique Agricole Commune ? Oui. Mais pour atteindre quoi ? Pour contribuer à façonner un système agricole et alimentaire qui <b>réponde aux besoins et attentes de la société </b> et qui soit <b>générateur de bienfaits économiques, sociaux et environnementaux. </b>Dessinons donc le <b>cercle vertueux </b>du modèle agro-alimentaire de demain (à horizon 2030).
           </p>
           <br/>
-          <p class="orange">
+          <p className="orange">
             <b>&emsp;&emsp;&emsp;1. Pourquoi proposer une vision rêvée du système agro-alimentaire ?</b>
           </p>
           <br/>
@@ -45,11 +43,11 @@ const SystemeAgro = ({children}) => {
           </p>
           <br/>
           <p>
-            <span class="orange bold" >&emsp;&emsp;&emsp;2. À quoi ressemble le système agro-alimentaire souhaité par <i>Pour une autre PAC?</i></span>
+            <span className="orange bold" >&emsp;&emsp;&emsp;2. À quoi ressemble le système agro-alimentaire souhaité par <i>Pour une autre PAC?</i></span>
           </p>
           <br/>
           <p>
-            <span class="green bold">
+            <span className="green bold">
       A. <i>Territoires, emplois, environnement</i>
             </span>
           </p>
@@ -80,7 +78,7 @@ const SystemeAgro = ({children}) => {
           </p>
           <br/>
           <p>
-            <span class="green bold">
+            <span className="green bold">
       B.<i>&ensp;Alimentation, santé, bien-être animal</i>
             </span>
           </p>
@@ -103,7 +101,7 @@ const SystemeAgro = ({children}) => {
           </p>
           <br/>
           <p>
-            <span class="green bold">
+            <span className="green bold">
       C.<i>
       &ensp;Revenu, résilience, autonomie
               </i>
@@ -133,7 +131,7 @@ const SystemeAgro = ({children}) => {
           </p>
           <br/>
           <p>
-            <span class="green bold">
+            <span className="green bold">
       D.<i>
       &ensp;Démocratie, solidarité, approche collective
               </i>
