@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import api from '../api'
+import FaCaretDown from 'react-icons/lib/fa/caret-down'
+import FaCaretUp from 'react-icons/lib/fa/caret-up'
 import './Resources.css'
 
 const ResourceCard = ({ doc }) =>
-  <div className="resource card" >
+  <div className="resource" >
     <span>{doc.createdAt}</span>
     <span>{doc.title}</span>
     <div className="category_resources">{doc.type}</div>
