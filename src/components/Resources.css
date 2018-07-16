@@ -70,6 +70,7 @@
     transition: .3s;
     outline-width: 0;
     border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
     font-size: 1em;
     background-color: #F4F4F4;
 }
@@ -83,6 +84,9 @@
     font-size: 1em;
     padding: 0.5em;
     margin-left: 3em;
+    border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    -moz-margin-left: 2em;
     /*outline-width: 0;*/
 }
 

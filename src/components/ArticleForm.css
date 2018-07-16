@@ -1,25 +1,53 @@
 #article-form {
   display: flex;
   flex-direction: column;
-  width: 50rem;
+  width: 60rem;
+  margin: auto;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  background-color: #F4971A;
+  color: #ffffff;
+  border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  padding: 1.5em;
 }
 
 #article-form form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  margin-bottom: 0.5em;
 }
 
 #article-form form label {
   display: flex;
   flex-direction: column;
   margin: 0.2rem;
-  font-size: 1rem;
 }
 
-#article-form form label > * {
-
+#article-form input {
+  width: 12em;
+  margin-top: 0.3em;
 }
+
+ #article-form select {
+  width: 12em;
+  margin-top: 0.3em;
+ }
+
+  #article-form textarea {
+    width: 24em;
+    margin-top: 0.4em;
+  }
+
+  #article-form .send-button {
+    width: 8em;
+    padding: .6em .6em .6em .6em;
+    background-color: #731717;
+    font-size: 1rem;
+    border: solid 1px #ffffff;
+    cursor: pointer;
+    float: right;
+    margin-top: 1em;
+    border-radius: .2em;
+    color: #ffffff;
+  }
