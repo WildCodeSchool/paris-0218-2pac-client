@@ -47,13 +47,13 @@ class DocumentForm extends React.Component {
     return (
       <div id='document-form'>
         <form onSubmit={this.handleSubmit}>
-          <label>titre
+          <label>Titre :
             <input type='text' name='title' value={doc.title} onChange={this.handleChange} />
           </label>
-          <label>document
+          <label>Document :
             <input id='document-form-file' type='file' name='document' onChange={this.handleChange} accept='image/png, image/jpeg, application/pdf, .word, .ppt, .pdf, .docx' />
           </label>
-          <label>catégorie
+          <label>Catégorie :
             <select name='typeId' value={doc.typeId} onChange={this.handleChange}>
               <option value={1}>Textes politiques</option>
               <option value={2}>Documents de position des organisations membres</option>
@@ -62,20 +62,20 @@ class DocumentForm extends React.Component {
               <option value={5}>Autres documents de position</option>
             </select>
           </label>
-          <label>description
+          <label>Résumé :
             <textarea type='text' name='shortDescription' value={doc.shortDescription} onChange={this.handleChange} />
           </label>
-          <label>contenu membre
+          <label>Contenu membre :
             <input type='checkbox' name='isMemberOnly' checked={doc.isMemberOnly} onChange={this.handleChange} />
           </label>
-          <label>resource
+          <label>Ressource :
             <input type='checkbox' name='isResource' checked={doc.isResource} onChange={this.handleChange} />
           </label>
-          <label>archivé
+          <label>Archivé
             <input type='checkbox' name='isArchived' checked={doc.isArchived} onChange={this.handleChange} />
           </label>
           <label>
-            <button type='submit' value='submit'>valider</button>
+            <button type='submit' value='submit'>Valider</button>
           </label>
         </form>
       </div>

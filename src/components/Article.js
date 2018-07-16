@@ -27,8 +27,8 @@ const Article = ({ article }) => {
         {noImgFunc()}
         <div className="intro-details">
           <span className="category">{article.category}</span>
-          <span className="date">{article.createdAt}</span>
-
+          {/*<span className="date">{article.createdAt}</span>*/}
+          <span className="event-date">{article.eventDate}</span>
         </div>
       </div>
       <div className="article-body">
