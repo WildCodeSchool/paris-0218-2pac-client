@@ -15,7 +15,7 @@ const freshArticle = {
 
 class ArticleForm extends React.Component {
   state = {
-    article: this.props.article || freshArticle,
+    article: this.props.article || freshArticle
   }
 
   handleChange = e => {
@@ -42,9 +42,8 @@ class ArticleForm extends React.Component {
       article.eventDate = ''
     }
 
-
     this.props.submitArticle(article)
-      // .then(res => this.reset())
+    // .then(res => this.reset())
   }
 
   handleEditorChange = e => {
@@ -75,7 +74,7 @@ class ArticleForm extends React.Component {
           </label>
           {
             article.categoryId === 4
-              ? <label>Date :
+              ? <label>date de l'évenement
                 <input type="date" name='eventDate' value={article.eventDate} onChange={this.handleChange} />
               </label>
               : ''

@@ -18,7 +18,11 @@
     "html-to-draftjs": "^1.4.0",
     "lint": "^1.1.2",
     "react": "^16.4.0",
+
     "react-csv": "^1.0.14",
+
+    "react-calendar": "^2.16.0",
+
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.4.0",
     "react-draft-wysiwyg": "^1.12.13",
