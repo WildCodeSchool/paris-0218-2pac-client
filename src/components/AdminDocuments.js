@@ -1,7 +1,7 @@
 import React from 'react'
 import api from '../api'
-import './AdminDocuments.css'
 import { Link } from '@reach/router'
+import './AdminDocuments.css'
 
 const AdminDocuments = ({ documents }) => {
   const deleteDocument = id => {

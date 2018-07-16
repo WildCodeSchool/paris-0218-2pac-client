@@ -1,11 +1,14 @@
 import React from 'react'
 import SideBarButton from './SideBarButton'
+import EventsCalendar from '../containers/EventsCalendar'
 import { Link } from '@reach/router'
 import './SideBar.css'
 
-const SideBar = () => {
+const SideBar = ({ articles }) => {
+  const events = articles.filter(article => article.categoryId === 4)
+
   return (
-    <div className="SideBar icon-button-globe">
+    <div id="sidebar" className="icon-button-globe">
 
       <Link to="/actuality">
         <SideBarButton style={{ backgroundColor: '#226462' }}>
@@ -37,6 +40,7 @@ const SideBar = () => {
         </SideBarButton>
       </a>
 
+      <EventsCalendar events={events} />
     </div>
   )
 }

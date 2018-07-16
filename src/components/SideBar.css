@@ -1,6 +1,4 @@
-.SideBar {
+#sidebar {
   display: flex;
   flex-direction: column;
-  width: 10rem;
-  height: 12rem;
 }
