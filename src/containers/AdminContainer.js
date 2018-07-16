@@ -48,21 +48,7 @@ const AdminArticleEdit = ({ id, articles }) => {
 
 const AdminDocumentNew = (props) => <div><DocumentForm submitDocument={api.newDocument} /></div>
 
-<<<<<<< HEAD
-const AdminDocumentNew = (props) => <div><DocumentForms submitDocument={api.newDocument} /></div>
 
-const AdminDocumentEdit = ({ id, documents }) => {
-
-  const document = documents.find(document => document.id == id)
-
-  return (
-    <div>
-      {document ? <DocumentForms document={document} submitDocument={api.updateDocument} /> : <div>Loading...</div>}
-    </div>
-  )
-}
-
-=======
 const AdminDocumentEdit = ({ id, documents }) => {
   const doc = documents.find(doc => String(doc.id) === id)
 
@@ -72,7 +58,7 @@ const AdminDocumentEdit = ({ id, documents }) => {
     </div>
   )
 }
->>>>>>> dev
+
 
 class AdminContainer extends Component {
   state = {
@@ -141,11 +127,7 @@ class AdminContainer extends Component {
                 <AdminArticleNew path='articles/new' />
                 <AdminArticleEdit path='articles/edit/:id' articles={this.state.articles} />
                 <AdminDocuments path='documents' documents={this.state.documents} />
-<<<<<<< HEAD
-                <AdminDocumentNew path='documents/new' articles={this.state.articles}/>
-=======
                 <AdminDocumentNew path='documents/new' />
->>>>>>> dev
                 <AdminDocumentEdit path='documents/edit/:id' documents={this.state.documents} />
                 <AdminSubscribers path='subscribers' subscribers={this.state.subscribers} />
               </Router>
