@@ -3,7 +3,7 @@ import './Resources.css'
 
 const ResourceCard = ({ doc }) =>
   <div className="resource" >
-    <span>{doc.createdAt}</span>
+    <span>{(new Date(doc.createdAt)).toLocaleString().slice(0, -3)}</span>
     <span>{doc.title}</span>
     <div className="category_resources">{doc.type}</div>
     <a target="_blank" href={doc.url}>Consulter</a>
