@@ -20,7 +20,7 @@ const Article = ({ article }) => {
     }
   }
 
-  const tags = article.tags.split(',').map(tag => <span className="tag">{tag}</span>)
+  const tags = article.tags.split(',').map((tag, i) => <span key={i} className="tag">{tag}</span>)
 
   return (
     <Container>
