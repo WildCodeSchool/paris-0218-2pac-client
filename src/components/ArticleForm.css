@@ -74,12 +74,12 @@ margin-top: .3em;
   color: #ffffff;
   }
 
-.titre-categorie{
+.titre-categorie {
   width: 100%;
   display: flex;
 }
 
-#article-form textarea{
+#article-form textarea {
   width: 55rem;
   margin-top: 0.4em;
   resize: none;
@@ -105,3 +105,4 @@ margin-top: .3em;
 #article-form .little-description .descrip-art-txt {
   width: 45rem;
 }
+

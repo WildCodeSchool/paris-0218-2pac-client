@@ -21,8 +21,8 @@
 }
 
 #subscribers-form form div:first-child {
-  padding: 1em 0em 1em;
-
+width: 100%;
+padding: 1em 0em 1em;
 }
 
 #subscribers-form form div:nth-child(2) {

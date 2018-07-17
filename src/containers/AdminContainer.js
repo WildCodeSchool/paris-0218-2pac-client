@@ -48,7 +48,6 @@ const AdminArticleEdit = ({ id, articles }) => {
 
 const AdminDocumentNew = (props) => <div><DocumentForm submitDocument={api.newDocument} /></div>
 
-
 const AdminDocumentEdit = ({ id, documents }) => {
   const doc = documents.find(doc => String(doc.id) === id)
 
@@ -58,7 +57,6 @@ const AdminDocumentEdit = ({ id, documents }) => {
     </div>
   )
 }
-
 
 class AdminContainer extends Component {
   state = {

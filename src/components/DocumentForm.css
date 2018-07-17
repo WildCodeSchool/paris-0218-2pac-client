@@ -1,10 +1,44 @@
 #document-form {
-  display: flex;
-  flex-direction: column;
-  width: 50rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
   align-items: center;
   justify-content: center;
   margin: auto;
+  background-color: #F4971A;
+  color: white;
+  font-weight: bold;
+  padding:1.5em;
+  letter-spacing: .04rem;
+}
+#document-form .test{
+  display:flex;
+  width: 100%;
+}
+
+
+#document-form input  {
+  background-color: white;
+  width:95%;
+  border: 2px solid transparent;
+  transition: .3s;
+  outline-width: 0;
+  margin-top: .3em;
+  color: #F4971A;
+}
+
+#document-form select {
+  background-color: white;
+  border: 2px solid transparent;
+  transition: .3s;
+  outline-width: 0;
+  width: 93%;
+  margin-top: .3em;
+  color: #F4971A;
+}
+.document-form-select option
+{
+   background-color: white;
+
 }
 
 #document-form form {
@@ -13,9 +47,57 @@
   align-items: flex-start;
 }
 
+
 #document-form form label {
   display: flex;
   flex-direction: column;
-  margin: 0.2rem;
+  margin: 0.5em;
+  width:50%;
+ 
+}
+
+
+.shortDescription-document {
+    height: 10em;
+    width:69em;
+    border: 2px solid transparent;
+    transition: .3s;
+    outline-width: 0;
+    margin-top: .3em;
+    color: #F4971A;
+      }
+
+.align {
+  margin-top: 1.8em;
+  margin-right: 3rem;
+  }
+
+
+.document-form-button
+{
+  margin-left: 0.2rem;
+  padding: .6em .6em .6em .6em;
+  background-color: #731717;
   font-size: 1rem;
+  border: solid white 2px;
+  cursor: pointer;
+  float: right;
+  margin-top: 1em;
+  border-radius: .2em;
+  color: white;
+  min-width: 8em;
+}
+
+.document-form-checkboxes {
+  display: flex;
+  margin-right: 0em;
+}
+
+.cat {
+  display: flex;
+  width:100%;
+}
+
+.document-form-shortDescription {
+  margin-left: .4rem;
 }

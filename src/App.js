@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router } from '@reach/router'
+import { Router, navigate } from '@reach/router'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
@@ -10,6 +10,8 @@ import ArticleContainer from './containers/ArticleContainer'
 import ActualityContainer from './containers/ActualityContainer'
 import ResourcesContainer from './containers/ResourcesContainer'
 import NewsletterContainer from './containers/NewsletterContainer'
+
+import SearchResults from './components/SearchResults'
 
 import Nav from './components/Nav'
 
@@ -69,6 +71,10 @@ class App extends Component {
     window.location = window.location // reload datas
   }
 
+  onSearchSubmit = searchValue => {
+    navigate(`/search/${searchValue}`)
+  }
+
   syncDatas = () => {
     api.getArticles().then(articles => { this.setState({ articles: articles }) })
 
@@ -105,6 +111,9 @@ class App extends Component {
               <ResourcesContainer path="/resources" documents={this.state.documents} />
               <NewsletterContainer path="/newsletter" />
               <ContactContainer path="/contact" contactData={infoContact} />
+
+              <SearchResults path="/search/:searchValue" articles={this.state.articles} />
+
               <Presentation path="/presentation" />
               <Historique path="/historique" />
               <NosActions path="/nos-actions" />
@@ -137,7 +146,7 @@ class App extends Component {
             </Router>
           </div>
           <div id='app-sidebar-right'>
-            <SideBar articles={this.state.articles} />
+            <SideBar articles={this.state.articles} onSearchSubmit={this.onSearchSubmit} />
           </div>
         </div>
         <Footer />

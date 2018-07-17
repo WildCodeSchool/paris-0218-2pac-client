@@ -2,6 +2,7 @@ import React from 'react'
 import './AsideLeft.css'
 
 const AsideLeft = props => {
+  console.log(props)
   return (
     <div className="aside-left-content">
       <span className="category"><b>{props.category}</b></span>
@@ -11,7 +12,8 @@ const AsideLeft = props => {
         ? <p>Date : {props.eventDate}</p>
         : ''
       }
-      <p><span className="aside-link" > Lire la suite</span></p>
+
+      <p><span className="aside-link" >Lire la suite</span></p>
 
     </div>
   )

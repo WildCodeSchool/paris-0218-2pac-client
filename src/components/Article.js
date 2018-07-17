@@ -20,6 +20,8 @@ const Article = ({ article }) => {
     }
   }
 
+  const tags = article.tags.split(',').map((tag, i) => <span key={i} className="tag">{tag}</span>)
+
   return (
     <Container>
       <div className="intro-article">
@@ -27,8 +29,9 @@ const Article = ({ article }) => {
         {noImgFunc()}
         <div className="intro-details">
           <span className="category">{article.category}</span>
+          <span className="tags">{tags}</span>
           <span className="date">Mis en ligne le {(new Date(article.createdAt)).toLocaleString().slice(0, -3)}</span>
-          {article.categoryId === 4 ? <span>Date de l'évenement: {(new Date(article.eventDate)).toLocaleDateString()}</span> : ''}
+          {article.categoryId === 4 ? <span className="event-date">Date de l'évenement: {(new Date(article.eventDate)).toLocaleDateString()}</span> : ''}
         </div>
       </div>
       <div className="article-body">
