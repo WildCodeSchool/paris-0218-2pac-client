@@ -58,19 +58,21 @@ class ArticleForm extends React.Component {
     return (
       <div id='article-form'>
 <form onSubmit={this.handleSubmit}>
+<div className="titre-categorie">
 <label>Titre :
-<input type="text" name='title' value={article.title} onChange={this.handleChange} />
+<input className="article-form-input" type="text" name='title' value={article.title} onChange={this.handleChange} />
 </label>
-<label>Catégorie :
-<select id="categoryId" name='categoryId' value={article.categoryId} onChange={this.handleChange}>
-<option value={1}>article</option>
-<option value={2}>presse</option>
-<option value={3}>actualité</option>
-<option value={4}>évènement</option>
+<label className="article-form-cat">Catégorie :
+<select className="article-form-select" id="categoryId" name='categoryId' value={article.categoryId} onChange={this.handleChange}>
+<option value={1}>Article</option>
+<option value={2}>Presse</option>
+<option value={3}>Actualité</option>
+<option value={4}>Évènement</option>
 </select>
 </label>
+</div>
 <label>Résumé :
-<textarea type="text" name='shortDescription' value={article.shortDescription} onChange={this.handleChange} />
+<textarea className="resume" type="text" name='shortDescription' value={article.shortDescription} onChange={this.handleChange} />
 </label>
 {
 article.categoryId === 4
@@ -79,20 +81,22 @@ article.categoryId === 4
 </label>
 : ''
 }
+<div className="article-form-image">
 <label>Cover image :
 <input type="text" name='imageURL' value={article.imageURL} onChange={this.handleChange} />
 </label>
 <label>Description de l'image :
 <input type="text" name='imageDescription' value={article.imageDescription} onChange={this.handleChange} />
 </label>
-<label>Contenu membre :
+</div>
+<div className ="descr-membre">
+<label className="little-description">Description :
+<textarea className="descrip-art-txt" type="text_description" name='description' value={article.description} onChange={this.handleChange} />
+</label>
+<label className="member-checkbox" >Contenu membre :
 <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
 </label>
-<label>Description :
-<textarea type="text_description" name='description' value={article.description} onChange={this.handleChange} />
-</label>
-<button className="send-button" type="submit" value="submit">Valider</button>
-</form>
+</div>
 <Editor apiKey='cwyqiu11xr2rk71h157w64bzbwi5evps8y0belarj25soekt'
 initialValue={this.state.article.description}
 onChange={this.handleEditorChange}
@@ -115,9 +119,13 @@ textcolor_map: [
 ]
 }}
 />
+  <button className="send-button" type="submit" value="submit">Valider</button>
+</form>
 </div>
     )
   }
 }
 
 export default ArticleForm
+
+
