@@ -14,7 +14,7 @@ const AdminDocuments = ({ documents }) => {
       {documents.map(doc =>
         <div key={doc.id} className="admin-document" >
           <span>{doc.title}</span>
-          <a target="_blank" href={`${api.hostUrl}/medias/documents/${doc.url}`}>link</a>
+          <a target="_blank" href={doc.url}>lien</a>
           <Link to={`/admin/documents/edit/${doc.id}`}><button>Modifier</button></Link>
           <button onClick={() => deleteDocument(doc.id)}>Supprimer</button>
         </div>
