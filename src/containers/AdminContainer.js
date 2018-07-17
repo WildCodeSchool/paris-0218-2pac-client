@@ -32,7 +32,7 @@ const AdminUsers = ({ users }) => {
   )
 }
 
-const AdminHome = () => <div className="admin-home">Admin home</div>
+const AdminHome = () => <div></div>
 
 const AdminArticleNew = () => <div><ArticleForm submitArticle={api.newArticle} /></div>
 
@@ -120,7 +120,6 @@ class AdminContainer extends Component {
             <div id='admin-router-view' className="admin-general-container">
               <Router>
                 <AdminHome path='/' />
-                <AdminUsers path='users' users={this.state.users} />
                 <AdminArticles path='articles' articles={this.state.articles} />
                 <AdminArticleNew path='articles/new' />
                 <AdminArticleEdit path='articles/edit/:id' articles={this.state.articles} />
