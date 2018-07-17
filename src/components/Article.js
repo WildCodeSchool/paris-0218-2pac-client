@@ -27,8 +27,8 @@ const Article = ({ article }) => {
         {noImgFunc()}
         <div className="intro-details">
           <span className="category">{article.category}</span>
-          {/*<span className="date">{article.createdAt}</span>*/}
-          <span className="event-date">{article.eventDate}</span>
+          <span className="date">Mis en ligne le {(new Date(article.createdAt)).toLocaleString().slice(0, -3)}</span>
+          {article.categoryId === 4 ? <span className="event-date">Date de l'évenement: {(new Date(article.eventDate)).toLocaleDateString()}</span> : ''}
         </div>
       </div>
       <div className="article-body">

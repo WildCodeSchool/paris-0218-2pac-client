@@ -52,9 +52,11 @@ const signOut = () => {
   return Promise.resolve()
 }
 
-// Datas
+// USERS
 
 const getUsers = () => _fetch('/users')
+
+// ARTICLES
 
 const getArticles = () => _fetch('/articles')
 
@@ -76,29 +78,29 @@ const updateArticle = article => _fetch(`/articles/${article.id}`, {
 
 const deleteArticle = id => _fetch(`/articles/${id}`, { method: 'delete' })
 
+// DOCUMENTS
+
 const getDocuments = () => _fetch('/documents')
-
-const toFormData = json => {
-  const formData = new FormData()
-
-  for (const [ key, value ] of Object.entries(json)) {
-    formData.set(key, value)
-  }
-
-  return formData
-}
 
 const newDocument = doc => _fetch('/documents', {
   method: 'post',
-  body: toFormData(doc)
+  headers: {
+    'content-type': 'application/json'
+  },
+  body: JSON.stringify(doc)
 })
 
 const updateDocument = doc => _fetch(`/documents/${doc.id}`, {
   method: 'put',
-  body: toFormData(doc)
+  headers: {
+    'content-type': 'application/json'
+  },
+  body: JSON.stringify(doc)
 })
 
 const deleteDocument = id => _fetch(`/documents/${id}`, { method: 'delete' })
+
+// SUBSCRIBERS
 
 const getSubscribers = () => _fetch('/subscribers')
 
