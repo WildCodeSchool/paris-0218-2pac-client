@@ -91,8 +91,8 @@ class ArticleForm extends React.Component {
             </label>
           </div>
           <div className ="descr-membre">
-            <label className="little-description">Description :
-              <textarea className="descrip-art-txt" type="text_description" name='description' value={article.description} onChange={this.handleChange} />
+            <label className="little-description">Tags :
+              <input type="text" name='tags' value={article.tags} onChange={this.handleChange} />
             </label>
             <label className="member-checkbox" >Contenu membre :
               <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
