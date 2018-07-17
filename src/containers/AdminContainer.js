@@ -8,29 +8,9 @@ import AdminSubscribers from '../components/AdminSubscribers'
 import ArticleForm from '../components/ArticleForm'
 import './AdminContainer.css'
 import DocumentForm from '../components/DocumentForm'
-
 import AuthForm from './AuthForm'
-
 import store from '../store.js'
 import api from '../api.js'
-
-// import '../App.css'
-
-const User = ({ user }) =>
-  <li>
-    <span><strong>{user.username}</strong></span>
-    <label> isAdmin<input type='checkbox' checked={user.isAdmin} readOnly /></label>
-  </li>
-
-const AdminUsers = ({ users }) => {
-  const _users = users.map(user => <User key={user.id} user={user} />)
-
-  return (
-    <div>
-      {_users}
-    </div>
-  )
-}
 
 const AdminHome = () => <div></div>
 

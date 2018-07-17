@@ -1,10 +1,15 @@
+.subscriberTable th {
+background-color: #F4971A;
+color: #707070;
+padding: .5em;
+}
+
 .subscribers th {
 font-family: 'Source Sans Pro', sans-serif;
 padding-right: 1em;
 width: 25%;
 background-color: #F4971A;
 color: #707070;
-
 font-size: 1.1em;
 }
 
@@ -41,12 +46,6 @@ cursor: pointer;
 .admin-subscribers-title span {
 font-size: 2em;
 color:#FFFFFF
-}
-
-.subscriberTable th {
-background-color: #F4971A;
-color: #707070;
-padding: .5em;
 }
 
 .csv-link{
