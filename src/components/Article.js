@@ -31,7 +31,7 @@ const Article = ({ article }) => {
           <span className="category">{article.category}</span>
           <span className="tags">{tags}</span>
           <span className="date">Mis en ligne le {(new Date(article.createdAt)).toLocaleString().slice(0, -3)}</span>
-          {article.categoryId === 4 ? <span>Date de l'évenement: {(new Date(article.eventDate)).toLocaleDateString()}</span> : ''}
+          {article.categoryId === 4 ? <span className="event-date">Date de l'évenement: {(new Date(article.eventDate)).toLocaleDateString()}</span> : ''}
         </div>
       </div>
       <div className="article-body">

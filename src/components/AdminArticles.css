@@ -18,7 +18,7 @@
 
 .admin-articles-title{
   text-align: center;
-  width: 77em;
+  width: 100%;
   background-color: #226462;
   border-radius: .3rem;
   margin-bottom: 3em;
@@ -38,6 +38,7 @@
   color: #226462;
   font-weight: bold;
   display: block;
+  height: 1.7rem;
   width: 15em;
   max-width: 15em;
   text-align: center;
@@ -74,4 +75,15 @@ color: #F4971A;
   color: #ffffff;
   border-radius: .3rem;
   padding: 0.2em 0.5em;
+    /*background-color: #F4971A;
+    color: #ffffff;
+    border-radius: .3rem;
+    padding: 0.2em 0.5em;*/
 }
+
+/*.admin-article Link button {
+  background-color: #F4971A;
+  color: #ffffff;
+  border-radius: .3rem;
+  padding: 1.2em 0.5em;
+}*/

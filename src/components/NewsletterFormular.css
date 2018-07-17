@@ -13,26 +13,24 @@
 }
 
 #subscribers-form p {
-  color: white;
+  color: #ffffff;
 }
 
-form {
+#subscribers-form form {
+  width: 100%;
+}
+
+#subscribers-form form div:first-child {
 width: 100%;
+padding: 1em 0em 1em;
 }
 
-form div:first-child {
-
-  padding: 1em 0em 1em;
-
-}
-
-form div:nth-child(2) {
+#subscribers-form form div:nth-child(2) {
   display: flex;
   justify-content: center;
 }
 
-form div:nth-child(3) {
-
+#subscribers-form form div:nth-child(3) {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -59,8 +57,7 @@ form div:nth-child(3) {
 }
 
 #subscribers-form input:focus {
-
-  border: 2px solid #F4971A;
+   border: 2px solid #F4971A;
   border-radius: 5px;
 
 }

@@ -1,6 +1,6 @@
 #header {
   background-image: url('../img/photo_couverture_web.jpg');
-  background-size: auto 100%;
+  /*background-size: auto 100%;*/
   display: flex;
   justify-content: flex-start;
   align-items: center;

@@ -12,7 +12,9 @@ const AsideLeftArticle = ({ article }) =>
       title={article.title}
       category={article.category}
       shortDescription={article.shortDescription}
+      eventDate={article.eventDate}
     />
+
   </Link>
 
 const Home = ({ articles }) => {

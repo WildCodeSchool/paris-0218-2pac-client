@@ -3,4 +3,42 @@
   background-color: rgba(255, 255, 255, 0.85);
   right: 0;
   padding: 0.5rem;
+
+}
+
+
+#auth-form button {
+background-color: #F4971A;
+color: white;
+font-weight: bold;
+border-radius: 0.3em;
+border: 0.15em solid white;
+padding: 0.7em;
+margin-right:0em;
+cursor: pointer;
+}
+
+#auth-form input {
+background-color: #F4971A;
+font-weight: bold;
+color: white;
+border-radius: 0.3em;
+border: 0.15em solid white;
+padding: 0.7em;
+cursor: pointer;
+margin-left: 1.5em;
+}
+
+#auth-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#auth-form span {
+color: #F4971A;
+font-size: .8em;
+background-color: white;
+}
+
+.flex-row {
+	background-color: white;
 }

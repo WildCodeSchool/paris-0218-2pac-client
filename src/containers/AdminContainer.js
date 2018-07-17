@@ -6,32 +6,13 @@ import Header from '../components/Header'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminSubscribers from '../components/AdminSubscribers'
 import ArticleForm from '../components/ArticleForm'
+import './AdminContainer.css'
 import DocumentForm from '../components/DocumentForm'
-
 import AuthForm from './AuthForm'
-
 import store from '../store.js'
 import api from '../api.js'
 
-// import '../App.css'
-
-const User = ({ user }) =>
-  <li>
-    <span><strong>{user.username}</strong></span>
-    <label> isAdmin<input type='checkbox' checked={user.isAdmin} readOnly /></label>
-  </li>
-
-const AdminUsers = ({ users }) => {
-  const _users = users.map(user => <User key={user.id} user={user} />)
-
-  return (
-    <div>
-      {_users}
-    </div>
-  )
-}
-
-const AdminHome = () => <div>Admin home</div>
+const AdminHome = () => <div></div>
 
 const AdminArticleNew = () => <div><ArticleForm submitArticle={api.newArticle} /></div>
 
@@ -116,10 +97,9 @@ class AdminContainer extends Component {
         { loggedAs && loggedAs.isAdmin
           ? <div>
             <AdminNav />
-            <div id='admin-router-view'>
+            <div id='admin-router-view' className="admin-general-container">
               <Router>
                 <AdminHome path='/' />
-                <AdminUsers path='users' users={this.state.users} />
                 <AdminArticles path='articles' articles={this.state.articles} />
                 <AdminArticleNew path='articles/new' />
                 <AdminArticleEdit path='articles/edit/:id' articles={this.state.articles} />
