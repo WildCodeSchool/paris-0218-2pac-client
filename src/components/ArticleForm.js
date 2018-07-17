@@ -10,7 +10,8 @@ const freshArticle = {
   categoryId: 1,
   imageURL: '',
   imageDescription: '',
-  isMemberOnly: false
+  isMemberOnly: false,
+  tags: ''
 }
 
 class ArticleForm extends React.Component {
@@ -92,6 +93,9 @@ class ArticleForm extends React.Component {
             <div>
               <textarea type="text_description" name='description' value={article.description} onChange={this.handleChange} />
             </div>
+            </label>
+          <label>tags
+            <input type="text" name='tags' value={article.tags} onChange={this.handleChange} />
           </label>
           <button type="submit" value="submit">valider</button>
         </form>
