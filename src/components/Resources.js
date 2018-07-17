@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import api from '../api'
 import './Resources.css'
 
 const ResourceCard = ({ doc }) =>
@@ -7,7 +6,7 @@ const ResourceCard = ({ doc }) =>
     <span>{doc.createdAt}</span>
     <span>{doc.title}</span>
     <div className="category_resources">{doc.type}</div>
-    <a target="_blank" href={`${api.hostUrl}/medias/documents/${doc.url}`}>Télécharger</a>
+    <a target="_blank" href={doc.url}>Consulter</a>
   </div>
 
 class Resources extends Component {
