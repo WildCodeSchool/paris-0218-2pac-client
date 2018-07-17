@@ -2,7 +2,6 @@ import React from 'react'
 import './SearchBar.css'
 
 class SearchBar extends React.Component {
-
   state = {
     searchValue: ''
   }
@@ -23,7 +22,7 @@ class SearchBar extends React.Component {
     this.setState({ searchValue: value })
   }
 
-  render() {
+  render () {
     return (
       <div id="search-bar">
         <form onSubmit={this.handleSubmit}>
@@ -32,7 +31,6 @@ class SearchBar extends React.Component {
       </div>
     )
   }
-
 }
 
 export default SearchBar

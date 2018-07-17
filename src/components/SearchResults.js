@@ -12,7 +12,6 @@ const ActualityCard = ({ article }) =>
     </div>
   </Link>
 
-
 const options = {
   shouldSort: true,
   includeScore: false,
@@ -22,8 +21,8 @@ const options = {
   maxPatternLength: 32,
   minMatchCharLength: 1,
   keys: [
-    "title",
-    "tags"
+    'title',
+    'tags'
   ]
 }
 
