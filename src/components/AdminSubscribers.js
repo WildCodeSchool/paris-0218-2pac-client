@@ -1,5 +1,6 @@
 import React from 'react'
 import './AdminSubscribers.css'
+import { CSVLink } from 'react-csv'
 
 const SubscriberCard = ({ subscriber }) =>
   <tr className="subscribers">
@@ -16,8 +17,8 @@ const AdminSubscribers = ({ subscribers }) => {
 
   return (
     <div className="subscribers-container">
-      <div className="admin-subscribers-title"><span>Abonnés à la Newsletter</span></div>
-      <table>
+      <button className="admin-subscribers-title"><span>Abonnés à la Newsletter</span></button>
+      <table className="subscriberTable">
         <thead>
           <tr>
             <th>Nom</th>
@@ -31,6 +32,9 @@ const AdminSubscribers = ({ subscribers }) => {
           {subscribersCards}
         </tbody>
       </table>
+      <button className="csv-link">
+        <CSVLink data={subscribers} filename={'subscribers.csv'}><span>Télécharger</span></CSVLink>
+      </button>
     </div>
   )
 }

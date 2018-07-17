@@ -15,7 +15,7 @@ const AdminArticles = ({ articles }) => {
         <div key={article.id} className="admin-article" >
           <span>{article.title}</span>
           <Link to={`/admin/articles/edit/${article.id}`}><button>Modifier</button></Link>
-          <button onClick={() => deleteArticle(article.id)}>Supprimer</button>
+          <a><button onClick={() => deleteArticle(article.id)}>Supprimer</button></a>
         </div>
       )}
     </div>

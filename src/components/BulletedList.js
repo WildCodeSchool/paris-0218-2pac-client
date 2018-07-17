@@ -3,7 +3,7 @@ import './BulletedList.css'
 
 const BulletedList = () => {
   return (
-    <i class="fas fa-circle"></i>
+    <i className="fas fa-circle"></i>
   )
 }
 

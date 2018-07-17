@@ -12,7 +12,7 @@ const Presentation = ({children}) => {
           <br/>
           <p>Pour une autre PAC est une plateforme française inter-organisations constituant un espace commun de réflexion et d’action, en vue de la refonte de la politique agricole commune (PAC).</p>
           <br/>
-          <p>Pour une autre PAC défend une révision complète de l’actuelle politique agricole commune en faveur d’une nouvelle politique agricole et alimentaire commune (PAAC) mise au service de tous les citoyen·ne·s, en conciliant des objectifs de : </p>
+          <p>Pour une autre PAC défend une révision complète de l’actuelle politique agricole commune en faveur d’une nouvelle politique agricole et alimentaire commune (PAAC) mise au service de tous les citoyen·ne·s, en conciliant des objectifs de&nbsp;: </p>
           <br/>
           <ul>
             <li><BulletedList /> Valorisation du métier de paysanne</li>

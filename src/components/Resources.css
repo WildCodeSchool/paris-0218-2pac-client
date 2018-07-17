@@ -8,6 +8,7 @@
 .resource {
   min-width: 30vw;
   margin: 0em 0 1.5em 0;
+  margin-top: 2em;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,21 +38,56 @@
   font-weight: bold;
   padding: 0.2em 0.5em;
   border-radius: .3rem;
+  width: 15em;
+  text-align: center;
 }
 
 .resource a {
-color: #707070;
-transition: .2s;
-width: 15em;
-max-width: 15em;
-text-align: center;
-padding-top: 0.2em;
+  color: #707070;
+  transition: .2s;
+  width: 10em;
+  /*max-width: 15em;*/
+  text-align: center;
+  padding-top: 0.2em;
 }
 
 .resource a:hover {
-color: #F4971A;
+  color: #F4971A;
+}
+.resource-filters{
+  margin-bottom: 1em;
 }
 
 .resource-filters label {
   color: black;
+}
+
+.resource-filters input {
+    min-width: 6vw;
+    border: 1px solid #F4971A;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    outline-width: 0;
+    border-radius: 0.2em;
+    font-size: 1em;
+    background-color: #F4F4F4;
+}
+
+.resource-filters select {
+    min-width: 53vw;
+    border: 1px solid #F4971A;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-left: 3em;
+    /*outline-width: 0;*/
+}
+
+.search-result {
+  margin-left: 23em;
+  color: #226462;
+  font-weight: bold;
 }

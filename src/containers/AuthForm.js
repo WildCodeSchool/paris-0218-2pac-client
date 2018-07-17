@@ -51,10 +51,10 @@ class AuthForm extends Component {
     return (
       <div id='auth-form'>
         { loggedAs
-          ? <div className='flex row'>
+          ? <div className='flex-row'>
             <span>Logged as <strong>{loggedAs.username}</strong></span>
             <input type='button' value='Sign Out' onClick={this.signout}/>
-            {loggedAs.isAdmin ? <Link to='/admin'><button>admin</button></Link> : ''}
+            {loggedAs.isAdmin ? <Link to='/admin'><button>Admin</button></Link> : ''}
           </div>
           : <form className='flex row' onSubmit={this.signin}>
             <input type='text' placeholder='username' name='username' value={this.state.username} onChange={this.handleChange} />
