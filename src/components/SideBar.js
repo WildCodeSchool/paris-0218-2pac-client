@@ -1,14 +1,17 @@
 import React from 'react'
 import SideBarButton from './SideBarButton'
+import SearchBar from './SearchBar'
 import EventsCalendar from '../containers/EventsCalendar'
 import { Link } from '@reach/router'
 import './SideBar.css'
 
-const SideBar = ({ articles }) => {
+const SideBar = ({ articles, onSearchSubmit }) => {
   const events = articles.filter(article => article.categoryId === 4)
 
   return (
     <div id="sidebar" className="icon-button-globe">
+
+      <SearchBar onSubmit={onSearchSubmit} />
 
       <Link to="/actuality">
         <SideBarButton style={{ backgroundColor: '#226462' }}>

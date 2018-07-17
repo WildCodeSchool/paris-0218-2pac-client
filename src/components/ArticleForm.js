@@ -10,7 +10,8 @@ const freshArticle = {
   categoryId: 1,
   imageURL: '',
   imageDescription: '',
-  isMemberOnly: false
+  isMemberOnly: false,
+  tags: ''
 }
 
 class ArticleForm extends React.Component {
@@ -88,10 +89,8 @@ class ArticleForm extends React.Component {
           <label>contenu membre
             <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
           </label>
-          <label>description
-            <div>
-
-            </div>
+          <label>tags
+            <input type="text" name='tags' value={article.tags} onChange={this.handleChange} />
           </label>
           <button type="submit" value="submit">valider</button>
         </form>
