@@ -7,7 +7,8 @@ const freshDocument = {
   typeId: 1,
   isMemberOnly: false,
   isResource: false,
-  isArchived: false
+  isArchived: false,
+  url: ''
 }
 
 class DocumentForm extends React.Component {
@@ -16,20 +17,13 @@ class DocumentForm extends React.Component {
   }
 
   handleChange = e => {
-    switch (e.target.name) {
-      case 'document':
-        return this.setState({ doc: { ...this.state.doc, document: e.target.files[0] } })
-      default:
-        const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
-        return this.setState({ doc: { ...this.state.doc, [e.target.name]: value } })
-    }
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
+
+    return this.setState({ doc: { ...this.state.doc, [e.target.name]: value } })
   }
 
   reset = () => {
     this.setState({ doc: freshDocument })
-
-    // only way to reset the value of the input type file
-    document.getElementById('document-form-file').value = ''
   }
 
   handleSubmit = (e) => {
@@ -50,8 +44,8 @@ class DocumentForm extends React.Component {
           <label>titre
             <input type='text' name='title' value={doc.title} onChange={this.handleChange} />
           </label>
-          <label>document
-            <input id='document-form-file' type='file' name='document' onChange={this.handleChange} accept='image/png, image/jpeg, application/pdf, .word, .ppt, .pdf, .docx' />
+          <label>url
+            <input type='text' name='url' value={doc.url} onChange={this.handleChange} />
           </label>
           <label>catégorie
             <select name='typeId' value={doc.typeId} onChange={this.handleChange}>
