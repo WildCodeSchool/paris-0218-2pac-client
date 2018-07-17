@@ -16,22 +16,22 @@
   color: white;
 }
 
-form {
+#subscribers-form form {
 width: 100%;
 }
 
-form div:first-child {
+#subscribers-form form div:first-child {
 
   padding: 1em 0em 1em;
 
 }
 
-form div:nth-child(2) {
+#subscribers-form form div:nth-child(2) {
   display: flex;
   justify-content: center;
 }
 
-form div:nth-child(3) {
+#subscribers-form form div:nth-child(3) {
 
   display: flex;
   justify-content: center;

@@ -7,7 +7,7 @@ const SystemeAgro = ({children}) => {
     <div>
       <Container>
         <div className="fix-content-article">
-            <h1>Système agro-alimentaire souhaité</h1>
+          <h1>Système agro-alimentaire souhaité</h1>
           <br/>
           <h2 className="cherry">
             <b>

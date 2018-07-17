@@ -8,9 +8,9 @@ const AsideLeft = props => {
       <span className="category"><b>{props.category}</b></span>
       <span className="aside-left-title"><b>{props.title}</b></span>
       <p>{props.shortDescription}</p>
-         {    props.category === 'Evénement'
-              ? <p>Date : {props.eventDate}</p>
-              : ''
+      { props.category === 'Evénement'
+        ? <p>Date : {props.eventDate}</p>
+        : ''
       }
 
       <p><span className="aside-link" >Lire la suite</span></p>

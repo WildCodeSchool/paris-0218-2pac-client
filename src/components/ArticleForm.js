@@ -90,7 +90,7 @@ class ArticleForm extends React.Component {
           </label>
           <label>description
             <div>
-            <textarea type="text_description" name='description' value={article.description} onChange={this.handleChange} />
+              <textarea type="text_description" name='description' value={article.description} onChange={this.handleChange} />
             </div>
           </label>
           <button type="submit" value="submit">valider</button>
