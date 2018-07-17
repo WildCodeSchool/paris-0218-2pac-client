@@ -17,7 +17,6 @@ const AdminSubscribers = ({ subscribers }) => {
 
   return (
     <div className="subscribers-container">
-      <button className="admin-subscribers-title"><span>Abonnés à la Newsletter</span></button>
       <table className="subscriberTable">
         <thead>
           <tr>
