@@ -38,6 +38,7 @@
   color: #226462;
   font-weight: bold;
   display: block;
+  height: 1.7rem;
   width: 15em;
   max-width: 15em;
   text-align: center;
@@ -73,7 +74,7 @@ color: #F4971A;
   background-color: #F4971A;
   color: #ffffff;
   border-radius: .3rem;
-  padding: 1.2em 0.5em;
+  padding: 0.2em 0.5em;
     /*background-color: #F4971A;
     color: #ffffff;
     border-radius: .3rem;

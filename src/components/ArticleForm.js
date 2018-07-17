@@ -93,7 +93,7 @@ class ArticleForm extends React.Component {
             <div>
               <textarea type="text_description" name='description' value={article.description} onChange={this.handleChange} />
             </div>
-            </label>
+          </label>
           <label>tags
             <input type="text" name='tags' value={article.tags} onChange={this.handleChange} />
           </label>
