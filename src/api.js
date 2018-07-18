@@ -1,6 +1,10 @@
 import jwt from './jwt'
 
-const hostUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000'
+const defaultUrl = 'http://localhost:5000'
+const hostUrl = process.env.REACT_APP_API_URL || defaultUrl
+if (!process.env.REACT_APP_API_URL) {
+  console.warn(`'REACT_APP_API_URL' environment variable is not set! -> fallback to default url: '${defaultUrl}'`)
+}
 
 const _fetch = (route, options = {}) => {
   const token = jwt.get()
@@ -9,7 +13,7 @@ const _fetch = (route, options = {}) => {
     ? { ...options.headers, 'Authorization': `JWT ${token}` }
     : options.headers
 
-  return fetch(route, {
+  return fetch(`${hostUrl}${route}`, {
     ...options,
     headers
   })
