@@ -5,7 +5,7 @@ export default
 <div>
   <h1>Orientations Communes </h1>
   <br/>
-  <h2 className="center-title">Un autre PAACte entre les paysan·ne·s et la société </h2>
+  <h2>Un autre PAACte entre les paysan·ne·s et la société </h2>
   <br/>
   <p>&emsp;&emsp;&emsp;La Politique Agricole Commune (PAC) 2014-2020 a manqué sa cible. Elle était annoncée comme plus verte et plus juste, mais elle n’a en réalité pas changé de cap ni arrêté le rouleau compresseur auquel la nature et les agriculteur·rice·s sont soumis. En effet, la PAC 2014-2020 s’est illustrée par le manque total d’ambition du verdissement, la discrimination des critères envers les petites fermes, l’absence de plafonnement, la persistance du déséquilibre entre 1er et 2ème piliers et le parachèvement de la dérégulation. De surcroît, en France, la confiance des agriculteur·rice·s en cette politique a été profondément ébranlée par son incohérence, sa complexité, son incapacité à leur permettre de tirer un revenu de leur production, et surtout, par l’instabilité des dispositifs.
   </p>

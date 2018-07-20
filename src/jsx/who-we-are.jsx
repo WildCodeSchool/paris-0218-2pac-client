@@ -13,7 +13,7 @@ export default
   <p>&emsp;&emsp;&emsp;The major strength of <i>Pour une autre PAC </i>is the common mobilization of dozens of associations, federations and syndicates, with various interests, around a common and specific goal: pushing for a positive reform of the CAP. There is no other such organization or structure in France working on the CAP.</p>
   <p>&emsp;&emsp;&emsp;<i>Pour une autre PAC </i>gathers around some thirty member organizations, structured in four categories. All work at national level and demonstrate a direct link between their domain of activity and the CAP.</p><br/>
   <br/>
-  <ul className="circle-list">
+  <ul>
     <li>Farmer’s Organizations:
       <ul>
         <li> <a href="https://www.confederationpaysanne.fr/">Confédération paysanne</a></li>

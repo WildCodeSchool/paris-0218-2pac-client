@@ -7,7 +7,7 @@ export default
   <br/>
   <p><i> Pour une autre PAC </i> anime un travail collectif s’articulant autour de trois axes :</p>
   <br/>
-  <ul className="circle-list">
+  <ul>
     <li>Favoriser l’échange entre parties prenantes à but non lucratif sur la thématique de la PAC, en France et dans l’Union européenne :
       <ul>
         <li>suivre l’actualité politique française et européenne en lien avec la réforme de la PAC,</li>

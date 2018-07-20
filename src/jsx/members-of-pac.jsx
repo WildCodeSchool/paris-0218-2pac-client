@@ -5,7 +5,7 @@ export default
 <div>
   <h1>Nos membres</h1>
   <br/>
-  <ul className="circle-list">
+  <ul>
     <li>Organisations paysannes :</li>
     <ul>
       <li> <a href="https://www.confederationpaysanne.fr/">Confédération paysanne</a></li>

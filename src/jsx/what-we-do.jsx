@@ -7,7 +7,7 @@ export default
   <br/>
   <p><i>Pour une autre PAC</i>&nbsp;&nbsp;leads and coordinates collective work articulated around three axes:</p>
   <br/>
-  <ul className="circle-list">
+  <ul>
     <li><b>Forum</b> i.e. encouraging communication and engagement between the non-for-profit stakeholders in CAP-related topics:
       <ul>
         <li>building, adjusting and consolidating internal cohesion, including the goals, political orientations and strategy</li>
