@@ -22,7 +22,7 @@ const Nav = ({ menu }) => {
             <ul className="submenu">
               <li><Link to='abc-de-la-pac'>L’ABC de la PAC</Link></li>
               <li><Link to='la-pac-ca-mimpacte'>La PAC, ça m’impacte ?</Link></li>
-              <li><Link to='la-pac-20152020'>La PAC 2015-2020</Link></li>
+              <li><Link to='la-pac-2015-2020'>La PAC 2015-2020</Link></li>
               <li><Link to='reforme-de-la-pac'>La réforme de la PAC</Link></li>
               <li><Link to='chiffres-cles'>Chiffres-clés</Link></li>
               <li><Link to='sigles'>Sigles</Link></li>
@@ -34,7 +34,7 @@ const Nav = ({ menu }) => {
               <li><Link to='bilan-actuel'>Bilan de l’actuelle PAC</Link></li>
               <li><Link to='systeme-agro'>Système agro-alimentaire souhaité</Link></li>
               <li><Link to='priorite-2020'>12 priorités pour la PAC post 2020</Link></li>
-              <li><Link to='PAAC'>PAAC souhaitée</Link></li>
+              <li><Link to='paac'>PAAC souhaitée</Link></li>
             </ul>
           </li>
           <li className="menu"><a>Agir</a>

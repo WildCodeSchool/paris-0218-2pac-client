@@ -1,0 +1,61 @@
+td{
+  padding: .3em;
+}
+
+td:first-child {
+  color: #F4971A;
+}
+
+.fix-content-article h1{
+   color: #226462;
+   text-transform: uppercase;
+   font-size:1.25em;
+   letter-spacing: 1px;
+
+}
+.fix-content-article h2{
+  font-size: 1.15em;
+}
+.fix-content-article a{
+  text-decoration: none;
+  color:#707070;
+  transition: .2s;
+}
+
+.fix-content-article a:hover{
+  text-decoration: none;
+  color: #F4971A;
+}
+
+.fix-content-article{
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.3;
+}
+
+.orange{
+  color: #F4971A;
+}
+
+.green{
+  color: #226462;
+}
+.cherry{
+  color: #731717;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.circle-list ul li{
+  list-style: circle;
+  margin-left: 4em;
+}
+
+.list-padding ul li{
+  padding: 2em;
+}
+.center-title{
+  text-align: center;
+}
