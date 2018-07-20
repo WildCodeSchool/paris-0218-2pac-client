@@ -52,15 +52,15 @@ class AuthForm extends Component {
       <div id='auth-form'>
         { loggedAs
           ? <div className='flex-row'>
-            <span>Connecté, <strong>{loggedAs.username}</strong></span>
+            <span className='mr-1'>Connecté, <strong>{loggedAs.username}</strong></span>
             <input type='button' value='Se déconnecter' onClick={this.signout}/>
-            {loggedAs.isAdmin ? <Link to='/admin'><button>Zone admin</button></Link> : ''}
+            {loggedAs.isAdmin ? <Link to='/admin'><input type='button' value="Zone admin" /></Link> : ''}
           </div>
           : <form className='flex row' onSubmit={this.signin}>
-            <input type='text' placeholder='identifiant' name='username' value={this.state.username} onChange={this.handleChange} />
-            <input type='password' placeholder='mot de passe' name='password' value={this.state.password} onChange={this.handleChange} />
+            <span className="auth-error-message">{this.state.message}</span>
+            <input type='text' placeholder='identifiant' required name='username' value={this.state.username} onChange={this.handleChange} />
+            <input type='password' placeholder='mot de passe' required name='password' value={this.state.password} onChange={this.handleChange} />
             <input type='submit' value='Se connecter' />
-            <span>{this.state.message}</span>
           </form>
         }
       </div>

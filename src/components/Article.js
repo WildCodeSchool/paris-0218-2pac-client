@@ -1,46 +1,30 @@
 import React from 'react'
-import Container from './Container'
+import CategoryLabel from './CategoryLabel'
 import ChevronTitle from './ChevronTitle'
 import './Article.css'
 
-const Article = ({ article }) => {
-  const noImgFunc = () => {
-    if (article.imageURL === '') {
-      return (
-        <div className="intro-img" style={ { display: 'none' } }>
-          <p className="img-legend">{article.imageDescription}</p>
-        </div>
-      )
-    } else {
-      return (
-        <div className="intro-img" style={ { backgroundImage: `url(${article.imageURL})` } }>
-          <p className="img-legend">{article.imageDescription}</p>
-        </div>
-      )
-    }
-  }
+const Tag = ({ children }) => <span className="tag">{children}</span>
 
-  const tags = article.tags.split(',').map((tag, i) => <span key={i} className="tag">{tag}</span>)
+const Article = ({ article }) => {
+  const tags = article.tags.split(',')
+    .filter(tag => tag !== '')
+    .map((tag, i) => <Tag key={i}>{tag}</Tag>)
 
   return (
-    <Container>
-      <div className="intro-article">
-        <ChevronTitle title={article.title} />
-        {noImgFunc()}
-        <div className="intro-details">
-          <span className="category">{article.category}</span>
-          <span className="tags">{tags}</span>
-          <span className="date">Mis en ligne le {(new Date(article.createdAt)).toLocaleString().slice(0, -3)}</span>
-          {article.categoryId === 4 ? <span className="event-date">Date de l'évenement: {(new Date(article.eventDate)).toLocaleDateString()}</span> : ''}
+    <div className="article">
+      <div className="article-header">
+        <h3><ChevronTitle title={article.title} /></h3>
+        <div className="article-cover-image" style={{ backgroundImage: `url(${article.imageURL})` }}></div>
+        <span className="article-cover-image-legend">{article.imageDescription}</span>
+        <div className="article-header-details">
+          <CategoryLabel>{article.category}</CategoryLabel>
+          <span className="article-created-date bold">{(new Date(article.createdAt)).toLocaleDateString()}</span>
+          <span className="article-tags">{tags}</span>
         </div>
+        {/*article.categoryId === 4 ? <span className="event-date">Date de l'évenement: {(new Date(article.eventDate)).toLocaleDateString()}</span> : ''*/}
       </div>
-      <div className="article-body">
-        <p className="headline">
-          {article.shortDescription}
-        </p>
-        <p className="content" dangerouslySetInnerHTML={{ __html: article.description }}></p>
-      </div>
-    </Container>
+      <div className="article-content" dangerouslySetInnerHTML={{ __html: article.description }}></div>
+    </div>
   )
 }
 

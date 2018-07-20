@@ -1,6 +1,6 @@
 import React from 'react'
-import './NewsletterFormular.css'
-import ChevronTitle from './ChevronTitle'
+import ChevronTitle from '../components/ChevronTitle'
+import './NewsletterPage.css'
 
 const initialInputValues = {
   reuseableInfo: false,
@@ -10,7 +10,7 @@ const initialInputValues = {
   email: ''
 }
 
-class NewsletterFormular extends React.Component {
+class NewsletterPage extends React.Component {
   state = {
     inputs: initialInputValues
   }
@@ -23,7 +23,6 @@ class NewsletterFormular extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    // alert('votre formulaire a été envoyé')
 
     const data = this.state.inputs
 
@@ -40,8 +39,8 @@ class NewsletterFormular extends React.Component {
     const inputs = this.state.inputs
 
     return (
-      <div id='subscribers-form'>
-        <p><ChevronTitle ChevronColor="white" TextColor="white" title="Recevoir des nouvelles de pour une autre Pac" /> </p>
+      <div id='subscribers-form' className="container">
+        <ChevronTitle ChevronColor="white" TextColor="white" title="Recevoir des nouvelles de pour une autre Pac" />
         <p>En remplissant ce formulaire, la plateforme <i>Pour une autre PAC </i>
             pourra utiliser ces données pour vous informer des ses prochaines actions.</p>
         <form onSubmit={this.handleSubmit}>
@@ -68,4 +67,4 @@ class NewsletterFormular extends React.Component {
   }
 }
 
-export default NewsletterFormular
+export default NewsletterPage

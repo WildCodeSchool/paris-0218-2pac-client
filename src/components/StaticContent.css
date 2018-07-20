@@ -1,18 +1,20 @@
+.static-content.container {
+  padding: 3rem;
+}
+
 .static-content {
   text-align: justify;
   text-justify: inter-word;
-  line-height: 1.3;
+  /*line-height: 1.3;*/
 }
 
 .static-content h1 {
   color: #226462;
   text-transform: uppercase;
-  font-size: 1.25em;
-  letter-spacing: 1px;
 }
 
 .static-content h2 {
-  font-size: 1.15em;
+  /*font-size: 1.15em;*/
 }
 
 .static-content a {
@@ -21,12 +23,12 @@
   transition: .2s;
 }
 
-.static-content a:hover{
+.static-content a:hover {
   text-decoration: none;
   color: #F4971A;
 }
 
-.static-content td{
+.static-content td {
   padding: .3em;
 }
 
@@ -34,15 +36,26 @@
   color: #F4971A;
 }
 
-.static-content .circle-list ul li {
-  list-style: circle;
-  margin-left: 4em;
+/* bullet list */
+
+.static-content ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+.static-content ul ul {
+  padding-left: 3rem;
+
 }
 
-.static-content .list-padding ul li {
-  padding: 2em;
+.static-content ul li::before {
+  content: "● "; /* • */
+  color: #F4971A;
 }
 
-.static-content .center-title {
-  text-align: center;
+.static-content ul ul {
+  list-style-type: circle;
+}
+
+.static-content ul ul li::before {
+  content: none;
 }

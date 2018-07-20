@@ -1,49 +1,27 @@
 import React from 'react'
-import SideBarButton from './SideBarButton'
-import SearchBar from './SearchBar'
-import EventsCalendar from '../containers/EventsCalendar'
 import { Link } from '@reach/router'
+import SearchBar from './SearchBar'
 import './SideBar.css'
+
+const SideBarButton = ({ backgroundColor, icon, children }) =>
+  <div className="sidebar-button" style={{ backgroundColor }}>
+    <i className={`flex-1 sidebar-button-icon ${icon}`} />
+    { children ? <div className="flex-5">{children}</div> : '' }
+  </div>
 
 const SideBar = ({ articles, onSearchSubmit }) => {
   const events = articles.filter(article => article.categoryId === 4)
 
   return (
-    <div id="sidebar" className="icon-button-globe">
-
+    <div id="sidebar">
       <SearchBar onSubmit={onSearchSubmit} />
-
-      <Link to="/actuality">
-        <SideBarButton style={{ backgroundColor: '#226462' }}>
-          <span><i className="fas fa-globe"></i></span>Actualités
-        </SideBarButton>
-      </Link>
-
-      <Link to="/resources">
-        <SideBarButton style={{ backgroundColor: '#F4971A' }}>
-          <span><i className="fas fa-book-open"></i></span>Ressources
-        </SideBarButton>
-      </Link>
-
-      <Link to="/contact">
-        <SideBarButton style={{ backgroundColor: '#A99C2F' }}>
-          <span><i className="fas fa-user-alt"></i></span>Contacts
-        </SideBarButton>
-      </Link>
-
-      <Link to="/newsletter">
-        <SideBarButton style={{ backgroundColor: '#731717' }}>
-          <span><i className="fas fa-rss"></i></span>Rester connecté
-        </SideBarButton>
-      </Link>
-
+      <Link to="/news"><SideBarButton backgroundColor="#226462" icon="fas fa-globe">Actualités</SideBarButton></Link>
+      <Link to="/resources"><SideBarButton backgroundColor="#F4971A" icon="fas fa-book-open">Ressources</SideBarButton></Link>
+      <Link to="/contact"><SideBarButton backgroundColor="#A99C2F" icon="fas fa-user-alt">Contacts</SideBarButton></Link>
+      <Link to="/subscribe"><SideBarButton backgroundColor="#731717" icon="fas fa-rss">Rester connecté</SideBarButton></Link>
       <a href="https://twitter.com/pouruneautrepac" target="_blank" rel="noopener noreferrer">
-        <SideBarButton style={{ backgroundColor: '#707070' }}>
-          <span><i className="fab fa-twitter"></i></span>
-        </SideBarButton>
+        <SideBarButton backgroundColor="#707070" icon="fab fa-twitter"></SideBarButton>
       </a>
-
-      <EventsCalendar events={events} />
     </div>
   )
 }

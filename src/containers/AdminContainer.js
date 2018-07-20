@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router } from '@reach/router'
+import { Router, Link } from '@reach/router'
 import AdminNav from '../components/AdminNav'
 import AdminArticles from '../components/AdminArticles'
 import Header from '../components/Header'
@@ -110,7 +110,10 @@ class AdminContainer extends Component {
               </Router>
             </div>
           </div>
-          : <div>You must sign in with an admin account</div>
+          : <div className="container">
+              <div>Vous devez vous connecter avec un compte <b>administrateur</b></div>
+              <Link to="/"><button>Revenir à l'accueil</button></Link>
+            </div>
         }
       </div>
     )

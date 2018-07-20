@@ -1,9 +1,12 @@
 import React from 'react'
+import ScrollUp from '../containers/utils/ScrollUp'
 import './StaticContent.css'
 
 const StaticContent = ({ content }) =>
-  <div className="static-content container">
-    {content}
-  </div>
+  <ScrollUp>
+    <div className="static-content container">
+      {content}
+    </div>
+  </ScrollUp>
 
 export default StaticContent

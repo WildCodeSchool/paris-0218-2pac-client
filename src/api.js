@@ -108,6 +108,14 @@ const deleteDocument = id => _fetch(`/documents/${id}`, { method: 'delete' })
 
 const getSubscribers = () => _fetch('/subscribers')
 
+const newSubscriber = subscriber => _fetch('/subscribers', {
+  method: 'post',
+  headers: {
+    'content-type': 'application/json'
+  },
+  body: JSON.stringify(subscriber)
+})
+
 export default {
   hostUrl,
   getUsers,
@@ -120,6 +128,7 @@ export default {
   updateDocument,
   deleteDocument,
   getSubscribers,
+  newSubscriber,
   signIn,
   whoami,
   signOut

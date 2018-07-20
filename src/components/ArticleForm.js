@@ -78,7 +78,7 @@ class ArticleForm extends React.Component {
           {
             article.categoryId === 4
               ? <label>Date de l'évenement :
-                <input type="date" name='eventDate' value={article.eventDate} onChange={this.handleChange} />
+                <input type="date" name='eventDate' value={article.eventDate} required onChange={this.handleChange} />
               </label>
               : ''
           }

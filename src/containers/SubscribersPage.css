@@ -1,0 +1,34 @@
+#subscribers-page {
+  background-color: #731717;
+  color: white;
+}
+
+#subscribers-page form div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+#subscribers-page form div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#subscribers-page input {
+  color: black;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+#subscribers-page input[name='lastName'], input[name='firstName'] {
+  width: 50%;
+}
+
+#subscribers-page input[type='submit'] {
+  background-color: #F4971A;
+  color: white;
+  border: 0.15rem solid white;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}

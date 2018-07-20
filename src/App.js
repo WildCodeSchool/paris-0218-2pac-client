@@ -1,27 +1,24 @@
 import React, { Component } from 'react'
 import { Router, navigate } from '@reach/router'
+import NavBar from './components/NavBar'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
 
-import Home from './containers/Home'
-import ContactContainer from './containers/ContactContainer'
-import ArticleContainer from './containers/ArticleContainer'
-import ActualityContainer from './containers/ActualityContainer'
-import ResourcesContainer from './containers/ResourcesContainer'
-import NewsletterContainer from './containers/NewsletterContainer'
-
-import SearchResults from './components/SearchResults'
-
-import Nav from './components/Nav'
 import StaticContent from './components/StaticContent'
 
 import AuthForm from './containers/AuthForm'
 
+import Home from './containers/Home'
+import ContactPage from './containers/ContactPage'
+import ArticlePage from './containers/ArticlePage'
+import NewsPage from './containers/NewsPage'
+import ResourcesPage from './containers/ResourcesPage'
+import SubscribersPage from './containers/SubscribersPage'
+import SearchResultsPage from './containers/SearchResultsPage'
 
-/* mocks */
-import infoContact from './mocks/infoContact.json'
 import staticContentMapping from './jsx/__mapping'
+import contactInfos from './datas/contact-infos.json'
 
 import api from './api.js'
 import store from './store.js'
@@ -77,24 +74,21 @@ class App extends Component {
       <div>
         <AuthForm loggedAs={loggedAs} onLoggedIn={this.onLoggedIn} onLoggedOut={this.onLoggedOut} />
         <Header />
-        <Nav />
-        <div id='app-content'>
-          <div id='app-sidebar-left'></div>
-          <div id='app-center' className='container'>
+        <NavBar />
+        <div id='app'>
+          <div id='app-content'>
             <Router>
               <Home path="/" articles={this.state.articles} />
-              <ArticleContainer path="/article/:id" articles={this.state.articles} />
-              <ActualityContainer path="/actuality" articles={this.state.articles} />
-              <ResourcesContainer path="/resources" documents={this.state.documents} />
-              <NewsletterContainer path="/newsletter" />
-              <ContactContainer path="/contact" contactData={infoContact} />
-
-              <SearchResults path="/search/:searchValue" articles={this.state.articles} />
-
+              <ArticlePage path="/article/:id" articles={this.state.articles} />
+              <NewsPage path="/news" articles={this.state.articles} />
+              <ResourcesPage path="/resources" documents={this.state.documents} />
+              <SubscribersPage path="/subscribe" />
+              <ContactPage path="/contact" contactInfos={contactInfos} />
+              <SearchResultsPage path="/search/:searchValue" articles={this.state.articles} />
               {staticContentRoutes}
             </Router>
           </div>
-          <div id='app-sidebar-right'>
+          <div id='app-sidebar'>
             <SideBar articles={this.state.articles} onSearchSubmit={this.onSearchSubmit} />
           </div>
         </div>

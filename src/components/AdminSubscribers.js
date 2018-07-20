@@ -8,8 +8,18 @@ const SubscriberCard = ({ subscriber }) =>
     <td>{subscriber.firstName}</td>
     <td>{subscriber.phoneNumber}</td>
     <td>{subscriber.email}</td>
-    <td>{subscriber.reuseableInfo ? 'Oui' : 'Non'}</td>
+    <td>{subscriber.reuseableInfo ? 'oui' : 'non'}</td>
   </tr>
+
+const prepareSubscriber = subscriber => ({
+  date: subscriber.createdAt,
+  nom: subscriber.lastName,
+  prenom: subscriber.firstName,
+  telephone: subscriber.phoneNumber,
+  mail: subscriber.email,
+  rgpd: subscriber.reuseableInfo ? 'oui' : 'non'
+})
+const prepareSubscribers = subscribers => subscribers.map(prepareSubscriber)
 
 const AdminSubscribers = ({ subscribers }) => {
   const subscribersCards = subscribers
@@ -32,7 +42,7 @@ const AdminSubscribers = ({ subscribers }) => {
         </tbody>
       </table>
       <button className="csv-link">
-        <CSVLink data={subscribers} filename={'subscribers.csv'}><span>Télécharger</span></CSVLink>
+        <CSVLink data={prepareSubscribers(subscribers)} filename={'subscribers.csv'}><span>Télécharger (au format csv)</span></CSVLink>
       </button>
     </div>
   )

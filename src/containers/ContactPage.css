@@ -8,95 +8,40 @@
 .find-us {
   width: 50%;
   padding: 1.25em;
-
 }
 
 .contact-us {
-
   width: 50%;
   padding: 1.25em;
-
 }
 
 .sub-title {
-
   margin-bottom : 0.9375em;
   font-size : 1.1875em;
   font-weight: 700;
   color: #707070;
-
 }
 
 .find-us-content {
-
   display:flex
-
 }
 
 .contact-icon {
-
   font-size: 1.25em;
   margin-right: 0.625em;
 }
 
 .contact-us-content  div {
-
   padding-bottom: 0.625em;
-
 }
 
 .contact-us-content a {
-
   color: #707070;
   transition: .3s;
 }
 
 .contact-us-content a:hover {
-
   color: #F4971A;
   transition: .4s;
 }
 
-@media screen and (max-width: 45em) {
-
-  .container-contact {
-
-    display: block;
-    text-align: center;
-
-  }
-
-  .find-us {
-
-    width: 100%;
-    padding: 0.625em;
-
-  }
-
-  .contact-us {
-
-    width: 100%;
-    padding: 0.625em;
-
-  }
-
-  .find-us-content {
-
-    display: block;
-    font-size: 0.75em;
-
-  }
-
-  .contact-us-content {
-
-    font-size: 0.75em;
-
-  }
-
-  .contact-icon {
-
-    font-size: 1.25em;
-    margin-right: 0.425em;
-  }
-
-}

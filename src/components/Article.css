@@ -1,77 +1,45 @@
-.headline {
-  font-size: 1.5em;
-  color: #226462 ;
-  word-spacing: 2px;
+.article-header-details {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
 }
 
-.content {
-  color:  #707070;
-  font-weight:600;
-  font-size : 1.0625em;
+.article-content {
+  margin-top: 2rem;
 }
 
-.icon {
-  color: #F4971A;
+.article-created-date {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  flex-grow: 1;
 }
 
-.title {
-  font-weight: 700;
-  color: #707070;
-  text-transform: uppercase;
-  font-size : 1.25em;
-  letter-spacing: 1px;
-  padding: 0.625em 0 0.9375em 0;
-}
-
-.intro-img {
+.article-cover-image {
   width: 100%;
-  min-height: 11em;
-  max-height: 11em;
+  height: 10rem;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
-.img-legend {
-  font-size: 0.625em;
-  color: white;
+.article-cover-image-legend {
+  font-size: 0.7rem;
 }
 
-
-.img-legend span {
-  text-decoration: underline;
+.article-tags {
+  display: flex;
 }
 
-.intro-details {
-  padding: 1.5625em 0 1.5625em 0;
-}
-
-.category {
-  background-color: #F4971A;
-  padding: 0.2rem 0.5rem;
-  margin-right: 2em;
-  text-transform: uppercase;
-  border-radius: 0.3rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: white;
-}
-
-.date {
-  font-weight: 700;
-  color: #707070;
+.article-tags .tag {
+  margin-right: 0.3rem;
 }
 
 .tag {
-  border: 1px solid gray;
+  border: 1px solid #bbb;
   border-radius: 0.3rem;
-  padding: 0.3rem;
-  color: gray;
-  margin: 0.1rem;
+  padding: 0.25rem 0.4rem;
+  color: #bbb;
   font-size: 0.8rem;
+  line-height: 0.8rem;
   text-transform: lowercase;
-}
-
-.tag-container {
-  float: right;
 }
