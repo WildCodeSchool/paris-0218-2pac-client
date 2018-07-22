@@ -21,11 +21,10 @@ const EventCalendarCard = ({ event }) =>
   <div className="events-calendar-card">
     <Label>{(new Date(event.eventDate)).toLocaleDateString()}</Label>
     <span className="bold ml-2">{event.title}</span>
-    {/*<div className="mt-2">{event.shortDescription}</div>*/}
+    {/* <div className="mt-2">{event.shortDescription}</div> */}
     <div><Link className="link" to={`/article/${event.id}`}>> Lire la suite</Link></div>
     <div className="divider" />
   </div>
-
 
 class EventsCalendar extends Component {
   onClickDay = date => {
@@ -79,7 +78,6 @@ class EventsCalendar extends Component {
         </div>
       </div>
     )
-
   }
 }
 

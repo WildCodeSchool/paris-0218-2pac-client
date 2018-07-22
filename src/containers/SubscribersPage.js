@@ -1,6 +1,7 @@
 import React from 'react'
 import ChevronTitle from '../components/ChevronTitle'
 import './SubscribersPage.css'
+import Alert from 'react-s-alert'
 import api from '../api.js'
 
 const freshSubscriber = {
@@ -22,13 +23,20 @@ class SubscribersPage extends React.Component {
     return this.setState({ subscriber: { ...this.state.subscriber, [e.target.name]: value } })
   }
 
+  reset = () => {
+    this.setState({ subscriber: freshSubscriber })
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
 
     const subscriber = this.state.subscriber
 
     api.newSubscriber(subscriber)
-    // .then(res => this.reset())
+      .then(res => {
+        Alert.success(`Merci ${subscriber.firstName}, votre inscription a bien été prise en compte!`)
+        this.reset()
+      })
   }
 
   render () {

@@ -26,24 +26,23 @@ const AdminSubscribers = ({ subscribers }) => {
     .map(subscriber => <SubscriberCard key={subscriber.id} subscriber={subscriber} />)
 
   return (
-    <div className="subscribers-container">
-      <table className="subscriberTable">
+    <div id='admin-subscribers' className="container">
+      <span><b>{subscribers.length}</b> abonnés</span>
+      <button className="csv-button"><CSVLink data={prepareSubscribers(subscribers)} filename={'subscribers.csv'}>Télécharger (au format csv)</CSVLink></button>
+      <table>
         <thead>
           <tr>
             <th>Nom</th>
             <th>Prénom</th>
             <th>Téléphone</th>
             <th>E-mail</th>
-            <th>Infos</th>
+            <th>RGPD</th>
           </tr>
         </thead>
         <tbody>
           {subscribersCards}
         </tbody>
       </table>
-      <button className="csv-link">
-        <CSVLink data={prepareSubscribers(subscribers)} filename={'subscribers.csv'}><span>Télécharger (au format csv)</span></CSVLink>
-      </button>
     </div>
   )
 }

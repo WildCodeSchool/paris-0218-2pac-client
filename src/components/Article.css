@@ -31,10 +31,6 @@
 }
 
 .article-tags .tag {
-  margin-right: 0.3rem;
-}
-
-.tag {
   border: 1px solid #bbb;
   border-radius: 0.3rem;
   padding: 0.25rem 0.4rem;
@@ -42,4 +38,5 @@
   font-size: 0.8rem;
   line-height: 0.8rem;
   text-transform: lowercase;
+  margin-right: 0.3rem;
 }

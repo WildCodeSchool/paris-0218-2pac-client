@@ -25,7 +25,6 @@ const search = (searchValue, source) => {
 }
 
 const byMostRecent = (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-const byOlder = (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
 
 const SearchResultsPage = ({ articles, searchValue }) => {
   const resultArticles = search(searchValue, articles)

@@ -1,108 +1,51 @@
-#article-form {
-font-family: 'Source Sans Pro', sans-serif;
-width: 100%;
-align-items: center;
-justify-content: center;
-margin: auto;
-background-color: #F4971A;
-color: #ffffff;
-letter-spacing: 0.04rem;
-padding: 1rem;
-line-height: 1.2rem;
+.admin-form {
+  background-color: #F4971A;
+  color: white;
+  padding: 2rem;
 }
 
-#article-form form {
-  margin: 2rem;
-  margin-bottom: 6rem;
-}
-
-#article-form label {
-width: 50%;
-flex-direction: column;
-display: flex;
-margin: 0.5em;
-/*margin-top: 2rem;*/
-}
-
-#article-form input {
-border: 2px solid transparent;
-transition: .3s;
-outline-width: 0;
-margin-top: .3em;
-/*color: #F4971A;*/
-}
-
-#article-form select {
-background-color: white;
-border: 2px solid transparent;
-transition: .3s;
-outline-width: 0;
-width: 100%;
-margin-top: .3em;
-/*color: #F4971A;*/
-}
-
-.article-form-image{
-  width: 100%;
+.admin-form form {
   display: flex;
+  flex-direction: column;
 }
 
-.short-description-article {
-height: 10em;
-width:70em;
-border: 2px solid transparent;
-transition: .3s;
-outline-width: 0;
-margin-top: .3em;
-}
-
-#article-form .descr-membre{
+.admin-form label {
   display: flex;
-  margin-bottom: 1.5rem;
+  flex-direction: column;
+  padding: 0.2rem 0.5rem;
 }
 
-#article-form .send-button {
-  width: 8em;
-  padding: .6em .6em .6em .6em;
-  background-color: #731717;
-  font-size: 1rem;
-  border: solid 1px #ffffff;
-  cursor: pointer;
-  float: right;
-  margin-top: 1em;
-  border-radius: .2em;
-  color: #ffffff;
-  }
-
-.titre-categorie {
-  width: 100%;
-  display: flex;
+.admin-form input, .admin-form select, .admin-form textarea {
+  border: 2px solid transparent;
+  outline-width: 0;
+  margin-top: .2rem;
 }
 
-#article-form textarea {
-  width: 55rem;
-  margin-top: 0.4em;
+.admin-form textarea {
   resize: none;
 }
 
-#article-form input[type='checkbox'] {
-  -ms-transform: scale(1.6);
-  /* IE */
-  -moz-transform: scale(1.6);
-  /* FF */
-  -webkit-transform: scale(1.6);
-  /* Safari and Chrome */
-  -o-transform: scale(1.6);
-  /* Opera */
-  margin-top: .7rem;
-  width: 8rem;
-
+.admin-form input[type='submit'] {
+  background-color: white;
+  color: #F4971A;
+  border: 0.15rem solid white;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  align-self: flex-end;
+  margin-top: 1rem;
 }
 
-#article-form .little-description {
-  width: 45rem;
+#article-form label {
+  width: 50%;
 }
-#article-form .little-description .descrip-art-txt {
-  width: 45rem;
+
+#article-form .titre-categorie,
+#article-form .article-form-image,
+#article-form .descr-membre {
+  display: flex;
+}
+
+#article-form .descr-membre {
+  margin-bottom: 1rem;
 }
 

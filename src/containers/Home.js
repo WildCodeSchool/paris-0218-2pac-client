@@ -7,7 +7,6 @@ import { Link } from '@reach/router'
 import './Home.css'
 
 const byMostRecent = (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-const byOlder = (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
 
 const ActualityFeedArticle = ({ article }) =>
   <div className="actuality-feed-article">

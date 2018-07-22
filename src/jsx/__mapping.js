@@ -26,7 +26,7 @@ export default [
   'systeme-agro',
   'what-we-do',
   'what-we-want',
-  'who-we-are',
+  'who-we-are'
 ].reduce((acc, page) => {
   acc[page] = require(`./${page}.jsx`).default
   return acc

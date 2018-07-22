@@ -44,16 +44,12 @@
 }
 .static-content ul ul {
   padding-left: 3rem;
-
+  list-style-type: circle;
 }
 
 .static-content ul li::before {
   content: "● "; /* • */
   color: #F4971A;
-}
-
-.static-content ul ul {
-  list-style-type: circle;
 }
 
 .static-content ul ul li::before {

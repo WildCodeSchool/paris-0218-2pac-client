@@ -1,5 +1,6 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
+import Alert from 'react-s-alert'
 import './ArticleForm.css'
 
 const freshArticle = {
@@ -16,7 +17,8 @@ const freshArticle = {
 
 class ArticleForm extends React.Component {
   state = {
-    article: this.props.article || freshArticle
+    article: this.props.article || freshArticle,
+    editorContent: ''
   }
 
   handleChange = e => {
@@ -44,12 +46,14 @@ class ArticleForm extends React.Component {
     }
 
     this.props.submitArticle(article)
-    // .then(res => this.reset())
+      .then(res => {
+        Alert.success(`Succès`)
+        this.reset()
+        setTimeout(() => { window.location = window.location }, 500)
+      })
   }
 
-  handleEditorChange = e => {
-    const content = e.target.getContent()
-
+  handleEditorChange = content => {
     this.setState({ article: { ...this.state.article, description: content } })
   }
 
@@ -57,14 +61,14 @@ class ArticleForm extends React.Component {
     const article = this.state.article
 
     return (
-      <div id='article-form'>
+      <div id='article-form' className="admin-form container">
         <form onSubmit={this.handleSubmit}>
           <div className="titre-categorie">
             <label>Titre :
-              <input className="article-form-input" type="text" name='title' value={article.title} onChange={this.handleChange} />
+              <input className="article-form-input" type="text" name='title' required value={article.title} onChange={this.handleChange} />
             </label>
             <label className="article-form-cat">Catégorie :
-              <select className="article-form-select" id="categoryId" name='categoryId' value={article.categoryId} onChange={this.handleChange}>
+              <select className="article-form-select" id="categoryId" name='categoryId' required value={article.categoryId} onChange={this.handleChange}>
                 <option value={1}>Article</option>
                 <option value={2}>Presse</option>
                 <option value={3}>Actualité</option>
@@ -78,13 +82,13 @@ class ArticleForm extends React.Component {
           {
             article.categoryId === 4
               ? <label>Date de l'évenement :
-                <input type="date" name='eventDate' value={article.eventDate} required onChange={this.handleChange} />
+                <input type="date" name='eventDate' required value={article.eventDate} onChange={this.handleChange} />
               </label>
               : ''
           }
           <div className="article-form-image">
             <label>Cover image :
-              <input type="text" name='imageURL' value={article.imageURL} onChange={this.handleChange} />
+              <input type="text" name='imageURL' required placeholder="url de l'image" value={article.imageURL} onChange={this.handleChange} />
             </label>
             <label>Description de l'image :
               <input type="text" name='imageDescription' value={article.imageDescription} onChange={this.handleChange} />
@@ -92,15 +96,16 @@ class ArticleForm extends React.Component {
           </div>
           <div className ="descr-membre">
             <label className="little-description">Tags :
-              <input type="text" name='tags' value={article.tags} onChange={this.handleChange} />
+              <input type="text" name='tags' placeholder="séparés par des virgules (ex. 'alimentation,europe,politique')" value={article.tags} onChange={this.handleChange} />
             </label>
             <label className="member-checkbox" >Contenu membre :
               <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
             </label>
           </div>
-          <Editor apiKey='cwyqiu11xr2rk71h157w64bzbwi5evps8y0belarj25soekt'
-            initialValue={this.state.article.description}
-            onChange={this.handleEditorChange}
+          <Editor id="tinymce-editor"
+            apiKey='cwyqiu11xr2rk71h157w64bzbwi5evps8y0belarj25soekt'
+            onEditorChange={this.handleEditorChange}
+            value={article.description}
             init={{
               height: 500,
               plugins: 'print link image media preview fullpage charmap insertdatetime lists textcolor wordcount imagetools help',
@@ -120,7 +125,7 @@ class ArticleForm extends React.Component {
               ]
             }}
           />
-          <button className="send-button" type="submit" value="submit">Valider</button>
+          <input type="submit" value="Valider" />
         </form>
       </div>
 

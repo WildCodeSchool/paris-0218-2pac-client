@@ -4,7 +4,6 @@ import ArticleCard from '../components/ArticleCard'
 import './NewsPage.css'
 
 const byMostRecent = (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-const byOlder = (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
 
 const NewsPage = ({ articles }) => {
   const articleCards = articles

@@ -50,7 +50,6 @@ input, textarea, select {
 .flex-4 { flex: 4; }
 .flex-5 { flex: 5; }
 
-
 #app {
   display: flex;
   max-width: 960px;

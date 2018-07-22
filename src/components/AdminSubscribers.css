@@ -1,65 +1,28 @@
-.subscriberTable th {
-background-color: #F4971A;
-color: #707070;
-padding: .5em;
+#admin-subscribers {
+  display: flex;
+  flex-direction: column;
 }
 
-.subscribers th {
-font-family: 'Source Sans Pro', sans-serif;
-padding-right: 1em;
-width: 25%;
-background-color: #F4971A;
-color: #707070;
-font-size: 1.1em;
-}
-
-.subscribers tr th {
-padding: 0.5em;
-height:1.7em;
-color: white;
-}
-
-.subscribers td {
-padding-right: 1em;
-padding-left: 0em;
-width: 25%;
-color: #707070;
-text-align: center;
-border-radius: 2px 2px 2px 2px;
-border:3px solid white;
-font-family: 'Source Sans Pro', sans-serif;
-box-shadow: 0 0em 0.825em rgba(0,0,0,0.4);
-}
-
-.admin-subscribers-title {
-text-align: center;
-width: 100%;
-background-color: #226462;
-border-radius: .3rem;
-margin-bottom: 3em;
-min-height: 6em;
-box-shadow: 0 0em 0.825em rgba(0,0,0,0.1);
-cursor: pointer;
-
-}
-
-.admin-subscribers-title span {
-font-size: 2em;
-color:#FFFFFF
-}
-
-.csv-link{
-  min-width: 8em;
-  padding: .6em .6em .6em .6em;
+#admin-subscribers table th {
   background-color: #F4971A;
-  font-size: 1rem;
-  border:none;
-  cursor: pointer;
-  float: right;
-  margin-top: 1em;
-  border-radius: .2em;
+  width: 100%;
+  color: white;
+  font-weight: 100;
+  padding: 0.2rem 2rem;
+  border: 1px solid #F4971A;
 }
 
-.csv-link span{
-  color: #ffffff;
+#admin-subscribers table td {
+  border: 1px solid #F4971A;
+  padding: 0.1rem 0.3rem;
+}
+
+.csv-button {
+  background-color: #F4971A;
+  color: white;
+  border: 0.15rem solid white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  align-self: flex-end;
+  margin-bottom: .5rem;
 }

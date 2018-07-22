@@ -1,17 +1,40 @@
-.admin-home {
-background-color: #F4971A;
-color: white;
-font-weight: bold;
-border-radius: 0.3em;
-border: 0.15em solid white;
-padding: 0.7em;
-cursor: pointer; 
-width: 10%;
-text-align: center;
-}
-.admin-general-container {
-width: 60em;
-margin: auto;
-margin-top: 3em;
+#admin-content {
+  max-width: 960px;
+  margin: auto;
 }
 
+.admin-new-button {
+  background-color: #226462;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: .3rem;
+  box-shadow: 0 0em 0.825em rgba(0,0,0,0.1);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.admin-data-row {
+  display: flex;
+  padding: 0.5rem;
+  border-top: 1px solid #1111;
+  align-items: center;
+}
+
+.admin-data-row:hover {
+  background-color: #eee;
+}
+
+.admin-data-row:first-child {
+  border: none;
+}
+
+.admin-data-title {
+  flex-grow: 1;
+}
+
+.admin-tool-button {
+  cursor: pointer;
+}

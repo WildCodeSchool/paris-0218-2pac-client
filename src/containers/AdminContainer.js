@@ -12,7 +12,10 @@ import AuthForm from './AuthForm'
 import store from '../store.js'
 import api from '../api.js'
 
-const AdminHome = () => <div></div>
+const AdminHome = () =>
+  <div className='container'>
+    <h3>Bienvenu dans la zone administrable</h3>
+  </div>
 
 const AdminArticleNew = () => <div><ArticleForm submitArticle={api.newArticle} /></div>
 
@@ -97,7 +100,7 @@ class AdminContainer extends Component {
         { loggedAs && loggedAs.isAdmin
           ? <div>
             <AdminNav />
-            <div id='admin-router-view' className="admin-general-container">
+            <div id='admin-content'>
               <Router>
                 <AdminHome path='/' />
                 <AdminArticles path='articles' articles={this.state.articles} />
@@ -111,9 +114,9 @@ class AdminContainer extends Component {
             </div>
           </div>
           : <div className="container">
-              <div>Vous devez vous connecter avec un compte <b>administrateur</b></div>
-              <Link to="/"><button>Revenir à l'accueil</button></Link>
-            </div>
+            <div>Vous devez vous connecter avec un compte <b>administrateur</b></div>
+            <Link to="/"><button>Revenir à l'accueil</button></Link>
+          </div>
         }
       </div>
     )
