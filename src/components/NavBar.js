@@ -55,7 +55,7 @@ const NavBar = () =>
         </ul>
       </li>
       <li className="navbar-item">
-        <a>▾&nbsp;&nbsp;&nbsp;Content in English&nbsp;&nbsp;<span role="img" aria-label="english-flag">🇬🇧</span></a>
+        <a>▾&nbsp;&nbsp;&nbsp;Content in English&nbsp;&nbsp;<span class="flag-icon flag-icon-gb"></span></a>
         <ul className="navbar-dropdown">
           <Link className="navbar-dropdown-item" to='/who-we-are'>Who we are</Link>
           <Link className="navbar-dropdown-item" to='/what-we-do'>What we do</Link>
