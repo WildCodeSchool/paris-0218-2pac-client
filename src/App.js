@@ -50,6 +50,8 @@ class App extends Component {
   }
 
   syncDatas = () => {
+    api.getStatics().then(statics => { this.setState({ statics: statics }) })
+
     api.getArticles().then(articles => { this.setState({ articles: articles }) })
 
     api.getDocuments().then(documents => { this.setState({ documents: documents }) })

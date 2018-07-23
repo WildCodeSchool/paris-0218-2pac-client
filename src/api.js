@@ -116,6 +116,19 @@ const newSubscriber = subscriber => _fetch('/subscribers', {
   body: JSON.stringify(subscriber)
 })
 
+
+// STATICS
+
+const getStatics = () => _fetch('/statics')
+
+const updateStatic = _static => _fetch(`/statics/${_static.id}`, {
+  method: 'put',
+  headers: {
+    'content-type': 'application/json'
+  },
+  body: JSON.stringify(_static)
+})
+
 export default {
   hostUrl,
   getUsers,
@@ -129,6 +142,8 @@ export default {
   deleteDocument,
   getSubscribers,
   newSubscriber,
+  getStatics,
+  updateStatic,
   signIn,
   whoami,
   signOut
