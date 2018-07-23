@@ -31,8 +31,8 @@ export default
     </li>
   </ul>
   <br/>
-  <p><a href="https://drive.google.com/open?id=1DXOzfqX_yFHcyWShtjWdHP6utQFGijui" target="_blank">Rapports d’activités 2013</a></p>
-  <p><a href="https://drive.google.com/open?id=1yf1x5fb3JRDIgloevJWulIauuSUjIgE5" target="_blank">Rapports d’activités 2014</a></p>
-  <p><a href="https://drive.google.com/open?id=1bLTU-abwEq9Ys2T3e_RT_ghdCQa8c9_g" target="_blank">Rapport d’activités 2017</a></p>
+  <p><a href="https://drive.google.com/open?id=1DXOzfqX_yFHcyWShtjWdHP6utQFGijui" target="_blank" rel="noopener noreferrer">Rapports d’activités 2013</a></p>
+  <p><a href="https://drive.google.com/open?id=1yf1x5fb3JRDIgloevJWulIauuSUjIgE5" target="_blank" rel="noopener noreferrer">Rapports d’activités 2014</a></p>
+  <p><a href="https://drive.google.com/open?id=1bLTU-abwEq9Ys2T3e_RT_ghdCQa8c9_g" target="_blank" rel="noopener noreferrer">Rapport d’activités 2017</a></p>
 </div>
 

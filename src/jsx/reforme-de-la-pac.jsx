@@ -8,5 +8,5 @@ export default
   <p>Contenu à venir.</p>
   <br/>
   <p>En attendant, vous pouvez vous reporter sur les sites suivants :</p>
-  <p><a href="https://www.supagro.fr/capeye/pac-application/" target="_blank">https://www.supagro.fr/capeye/pac-application/</a></p>
+  <p><a href="https://www.supagro.fr/capeye/pac-application/" target="_blank" rel="noopener noreferrer">https://www.supagro.fr/capeye/pac-application/</a></p>
 </div>

@@ -12,24 +12,24 @@ export default
   <br/>
   <ul>
     <li>
-    <a href="https://drive.google.com/open?id=1yufgyHrpWOptoP9-gfjswfLvmfsZGUBK" target="_blank">Réaction au bilan de santé de la PAC (25 février 2008)</a></li>
+    <a href="https://drive.google.com/open?id=1yufgyHrpWOptoP9-gfjswfLvmfsZGUBK" target="_blank" rel="noopener noreferrer">Réaction au bilan de santé de la PAC (25 février 2008)</a></li>
     <li>
-    <a href="https://drive.google.com/open?id=1-VNzb4vIOshVM07eExAH6OoQ1upkMwSw" target="_blank">
+    <a href="https://drive.google.com/open?id=1-VNzb4vIOshVM07eExAH6OoQ1upkMwSw" target="_blank" rel="noopener noreferrer">
     Constats, propositions et leviers d'action pour une politique agricole, alimentaire, environnementale et rurale européenne (18 février 2010)</a></li>
     <li>
-     <a href="https://drive.google.com/open?id=1l09V7Scooe7_8nZrYi0WXzermfMPa6Vg" target="_blank">
+     <a href="https://drive.google.com/open?id=1l09V7Scooe7_8nZrYi0WXzermfMPa6Vg" target="_blank" rel="noopener noreferrer">
     Propositions pour rémunérer les services environnementaux et socio-territoriaux associés à l'agriculture en ciblant les paiements directs pour relégitimer la PAC (7 septembre 2010)</a></li>
     <li>
-    <a href="https://drive.google.com/open?id=1JxcGMo5asQZji__L3EGftdx6SYSGfidK" target="_blank">
+    <a href="https://drive.google.com/open?id=1JxcGMo5asQZji__L3EGftdx6SYSGfidK" target="_blank" rel="noopener noreferrer">
     Commentaire de la communication de la Commission européenne du 18 novembre 2010 intitulée « La PAC à l’horizon 2020&nbsp;: alimentation, ressources naturelles et territoire – relever les défis de l’avenir » (6 juin 2011) </a>
     </li>
     <li>
-    <a href="https://drive.google.com/open?id=1kEuOCuqUaKnPOFqvE0cS-B_weE5I3hpq" target="_blank">
+    <a href="https://drive.google.com/open?id=1kEuOCuqUaKnPOFqvE0cS-B_weE5I3hpq" target="_blank" rel="noopener noreferrer">
     Analyse des propositions de la Commission européenne pour la réforme de la PAC (27 février 2012)
     </a>
     </li>
     <li>
-    <a href="https://drive.google.com/open?id=1H3r_wD1t_X7qewkahZPJed7L250IWcEl" target="_blank">
+    <a href="https://drive.google.com/open?id=1H3r_wD1t_X7qewkahZPJed7L250IWcEl" target="_blank" rel="noopener noreferrer">
     Analyse du « verdissement » de la PAC (avril 2012)
     </a>
     </li>
