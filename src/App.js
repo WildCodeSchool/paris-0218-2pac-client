@@ -17,7 +17,6 @@ import ResourcesPage from './containers/ResourcesPage'
 import SubscribersPage from './containers/SubscribersPage'
 import SearchResultsPage from './containers/SearchResultsPage'
 
-import staticContentMapping from './jsx/__mapping'
 import contactInfos from './datas/contact-infos.json'
 
 import api from './api.js'
@@ -25,11 +24,9 @@ import store from './store.js'
 
 import './App.css'
 
-const staticContentRoutes = Object.keys(staticContentMapping)
-  .map((k, i) => <StaticContent key={i} path={`/${k}`} content={staticContentMapping[k]} />)
-
 class App extends Component {
   state = {
+    statics: [],
     articles: [],
     documents: [],
     subscribers: []
@@ -87,7 +84,7 @@ class App extends Component {
               <SubscribersPage path="/subscribe" />
               <ContactPage path="/contact" contactInfos={contactInfos} />
               <SearchResultsPage path="/search/:searchValue" articles={this.state.articles} />
-              {staticContentRoutes}
+              {this.state.statics.map(s => <StaticContent key={s.id} path={`/${s.slug}`} content={s.content} />)}
             </Router>
           </div>
           <div id='app-sidebar'>

@@ -4,9 +4,7 @@ import './StaticContent.css'
 
 const StaticContent = ({ content }) =>
   <ScrollUp>
-    <div className="static-content container">
-      {content}
-    </div>
+    <div className="static-content container" dangerouslySetInnerHTML={{ __html: content }}></div>
   </ScrollUp>
 
 export default StaticContent
