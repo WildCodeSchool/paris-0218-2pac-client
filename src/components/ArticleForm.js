@@ -18,8 +18,7 @@ const freshArticle = {
 
 class ArticleForm extends React.Component {
   state = {
-    article: this.props.article || freshArticle,
-    editorContent: ''
+    article: this.props.article || freshArticle
   }
 
   handleChange = e => {
@@ -107,17 +106,17 @@ class ArticleForm extends React.Component {
             <div className="flex row">
               {
                 article.categoryId === 4
-                ? <label className="member-checkbox">Contenu membre
-                  <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
-                </label>
-                : ''
+                  ? <label className="member-checkbox">Contenu membre
+                    <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
+                  </label>
+                  : ''
               }
               {
                 article.categoryId === 1 || article.categoryId === 2
-                ? <label className="member-checkbox">Contenu à la Une
-                  <input type='checkbox' name='isStared' checked={article.isStared} onChange={this.handleChange}/>
-                </label>
-                : ''
+                  ? <label className="member-checkbox">Contenu à la Une
+                    <input type='checkbox' name='isStared' checked={article.isStared} onChange={this.handleChange}/>
+                  </label>
+                  : ''
               }
             </div>
           </div>

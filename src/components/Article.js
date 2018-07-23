@@ -21,7 +21,6 @@ const Article = ({ article }) => {
           <span className="article-created-date bold">{(new Date(article.createdAt)).toLocaleDateString()}</span>
           <span className="article-tags">{tags}</span>
         </div>
-        {/* article.categoryId === 4 ? <span className="event-date">Date de l'évenement: {(new Date(article.eventDate)).toLocaleDateString()}</span> : '' */}
       </div>
       <div className="article-content" dangerouslySetInnerHTML={{ __html: article.description }}></div>
     </div>

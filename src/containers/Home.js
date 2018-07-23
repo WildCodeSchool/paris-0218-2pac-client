@@ -15,7 +15,6 @@ const staredThenMostRecent = (a, b) => {
 }
 const byMostRecent = (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
 
-const isStared = article => article.isStared === true
 const isFromCategoryEvent = article => article.categoryId === 4
 const isFromCategoryActuality = article => article.categoryId === 3
 const isFromCategoryPresseOrArticle = article => article.categoryId === 1 || article.categoryId === 2

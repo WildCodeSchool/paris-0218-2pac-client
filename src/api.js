@@ -116,7 +116,6 @@ const newSubscriber = subscriber => _fetch('/subscribers', {
   body: JSON.stringify(subscriber)
 })
 
-
 // STATICS
 
 const getStatics = () => _fetch('/statics')
