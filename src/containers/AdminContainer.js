@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import { Router, Link } from '@reach/router'
+import Header from '../components/Header'
 import AdminNav from '../components/AdminNav'
 import AdminArticles from '../components/AdminArticles'
-import Header from '../components/Header'
+import AdminStatics from '../components/AdminStatics'
 import AdminDocuments from '../components/AdminDocuments'
 import AdminSubscribers from '../components/AdminSubscribers'
 import ArticleForm from '../components/ArticleForm'
-import './AdminContainer.css'
+import StaticForm from '../components/StaticForm'
 import DocumentForm from '../components/DocumentForm'
 import AuthForm from './AuthForm'
 import store from '../store.js'
 import api from '../api.js'
+import './AdminContainer.css'
 
 const AdminHome = () =>
   <div className='container'>
@@ -41,31 +43,36 @@ const AdminDocumentEdit = ({ id, documents }) => {
   )
 }
 
+const AdminStaticEdit = ({ id, statics }) => {
+  const _static = statics.find(s => String(s.id) === id)
+
+  return (
+    <div>
+      {_static ? <StaticForm static={_static} submitStatic={api.updateStatic} /> : <div>Loading..</div>}
+    </div>
+  )
+}
+
 class AdminContainer extends Component {
   state = {
     loggedAs: undefined,
     users: [],
+    statics: [],
     articles: [],
     documents: [],
     subscribers: []
   }
 
   syncDatas = () => {
-    api.getUsers()
-      .then(users => { this.setState({ users: users }) })
-      .catch(console.log)
+    api.getUsers().then(users => { this.setState({ users }) }).catch(console.log)
 
-    api.getArticles()
-      .then(articles => { this.setState({ articles: articles }) })
-      .catch(console.log)
+    api.getStatics().then(statics => { this.setState({ statics }) }).catch(console.log)
 
-    api.getDocuments()
-      .then(documents => { this.setState({ documents: documents }) })
-      .catch(console.log)
+    api.getArticles().then(articles => { this.setState({ articles }) }).catch(console.log)
 
-    api.getSubscribers()
-      .then(subscribers => { this.setState({ subscribers: subscribers }) })
-      .catch(console.log)
+    api.getDocuments().then(documents => { this.setState({ documents }) }).catch(console.log)
+
+    api.getSubscribers().then(subscribers => { this.setState({ subscribers }) }).catch(console.log)
   }
 
   onLoggedIn = user => {
@@ -103,6 +110,8 @@ class AdminContainer extends Component {
             <div id='admin-content'>
               <Router>
                 <AdminHome path='/' />
+                <AdminStatics path='statics' statics={this.state.statics} />
+                <AdminStaticEdit path='statics/edit/:id' statics={this.state.statics} />
                 <AdminArticles path='articles' articles={this.state.articles} />
                 <AdminArticleNew path='articles/new' />
                 <AdminArticleEdit path='articles/edit/:id' articles={this.state.articles} />
