@@ -19,7 +19,7 @@ export default
     Contact : 01 80 89 99 51
     <br/>
     <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      aurelie.catallo@pouruneautrepac.eu
+      aurelie.catallo[@]pouruneautrepac.eu
     </a>
     <br/>
     <br/>
@@ -65,7 +65,7 @@ export default
     </a>
     <br/>
     <a href="http://gmail.com/" target="_blank" rel="noopener noreferrer">
-      comdeterre@gmail.com
+      comdeterre[@]gmail.com
     </a>
     <br/>
     <br/>
@@ -100,7 +100,7 @@ export default
     <br/>
     Pour une demande de ce type, veuillez adresser un courrier à Pour une autre PAC ou contacter l'adresse
     <br/>
-    courriel : aurelie.catallo@pouruneautrepac.eu .
+    courriel : aurelie.catallo[@]pouruneautrepac.eu .
     <br/>
     <br/>
     <h2>Cookies</h2>

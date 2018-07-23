@@ -37,5 +37,5 @@ export default
   <h2>Repenser la gouvernance de la PAAC dans sa conception et son application</h2>
   <p>La future PAAC doit affirmer sa plus-value européenne, par opposition à une renationalisation des politiques agricoles, qui viderait de sa substance l’ambition des objectifs fixés par l’UE. Le niveau européen est garant de la solidarité financière entre citoyen·ne·s et agriculteur·rice·s des différents États membres.Par ailleurs, la définition de la future PAAC appelle à un processus démocratique délibératif à toutes les échelles de prise de décision et de mise en œuvre, au sein duquel, d’une part, les citoyen·ne·s sont réellement associé·e·s et d’autre part, les instances de gouvernance impliquées sont élargies à celles chargées de l’alimentation, des territoires, de la santé et de l’environnement. Enfin, une obligation d’évaluation indépendante et décisive des dispositifs doit être instaurée, afin de restaurer la légitimité et la lisibilité de la PAAC auprès de ses bénéficiaires.</p>
   <br/>
-  <p>Orientations communes de la plateforme <i>Pour une autre PAC à télécharger</i></p>
+  <p>Orientations communes de la plateforme <i>Pour une autre PAC à <a href="https://drive.google.com/open?id=1ym8b89YzFyrleoSmKxw4_8o4BIKWy9K6" target="_blank">télécharger</a></i></p>
 </div>
