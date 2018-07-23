@@ -14,7 +14,7 @@ import api from '../api.js'
 
 const AdminHome = () =>
   <div className='container'>
-    <h3>Bienvenu dans la zone administrable</h3>
+    <h3>Bienvenue dans la zone administrable</h3>
   </div>
 
 const AdminArticleNew = () => <div><ArticleForm submitArticle={api.newArticle} /></div>
