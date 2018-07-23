@@ -14,6 +14,7 @@ import Home from './containers/Home'
 import ContactPage from './containers/ContactPage'
 import ArticlePage from './containers/ArticlePage'
 import NewsPage from './containers/NewsPage'
+import EventsPage from './containers/EventsPage'
 import ResourcesPage from './containers/ResourcesPage'
 import SubscribersPage from './containers/SubscribersPage'
 import SearchResultsPage from './containers/SearchResultsPage'
@@ -80,6 +81,7 @@ class App extends Component {
             <Router>
               <Home path="/" articles={this.state.articles} />
               <ArticlePage path="/article/:id" articles={this.state.articles} />
+              <EventsPage path="/events" articles={this.state.articles} />
               <NewsPage path="/news" articles={this.state.articles} />
               <ResourcesPage path="/resources" documents={this.state.documents} />
               <SubscribersPage path="/subscribe" />

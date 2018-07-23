@@ -43,7 +43,7 @@ const NavBar = () =>
         <ul className="navbar-dropdown">
           <Link className="navbar-dropdown-item" to='/nos-representants'>Interpeller ses représentants</Link>
           <Link className="navbar-dropdown-item" to='/become-member'>Devenir membre</Link>
-          <Link className="navbar-dropdown-item" to='/events-participation'>Participer à un événement</Link>
+          <Link className="navbar-dropdown-item" to='/events'>Participer à un événement</Link>
         </ul>
       </li>
       <li className="navbar-item">
