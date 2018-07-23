@@ -7,8 +7,6 @@ const freshDocument = {
   shortDescription: '',
   typeId: 1,
   isMemberOnly: false,
-  isResource: false,
-  isArchived: false,
   url: ''
 }
 
@@ -63,9 +61,6 @@ class DocumentForm extends React.Component {
           </label>
           <label>Contenu membre :
             <input type='checkbox' name='isMemberOnly' checked={doc.isMemberOnly} onChange={this.handleChange} />
-          </label>
-          <label>Ressource :
-            <input type='checkbox' name='isResource' checked={doc.isResource} onChange={this.handleChange} />
           </label>
           <label>Résumé :
             <textarea type='text' name='shortDescription' value={doc.shortDescription} onChange={this.handleChange} />
