@@ -21,8 +21,8 @@ export default
   <br/>
   <p>La plateforme <i>Pour une autre PAC</i> est constituée en association loi 1901, dont les statuts et le règlement intérieur sont disponibles ci-dessous.</p>
   <br/>
-  <p>Statuts et règlement intérieur de <i>Pour une autre PAC</i></p>
+  <p><a href="#" target="_blank">Statuts et règlement intérieur de <i>Pour une autre PAC</i></a></p>
   <br/>
-  <p>Plaquette de présentation de la plateforme <i>Pour une autre PAC</i></p>
+  <p><a href="https://drive.google.com/open?id=1Hprps_kTbNEcOzu7TltxWONFEoxBy5_1" target="_blank">Plaquette de présentation de la plateforme <i>Pour une autre PAC</i></a></p>
 </div>
 

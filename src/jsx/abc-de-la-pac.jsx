@@ -19,10 +19,10 @@ export default
   <br/>
   <p>En France, la PAC est gérée par le ministère en charge de l’agriculture, ainsi qu’en partie par les Régions pour ce qui relève du développement rural. La France est l’État membre de l’UE qui bénéficie le plus du budget de la PAC : elle reçoit environ 9 milliards d’euros par an. Ces aides sont très majoritairement versées aux agriculteur·rice·s français·es, mais une toute petite partie est également allouée à des acteur·rice·s du secteur forestier, à des structures d’animation territoriale en zones rurales, ainsi qu’à des groupements chargés de la commercialisation de certains types de produits.</p>
   <br/>
-  <p>Pour plus d’informations sur les fondamentaux de la PAC, vous pouvez consulter le <u>Guide de la PAC</u> réalisée par la plateforme en 2011, ainsi que vous reportez aux sites suivants :</p>
+  <p>Pour plus d’informations sur les fondamentaux de la PAC, vous pouvez consulter le <a href="https://drive.google.com/open?id=18lOIMXqv6Ns1MCxZwAtXzsU5_tEixy1o" target="_blank">Guide de la PAC</a> réalisée par la plateforme en 2011, ainsi que vous reportez aux sites suivants :</p>
   <ul>
-    <li><a href="https://www.supagro.fr/capeye/histoire-de-la-pac">https://www.supagro.fr/capeye</a></li>
-    <li><a href="http://www.vie-publique.fr/decouverte-institutions/union-europeenne/action/politiques-communautaires/qu-est-ce-que-politique-agricole-commune-pac.html">http://www.vie-publique.fr</a></li>
-    <li><a href="https://www.touteleurope.eu/actualite/l-agriculture-et-la-peche-dans-l-union-europeenne.html">https://www.touteleurope.eu</a></li>
+    <li><a href="https://www.supagro.fr/capeye/histoire-de-la-pac" target="_blank">https://www.supagro.fr/capeye</a></li>
+    <li><a href="http://www.vie-publique.fr/decouverte-institutions/union-europeenne/action/politiques-communautaires/qu-est-ce-que-politique-agricole-commune-pac.html" target="_blank">http://www.vie-publique.fr</a></li>
+    <li><a href="https://www.touteleurope.eu/actualite/l-agriculture-et-la-peche-dans-l-union-europeenne.html" target="_blank">https://www.touteleurope.eu</a></li>
   </ul>
 </div>
