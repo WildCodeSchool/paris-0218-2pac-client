@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
+import Page404 from './components/Page404'
 
 import StaticContent from './components/StaticContent'
 
@@ -85,6 +86,7 @@ class App extends Component {
               <ContactPage path="/contact" contactInfos={contactInfos} />
               <SearchResultsPage path="/search/:searchValue" articles={this.state.articles} />
               {this.state.statics.map(s => <StaticContent key={s.id} path={`/${s.slug}`} content={s.content} />)}
+              <Page404 path="*" />
             </Router>
           </div>
           <div id='app-sidebar'>
