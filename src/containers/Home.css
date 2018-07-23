@@ -60,3 +60,10 @@
 .une-right-column .article-card:first-child {
   margin-top: 0;
 }
+
+#priority-12-card {
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
