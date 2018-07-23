@@ -24,26 +24,11 @@ export default
     <br/>
     <br/>
     <h2>Propriétaire / Éditeur</h2>
-    Le site
-    <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      pouruneautrepac.eu
-    </a>
-    est un site web édité par l'association Pour une autre PAC et publié sous la direction d'Aurélie Catallo (coordinatrice). L'ensemble du site
-    <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      pouruneautrepac.eu</a>
-    , pages et contenus, est la propriété de Pour une autre PAC.
+    Le site <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">pouruneautrepac.eu</a> est un site web édité par l'association Pour une autre PAC et publié sous la direction d'Aurélie Catallo (coordinatrice). L'ensemble du site <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">pouruneautrepac.eu</a>, pages et contenus, est la propriété de Pour une autre PAC.
     <br/>
     <br/>
     <h2>Hébergeur</h2>
-    Le site
-    <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      pouruneautrepac.eu
-    </a>
-    est hébergé par la SAS OVH. Pour plus d'informations, reportez-vous au site:
-    <a href="https://www.ovh.com/" target="_blank" rel="noopener noreferrer">
-      https://www.ovh.com/
-    </a>
-    .
+    Le site <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">pouruneautrepac.eu</a> est hébergé par la SAS OVH. Pour plus d'informations, reportez-vous au site: <a href="https://www.ovh.com/" target="_blank" rel="noopener noreferrer">https://www.ovh.com/</a>.
     <br/>
     <br/>
     OVH SAS au capital de 10 069 020 € enregistrée auprès de la RCS Roubaix – Tourcoing 424 761 419 00045 sous le numéro SIREN 424761419 N° T.V.A. Intracommunautaire FR 22 424761419
@@ -54,11 +39,7 @@ export default
     <br/>
     <br/>
     <h2>Conception graphique</h2>
-    Le visuel du site
-    <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      pouruneautrepac.eu
-    </a>
-    a été conçu par Julia Klag.
+    Le visuel du site <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">pouruneautrepac.eu</a> a été conçu par Julia Klag.
     <br/>
     <a href="http://com-de-terre.fr/" target="_blank" rel="noopener noreferrer">
       http://com-de-terre.fr/
@@ -70,11 +51,7 @@ export default
     <br/>
     <br/>
     <h2>Développeur</h2>
-    Le site
-    <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      pouruneautrepac.eu
-    </a>
-    a été développé par la Wild Code School en 2018.
+    Le site <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">pouruneautrepac.eu</a> a été développé par la Wild Code School en 2018.
     <br/>
     Wild Code School
     <br/>
@@ -92,11 +69,7 @@ export default
     <h2>Collecte et traitement de données personnelles</h2>
     Les informations éventuellement recueillies par le site ne sont jamais communiquées à des tiers. Sauf cas particulier, ces informations proviennent de l'enregistrement volontaire d'une adresse courriel fournie par l'internaute, lui permettant de recevoir une documentation ou une newsletter.
     <br/>
-    En application de la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, l'internaute dispose d'un droit d'accès, de rectification et de suppression des informations personnelles le concernant stockées par le site
-    <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      pouruneautrepac.eu
-    </a>
-    , qu'il peut exercer à tout moment auprès de l'administrateur du site.
+    En application de la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, l'internaute dispose d'un droit d'accès, de rectification et de suppression des informations personnelles le concernant stockées par le site <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">pouruneautrepac.eu</a>, qu'il peut exercer à tout moment auprès de l'administrateur du site.
     <br/>
     Pour une demande de ce type, veuillez adresser un courrier à Pour une autre PAC ou contacter l'adresse
     <br/>
@@ -104,15 +77,7 @@ export default
     <br/>
     <br/>
     <h2>Cookies</h2>
-    Certaines informations nominatives et certains marqueurs témoins peuvent être enregistrées par le site
-    <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      pouruneautrepac.eu
-    </a>
-    sur l'ordinateur personnel de l'internaute sans expression de la volonté de ce dernier (« cookies »). Sauf indication contraire explicite, ces procédés techniques ne sont pas indispensables au bon fonctionnement de le site
-    <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">
-      pouruneautrepac.eu
-    </a>
-    et leur utilisation peut bien entendu être désactivée dans le navigateur utilisé par l'internaute sans que sa navigation en soit affectée. Aucune de ces informations n'est conservée par le site après déconnexion de l'internaute.
+    Certaines informations nominatives et certains marqueurs témoins peuvent être enregistrées par le site <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">pouruneautrepac.eu</a> sur l'ordinateur personnel de l'internaute sans expression de la volonté de ce dernier (« cookies »). Sauf indication contraire explicite, ces procédés techniques ne sont pas indispensables au bon fonctionnement de le site <a href="http://pouruneautrepac.eu/" target="_blank" rel="noopener noreferrer">pouruneautrepac.eu</a> et leur utilisation peut bien entendu être désactivée dans le navigateur utilisé par l'internaute sans que sa navigation en soit affectée. Aucune de ces informations n'est conservée par le site après déconnexion de l'internaute.
     <br/>
   </p>
 </div>
