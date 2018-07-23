@@ -8,6 +8,10 @@
   border-top: 1px solid #1111;
 }
 
+.resource-card, .resource-card > div {
+  width: 100%;
+}
+
 .resource-card:hover {
   background-color: #eee;
 }

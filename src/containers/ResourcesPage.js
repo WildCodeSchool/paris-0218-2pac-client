@@ -6,9 +6,14 @@ import store from '../store'
 
 const ResourceCard = ({ doc }) =>
   <a className="resource-card" target="_blank" href={doc.url}>
-    <span className="resource-card-date">{(new Date(doc.createdAt)).toLocaleString().slice(0, -3)}</span>
-    <span className="resource-card-title bold">{doc.title}</span>
-    <CategoryLabel>{doc.type}</CategoryLabel>
+    <div className="flex column">
+      <div className="flex row">
+        <span className="resource-card-date">{(new Date(doc.createdAt)).toLocaleString().slice(0, -3)}</span>
+        <span className="resource-card-title bold">{doc.title}</span>
+        <CategoryLabel>{doc.type}</CategoryLabel>
+      </div>
+       <span className="mt-2">{doc.shortDescription}</span>
+    </div>
   </a>
 
 class ResourcesPage extends Component {
