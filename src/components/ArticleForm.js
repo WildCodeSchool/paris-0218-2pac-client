@@ -12,6 +12,7 @@ const freshArticle = {
   imageURL: '',
   imageDescription: '',
   isMemberOnly: false,
+  isStared: false,
   tags: ''
 }
 
@@ -43,6 +44,11 @@ class ArticleForm extends React.Component {
 
     if (article.categoryId !== 4) {
       article.eventDate = ''
+      article.isMemberOnly = false
+    }
+
+    if (article.categoryId !== 1 && article.categoryId !== 2) {
+      article.isStared = false
     }
 
     this.props.submitArticle(article)
@@ -64,10 +70,10 @@ class ArticleForm extends React.Component {
       <div id='article-form' className="admin-form container">
         <form onSubmit={this.handleSubmit}>
           <div className="titre-categorie">
-            <label>Titre :
+            <label>Titre
               <input className="article-form-input" type="text" name='title' required value={article.title} onChange={this.handleChange} />
             </label>
-            <label className="article-form-cat">Catégorie :
+            <label className="article-form-cat">Catégorie
               <select className="article-form-select" id="categoryId" name='categoryId' required value={article.categoryId} onChange={this.handleChange}>
                 <option value={1}>Article</option>
                 <option value={2}>Presse</option>
@@ -76,31 +82,44 @@ class ArticleForm extends React.Component {
               </select>
             </label>
           </div>
-          <label>Résumé :
+          <label>Résumé
             <textarea className="resume" type="text" name='shortDescription' value={article.shortDescription} onChange={this.handleChange} />
           </label>
           {
             article.categoryId === 4
-              ? <label>Date de l'évenement :
+              ? <label>Date de l'évenement
                 <input type="date" name='eventDate' required value={article.eventDate} onChange={this.handleChange} />
               </label>
               : ''
           }
           <div className="article-form-image">
-            <label>Cover image :
+            <label>Cover image
               <input type="text" name='imageURL' required placeholder="url de l'image" value={article.imageURL} onChange={this.handleChange} />
             </label>
-            <label>Description de l'image :
+            <label>Description de l'image
               <input type="text" name='imageDescription' value={article.imageDescription} onChange={this.handleChange} />
             </label>
           </div>
           <div className ="descr-membre">
-            <label className="little-description">Tags :
+            <label className="little-description">Tags
               <input type="text" name='tags' placeholder="séparés par des virgules (ex. 'alimentation,europe,politique')" value={article.tags} onChange={this.handleChange} />
             </label>
-            <label className="member-checkbox" >Contenu membre :
-              <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
-            </label>
+            <div className="flex row">
+              {
+                article.categoryId === 4
+                ? <label className="member-checkbox">Contenu membre
+                  <input type='checkbox' name='isMemberOnly' checked={article.isMemberOnly} onChange={this.handleChange}/>
+                </label>
+                : ''
+              }
+              {
+                article.categoryId === 1 || article.categoryId === 2
+                ? <label className="member-checkbox">Contenu à la Une
+                  <input type='checkbox' name='isStared' checked={article.isStared} onChange={this.handleChange}/>
+                </label>
+                : ''
+              }
+            </div>
           </div>
           <Editor id="tinymce-editor"
             apiKey='cwyqiu11xr2rk71h157w64bzbwi5evps8y0belarj25soekt'

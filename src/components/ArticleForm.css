@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   padding: 0.2rem 0.5rem;
+  flex-grow: 1;
 }
 
 .admin-form input, .admin-form select, .admin-form textarea {
@@ -33,10 +34,6 @@
   text-transform: uppercase;
   align-self: flex-end;
   margin-top: 1rem;
-}
-
-#article-form label {
-  width: 50%;
 }
 
 #article-form .titre-categorie,

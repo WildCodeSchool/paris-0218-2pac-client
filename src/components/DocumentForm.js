@@ -44,26 +44,28 @@ class DocumentForm extends React.Component {
     return (
       <div id='document-form' className="admin-form container">
         <form onSubmit={this.handleSubmit}>
-          <label>Titre :
-            <input type='text' name='title' required value={doc.title} onChange={this.handleChange} />
-          </label>
-          <label>Url :
+          <div className="flex row">
+            <label>Titre
+              <input type='text' name='title' required value={doc.title} onChange={this.handleChange} />
+            </label>
+            <label>Catégorie
+              <select name='typeId' required value={doc.typeId} onChange={this.handleChange}>
+                <option value={1}>Textes politiques</option>
+                <option value={2}>Documents de position des organisations membres</option>
+                <option value={3}>Documents réservés aux membres</option>
+                <option value={4}>Travaux de recherche</option>
+                <option value={5}>Autres documents de position</option>
+              </select>
+            </label>
+          </div>
+          <label>Url
             <input type='text' name='url' required value={doc.url} onChange={this.handleChange} />
           </label>
-          <label>Catégorie :
-            <select name='typeId' required value={doc.typeId} onChange={this.handleChange}>
-              <option value={1}>Textes politiques</option>
-              <option value={2}>Documents de position des organisations membres</option>
-              <option value={3}>Documents réservés aux membres</option>
-              <option value={4}>Travaux de recherche</option>
-              <option value={5}>Autres documents de position</option>
-            </select>
-          </label>
-          <label>Contenu membre :
-            <input type='checkbox' name='isMemberOnly' checked={doc.isMemberOnly} onChange={this.handleChange} />
-          </label>
-          <label>Résumé :
+          <label>Résumé
             <textarea type='text' name='shortDescription' value={doc.shortDescription} onChange={this.handleChange} />
+          </label>
+          <label>Contenu membre
+            <input type='checkbox' name='isMemberOnly' checked={doc.isMemberOnly} onChange={this.handleChange} />
           </label>
           <input type='submit' value='Valider' />
         </form>
