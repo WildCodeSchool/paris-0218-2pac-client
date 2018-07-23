@@ -8,6 +8,10 @@ import './Home.css'
 
 const byMostRecent = (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
 
+const isFromCategoryEvent = article => article.categoryId === 4
+const isFromCategoryActuality = article => article.categoryId === 3
+const isFromCategoryPresseOrArticle = article => article.categoryId === 1 || article.categoryId === 2
+
 const ActualityFeedArticle = ({ article }) =>
   <div className="actuality-feed-article">
     <CategoryLabel>{article.category}</CategoryLabel>
@@ -57,13 +61,13 @@ const Une = ({ articles }) => {
 const Home = ({ articles }) =>
   <div id="home-container" className="flex row">
     <div className="container flex-1">
-      <ActualityFeed articles={articles} />
+      <ActualityFeed articles={articles.filter(isFromCategoryActuality)} />
     </div>
     <div className="flex-3 flex column">
       <div className="container">
-        <Une articles={articles} />
+        <Une articles={articles.filter(isFromCategoryPresseOrArticle)} />
       </div>
-      <EventsCalendar events={articles.filter(article => article.categoryId === 4)} />
+      <EventsCalendar events={articles.filter(isFromCategoryEvent)} />
     </div>
   </div>
 
