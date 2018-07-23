@@ -12,7 +12,7 @@ const ResourceCard = ({ doc }) =>
         <span className="resource-card-title bold">{doc.title}</span>
         <CategoryLabel>{doc.type}</CategoryLabel>
       </div>
-       <span className="mt-2">{doc.shortDescription}</span>
+      <span className="mt-2">{doc.shortDescription}</span>
     </div>
   </a>
 

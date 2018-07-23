@@ -2,7 +2,6 @@ import React from 'react'
 import ScrollUp from '../containers/utils/ScrollUp'
 import Article from '../components/Article'
 import Page404 from '../components/Page404'
-import './ArticlePage.css'
 
 const ArticlePage = (props) => {
   const article = props.articles.find(article => String(article.id) === props.id)

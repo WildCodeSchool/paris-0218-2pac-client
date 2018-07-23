@@ -41,7 +41,6 @@
 
 .une-left-column {
   height: 32rem;
-  /*background-color: #f001;*/
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
@@ -49,7 +48,6 @@
 
 .une-right-column {
   height: 32rem;
-  /*background-color: #00f1;*/
   display: flex;
   flex-direction: column;
   padding: 0.5rem;

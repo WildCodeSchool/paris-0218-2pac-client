@@ -111,7 +111,7 @@ class ArticleForm extends React.Component {
               plugins: 'print link image media preview fullpage charmap insertdatetime lists textcolor wordcount imagetools help',
               toolbar: 'media image link | undo redo | formatselect | fontsizeselect | bold italic strikethrough textcolor colorpicker forecolor backcolor | alignleft aligncenter alignright alignjustify | umlist bullist outdent indent | help',
               image_advtab: true,
-              content_css: [ 'fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' ],
+              content_css: [ 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,400,700' ],
               textcolor_map: [
                 'FFFFFF', 'White',
                 '000000', 'Black',
