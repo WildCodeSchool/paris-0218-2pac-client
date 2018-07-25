@@ -4,7 +4,6 @@ import CategoryLabel from '../components/CategoryLabel'
 import ArticleCard from '../components/ArticleCard'
 import EventsCalendar from './EventsCalendar'
 import { Link } from '@reach/router'
-import priority12Image from '../img/priority-12.jpg'
 import './Home.css'
 
 const staredThenMostRecent = (a, b) => {
@@ -49,14 +48,15 @@ const Une = ({ articles }) => {
   const mostRecentArticles = articles
     .sort(staredThenMostRecent)
 
-  const sideArticles = mostRecentArticles.slice(0, 3)
+  const mainArticle = mostRecentArticles[0]
+  const sideArticles = mostRecentArticles.slice(1, 4)
 
   return (
     <div id="une-container">
       <h3><ChevronTitle title="à la une" /></h3>
       <div className="une-articles">
-        <div className="une-left-column flex-3" >
-          <Link to="/priorite-2020" id="priority-12-card" className="flex" style={{ backgroundImage: `url(${priority12Image})` }}></Link>
+        <div className="une-left-column flex-3">
+          { mainArticle ? <ArticleCard article={mainArticle} displayShortDescription /> : '' }
         </div>
         <div className="une-right-column flex-2">
           { sideArticles.map(article => <ArticleCard key={article.id} article={article} />) }
