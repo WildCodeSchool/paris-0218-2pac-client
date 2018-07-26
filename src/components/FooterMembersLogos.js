@@ -33,6 +33,8 @@ import logos24 from './../img/logos/logos-24.png'
 import logos22 from './../img/logos/logos-22.png'
 import logos02 from './../img/logos/logos-02.png'
 import logos10 from './../img/logos/logos-10.png'
+import logos32 from './../img/logos/logos-32.jpg'
+import logos33 from './../img/logos/logos-33.jpg'
 
 const logos = [
   { src: logos08, alt: 'logos08', title: 'logos08' },
@@ -65,8 +67,9 @@ const logos = [
   { src: logos23, alt: 'logos23', title: 'logos23' },
   { src: logos18, alt: 'logos18', title: 'logos18' },
   { src: logos06, alt: 'logos06', title: 'logos06' },
-  { src: logos10, alt: 'logos10', title: 'logos10' }
-
+  { src: logos10, alt: 'logos10', title: 'logos10' },
+  { src: logos32, alt: 'logos32', title: 'logos32' },
+  { src: logos33, alt: 'logos33', title: 'logos33' }
 ]
 
 const FooterMembersLogos = () => {
